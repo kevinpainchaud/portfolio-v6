@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-v6",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/kevinpainchaud/portfolio-v6.git"
+  },
+  "author": "Kévin Painchaud",
+  "bugs": {
+    "url": "https://gitlab.com/kevinpainchaud/portfolio-v6/issues"
+  },
+  "homepage": "https://gitlab.com/kevinpainchaud/portfolio-v6#readme"
+}
