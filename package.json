@@ -9,5 +9,8 @@
   "bugs": {
     "url": "https://gitlab.com/kevinpainchaud/portfolio-v6/issues"
   },
-  "homepage": "https://gitlab.com/kevinpainchaud/portfolio-v6#readme"
+  "homepage": "https://gitlab.com/kevinpainchaud/portfolio-v6#readme",
+  "devDependencies": {
+    "webpack": "^4.41.0"
+  }
 }
