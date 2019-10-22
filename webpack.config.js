@@ -28,7 +28,10 @@ const config = {
                 use: [
                     "file-loader",
                     {
-                        loader: "image-webpack-loader"
+                        loader: "image-webpack-loader",
+                        options: {
+                            outputPath: "assets/images"
+                        }
                     }
                 ]
             }
