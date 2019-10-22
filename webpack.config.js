@@ -34,6 +34,17 @@ const config = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.woff2$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            outputPath: "assets/fonts"
+                        }
+                    }
+                ]
             }
         ]
     },
