@@ -40,7 +40,9 @@
     },
     "dependencies": {
         "preact": "^10.0.1",
+        "preact-helmet": "^4.0.0-alpha-3",
         "preact-router": "^3.0.1",
-        "styled-components": "^4.4.0"
+        "styled-components": "^4.4.0",
+        "styled-normalize": "^8.0.6"
     }
 }
