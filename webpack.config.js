@@ -8,6 +8,9 @@ const config = {
         path: path.resolve(__dirname, "dist"),
         filename: "main.js"
     },
+    devServer: {
+        historyApiFallback: true
+    },
     resolve: {
         alias: {
             react: "preact/compat",
