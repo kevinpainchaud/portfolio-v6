@@ -1,6 +1,7 @@
 [
     {
         "name": "MaFormation.fr",
+        "slug": "maformation",
         "url": "https://www.maformation.fr",
         "date": "2017 - Aujourd'hui",
         "company": "HelloWork",
@@ -12,6 +13,7 @@
     },
     {
         "name": "TOPO Revue",
+        "slug": "topo-revue",
         "url": "http://www.toporevue.fr",
         "date": "2016",
         "company": "Concept Image",
@@ -23,6 +25,7 @@
     },
     {
         "name": "Bridor",
+        "slug": "bridor",
         "date": "2017",
         "company": "Concept Image",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
