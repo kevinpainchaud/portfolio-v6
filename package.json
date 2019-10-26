@@ -13,7 +13,8 @@
         "start": "webpack-dev-server",
         "build": "webpack --mode production",
         "postbuild": "react-snap",
-        "serve": "serve dist"
+        "serve": "serve dist",
+        "fetch-linkedin": "python3 ./tools/fetch-linkedin.py"
     },
     "reactSnap": {
         "source": "dist",
