@@ -1,4 +1,5 @@
 import { h, Fragment } from "preact";
+import { Link } from "preact-router/match";
 
 import projects from "../../../data/projects.json";
 
@@ -6,7 +7,11 @@ const Projects = () => {
     const projectsItems = [];
 
     projects.forEach(project => {
-        projectsItems.push(<li>{project.name}</li>);
+        projectsItems.push(
+            <li>
+                <Link href={`/projets/${project.slug}`}>{project.name}</Link>
+            </li>
+        );
     });
 
     return (
