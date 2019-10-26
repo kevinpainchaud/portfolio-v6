@@ -5,6 +5,7 @@ import Navbar from "./navbar";
 
 import Home from "../routes/home";
 import Projects from "../routes/projects";
+import Error404 from "../routes/error-404";
 
 export default class App extends Component {
     handleRoute = e => {
@@ -19,6 +20,7 @@ export default class App extends Component {
                     <Router onChange={this.handleRoute}>
                         <Home path="/" />
                         <Projects path="/projets" />
+                        <Error404 default />
                     </Router>
                 </div>
             </>
