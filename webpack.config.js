@@ -6,7 +6,8 @@ const config = {
     entry: "./src/ui/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "main.js"
+        filename: "main.js",
+        publicPath: "/"
     },
     devServer: {
         historyApiFallback: true
