@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Intégration",
+        "slug": "integration"
+    },
+    {
+        "name": "Tests e2e",
+        "slug": "tests-e2e"
+    },
+    {
+        "name": "Tests A/B",
+        "slug": "tests-a-b"
+    },
+    {
+        "name": "DevOps",
+        "slug": "devops"
+    }
+]
