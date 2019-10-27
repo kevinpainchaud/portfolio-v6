@@ -1,13 +1,13 @@
 import { h } from "preact";
-import { Link } from "preact-router/match";
+import StyledRouterLink from "../styled-router-link";
 
 import { Nav } from "./style";
 
 const NavbarNav = () => (
     <Nav>
-        <Link href="/">Accueil</Link>
-        <Link href="/projets">Projets</Link>
-        <Link href="/a-propos">À propos</Link>
+        <StyledRouterLink href="/">Accueil</StyledRouterLink>
+        <StyledRouterLink href="/projets">Projets</StyledRouterLink>
+        <StyledRouterLink href="/a-propos">À propos</StyledRouterLink>
     </Nav>
 );
 
