@@ -2,6 +2,7 @@ import { h, Fragment, Component } from "preact";
 import { Router } from "preact-router";
 
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 import Home from "../routes/home";
 import Projects from "../routes/projects";
@@ -27,6 +28,7 @@ export default class App extends Component {
                         <Error404 default />
                     </Router>
                 </div>
+                <Footer />
             </>
         );
     }
