@@ -28,7 +28,7 @@ const config = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(gif|png|jpe?g|svg)$/,
+                test: /\.(gif|png|jpe?g)$/,
                 use: [
                     "file-loader",
                     {
@@ -38,6 +38,10 @@ const config = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.svg$/,
+                loader: "svg-sprite-loader"
             },
             {
                 test: /\.woff2$/,
