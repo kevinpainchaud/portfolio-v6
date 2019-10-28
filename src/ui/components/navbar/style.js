@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Header = styled.header`
+export const Host = styled.header`
     display: flex;
 
     > * + * {
