@@ -5,6 +5,8 @@ import Error404 from "../../routes/error-404";
 import projects from "../../../data/projects.json";
 import skills from "../../../data/skills.json";
 
+import { Container, Row, Col } from "../../components/grid/style";
+
 export default class Project extends Component {
     state = { project: null, skills: [] };
 
@@ -38,11 +40,15 @@ export default class Project extends Component {
         });
 
         return this.state.project ? (
-            <>
-                <Link href="/projets">Retour</Link>
-                <h1>{this.state.project.name}</h1>
-                {skillsItems.length > 0 ? <ul>{skillsItems}</ul> : ""}
-            </>
+            <Container>
+                <Row>
+                    <Col>
+                        <Link href="/projets">Retour</Link>
+                        <h1>{this.state.project.name}</h1>
+                        {skillsItems.length > 0 ? <ul>{skillsItems}</ul> : ""}
+                    </Col>
+                </Row>
+            </Container>
         ) : (
             Error404()
         );

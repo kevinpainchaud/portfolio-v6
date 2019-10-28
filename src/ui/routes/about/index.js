@@ -6,6 +6,8 @@ import tools from "../../../data/tools.json";
 import experience from "../../../data/experience.json";
 import education from "../../../data/education.json";
 
+import { Container, Row, Col } from "../../components/grid/style";
+
 export default class About extends Component {
     render() {
         const skillsItems = [],
@@ -43,18 +45,46 @@ export default class About extends Component {
         });
 
         return (
-            <>
-                <h1>À propos</h1>
-                {skillsItems.length > 0 ? <ul>{skillsItems}</ul> : ""}
-                {technologiesItems.length > 0 ? (
-                    <ul>{technologiesItems}</ul>
-                ) : (
-                    ""
-                )}
-                {toolsItems.length > 0 ? <ul>{toolsItems}</ul> : ""}
-                {experienceItems.length > 0 ? <ul>{experienceItems}</ul> : ""}
-                {educationItems.length > 0 ? <ul>{educationItems}</ul> : ""}
-            </>
+            <Container>
+                <Row>
+                    <Col>
+                        <h1>À propos</h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        {skillsItems.length > 0 ? <ul>{skillsItems}</ul> : ""}
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        {technologiesItems.length > 0 ? (
+                            <ul>{technologiesItems}</ul>
+                        ) : (
+                            ""
+                        )}
+                    </Col>
+                    <Col>
+                        {toolsItems.length > 0 ? <ul>{toolsItems}</ul> : ""}
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        {experienceItems.length > 0 ? (
+                            <ul>{experienceItems}</ul>
+                        ) : (
+                            ""
+                        )}
+                    </Col>
+                    <Col>
+                        {educationItems.length > 0 ? (
+                            <ul>{educationItems}</ul>
+                        ) : (
+                            ""
+                        )}
+                    </Col>
+                </Row>
+            </Container>
         );
     }
 }

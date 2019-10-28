@@ -3,6 +3,8 @@ import { Link } from "preact-router/match";
 
 import projects from "../../../data/projects.json";
 
+import { Container, Row, Col } from "../../components/grid/style";
+
 const Projects = () => {
     const projectsItems = [];
 
@@ -15,11 +17,17 @@ const Projects = () => {
     });
 
     return (
-        <>
-            <h1>Projets</h1>
-            <p>Ceci est le composant listant l'ensemble de mes projets.</p>
-            <ul>{projectsItems}</ul>
-        </>
+        <Container>
+            <Row>
+                <Col>
+                    <h1>Projets</h1>
+                    <p>
+                        Ceci est le composant listant l'ensemble de mes projets.
+                    </p>
+                    <ul>{projectsItems}</ul>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
