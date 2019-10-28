@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Host = styled.div`
     align-items: center;
-    display: flex;
+    display: inline-flex;
 
     > div:first-child {
         & + * {
