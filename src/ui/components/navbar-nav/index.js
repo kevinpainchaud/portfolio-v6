@@ -8,6 +8,8 @@ const NavbarNav = () => (
         <StyledRouterLink href="/">Accueil</StyledRouterLink>
         <StyledRouterLink href="/projets">Projets</StyledRouterLink>
         <StyledRouterLink href="/a-propos">À propos</StyledRouterLink>
+        <StyledRouterLink>Me contacter</StyledRouterLink>
+        <StyledRouterLink>Télécharger mon CV</StyledRouterLink>
     </Nav>
 );
 
