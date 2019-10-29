@@ -4,53 +4,95 @@ import Error404 from "../../routes/error-404";
 
 import projects from "../../../data/projects.json";
 import skills from "../../../data/skills.json";
+import technologies from "../../../data/technologies.json";
+
+import SkillTag from "../../components/skill-tag";
+import TechnologyBadge from "../../components/technology-badge";
 
 import { Container, Row, Col } from "../../components/grid/style";
+import StyledLink from "../../components/styled-link";
 
-export default class Project extends Component {
-    state = { project: null, skills: [] };
+const Project = ({ projectSlug }) => {
+    const project = projects.find(p => p.slug === projectSlug);
 
-    constructor(props) {
-        super();
+    const projectSkills =
+        project.skills && project.skills.length > 0
+            ? skills.filter(skill => project.skills.indexOf(skill.slug) >= 0)
+            : null;
 
-        // Get project data
-        this.state.project = this.getProject(props["project-slug"]);
+    const projectTechnologies =
+        project.technologies && project.technologies.length > 0
+            ? technologies.filter(
+                  technology =>
+                      project.technologies.indexOf(technology.slug) >= 0
+              )
+            : null;
 
-        // Get related skills
-        if (this.state.project && this.state.project.skills) {
-            this.state.skills = this.getSkills();
-        }
-    }
-
-    getProject(projectSlug) {
-        return projects.find(project => project.slug === projectSlug);
-    }
-
-    getSkills() {
-        return skills.filter(
-            skill => this.state.project.skills.indexOf(skill.slug) >= 0
-        );
-    }
-
-    render() {
-        const skillsItems = [];
-
-        this.state.skills.forEach(skill => {
-            skillsItems.push(<li>{skill.name}</li>);
-        });
-
-        return this.state.project ? (
-            <Container>
+    return project ? (
+        <Container>
+            <Row>
+                <Col>
+                    <Link href="/projets">Retour</Link>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h1>{project.name}</h1>
+                    <div>Pour : {project.company}</div>
+                    <div>Année : {project.date}</div>
+                    <StyledLink href={project.url} target="_blank">
+                        Visiter le site
+                    </StyledLink>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <h2>{project.presentation.title}</h2>
+                    <p>{project.presentation.content}</p>
+                </Col>
+            </Row>
+            {projectSkills ? (
                 <Row>
                     <Col>
-                        <Link href="/projets">Retour</Link>
-                        <h1>{this.state.project.name}</h1>
-                        {skillsItems.length > 0 ? <ul>{skillsItems}</ul> : ""}
+                        <h2>Compétences</h2>
+                        <div>
+                            {projectSkills.map(skill => (
+                                <SkillTag skill={skill}></SkillTag>
+                            ))}
+                        </div>
                     </Col>
                 </Row>
-            </Container>
-        ) : (
-            Error404()
-        );
-    }
-}
+            ) : (
+                ""
+            )}
+            {projectTechnologies ? (
+                <Row>
+                    <Col>
+                        <h2>Technos</h2>
+                        <div>
+                            {projectTechnologies.map(technology => (
+                                <TechnologyBadge
+                                    technology={technology}
+                                ></TechnologyBadge>
+                            ))}
+                        </div>
+                    </Col>
+                </Row>
+            ) : (
+                ""
+            )}
+            <Row>
+                <Col>
+                    <StyledLink href={project.url} target="_blank">
+                        Visiter le site
+                    </StyledLink>
+                    <Link href="/projets">Retour</Link>
+                </Col>
+            </Row>
+        </Container>
+    ) : (
+        Error404()
+    );
+};
+
+export default Project;

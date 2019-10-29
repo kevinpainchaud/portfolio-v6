@@ -23,7 +23,7 @@ export default class App extends Component {
                     <Router onChange={this.handleRoute}>
                         <Home path="/" />
                         <Projects path="/projets" />
-                        <Project path="/projets/:project-slug" />
+                        <Project path="/projets/:projectSlug" />
                         <About path="/a-propos" />
                         <Error404 default />
                     </Router>
