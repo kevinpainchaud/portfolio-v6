@@ -1,16 +1,22 @@
 import { h } from "preact";
-import StyledRouterLink from "../styled-router-link";
 
-import { Nav } from "./style";
+import { Host, Link } from "./style";
+import { Button, ButtonPrimary } from "../button/style";
 
 const NavbarNav = () => (
-    <Nav>
-        <StyledRouterLink href="/">Accueil</StyledRouterLink>
-        <StyledRouterLink href="/projets">Projets</StyledRouterLink>
-        <StyledRouterLink href="/a-propos">À propos</StyledRouterLink>
-        <StyledRouterLink>Me contacter</StyledRouterLink>
-        <StyledRouterLink>Télécharger mon CV</StyledRouterLink>
-    </Nav>
+    <Host>
+        <Link href="/" activeClassName="active">
+            Accueil
+        </Link>
+        <Link href="/projets" activeClassName="active">
+            Projets
+        </Link>
+        <Link href="/a-propos" activeClassName="active">
+            À propos
+        </Link>
+        <Button>Me contacter</Button>
+        <ButtonPrimary>Télécharger mon CV</ButtonPrimary>
+    </Host>
 );
 
 export default NavbarNav;
