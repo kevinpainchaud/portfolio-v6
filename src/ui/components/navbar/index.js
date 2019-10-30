@@ -9,7 +9,7 @@ import { Host } from "./style";
 const Navbar = () => (
     <Host>
         <Container>
-            <Row>
+            <Row alignItems="center">
                 <Col colWidth="3">
                     <NavbarBrand />
                 </Col>
