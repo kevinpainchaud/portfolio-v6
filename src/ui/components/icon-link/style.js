@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { colors } from "../../style/_variables";
-
 export const Host = styled.div`
     align-items: center;
     display: flex;
@@ -12,7 +10,7 @@ export const Host = styled.div`
         width: 24px;
 
         > use {
-            fill: ${colors["gray-base"]};
+            fill: ${props => props.theme.colors.grayBase};
         }
 
         & + * {
@@ -20,3 +18,11 @@ export const Host = styled.div`
         }
     }
 `;
+
+Host.defaultProps = {
+    theme: {
+        colors: {
+            grayBase: "gray"
+        }
+    }
+};
