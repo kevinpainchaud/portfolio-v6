@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
-export const Brand = styled.div`
+export const Host = styled.div`
+    font-size: 20px;
     font-weight: 600;
 `;

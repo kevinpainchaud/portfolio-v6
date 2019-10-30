@@ -1,7 +1,7 @@
 import { h } from "preact";
 
-import { Brand } from "./style";
+import { Host } from "./style";
 
-const NavbarBrand = () => <Brand>Kévin Painchaud</Brand>;
+const NavbarBrand = () => <Host>Kévin Painchaud</Host>;
 
 export default NavbarBrand;
