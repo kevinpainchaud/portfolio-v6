@@ -41,6 +41,7 @@
         "webpack-dev-server": "^3.8.2"
     },
     "dependencies": {
+        "polished": "^3.4.2",
         "preact": "^10.0.1",
         "preact-helmet": "^4.0.0-alpha-3",
         "preact-router": "^3.0.1",
