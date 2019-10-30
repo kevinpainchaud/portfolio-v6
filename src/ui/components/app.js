@@ -1,5 +1,6 @@
-import { h, Fragment, Component } from "preact";
+import { h, Component } from "preact";
 import { Router } from "preact-router";
+import { ThemeProvider } from "styled-components";
 
 import Navbar from "./navbar";
 import Footer from "./footer";
@@ -10,6 +11,8 @@ import Project from "../routes/project";
 import About from "../routes/about";
 import Error404 from "../routes/error-404";
 
+import mainTheme from "../style/themes/main";
+
 export default class App extends Component {
     handleRoute = e => {
         this.currentUrl = e.url;
@@ -17,7 +20,7 @@ export default class App extends Component {
 
     render() {
         return (
-            <>
+            <ThemeProvider theme={mainTheme}>
                 <Navbar />
                 <div>
                     <Router onChange={this.handleRoute}>
@@ -29,7 +32,7 @@ export default class App extends Component {
                     </Router>
                 </div>
                 <Footer />
-            </>
+            </ThemeProvider>
         );
     }
 }
