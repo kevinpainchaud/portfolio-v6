@@ -3,6 +3,7 @@ import { h, Fragment } from "preact";
 import Link from "../../components/link";
 
 import { Container, Row, Col } from "../../components/grid/style";
+import { Button, ButtonPrimary } from "../../components/button/style";
 
 const Home = () => (
     <Container>
@@ -13,7 +14,7 @@ const Home = () => (
                     Officia suscipit architecto minima pariatur optio.
                     Laudantium nemo possimus ratione aspernatur.
                 </p>
-                <Link>Télécharger mon CV</Link>
+                <ButtonPrimary>Télécharger mon CV</ButtonPrimary>
             </Col>
             <Col>ILLUSTRATION</Col>
         </Row>
