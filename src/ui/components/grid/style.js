@@ -11,7 +11,7 @@ export const Container = styled.div`
 `;
 
 export const Row = styled.div`
-    align-items: flex-start;
+    align-items: ${props => props.alignItems || "flex-start"};
     display: flex;
     margin-left: -15px;
     margin-right: -15px;
