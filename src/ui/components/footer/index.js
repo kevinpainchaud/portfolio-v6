@@ -3,11 +3,9 @@ import { h } from "preact";
 import links from "../../../data/links.json";
 
 import LinksGroup from "../links-group";
-import StyledLink from "../styled-link";
-import IconLink from "../icon-link";
 
+import { Host, StyledLink, IconLink } from "./style";
 import { Container, Row, Col } from "../grid/style";
-import { Host } from "./style";
 import iconTwitter from "../../assets/images/icon-twitter.svg";
 import iconLinkedIn from "../../assets/images/icon-linkedin.svg";
 import iconGitLab from "../../assets/images/icon-gitlab.svg";
