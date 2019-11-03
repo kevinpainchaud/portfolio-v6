@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-export default css`
+export const typography = css`
     h1 {
         font-size: 40px;
         font-weight: 600;

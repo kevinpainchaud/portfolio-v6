@@ -1,9 +1,13 @@
 import { css } from "styled-components";
 
-export default css`
+export const base = css`
     body {
-        font-family: "Fira Sans", sans-serif;
+        font-family: ${props => props.theme.base.fontFamily};
         font-size: 14px;
         font-weight: 400;
+    }
+
+    * {
+        box-sizing: border-box;
     }
 `;

@@ -3,7 +3,7 @@ import { css } from "styled-components";
 import FiraSansRegularWoff2 from "../assets/fonts/fira-sans/fira-sans-regular.woff2";
 import FiraSansSemiBoldWoff2 from "../assets/fonts/fira-sans/fira-sans-semi-bold.woff2";
 
-export default css`
+export const fonts = css`
     // Fira Sans
     @font-face {
         font-family: "Fira Sans";
