@@ -1,13 +1,15 @@
 import { h, render } from "preact";
+import { ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
 import Helmet from "preact-helmet";
 
 import App from "./components/app";
 
+import { mainTheme } from "./style/themes/main";
 import { GlobalStyle } from "./style/index";
 
 render(
-    <div>
+    <ThemeProvider theme={mainTheme}>
         {/* Document title */}
         <Helmet
             title="Kévin Painchaud | Développeur front-end à Rennes"
@@ -24,8 +26,10 @@ render(
         <Normalize />
         <GlobalStyle />
 
-        <App />
-    </div>,
+        <div>
+            <App />
+        </div>
+    </ThemeProvider>,
     document.body,
     document.body.firstElementChild
 );
