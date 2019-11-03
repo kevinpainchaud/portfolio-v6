@@ -12,9 +12,18 @@ export const Host = styled.nav`
 `;
 
 export const Link = styled(RouterLink)`
+    color: ${props => props.theme.colors.textBase};
     text-decoration: none;
 
     &.active {
         font-weight: bold;
     }
 `;
+
+Link.defaultProps = {
+    theme: {
+        colors: {
+            textBase: "#000"
+        }
+    }
+};
