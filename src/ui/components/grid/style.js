@@ -3,10 +3,11 @@ import styled from "styled-components";
 const nbCols = 12;
 
 export const Container = styled.div`
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1140px;
     padding-left: 15px;
     padding-right: 15px;
-    margin: auto;
-    max-width: 1140px;
     width: 100%;
 `;
 
