@@ -1,11 +1,11 @@
 import { h } from "preact";
 
-import StyledLink from "../styled-link";
+import { StyledLink } from "../styled-link";
 
 import { Host } from "./style";
 
-const IconLink = ({ href, target, icon, children }) => (
-    <Host>
+export const IconLink = ({ href, target, icon, className, children }) => (
+    <Host className={className}>
         <svg>
             <use xlinkHref={`#${icon.id}`}></use>
         </svg>
@@ -14,5 +14,3 @@ const IconLink = ({ href, target, icon, children }) => (
         </StyledLink>
     </Host>
 );
-
-export default IconLink;

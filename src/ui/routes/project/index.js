@@ -10,7 +10,7 @@ import SkillTag from "../../components/skill-tag";
 import TechnologyBadge from "../../components/technology-badge";
 
 import { Container, Row, Col } from "../../components/grid/style";
-import StyledLink from "../../components/styled-link";
+import { StyledLink } from "../../components/styled-link";
 
 const Project = ({ projectSlug }) => {
     const project = projects.find(p => p.slug === projectSlug);
