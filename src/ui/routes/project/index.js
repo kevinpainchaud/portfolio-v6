@@ -1,4 +1,4 @@
-import { h, Component, Fragment } from "preact";
+import { h } from "preact";
 import { Link } from "preact-router/match";
 import Error404 from "../../routes/error-404";
 

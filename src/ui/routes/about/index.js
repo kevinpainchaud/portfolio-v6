@@ -1,4 +1,4 @@
-import { h, Component, Fragment } from "preact";
+import { h, Fragment } from "preact";
 
 import skills from "../../../data/skills.json";
 import technologies from "../../../data/technologies.json";

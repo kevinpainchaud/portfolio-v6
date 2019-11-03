@@ -1,5 +1,4 @@
-import { h, Fragment } from "preact";
-import { Link } from "preact-router/match";
+import { h } from "preact";
 
 import projects from "../../../data/projects.json";
 

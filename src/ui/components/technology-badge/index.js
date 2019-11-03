@@ -1,4 +1,4 @@
-import { h, Component, Fragment } from "preact";
+import { h } from "preact";
 
 import { Host } from "./style";
 
