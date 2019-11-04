@@ -14,7 +14,11 @@
         "build": "webpack --mode production",
         "postbuild": "react-snap",
         "serve": "serve dist",
-        "fetch-linkedin": "python3 ./tools/fetch-linkedin.py"
+        "fetch-linkedin": "python3 ./tools/fetch-linkedin.py",
+        "docker:start": "docker-compose -f ./docker/docker-compose.yml run --service-ports --rm start",
+        "docker:build": "docker-compose -f ./docker/docker-compose.yml run --rm build",
+        "docker:serve": "docker-compose -f ./docker/docker-compose.yml run --service-ports --rm serve",
+        "docker:fetch-linkedin": "docker-compose -f ./docker/docker-compose.yml run --rm fetch-linkedin"
     },
     "reactSnap": {
         "source": "dist",
