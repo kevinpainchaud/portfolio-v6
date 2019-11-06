@@ -6,6 +6,7 @@ import tools from "../../../data/tools.json";
 import experience from "../../../data/experience.json";
 import education from "../../../data/education.json";
 
+import PageTitle from "../../components/page-title";
 import Link from "../../components/link";
 
 import { Container, Row, Col } from "../../components/grid/style";
@@ -14,8 +15,10 @@ const About = () => (
     <Container>
         <Row>
             <Col>
-                <h1>À propos</h1>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing</div>
+                <PageTitle
+                    title="À propos"
+                    subTitle="Lorem ipsum dolor sit, amet consectetur adipisicing"
+                ></PageTitle>
             </Col>
         </Row>
         {skills.length > 0 ? (

@@ -2,6 +2,7 @@ import { h } from "preact";
 
 import projects from "../../../data/projects.json";
 
+import PageTitle from "../../components/page-title";
 import ProjectCard from "../../components/project-card";
 
 import { Container, Row, Col } from "../../components/grid/style";
@@ -10,8 +11,10 @@ const Projects = () => (
     <Container>
         <Row>
             <Col>
-                <h1>Projets</h1>
-                <div>Lorem ipsum dolor sit amet consectetur, adipisicing</div>
+                <PageTitle
+                    title="Projets"
+                    subTitle="Lorem ipsum dolor sit amet consectetur, adipisicing"
+                ></PageTitle>
             </Col>
         </Row>
         <Row>
