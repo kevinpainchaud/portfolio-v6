@@ -88,7 +88,7 @@ export const Meta = styled.div`
     s.defaultProps = {
         theme: {
             colors: {
-                grayBase: "blue"
+                grayBase: "gray"
             }
         }
     };
