@@ -12,10 +12,13 @@ import {
     Meta
 } from "./style";
 
-const ProjectCard = ({ project }) => (
+const ProjectCard = ({ project, width }) => (
     <Host>
         <Link href={`/projets/${project.slug}`}>
-            <Cover style="background-image: url('https://picsum.photos/id/277/700/300');"></Cover>
+            <Cover
+                className={width === "full" ? "lg" : ""}
+                style="background-image: url('https://picsum.photos/id/277/700/300');"
+            ></Cover>
             <Body>
                 <Logo>
                     <img src="https://picsum.photos/id/305/300/300" alt="" />

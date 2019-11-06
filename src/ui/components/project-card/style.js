@@ -14,11 +14,15 @@ export const Host = styled.div`
 `;
 
 export const Cover = styled.div`
-    background-color: #ccc;
+    background-color: ${props => props.theme.colors.grayBase};
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 125px;
+
+    &.lg {
+        height: 300px;
+    }
 `;
 
 export const Body = styled.div`
@@ -84,7 +88,7 @@ export const Meta = styled.div`
     }
 `;
 
-[Host, Logo, Meta].forEach(s => {
+[Host, Cover, Logo, Meta].forEach(s => {
     s.defaultProps = {
         theme: {
             colors: {
