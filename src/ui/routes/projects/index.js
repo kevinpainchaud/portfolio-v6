@@ -15,11 +15,11 @@ const Projects = () => (
             </Col>
         </Row>
         <Row>
-            <Col>
-                {projects.map(project => (
+            {projects.map(project => (
+                <Col>
                     <ProjectCard project={project}></ProjectCard>
-                ))}
-            </Col>
+                </Col>
+            ))}
         </Row>
     </Container>
 );
