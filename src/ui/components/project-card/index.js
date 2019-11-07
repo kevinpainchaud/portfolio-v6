@@ -12,6 +12,8 @@ import {
     Meta
 } from "./style";
 
+import iconCalendar from "../../assets/images/icon-calendar.svg";
+
 const ProjectCard = ({ project, width }) => (
     <Host>
         <Link href={`/projets/${project.slug}`}>
@@ -27,9 +29,9 @@ const ProjectCard = ({ project, width }) => (
                     <Title>{project.name}</Title>
                     <Description>{project.description}</Description>
                     <Meta>
-                        {/* <svg>
-                            <use xlinkHref=""></use>
-                        </svg> */}
+                        <svg>
+                            <use xlinkHref={`#${iconCalendar.id}`}></use>
+                        </svg>
                         <div>Année : {project.date}</div>
                     </Meta>
                 </Content>

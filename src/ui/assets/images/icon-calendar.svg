@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="19.365" height="19.365" viewBox="0 0 19.365 19.365">
+    <path class="a" d="M15.331,1.614V0H13.717V1.614H5.648V0H4.034V1.614H0V19.365H19.365V1.614Zm2.421,16.138H1.614V8.029H17.752ZM1.614,6.415V3.228H4.034V4.841H5.648V3.228h8.069V4.841h1.614V3.228h2.421V6.415Z"/>
+    <rect class="a" width="3" height="3" transform="translate(2.922 9.352)"/>
+    <rect class="a" width="3" height="3" transform="translate(6.494 9.352)"/>
+    <rect class="a" width="3" height="3" transform="translate(9.969 9.352)"/>
+    <rect class="a" width="3" height="3" transform="translate(13.443 9.352)"/>
+    <rect class="a" width="3" height="3" transform="translate(2.922 12.859)"/>
+    <rect class="a" width="3" height="3" transform="translate(6.494 12.859)"/>
+    <rect class="a" width="3" height="3" transform="translate(9.969 12.859)"/>
+    <rect class="a" width="3" height="3" transform="translate(13.443 12.859)"/>
+</svg>
