@@ -20,7 +20,7 @@ export const Row = styled.div`
     margin-right: -${colPadding}px;
 
     > div {
-        text-align: ${props => props.textAlign || "left"};
+        text-align: ${props => props.textAlign || "inherit"};
     }
 `;
 
