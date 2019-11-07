@@ -6,6 +6,7 @@ export const mainTheme = {
     },
     colors: {
         primary: "#eb6e08",
+        gray300: "#e1e1e1",
         grayBase: "gray",
         textBase: lighten(0.15, "#000")
     },
