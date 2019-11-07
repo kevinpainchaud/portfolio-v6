@@ -62,33 +62,7 @@ export const Description = styled.div`
     font-size: 14px;
 `;
 
-export const Meta = styled.div`
-    align-items: center;
-    display: flex;
-
-    > svg {
-        height: 16px;
-        left: 0px;
-        min-width: 16px;
-        position: relative;
-        top: -1px;
-        width: 16px;
-
-        > use {
-            fill: ${props => props.theme.colors.grayBase};
-        }
-    }
-
-    > div {
-        color: ${props => props.theme.colors.grayBase};
-    }
-
-    > svg + div {
-        margin-left: 5px;
-    }
-`;
-
-[Host, Cover, Logo, Meta].forEach(s => {
+[Host, Cover, Logo].forEach(s => {
     s.defaultProps = {
         theme: {
             colors: {

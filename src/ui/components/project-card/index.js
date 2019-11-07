@@ -1,16 +1,8 @@
 import { h } from "preact";
 import { Link } from "preact-router/match";
 
-import {
-    Host,
-    Cover,
-    Body,
-    Logo,
-    Content,
-    Title,
-    Description,
-    Meta
-} from "./style";
+import { Host, Cover, Body, Logo, Content, Title, Description } from "./style";
+import { Meta } from "../meta/style";
 
 import iconCalendar from "../../assets/images/icon-calendar.svg";
 
