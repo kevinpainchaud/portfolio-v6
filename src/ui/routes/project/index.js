@@ -7,6 +7,7 @@ import skills from "../../../data/skills.json";
 import technologies from "../../../data/technologies.json";
 
 import ProjectCover from "../../components/project-cover";
+import ProjectIntro from "../../components/project-intro";
 import SkillTag from "../../components/skill-tag";
 import TechnologyBadge from "../../components/technology-badge";
 
@@ -36,6 +37,10 @@ const Project = ({ projectSlug }) => {
                 company={project.company}
                 date={project.date}
             ></ProjectCover>
+            <ProjectIntro
+                title={project.presentation.title}
+                content={project.presentation.content}
+            ></ProjectIntro>
             <Container>
                 <Row>
                     <Col>
