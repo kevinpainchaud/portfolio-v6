@@ -7,7 +7,7 @@ import { Meta } from "../meta/style";
 
 import iconCalendar from "../../assets/images/icon-calendar.svg";
 
-const ProjectCover = ({ project }) => (
+const ProjectCover = ({ name, company, date }) => (
     <Host>
         <Container>
             <Header>
@@ -21,7 +21,7 @@ const ProjectCover = ({ project }) => (
                 <Row>
                     <Col>
                         <BodyInner>
-                            <Title>{project.name}</Title>
+                            <Title>{name}</Title>
                             <Metas>
                                 <Meta>
                                     <svg>
@@ -29,7 +29,7 @@ const ProjectCover = ({ project }) => (
                                             xlinkHref={`#${iconCalendar.id}`}
                                         ></use>
                                     </svg>
-                                    <div>Pour : {project.company}</div>
+                                    <div>Pour : {company}</div>
                                 </Meta>
                                 <Meta>
                                     <svg>
@@ -37,7 +37,7 @@ const ProjectCover = ({ project }) => (
                                             xlinkHref={`#${iconCalendar.id}`}
                                         ></use>
                                     </svg>
-                                    <div>Année : {project.date}</div>
+                                    <div>Année : {date}</div>
                                 </Meta>
                             </Metas>
                             <Button>Visiter le site</Button>

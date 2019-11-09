@@ -31,7 +31,11 @@ const Project = ({ projectSlug }) => {
 
     return project ? (
         <>
-            <ProjectCover project={project}></ProjectCover>
+            <ProjectCover
+                name={project.name}
+                company={project.company}
+                date={project.date}
+            ></ProjectCover>
             <Container>
                 <Row>
                     <Col>
