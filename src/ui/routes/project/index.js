@@ -8,9 +8,11 @@ import technologies from "../../../data/technologies.json";
 
 import ProjectCover from "../../components/project-cover";
 import ProjectIntro from "../../components/project-intro";
+import ContentBlock from "../../components/content-block";
 import SkillTag from "../../components/skill-tag";
 import TechnologyBadge from "../../components/technology-badge";
 
+import { Host } from "./style";
 import { Container, Row, Col } from "../../components/grid/style";
 import { StyledLink } from "../../components/styled-link";
 
@@ -31,53 +33,41 @@ const Project = ({ projectSlug }) => {
             : null;
 
     return project ? (
-        <>
+        <Host>
+            {/* Cover */}
             <ProjectCover
                 name={project.name}
                 company={project.company}
                 date={project.date}
             ></ProjectCover>
+
+            {/* Intro */}
             <ProjectIntro
                 title={project.presentation.title}
                 content={project.presentation.content}
             ></ProjectIntro>
+
+            {/* Skills */}
+            {projectSkills ? (
+                <ContentBlock title="Compétences" fullWidth={false}>
+                    {projectSkills.map(skill => (
+                        <SkillTag skill={skill}></SkillTag>
+                    ))}
+                </ContentBlock>
+            ) : null}
+
+            {/* Technologies */}
+            {projectTechnologies ? (
+                <ContentBlock title="Technos" fullWidth={false} noPaddingTop>
+                    {projectTechnologies.map(technology => (
+                        <TechnologyBadge
+                            technology={technology}
+                        ></TechnologyBadge>
+                    ))}
+                </ContentBlock>
+            ) : null}
+
             <Container>
-                <Row>
-                    <Col>
-                        <h2>{project.presentation.title}</h2>
-                        <p>{project.presentation.content}</p>
-                    </Col>
-                </Row>
-                {projectSkills ? (
-                    <Row>
-                        <Col>
-                            <h2>Compétences</h2>
-                            <div>
-                                {projectSkills.map(skill => (
-                                    <SkillTag skill={skill}></SkillTag>
-                                ))}
-                            </div>
-                        </Col>
-                    </Row>
-                ) : (
-                    ""
-                )}
-                {projectTechnologies ? (
-                    <Row>
-                        <Col>
-                            <h2>Technos</h2>
-                            <div>
-                                {projectTechnologies.map(technology => (
-                                    <TechnologyBadge
-                                        technology={technology}
-                                    ></TechnologyBadge>
-                                ))}
-                            </div>
-                        </Col>
-                    </Row>
-                ) : (
-                    ""
-                )}
                 <Row>
                     <Col>
                         <StyledLink href={project.url} target="_blank">
@@ -87,7 +77,7 @@ const Project = ({ projectSlug }) => {
                     </Col>
                 </Row>
             </Container>
-        </>
+        </Host>
     ) : (
         Error404()
     );
