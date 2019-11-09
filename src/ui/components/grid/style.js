@@ -16,6 +16,7 @@ export const Container = styled.div`
 export const Row = styled.div`
     align-items: ${props => props.alignItems || "flex-start"};
     display: flex;
+    justify-content: ${props => props.justifyContent || "flex-start"};
     margin-left: -${colPadding}px;
     margin-right: -${colPadding}px;
 
