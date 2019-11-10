@@ -5,6 +5,7 @@ import { Container, Row, Col } from "../grid/style";
 import { Button } from "../button/style";
 import { Meta } from "../meta/style";
 
+import iconCompany from "../../assets/images/icon-company.svg";
 import iconCalendar from "../../assets/images/icon-calendar.svg";
 
 const ProjectCover = ({ name, company, date, url }) => (
@@ -28,7 +29,7 @@ const ProjectCover = ({ name, company, date, url }) => (
                                 <Meta>
                                     <svg>
                                         <use
-                                            xlinkHref={`#${iconCalendar.id}`}
+                                            xlinkHref={`#${iconCompany.id}`}
                                         ></use>
                                     </svg>
                                     <div>Pour : {company}</div>
