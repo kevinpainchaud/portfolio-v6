@@ -1,5 +1,4 @@
 import { h, Fragment } from "preact";
-import { Link } from "preact-router/match";
 import Error404 from "../../routes/error-404";
 
 import projects from "../../../data/projects.json";
@@ -11,10 +10,14 @@ import ProjectIntro from "../../components/project-intro";
 import ContentBlock from "../../components/content-block";
 import SkillTag from "../../components/skill-tag";
 import TechnologyBadge from "../../components/technology-badge";
+import { IconLink } from "../../components/icon-link";
 
 import { Host } from "./style";
 import { Container, Row, Col } from "../../components/grid/style";
-import { StyledLink } from "../../components/styled-link";
+import { Button } from "../../components/button/style";
+import { ActionsGroup } from "../../components/actions-group/style";
+
+import arrowLeft from "../../assets/images/arrow-left.svg";
 
 const Project = ({ projectSlug }) => {
     const project = projects.find(p => p.slug === projectSlug);
@@ -39,6 +42,7 @@ const Project = ({ projectSlug }) => {
                 name={project.name}
                 company={project.company}
                 date={project.date}
+                url={project.url}
             ></ProjectCover>
 
             {/* Intro */}
@@ -49,7 +53,11 @@ const Project = ({ projectSlug }) => {
 
             {/* Skills */}
             {projectSkills ? (
-                <ContentBlock title="Compétences" background={true}>
+                <ContentBlock
+                    title="Compétences"
+                    background={true}
+                    textAlign="center"
+                >
                     {projectSkills.map(skill => (
                         <SkillTag skill={skill}></SkillTag>
                     ))}
@@ -58,7 +66,12 @@ const Project = ({ projectSlug }) => {
 
             {/* Technologies */}
             {projectTechnologies ? (
-                <ContentBlock title="Technos" background={true} noPaddingTop>
+                <ContentBlock
+                    title="Technos"
+                    background={true}
+                    noPaddingTop
+                    textAlign="center"
+                >
                     {projectTechnologies.map(technology => (
                         <TechnologyBadge
                             technology={technology}
@@ -67,16 +80,21 @@ const Project = ({ projectSlug }) => {
                 </ContentBlock>
             ) : null}
 
-            <Container>
-                <Row>
-                    <Col>
-                        <StyledLink href={project.url} target="_blank">
-                            Visiter le site
-                        </StyledLink>
-                        <Link href="/projets">Retour</Link>
-                    </Col>
-                </Row>
-            </Container>
+            <ContentBlock noPaddingBottom>
+                <ActionsGroup>
+                    <Button href={project.url} target="_blank">
+                        Visiter le site
+                    </Button>
+                    <IconLink
+                        href="/projets"
+                        tagName="routerLink"
+                        icon={arrowLeft}
+                        iconWidthXs
+                    >
+                        Retour
+                    </IconLink>
+                </ActionsGroup>
+            </ContentBlock>
         </Host>
     ) : (
         Error404()
