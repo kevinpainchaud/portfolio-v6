@@ -4,8 +4,8 @@ import Link from "../link";
 
 import { Host } from "./style";
 
-const NavbarBrand = () => (
-    <Host>
+const NavbarBrand = ({ reverseColor }) => (
+    <Host reverseColor={reverseColor}>
         <Link href="/" tagName="routerLink">
             Kévin Painchaud
         </Link>

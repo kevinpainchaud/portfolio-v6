@@ -9,9 +9,17 @@ import iconExternalLink from "../../assets/images/icon-external-link.svg";
 import iconCompany from "../../assets/images/icon-company.svg";
 import iconCalendar from "../../assets/images/icon-calendar.svg";
 
-const ProjectCover = ({ name, company, date, url }) => (
-    <Host>
-        <Container>
+const ProjectCover = ({ name, company, date, url, topOffset }) => (
+    <Host
+        style={{
+            "margin-top": -topOffset + "px"
+        }}
+    >
+        <Container
+            style={{
+                "padding-top": topOffset + "px"
+            }}
+        >
             <Header>
                 <Row>
                     <Col>
@@ -27,7 +35,7 @@ const ProjectCover = ({ name, company, date, url }) => (
                         <BodyInner>
                             <Title>{name}</Title>
                             <Metas>
-                                <Meta>
+                                <Meta reverseColor>
                                     <svg>
                                         <use
                                             xlinkHref={`#${iconCompany.id}`}
@@ -35,7 +43,7 @@ const ProjectCover = ({ name, company, date, url }) => (
                                     </svg>
                                     <div>Pour : {company}</div>
                                 </Meta>
-                                <Meta>
+                                <Meta reverseColor>
                                     <svg>
                                         <use
                                             xlinkHref={`#${iconCalendar.id}`}

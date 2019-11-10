@@ -13,7 +13,8 @@ export const Host = styled.nav`
 `;
 
 export const Link = styled(OriginalLink)`
-    color: ${props => props.theme.colors.textBase};
+    color: ${props =>
+        props.reverseColor ? "#fff" : props.theme.colors.textBase};
     text-decoration: none;
 
     &.active {

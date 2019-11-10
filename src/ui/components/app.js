@@ -1,4 +1,5 @@
 import { h, Component, Fragment } from "preact";
+import { useRef } from "preact/hooks";
 import { Router } from "preact-router";
 
 import Navbar from "./navbar";
@@ -11,19 +12,30 @@ import About from "../routes/about";
 import Error404 from "../routes/error-404";
 
 export default class App extends Component {
-    handleRoute = e => {
-        this.currentUrl = e.url;
-    };
-
     render() {
+        const navbarRef = useRef();
+
+        const handleRoute = e => {
+            this.currentUrl = e.url;
+
+            // We have to re-render navbar because
+            // her styles can change depending on current page
+            if (navbarRef.current) {
+                navbarRef.current.forceUpdate();
+            }
+        };
+
         return (
             <>
-                <Navbar />
+                <Navbar ref={navbarRef} />
                 <div>
-                    <Router onChange={this.handleRoute}>
+                    <Router onChange={handleRoute}>
                         <Home path="/" />
                         <Projects path="/projets" />
-                        <Project path="/projets/:projectSlug" />
+                        <Project
+                            path="/projets/:projectSlug"
+                            navbarRef={navbarRef}
+                        />
                         <About path="/a-propos" />
                         <Error404 default />
                     </Router>

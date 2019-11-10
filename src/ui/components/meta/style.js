@@ -13,12 +13,14 @@ export const Meta = styled.div`
         width: ${props => (props.iconWidthXs ? "12px" : "24px")};
 
         > use {
-            fill: ${props => props.theme.colors.grayBase};
+            fill: ${props =>
+                props.reverseColor ? "#fff" : props.theme.colors.grayBase};
         }
     }
 
     > div {
-        color: ${props => props.theme.colors.grayBase};
+        color: ${props =>
+            props.reverseColor ? "#fff" : props.theme.colors.grayBase};
     }
 
     > svg + div {
