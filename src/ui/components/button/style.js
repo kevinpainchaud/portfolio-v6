@@ -26,12 +26,12 @@ export const Button = styled(Link)`
     }
 
     > svg {
-        height: 16px;
+        height: ${props => (props.iconWidthXs ? "12px" : "16px")};
         left: 0;
-        min-width: 16px;
+        min-width: ${props => (props.iconWidthXs ? "12px" : "16px")};
         position: relative;
         top: -1px;
-        width: 16px;
+        width: ${props => (props.iconWidthXs ? "12px" : "16px")};
 
         > use {
             fill: ${props => props.theme.colors.primary};
