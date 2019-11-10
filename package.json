@@ -23,8 +23,8 @@
     "reactSnap": {
         "source": "dist",
         "minifyHtml": {
-            "collapseWhitespace": false,
-            "removeComments": false
+            "collapseWhitespace": true,
+            "removeComments": true
         },
         "puppeteerArgs": [
             "--no-sandbox",
