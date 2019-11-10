@@ -21,7 +21,7 @@ const ProjectCard = ({ project, width }) => (
                 <Content>
                     <Title>{project.name}</Title>
                     <Description>{project.description}</Description>
-                    <Meta>
+                    <Meta iconWidthXs>
                         <svg>
                             <use xlinkHref={`#${iconCalendar.id}`}></use>
                         </svg>
