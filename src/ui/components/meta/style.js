@@ -5,12 +5,12 @@ export const Meta = styled.div`
     display: flex;
 
     > svg {
-        height: 16px;
+        height: ${props => (props.iconWidthXs ? "12px" : "24px")};
         left: 0px;
-        min-width: 16px;
+        min-width: ${props => (props.iconWidthXs ? "12px" : "24px")};
         position: relative;
         top: -1px;
-        width: 16px;
+        width: ${props => (props.iconWidthXs ? "12px" : "24px")};
 
         > use {
             fill: ${props => props.theme.colors.grayBase};
