@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Host = styled.div`
     align-items: center;
-    display: flex;
+    display: inline-flex;
 
     > svg {
-        height: 24px;
-        min-width: 24px;
-        width: 24px;
+        height: ${props => (props.iconWidthXs ? "12px" : "24px")};
+        min-width: ${props => (props.iconWidthXs ? "12px" : "24px")};
+        width: ${props => (props.iconWidthXs ? "12px" : "24px")};
 
         > use {
             fill: ${props => props.theme.colors.grayBase};
