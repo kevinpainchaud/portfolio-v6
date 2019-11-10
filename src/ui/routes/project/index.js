@@ -49,7 +49,7 @@ const Project = ({ projectSlug }) => {
 
             {/* Skills */}
             {projectSkills ? (
-                <ContentBlock title="Compétences" fullWidth={false}>
+                <ContentBlock title="Compétences" background={true}>
                     {projectSkills.map(skill => (
                         <SkillTag skill={skill}></SkillTag>
                     ))}
@@ -58,7 +58,7 @@ const Project = ({ projectSlug }) => {
 
             {/* Technologies */}
             {projectTechnologies ? (
-                <ContentBlock title="Technos" fullWidth={false} noPaddingTop>
+                <ContentBlock title="Technos" background={true} noPaddingTop>
                     {projectTechnologies.map(technology => (
                         <TechnologyBadge
                             technology={technology}

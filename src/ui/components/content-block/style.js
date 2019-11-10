@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Host = styled.div`
     background-color: ${props =>
-        props.withBackground ? props.theme.colors.gray300 : "transparent"};
+        props.background ? props.theme.colors.gray300 : "transparent"};
 `;
 
 export const Inner = styled.div`
     background-color: ${props =>
-        props.withBackground ? props.theme.colors.gray300 : "transparent"};
+        props.background ? props.theme.colors.gray300 : "transparent"};
     padding: 50px;
     padding-top: ${props => (props.noPaddingTop ? "0px" : "inerith")};
     text-align: center;

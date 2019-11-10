@@ -3,13 +3,19 @@ import { h } from "preact";
 import { Host, Inner, Title, Content } from "./style";
 import { Container, Row, Col } from "../grid/style";
 
-const ContentBlock = ({ title, fullWidth, noPaddingTop, children }) => (
-    <Host withBackground={fullWidth}>
+const ContentBlock = ({
+    title,
+    background,
+    fullWidth,
+    noPaddingTop,
+    children
+}) => (
+    <Host background={fullWidth && background}>
         <Container>
             <Row>
                 <Col>
                     <Inner
-                        withBackground={!fullWidth}
+                        background={!fullWidth && background}
                         noPaddingTop={noPaddingTop}
                     >
                         <Title>{title}</Title>
