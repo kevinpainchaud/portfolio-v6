@@ -6,19 +6,23 @@ import { Container, Row, Col } from "../grid/style";
 const ContentBlock = ({
     title,
     background,
-    fullWidth,
+    backgroundFullWidth,
+    noPaddingBottom,
     noPaddingTop,
+    textAlign,
     children
 }) => (
-    <Host background={fullWidth && background}>
+    <Host background={background && backgroundFullWidth}>
         <Container>
             <Row>
                 <Col>
                     <Inner
-                        background={!fullWidth && background}
+                        background={background && !backgroundFullWidth}
+                        noPaddingBottom={noPaddingBottom}
                         noPaddingTop={noPaddingTop}
+                        textAlign={textAlign}
                     >
-                        <Title>{title}</Title>
+                        {title ? <Title>{title}</Title> : null}
                         <Content>{children}</Content>
                     </Inner>
                 </Col>
