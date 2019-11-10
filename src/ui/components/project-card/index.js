@@ -1,5 +1,6 @@
 import { h } from "preact";
-import { Link } from "preact-router/match";
+
+import Link from "../link";
 
 import { Host, Cover, Body, Logo, Content, Title, Description } from "./style";
 import { Meta } from "../meta/style";
@@ -8,7 +9,7 @@ import iconCalendar from "../../assets/images/icon-calendar.svg";
 
 const ProjectCard = ({ project, width }) => (
     <Host>
-        <Link href={`/projets/${project.slug}`}>
+        <Link href={`/projets/${project.slug}`} tagName="routerLink">
             <Cover
                 className={width === "full" ? "lg" : ""}
                 style="background-image: url('https://picsum.photos/id/277/700/300');"

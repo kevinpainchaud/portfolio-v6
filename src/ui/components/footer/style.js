@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { StyledLink as OriginalStyledLink } from "../styled-link";
+import { StyledLink as OriginalStyledLink } from "../styled-link/style";
 import { IconLink as OriginalIconLink } from "../icon-link";
 
 export const Host = styled.footer`

@@ -7,13 +7,15 @@ import { Meta } from "../meta/style";
 
 import iconCalendar from "../../assets/images/icon-calendar.svg";
 
-const ProjectCover = ({ name, company, date }) => (
+const ProjectCover = ({ name, company, date, url }) => (
     <Host>
         <Container>
             <Header>
                 <Row>
                     <Col>
-                        <Button>Retour</Button>
+                        <Button href="/projets" tagName="routerLink">
+                            Retour
+                        </Button>
                     </Col>
                 </Row>
             </Header>
@@ -40,7 +42,9 @@ const ProjectCover = ({ name, company, date }) => (
                                     <div>Année : {date}</div>
                                 </Meta>
                             </Metas>
-                            <Button>Visiter le site</Button>
+                            <Button href={url} target="_blank" tagName="button">
+                                Visiter le site
+                            </Button>
                         </BodyInner>
                     </Col>
                 </Row>

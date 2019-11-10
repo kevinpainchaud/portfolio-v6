@@ -5,13 +5,13 @@ import { Button, ButtonPrimary } from "../button/style";
 
 const NavbarNav = () => (
     <Host>
-        <Link href="/" activeClassName="active">
+        <Link href="/" tagName="routerLink" activeClassName="active">
             Accueil
         </Link>
-        <Link href="/projets" activeClassName="active">
+        <Link href="/projets" tagName="routerLink" activeClassName="active">
             Projets
         </Link>
-        <Link href="/a-propos" activeClassName="active">
+        <Link href="/a-propos" tagName="routerLink" activeClassName="active">
             À propos
         </Link>
         <Button>Me contacter</Button>

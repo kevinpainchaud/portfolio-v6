@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { Link as RouterLink } from "preact-router/match";
+
+import OriginalLink from "../link";
 
 export const Host = styled.nav`
     align-items: center;
@@ -11,7 +12,7 @@ export const Host = styled.nav`
     }
 `;
 
-export const Link = styled(RouterLink)`
+export const Link = styled(OriginalLink)`
     color: ${props => props.theme.colors.textBase};
     text-decoration: none;
 
