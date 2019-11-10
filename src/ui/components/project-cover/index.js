@@ -5,6 +5,7 @@ import { Container, Row, Col } from "../grid/style";
 import { Button } from "../button/style";
 import { Meta } from "../meta/style";
 
+import iconExternalLink from "../../assets/images/icon-external-link.svg";
 import iconCompany from "../../assets/images/icon-company.svg";
 import iconCalendar from "../../assets/images/icon-calendar.svg";
 
@@ -43,8 +44,18 @@ const ProjectCover = ({ name, company, date, url }) => (
                                     <div>Année : {date}</div>
                                 </Meta>
                             </Metas>
-                            <Button href={url} target="_blank" tagName="button">
-                                Visiter le site
+                            <Button
+                                href={url}
+                                target="_blank"
+                                tagName="button"
+                                iconWidthXs
+                            >
+                                <svg>
+                                    <use
+                                        xlinkHref={`#${iconExternalLink.id}`}
+                                    ></use>
+                                </svg>
+                                <span>Visiter le site</span>
                             </Button>
                         </BodyInner>
                     </Col>

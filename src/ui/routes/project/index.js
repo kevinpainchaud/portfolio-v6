@@ -18,6 +18,7 @@ import { Button } from "../../components/button/style";
 import { ActionsGroup } from "../../components/actions-group/style";
 
 import arrowLeft from "../../assets/images/arrow-left.svg";
+import iconExternalLink from "../../assets/images/icon-external-link.svg";
 
 const Project = ({ projectSlug }) => {
     const project = projects.find(p => p.slug === projectSlug);
@@ -82,8 +83,11 @@ const Project = ({ projectSlug }) => {
 
             <ContentBlock noPaddingBottom>
                 <ActionsGroup>
-                    <Button href={project.url} target="_blank">
-                        Visiter le site
+                    <Button href={project.url} target="_blank" iconWidthXs>
+                        <svg>
+                            <use xlinkHref={`#${iconExternalLink.id}`}></use>
+                        </svg>
+                        <span>Visiter le site</span>
                     </Button>
                     <IconLink
                         href="/projets"
