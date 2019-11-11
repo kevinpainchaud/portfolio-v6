@@ -14,7 +14,7 @@ export const Inner = styled.div`
     text-align: ${props => (props.textAlign ? "center" : "inerith")};
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h2`
     margin: 0;
 `;
 
