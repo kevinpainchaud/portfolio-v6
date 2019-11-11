@@ -15,7 +15,6 @@ export const Host = styled.nav`
 export const Link = styled(OriginalLink)`
     color: ${props =>
         props.reverseColor ? "#fff" : props.theme.colors.textBase};
-    text-decoration: none;
 
     &.active {
         font-weight: bold;

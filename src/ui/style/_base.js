@@ -10,4 +10,8 @@ export const base = css`
     * {
         box-sizing: border-box;
     }
+
+    a {
+        text-decoration: none;
+    }
 `;

@@ -13,7 +13,6 @@ export const Button = styled(Link)`
     cursor: pointer;
     display: inline-flex;
     padding: 10px 20px;
-    text-decoration: none;
 
     &:hover {
         background-color: ${props => darken(0.1, props.theme.colors.primary)};

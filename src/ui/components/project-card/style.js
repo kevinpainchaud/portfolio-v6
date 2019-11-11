@@ -9,7 +9,6 @@ export const Host = styled.div`
 
     > a {
         color: inherit;
-        text-decoration: none;
     }
 `;
 
