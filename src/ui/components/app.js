@@ -18,6 +18,8 @@ export default class App extends Component {
         const handleRoute = e => {
             this.currentUrl = e.url;
 
+            window.scrollTo(0, 0);
+
             // We have to re-render navbar because
             // her styles can change depending on current page
             if (navbarRef.current) {
