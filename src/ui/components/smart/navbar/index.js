@@ -8,10 +8,11 @@ import { Container, Row, Col } from "../../styled/grid";
 import Host from "./style";
 
 const Navbar = () => {
-    const isProjectPage = /^\/projets\/.*/.test(getCurrentUrl());
+    const isHomePage = /^\/$/.test(getCurrentUrl()),
+        isProjectPage = /^\/projets\/.*/.test(getCurrentUrl());
 
     return (
-        <Host transparent={isProjectPage}>
+        <Host noBorderBottom={isHomePage} transparent={isProjectPage}>
             <Container>
                 <Row alignItems="center">
                     <Col colWidth="3">
