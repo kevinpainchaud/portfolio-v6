@@ -17,9 +17,7 @@ const Link = ({
         if (href && tagName !== "a") {
             event.preventDefault();
 
-            if (tagName === "routerLink") {
-                route(href);
-            } else {
+            if (tagName !== "routerLink") {
                 if (target && target === "_blank") {
                     window.open(href);
                 } else {
