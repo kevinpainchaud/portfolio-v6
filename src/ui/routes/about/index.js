@@ -6,10 +6,9 @@ import tools from "../../../data/tools.json";
 import experience from "../../../data/experience.json";
 import education from "../../../data/education.json";
 
-import PageTitle from "../../components/page-title";
-import Link from "../../components/link";
-
-import { Container, Row, Col } from "../../components/grid/style";
+import PageTitle from "../../components/dumb/page-title";
+import Link from "../../components/smart/link";
+import { Container, Row, Col } from "../../components/styled/grid";
 
 const About = () => (
     <Container>

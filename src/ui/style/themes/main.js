@@ -1,6 +1,6 @@
 import { lighten } from "polished";
 
-export const mainTheme = {
+const mainTheme = {
     base: {
         fontFamily: '"Fira Sans", sans-serif'
     },
@@ -15,3 +15,5 @@ export const mainTheme = {
         borderWidth: "2px"
     }
 };
+
+export default mainTheme;

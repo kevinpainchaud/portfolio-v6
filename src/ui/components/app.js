@@ -2,8 +2,8 @@ import { h, Component, Fragment } from "preact";
 import { useRef } from "preact/hooks";
 import { Router } from "preact-router";
 
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "./smart/navbar";
+import Footer from "./smart/footer";
 
 import Home from "../routes/home";
 import Projects from "../routes/projects";

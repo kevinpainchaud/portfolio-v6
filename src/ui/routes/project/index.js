@@ -6,17 +6,17 @@ import projects from "../../../data/projects.json";
 import skills from "../../../data/skills.json";
 import technologies from "../../../data/technologies.json";
 
-import ProjectCover from "../../components/project-cover";
-import ProjectIntro from "../../components/project-intro";
-import ContentBlock from "../../components/content-block";
-import SkillTag from "../../components/skill-tag";
-import TechnologyBadge from "../../components/technology-badge";
-import { IconLink } from "../../components/icon-link";
+import ProjectCover from "../../components/smart/project-cover";
+import ContentBlock from "../../components/dumb/content-block";
+import SkillTag from "../../components/dumb/skill-tag";
+import TechnologyBadge from "../../components/dumb/technology-badge";
+import IconLink from "../../components/dumb/icon-link";
+import ProjectIntro from "../../components/dumb/project-intro";
+import { Button } from "../../components/styled/button";
+import ActionsGroup from "../../components/styled/actions-group";
+import SkillTags from "../../components/styled/skill-tags";
 
-import { Host } from "./style";
-import { Button } from "../../components/button/style";
-import { ActionsGroup } from "../../components/actions-group/style";
-import { SkillTags } from "../../components/skill-tags/style";
+import Host from "./style";
 
 import arrowLeft from "../../assets/images/arrow-left.svg";
 import iconExternalLink from "../../assets/images/icon-external-link.svg";

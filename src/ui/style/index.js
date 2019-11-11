@@ -1,10 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-import { fonts } from "./_fonts";
-import { base } from "./_base";
-import { typography } from "./_typography";
+import fonts from "./fonts";
+import base from "./base";
+import typography from "./typography";
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
     ${fonts}
     ${base}
     ${typography}
@@ -17,3 +17,5 @@ GlobalStyle.defaultProps = {
         }
     }
 };
+
+export default GlobalStyle;

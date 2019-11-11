@@ -5,8 +5,8 @@ import Helmet from "preact-helmet";
 
 import App from "./components/app";
 
-import { mainTheme } from "./style/themes/main";
-import { GlobalStyle } from "./style/index";
+import mainTheme from "./style/themes/main";
+import GlobalStyle from "./style/index";
 
 render(
     <ThemeProvider theme={mainTheme}>

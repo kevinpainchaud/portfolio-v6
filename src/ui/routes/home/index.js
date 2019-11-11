@@ -1,14 +1,15 @@
 import { h } from "preact";
 import { useRef, useState, useEffect } from "preact/hooks";
 
-import { Host } from "./style";
+import { Container, Row, Col } from "../../components/styled/grid";
 import {
     Jumbotron,
     JumbotronContent,
     JumbotronIllustration
-} from "../../components/jumbotron/style";
-import { Container, Row, Col } from "../../components/grid/style";
-import { ButtonPrimary } from "../../components/button/style";
+} from "../../components/styled/jumbotron";
+import { ButtonPrimary } from "../../components/styled/button";
+
+import Host from "./style";
 
 const Home = () => {
     const host = useRef(null);

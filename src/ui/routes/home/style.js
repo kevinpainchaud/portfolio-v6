@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Host = styled.div`
+const Host = styled.div`
     align-items: center;
     display: flex;
     width: 100%;
@@ -9,3 +9,5 @@ export const Host = styled.div`
         flex: 1;
     }
 `;
+
+export default Host;

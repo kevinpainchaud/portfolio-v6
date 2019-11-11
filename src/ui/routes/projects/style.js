@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-import { gutterWidth } from "../../components/grid/style";
+import { gutterWidth } from "../../components/styled/grid";
 
-export const ProjectCards = styled.div`
+const ProjectCards = styled.div`
     > * + * {
         margin-top: ${gutterWidth}px;
     }
 `;
+
+export default ProjectCards;
