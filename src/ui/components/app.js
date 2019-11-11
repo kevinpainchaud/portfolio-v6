@@ -28,18 +28,16 @@ export default class App extends Component {
         return (
             <>
                 <Navbar ref={navbarRef} />
-                <div>
-                    <Router onChange={handleRoute}>
-                        <Home path="/" />
-                        <Projects path="/projets" />
-                        <Project
-                            path="/projets/:projectSlug"
-                            navbarRef={navbarRef}
-                        />
-                        <About path="/a-propos" />
-                        <Error404 default />
-                    </Router>
-                </div>
+                <Router onChange={handleRoute}>
+                    <Home path="/" />
+                    <Projects path="/projets" />
+                    <Project
+                        path="/projets/:projectSlug"
+                        navbarRef={navbarRef}
+                    />
+                    <About path="/a-propos" />
+                    <Error404 default />
+                </Router>
                 <Footer />
             </>
         );
