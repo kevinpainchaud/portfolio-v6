@@ -4,10 +4,6 @@
         "slug": "sass"
     },
     {
-        "name": "Node.js",
-        "slug": "node-js"
-    },
-    {
         "name": "Electron",
         "slug": "electron"
     },

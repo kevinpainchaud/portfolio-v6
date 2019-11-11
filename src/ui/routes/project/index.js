@@ -8,13 +8,14 @@ import technologies from "../../../data/technologies.json";
 
 import ProjectCover from "../../components/smart/project-cover";
 import ContentBlock from "../../components/dumb/content-block";
-import TechnologyBadge from "../../components/dumb/technology-badge";
+import LogoBadge from "../../components/dumb/logo-badge";
 import IconLink from "../../components/dumb/icon-link";
 import ProjectIntro from "../../components/dumb/project-intro";
 import { Button } from "../../components/styled/button";
 import ActionsGroup from "../../components/styled/actions-group";
 import SkillTags from "../../components/styled/skill-tags";
 import SkillTag from "../../components/styled/skill-tag";
+import LogoBadges from "../../components/styled/logo-badges";
 
 import Host from "./style";
 
@@ -99,11 +100,15 @@ const Project = ({ projectSlug, navbarRef }) => {
                     noPaddingTop
                     textAlign="center"
                 >
-                    {projectTechnologies.map(technology => (
-                        <TechnologyBadge
-                            technology={technology}
-                        ></TechnologyBadge>
-                    ))}
+                    <LogoBadges>
+                        {projectTechnologies.map(technology => (
+                            <LogoBadge
+                                type="technology"
+                                slug={technology.slug}
+                                name={technology.name}
+                            ></LogoBadge>
+                        ))}
+                    </LogoBadges>
                 </ContentBlock>
             ) : null}
 

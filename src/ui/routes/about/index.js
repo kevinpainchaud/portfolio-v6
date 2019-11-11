@@ -7,8 +7,12 @@ import experience from "../../../data/experience.json";
 import education from "../../../data/education.json";
 
 import PageTitle from "../../components/dumb/page-title";
+import LogoBadge from "../../components/dumb/logo-badge";
 import Link from "../../components/smart/link";
 import { Container, Row, Col } from "../../components/styled/grid";
+import SkillTags from "../../components/styled/skill-tags";
+import SkillTag from "../../components/styled/skill-tag";
+import LogoBadges from "../../components/styled/logo-badges";
 
 const About = () => (
     <Container>
@@ -25,11 +29,11 @@ const About = () => (
                 <Col>
                     <h2>Mes compétences</h2>
 
-                    <div>
+                    <SkillTags>
                         {skills.map(skill => (
-                            <div>{skill.name}</div>
+                            <SkillTag>{skill.name}</SkillTag>
                         ))}
-                    </div>
+                    </SkillTags>
                 </Col>
             </Row>
         ) : (
@@ -41,11 +45,15 @@ const About = () => (
                     <Col>
                         <h2>Ma stack actuelle</h2>
                         {technologies.length > 0 ? (
-                            <div>
+                            <LogoBadges>
                                 {technologies.map(technology => (
-                                    <div>{technology.name}</div>
+                                    <LogoBadge
+                                        type="technology"
+                                        slug={technology.slug}
+                                        name={technology.name}
+                                    ></LogoBadge>
                                 ))}
-                            </div>
+                            </LogoBadges>
                         ) : (
                             ""
                         )}
@@ -57,11 +65,15 @@ const About = () => (
                     <Col>
                         <h2>Outils que j'❤️</h2>
                         {tools.length > 0 ? (
-                            <div>
+                            <LogoBadges>
                                 {tools.map(tool => (
-                                    <div>{tool.name}</div>
+                                    <LogoBadge
+                                        type="tool"
+                                        slug={tool.slug}
+                                        name={tool.name}
+                                    ></LogoBadge>
                                 ))}
-                            </div>
+                            </LogoBadges>
                         ) : (
                             ""
                         )}
