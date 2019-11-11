@@ -2,9 +2,10 @@ import { h } from "preact";
 
 import { Host, Header, Body, BodyInner, Title, Metas } from "./style";
 import { Container, Row, Col } from "../grid/style";
-import { Button } from "../button/style";
+import { ButtonWhiteOutline } from "../button/style";
 import { Meta } from "../meta/style";
 
+import arrowLeft from "../../assets/images/arrow-left.svg";
 import iconExternalLink from "../../assets/images/icon-external-link.svg";
 import iconCompany from "../../assets/images/icon-company.svg";
 import iconCalendar from "../../assets/images/icon-calendar.svg";
@@ -23,9 +24,16 @@ const ProjectCover = ({ name, company, date, url, topOffset }) => (
             <Header>
                 <Row>
                     <Col>
-                        <Button href="/projets" tagName="routerLink">
-                            Retour
-                        </Button>
+                        <ButtonWhiteOutline
+                            href="/projets"
+                            tagName="routerLink"
+                            xs
+                        >
+                            <svg>
+                                <use xlinkHref={`#${arrowLeft.id}`}></use>
+                            </svg>
+                            <span>Retour</span>
+                        </ButtonWhiteOutline>
                     </Col>
                 </Row>
             </Header>
@@ -52,7 +60,7 @@ const ProjectCover = ({ name, company, date, url, topOffset }) => (
                                     <div>Année : {date}</div>
                                 </Meta>
                             </Metas>
-                            <Button
+                            <ButtonWhiteOutline
                                 href={url}
                                 target="_blank"
                                 tagName="button"
@@ -64,7 +72,7 @@ const ProjectCover = ({ name, company, date, url, topOffset }) => (
                                     ></use>
                                 </svg>
                                 <span>Visiter le site</span>
-                            </Button>
+                            </ButtonWhiteOutline>
                         </BodyInner>
                     </Col>
                 </Row>
