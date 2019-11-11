@@ -14,14 +14,14 @@ export const Container = styled.div`
 `;
 
 export const Row = styled.div`
-    align-items: ${props => props.alignItems || "flex-start"};
+    align-items: ${props => props.alignItems || null};
     display: flex;
-    justify-content: ${props => props.justifyContent || "flex-start"};
+    justify-content: ${props => props.justifyContent || null};
     margin-left: -${colPadding}px;
     margin-right: -${colPadding}px;
 
     > div {
-        text-align: ${props => props.textAlign || "inherit"};
+        text-align: ${props => props.textAlign || null};
     }
 `;
 
@@ -38,4 +38,8 @@ export const Col = styled.div`
             ? ((props.colWidth / nbCols) * 100).toFixed(6) + "%"
             : "auto"};
     width: 100%;
+
+    > * {
+        min-height: ${props => (props.sameHeight ? "100%" : null)};
+    }
 `;
