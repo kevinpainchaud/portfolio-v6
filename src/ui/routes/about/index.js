@@ -8,8 +8,8 @@ import education from "../../../data/education.json";
 
 import PageTitle from "../../components/dumb/page-title";
 import ContentBlock from "../../components/dumb/content-block";
+import ContentBlockMini from "../../components/dumb/content-block-mini";
 import LogoBadge from "../../components/dumb/logo-badge";
-import Link from "../../components/smart/link";
 import { Container, Row, Col } from "../../components/styled/grid";
 import { Button, ButtonPrimary } from "../../components/styled/button";
 import SkillTags from "../../components/styled/skill-tags";
@@ -47,40 +47,52 @@ const About = () => (
                 <Row>
                     {technologies.length > 0 ? (
                         <Col>
-                            <h2>Ma stack actuelle</h2>
-                            {technologies.length > 0 ? (
-                                <LogoBadges>
-                                    {technologies.map(technology => (
-                                        <LogoBadge
-                                            type="technology"
-                                            slug={technology.slug}
-                                            name={technology.name}
-                                        ></LogoBadge>
-                                    ))}
-                                </LogoBadges>
-                            ) : (
-                                ""
-                            )}
+                            <ContentBlockMini
+                                title="Ma stack actuelle"
+                                textAlign="center"
+                                noPaddingLeft
+                                noPaddingRight
+                            >
+                                {technologies.length > 0 ? (
+                                    <LogoBadges>
+                                        {technologies.map(technology => (
+                                            <LogoBadge
+                                                type="technology"
+                                                slug={technology.slug}
+                                                name={technology.name}
+                                            ></LogoBadge>
+                                        ))}
+                                    </LogoBadges>
+                                ) : (
+                                    ""
+                                )}
+                            </ContentBlockMini>
                         </Col>
                     ) : (
                         ""
                     )}
                     {tools.length > 0 ? (
                         <Col>
-                            <h2>Outils que j'❤️</h2>
-                            {tools.length > 0 ? (
-                                <LogoBadges>
-                                    {tools.map(tool => (
-                                        <LogoBadge
-                                            type="tool"
-                                            slug={tool.slug}
-                                            name={tool.name}
-                                        ></LogoBadge>
-                                    ))}
-                                </LogoBadges>
-                            ) : (
-                                ""
-                            )}
+                            <ContentBlockMini
+                                title="Outils que j'❤️"
+                                textAlign="center"
+                                noPaddingLeft
+                                noPaddingRight
+                            >
+                                {tools.length > 0 ? (
+                                    <LogoBadges>
+                                        {tools.map(tool => (
+                                            <LogoBadge
+                                                type="tool"
+                                                slug={tool.slug}
+                                                name={tool.name}
+                                            ></LogoBadge>
+                                        ))}
+                                    </LogoBadges>
+                                ) : (
+                                    ""
+                                )}
+                            </ContentBlockMini>
                         </Col>
                     ) : (
                         ""
@@ -99,31 +111,39 @@ const About = () => (
                 >
                     <Row>
                         {experience.length > 0 ? (
-                            <Col>
-                                <h3>Mes expériences</h3>
-
-                                <div>
+                            <Col sameHeight>
+                                <ContentBlockMini
+                                    title="Mes expériences"
+                                    background
+                                    backgroundWhite
+                                    border
+                                    textAlign="center"
+                                >
                                     {experience.map(e => (
                                         <div>
                                             {e.title} - {e.companyName}
                                         </div>
                                     ))}
-                                </div>
+                                </ContentBlockMini>
                             </Col>
                         ) : (
                             ""
                         )}
                         {education.length > 0 ? (
-                            <Col>
-                                <h3>Mes formations</h3>
-
-                                <div>
+                            <Col sameHeight>
+                                <ContentBlockMini
+                                    title="Mes formations"
+                                    background
+                                    backgroundWhite
+                                    border
+                                    textAlign="center"
+                                >
                                     {education.map(e => (
                                         <div>
                                             {e.degreeName} - {e.schoolName}
                                         </div>
                                     ))}
-                                </div>
+                                </ContentBlockMini>
                             </Col>
                         ) : (
                             ""
