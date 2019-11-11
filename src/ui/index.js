@@ -33,3 +33,13 @@ render(
     document.body,
     document.body.firstElementChild
 );
+
+// Prevent conflict between preact-router & react-snap
+// After the page prerendering, remove active class from header links
+window.snapSaveState = () => {
+    const activeHeaderLinks = document.querySelector("header a.active");
+
+    if (activeHeaderLinks) {
+        activeHeaderLinks.classList.remove("active");
+    }
+};
