@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const logoWidth = 64,
+const logoWidth = 45,
     logoPadding = 15;
 
 const Host = styled.div`
