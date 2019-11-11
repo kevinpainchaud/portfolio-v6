@@ -16,6 +16,7 @@ import { IconLink } from "../../components/icon-link";
 import { Host } from "./style";
 import { Button } from "../../components/button/style";
 import { ActionsGroup } from "../../components/actions-group/style";
+import { SkillTags } from "../../components/skill-tags/style";
 
 import arrowLeft from "../../assets/images/arrow-left.svg";
 import iconExternalLink from "../../assets/images/icon-external-link.svg";
@@ -82,9 +83,11 @@ const Project = ({ projectSlug, navbarRef }) => {
                     background={true}
                     textAlign="center"
                 >
-                    {projectSkills.map(skill => (
-                        <SkillTag skill={skill}></SkillTag>
-                    ))}
+                    <SkillTags>
+                        {projectSkills.map(skill => (
+                            <SkillTag skill={skill}></SkillTag>
+                        ))}
+                    </SkillTags>
                 </ContentBlock>
             ) : null}
 
