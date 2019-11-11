@@ -12,7 +12,8 @@ export const Button = styled(Link)`
     color: ${props => props.theme.colors.primary};
     cursor: pointer;
     display: inline-flex;
-    padding: 10px 20px;
+    font-size: ${props => (props.xs ? "12px" : "14px")};
+    padding: ${props => (props.xs ? "5px 10px" : "10px 20px")};
 
     &:hover {
         background-color: ${props => darken(0.1, props.theme.colors.primary)};
@@ -25,19 +26,20 @@ export const Button = styled(Link)`
     }
 
     > svg {
-        height: ${props => (props.iconWidthXs ? "12px" : "16px")};
+        height: ${props => (props.iconWidthXs || props.xs ? "12px" : "16px")};
         left: 0;
-        min-width: ${props => (props.iconWidthXs ? "12px" : "16px")};
+        min-width: ${props =>
+            props.iconWidthXs || props.xs ? "12px" : "16px"};
         position: relative;
         top: -1px;
-        width: ${props => (props.iconWidthXs ? "12px" : "16px")};
+        width: ${props => (props.iconWidthXs || props.xs ? "12px" : "16px")};
 
         > use {
             fill: ${props => props.theme.colors.primary};
         }
 
         & + * {
-            margin-left: 10px;
+            margin-left: ${props => (props.xs ? "5px" : "10px")};
         }
     }
 `;
@@ -51,7 +53,16 @@ export const ButtonPrimary = styled(Button)`
     }
 `;
 
-[Button, ButtonPrimary].forEach(b => {
+export const ButtonWhiteOutline = styled(Button)`
+    border-color: #fff;
+    color: #fff;
+
+    > svg > use {
+        fill: #fff;
+    }
+`;
+
+[Button, ButtonPrimary, ButtonWhiteOutline].forEach(b => {
     b.defaultProps = {
         theme: {
             colors: {
