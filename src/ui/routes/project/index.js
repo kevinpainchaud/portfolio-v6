@@ -8,13 +8,13 @@ import technologies from "../../../data/technologies.json";
 
 import ProjectCover from "../../components/smart/project-cover";
 import ContentBlock from "../../components/dumb/content-block";
-import SkillTag from "../../components/dumb/skill-tag";
 import TechnologyBadge from "../../components/dumb/technology-badge";
 import IconLink from "../../components/dumb/icon-link";
 import ProjectIntro from "../../components/dumb/project-intro";
 import { Button } from "../../components/styled/button";
 import ActionsGroup from "../../components/styled/actions-group";
 import SkillTags from "../../components/styled/skill-tags";
+import SkillTag from "../../components/styled/skill-tag";
 
 import Host from "./style";
 
@@ -85,7 +85,7 @@ const Project = ({ projectSlug, navbarRef }) => {
                 >
                     <SkillTags>
                         {projectSkills.map(skill => (
-                            <SkillTag skill={skill}></SkillTag>
+                            <SkillTag>{skill.name}</SkillTag>
                         ))}
                     </SkillTags>
                 </ContentBlock>

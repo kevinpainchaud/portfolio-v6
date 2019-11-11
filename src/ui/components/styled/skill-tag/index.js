@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-const Host = styled.div`
+const SkillTag = styled.div`
     color: ${props => props.theme.colors.textColor};
     border: 1px solid ${props => props.theme.colors.textColor};
     padding: 5px 8px;
 `;
 
-Host.defaultProps = {
+SkillTag.defaultProps = {
     theme: {
         colors: {
             textColor: "gray"
@@ -14,4 +14,4 @@ Host.defaultProps = {
     }
 };
 
-export default Host;
+export default SkillTag;
