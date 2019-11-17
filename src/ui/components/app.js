@@ -5,6 +5,7 @@ import mitt from "mitt";
 
 import Navbar from "./smart/navbar";
 import Footer from "./smart/footer";
+import ContactModal from "./smart/contact-modal";
 
 import Home from "../routes/home";
 import Projects from "../routes/projects";
@@ -47,6 +48,7 @@ export default class App extends Component {
                         <Error404 default />
                     </Router>
                     <Footer />
+                    <ContactModal></ContactModal>
                 </AppContext.Provider>
             </>
         );
