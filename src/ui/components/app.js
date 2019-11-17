@@ -1,6 +1,7 @@
-import { h, Component, Fragment } from "preact";
+import { h, Component, Fragment, createContext } from "preact";
 import { useRef } from "preact/hooks";
 import { Router } from "preact-router";
+import mitt from "mitt";
 
 import Navbar from "./smart/navbar";
 import Footer from "./smart/footer";
@@ -10,6 +11,10 @@ import Projects from "../routes/projects";
 import Project from "../routes/project";
 import About from "../routes/about";
 import Error404 from "../routes/error-404";
+
+const emitter = mitt();
+
+export const AppContext = createContext({ emitter });
 
 export default class App extends Component {
     render() {
@@ -29,18 +34,20 @@ export default class App extends Component {
 
         return (
             <>
-                <Navbar ref={navbarRef} />
-                <Router onChange={handleRoute}>
-                    <Home path="/" />
-                    <Projects path="/projets" />
-                    <Project
-                        path="/projets/:projectSlug"
-                        navbarRef={navbarRef}
-                    />
-                    <About path="/a-propos" />
-                    <Error404 default />
-                </Router>
-                <Footer />
+                <AppContext.Provider value={{ emitter }}>
+                    <Navbar ref={navbarRef} />
+                    <Router onChange={handleRoute}>
+                        <Home path="/" />
+                        <Projects path="/projets" />
+                        <Project
+                            path="/projets/:projectSlug"
+                            navbarRef={navbarRef}
+                        />
+                        <About path="/a-propos" />
+                        <Error404 default />
+                    </Router>
+                    <Footer />
+                </AppContext.Provider>
             </>
         );
     }
