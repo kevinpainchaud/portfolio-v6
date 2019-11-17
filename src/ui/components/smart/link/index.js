@@ -1,11 +1,11 @@
 import { h } from "preact";
-import { route } from "preact-router";
 import { Link as RouterLink } from "preact-router/match";
 
 const Link = ({
     href,
     target,
     tagName = "a",
+    onClick,
     className,
     activeClassName,
     children
@@ -31,7 +31,7 @@ const Link = ({
         <TagName
             href={href && !virtualLink ? href : null}
             target={href && !virtualLink ? target : null}
-            onClick={handleClick}
+            onClick={onClick || handleClick}
             className={className}
             activeClassName={activeClassName}
         >
