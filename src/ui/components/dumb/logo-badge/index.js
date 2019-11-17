@@ -2,10 +2,6 @@ import { h } from "preact";
 
 import Host from "./style";
 
-/* const logoSass = require("../../../assets/images/logos/technologies/logo-sass.svg");
-
-console.log(logoSass); */
-
 const logoBadge = ({ type, slug, name }) => {
     let dirName = null,
         logoId = null;
