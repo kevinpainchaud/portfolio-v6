@@ -4,15 +4,16 @@ import { useRef, useState, useEffect } from "preact/hooks";
 import { Container, Row, Col } from "../../components/styled/grid";
 import {
     Jumbotron,
+    JumbotronInner,
     JumbotronContent,
     JumbotronIllustration
 } from "../../components/styled/jumbotron";
 import { ButtonPrimary } from "../../components/styled/button";
 
-import Host from "./style";
+import illustration from "../../assets/images/illustration.svg";
 
 const Home = () => {
-    const host = useRef(null);
+    const jumbotronInner = useRef(null);
     const [minHeight, setMinHeight] = useState(0);
 
     const updateMinHeight = () =>
@@ -20,7 +21,7 @@ const Home = () => {
             window.innerHeight -
                 (document.body.clientHeight -
                     window
-                        .getComputedStyle(host.current)
+                        .getComputedStyle(jumbotronInner.current)
                         .getPropertyValue("height")
                         .replace("px", ""))
         );
@@ -35,11 +36,21 @@ const Home = () => {
     }, []);
 
     return (
-        <Host ref={host} style={`min-height: ${minHeight}px`}>
-            <Jumbotron>
-                <Container>
-                    <Row alignItems="center">
-                        <Col>
+        <Jumbotron>
+            <Container>
+                <Row alignItems="center">
+                    <Col>
+                        <JumbotronInner
+                            ref={jumbotronInner}
+                            style={`min-height: ${minHeight}px`}
+                        >
+                            <JumbotronIllustration>
+                                <svg>
+                                    <use
+                                        xlinkHref={`#${illustration.id}`}
+                                    ></use>
+                                </svg>
+                            </JumbotronIllustration>
                             <JumbotronContent>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur
@@ -51,19 +62,11 @@ const Home = () => {
                                     Télécharger mon CV
                                 </ButtonPrimary>
                             </JumbotronContent>
-                        </Col>
-                        <Col>
-                            <JumbotronIllustration>
-                                <img
-                                    src="https://picsum.photos/800/800?grayscale"
-                                    alt=""
-                                />
-                            </JumbotronIllustration>
-                        </Col>
-                    </Row>
-                </Container>
-            </Jumbotron>
-        </Host>
+                        </JumbotronInner>
+                    </Col>
+                </Row>
+            </Container>
+        </Jumbotron>
     );
 };
 
