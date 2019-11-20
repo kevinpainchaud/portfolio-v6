@@ -6,6 +6,9 @@ import HKGroteskMedium from "../assets/fonts/hk-grotesk/hk-grotesk-medium.woff2"
 import HKGroteskSemiBold from "../assets/fonts/hk-grotesk/hk-grotesk-semi-bold.woff2";
 import HKGroteskBold from "../assets/fonts/hk-grotesk/hk-grotesk-bold.woff2";
 
+import GilroyBold from "../assets/fonts/gilroy/gilroy-bold.woff2";
+import GilroyBlack from "../assets/fonts/gilroy/gilroy-black.woff2";
+
 const fonts = css`
     // HK Grotesk
     @font-face {
@@ -35,6 +38,19 @@ const fonts = css`
     @font-face {
         font-family: "HK Grotesk";
         src: url(${HKGroteskBold}) format("woff2");
+        font-weight: 700;
+    }
+
+    // Gilroy
+    @font-face {
+        font-family: "Gilroy";
+        src: url(${GilroyBold}) format("woff2");
+        font-weight: 600;
+    }
+
+    @font-face {
+        font-family: "Gilroy";
+        src: url(${GilroyBlack}) format("woff2");
         font-weight: 700;
     }
 `;
