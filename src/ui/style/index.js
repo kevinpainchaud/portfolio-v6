@@ -15,6 +15,9 @@ GlobalStyle.defaultProps = {
         base: {
             fontFamily: "sans-serif",
             fontSize: 14
+        },
+        headings: {
+            fontFamily: "sans-serif"
         }
     }
 };

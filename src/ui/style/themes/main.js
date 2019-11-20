@@ -5,6 +5,9 @@ const mainTheme = {
         fontFamily: '"HK Grotesk", sans-serif',
         fontSize: 18
     },
+    headings: {
+        fontFamily: '"Gilroy", sans-serif'
+    },
     colors: {
         primary: "#eb6e08",
         gray300: "#e1e1e1",
