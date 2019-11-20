@@ -2,7 +2,7 @@ import { lighten } from "polished";
 
 const mainTheme = {
     base: {
-        fontFamily: '"Fira Sans", sans-serif'
+        fontFamily: "sans-serif"
     },
     colors: {
         primary: "#eb6e08",
