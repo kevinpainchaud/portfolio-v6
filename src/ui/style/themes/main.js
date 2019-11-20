@@ -15,7 +15,7 @@ const mainTheme = {
         textBase: lighten(0.15, "#000")
     },
     button: {
-        borderRadius: "20px",
+        borderRadius: "200px",
         borderWidth: "2px"
     }
 };

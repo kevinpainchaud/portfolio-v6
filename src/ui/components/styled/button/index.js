@@ -13,7 +13,7 @@ export const Button = styled(Link)`
     cursor: pointer;
     display: inline-flex;
     font-size: ${props => props.theme.base.fontSize - (props.xs ? 2 : 0)}px;
-    padding: ${props => (props.xs ? "5px 10px" : "10px 20px")};
+    padding: ${props => (props.xs ? "5px 10px" : "8px 18px")};
 
     &:hover {
         background-color: ${props => darken(0.1, props.theme.colors.primary)};
