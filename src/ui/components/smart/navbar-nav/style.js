@@ -17,7 +17,7 @@ export const Link = styled(OriginalLink)`
         props.reverseColor ? "#fff" : props.theme.colors.textBase};
 
     &.active {
-        font-weight: bold;
+        font-weight: 700;
     }
 `;
 
