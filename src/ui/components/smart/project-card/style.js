@@ -53,8 +53,9 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px;
+    font-family: ${props => props.theme.headings.fontFamily};
+    font-weight: 700;
 `;
 
 export const Description = styled.div`
@@ -66,6 +67,9 @@ export const Description = styled.div`
         theme: {
             base: {
                 fontSize: 14
+            },
+            headings: {
+                fontFamily: "sans-serif"
             },
             colors: {
                 grayBase: "gray"
