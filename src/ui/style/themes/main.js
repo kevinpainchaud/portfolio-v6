@@ -2,7 +2,7 @@ import { lighten } from "polished";
 
 const mainTheme = {
     base: {
-        fontFamily: "sans-serif"
+        fontFamily: '"HK Grotesk", sans-serif'
     },
     colors: {
         primary: "#eb6e08",
