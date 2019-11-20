@@ -12,7 +12,7 @@ export const Button = styled(Link)`
     color: ${props => props.theme.colors.primary};
     cursor: pointer;
     display: inline-flex;
-    font-size: ${props => (props.xs ? "12px" : "14px")};
+    font-size: ${props => props.theme.base.fontSize - (props.xs ? 2 : 0)}px;
     padding: ${props => (props.xs ? "5px 10px" : "10px 20px")};
 
     &:hover {
@@ -65,6 +65,9 @@ export const ButtonWhiteOutline = styled(Button)`
 [Button, ButtonPrimary, ButtonWhiteOutline].forEach(b => {
     b.defaultProps = {
         theme: {
+            base: {
+                fontSize: 14
+            },
             colors: {
                 primary: "gray"
             },

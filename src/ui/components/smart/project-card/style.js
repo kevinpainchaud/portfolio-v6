@@ -58,12 +58,15 @@ export const Title = styled.div`
 `;
 
 export const Description = styled.div`
-    font-size: 14px;
+    font-size: ${props => props.theme.base.fontSize}px;
 `;
 
 [Host, Cover, Logo].forEach(s => {
     s.defaultProps = {
         theme: {
+            base: {
+                fontSize: 14
+            },
             colors: {
                 grayBase: "gray"
             }

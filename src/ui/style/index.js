@@ -13,7 +13,8 @@ const GlobalStyle = createGlobalStyle`
 GlobalStyle.defaultProps = {
     theme: {
         base: {
-            fontFamily: "sans-serif"
+            fontFamily: "sans-serif",
+            fontSize: 14
         }
     }
 };
