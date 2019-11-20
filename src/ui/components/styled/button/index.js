@@ -6,9 +6,9 @@ import Link from "../../smart/link";
 export const Button = styled(Link)`
     align-items: center;
     background-color: transparent;
-    border: ${props => props.theme.button.borderWidth} solid transparent;
+    border: ${props => props.theme.button.borderWidth}px solid transparent;
     border-color: ${props => props.theme.colors.primary};
-    border-radius: ${props => props.theme.button.borderRadius};
+    border-radius: ${props => props.theme.button.borderRadius}px;
     color: ${props => props.theme.colors.primary};
     cursor: pointer;
     display: inline-flex;
@@ -72,8 +72,8 @@ export const ButtonWhiteOutline = styled(Button)`
                 primary: "gray"
             },
             button: {
-                borderRadius: "0px",
-                borderWidth: "1px"
+                borderRadius: 0,
+                borderWidth: 1
             }
         }
     };
