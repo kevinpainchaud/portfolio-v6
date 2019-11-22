@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 export const Host = styled.div`
     background-color: ${props =>
-        props.background ? props.theme.colors.gray300 : "transparent"};
+        props.background ? props.theme.colors.gray300 : null};
 `;
 
 export const Inner = styled.div`
     background-color: ${props =>
-        props.background ? props.theme.colors.gray300 : "transparent"};
+        props.background ? props.theme.colors.gray300 : null};
+    border-radius: ${props =>
+        props.background ? props.theme.base.borderRadius : null}px;
     padding: 50px;
     padding-bottom: ${props => (props.noPaddingBottom ? "0px" : null)};
     padding-top: ${props => (props.noPaddingTop ? "0px" : null)};
@@ -26,6 +28,9 @@ export const Content = styled.div`
 
 Inner.defaultProps = {
     theme: {
+        base: {
+            borderRadius: 4
+        },
         colors: {
             gray300: "#e1e1e1"
         }
