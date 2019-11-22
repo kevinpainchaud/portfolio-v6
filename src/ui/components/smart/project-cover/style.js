@@ -3,29 +3,18 @@ import styled from "styled-components";
 export const Host = styled.div`
     padding-bottom: 55px;
     position: relative;
+`;
 
-    &:before,
-    &:after {
-        content: "";
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
-
-    &:before {
-        background-color: ${props => props.theme.colors.gray300};
-        background-image: url(https://picsum.photos/1920/750?blur=10);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    &:after {
-        background-color: #000;
-        opacity: 0.7;
-    }
+export const BackgroundImage = styled.div`
+    background-color: ${props => props.theme.colors.grayBase};
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 `;
 
 export const Header = styled.div`
