@@ -66,6 +66,7 @@ const Project = ({ projectSlug, navbarRef }) => {
                 {/* Cover */}
                 <ProjectCover
                     name={project.name}
+                    slug={project.slug}
                     company={project.company}
                     date={project.date}
                     url={project.url}
