@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { useRef, useState, useEffect } from "preact/hooks";
 
+import PageContent from "../../components/styled/page-content";
 import { Container, Row, Col } from "../../components/styled/grid";
 import {
     Jumbotron,
@@ -36,37 +37,38 @@ const Home = () => {
     }, []);
 
     return (
-        <Jumbotron>
-            <Container>
-                <Row alignItems="center">
-                    <Col>
-                        <JumbotronInner
-                            ref={jumbotronInner}
-                            style={`min-height: ${minHeight}px`}
-                        >
-                            <JumbotronIllustration>
-                                <svg>
-                                    <use
-                                        xlinkHref={`#${illustration.id}`}
-                                    ></use>
-                                </svg>
-                            </JumbotronIllustration>
-                            <JumbotronContent>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Officia suscipit
-                                    architecto minima pariatur optio. Laudantium
-                                    nemo possimus ratione aspernatur.
-                                </p>
-                                <ButtonPrimary>
-                                    Télécharger mon CV
-                                </ButtonPrimary>
-                            </JumbotronContent>
-                        </JumbotronInner>
-                    </Col>
-                </Row>
-            </Container>
-        </Jumbotron>
+        <PageContent>
+            <Jumbotron>
+                <Container>
+                    <Row alignItems="center">
+                        <Col>
+                            <JumbotronInner
+                                ref={jumbotronInner}
+                                style={`min-height: ${minHeight}px`}
+                            >
+                                <JumbotronIllustration>
+                                    <svg>
+                                        <use
+                                            xlinkHref={`#${illustration.id}`}
+                                        ></use>
+                                    </svg>
+                                </JumbotronIllustration>
+                                <JumbotronContent>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur
+                                        adipisicing elit. Officia suscipit
+                                        architecto minima pariatur optio.
+                                        Laudantium nemo possimus ratione
+                                        aspernatur.
+                                    </p>
+                                    <ButtonPrimary>Voir mon CV</ButtonPrimary>
+                                </JumbotronContent>
+                            </JumbotronInner>
+                        </Col>
+                    </Row>
+                </Container>
+            </Jumbotron>
+        </PageContent>
     );
 };
 
