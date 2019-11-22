@@ -10,7 +10,6 @@ const Host = styled.div`
 
     > div {
         &:first-child {
-            border: 1px solid ${props => props.theme.colors.textColor};
             padding: ${logoPadding}px;
             width: ${logoWidth + logoPadding * 2}px;
 
@@ -25,6 +24,7 @@ const Host = styled.div`
 
         &:last-child {
             color: ${props => props.theme.colors.textColor};
+            font-size: 16px;
             margin-top: 10px;
         }
     }

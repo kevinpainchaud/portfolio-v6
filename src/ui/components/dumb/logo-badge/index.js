@@ -1,8 +1,10 @@
 import { h } from "preact";
 
+import Box from "../../styled/box";
+
 import Host from "./style";
 
-const logoBadge = ({ type, slug, name }) => {
+const logoBadge = ({ type, slug, name, darker }) => {
     let dirName = null,
         logoId = null;
 
@@ -19,11 +21,11 @@ const logoBadge = ({ type, slug, name }) => {
 
     return (
         <Host>
-            <div>
+            <Box darker={darker}>
                 <svg>
                     <use xlinkHref={`#${logoId}`}></use>
                 </svg>
-            </div>
+            </Box>
             <div>{name}</div>
         </Host>
     );
