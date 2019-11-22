@@ -6,6 +6,7 @@ import OriginalStyledLink from "../../styled/styled-link";
 export const Host = styled.footer`
     align-items: center;
     display: flex;
+    font-size: 14px;
     justify-content: center;
     padding: 45px 0;
 
