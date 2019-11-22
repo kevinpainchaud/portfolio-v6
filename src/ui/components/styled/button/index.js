@@ -13,6 +13,7 @@ export const Button = styled(Link)`
     cursor: pointer;
     display: inline-flex;
     font-size: ${props => props.theme.base.fontSize - (props.xs ? 2 : 0)}px;
+    font-weight: 500;
     padding: ${props => (props.xs ? "5px 10px" : "8px 18px")};
 
     &:hover {
