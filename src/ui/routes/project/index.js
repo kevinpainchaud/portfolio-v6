@@ -17,8 +17,6 @@ import SkillTags from "../../components/styled/skill-tags";
 import SkillTag from "../../components/styled/skill-tag";
 import LogoBadges from "../../components/styled/logo-badges";
 
-import Host from "./style";
-
 import arrowLeft from "../../assets/images/arrow-left.svg";
 import iconExternalLink from "../../assets/images/icon-external-link.svg";
 
