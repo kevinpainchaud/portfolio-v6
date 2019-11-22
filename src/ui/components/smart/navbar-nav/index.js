@@ -42,7 +42,7 @@ const NavbarNav = ({ reverseColor }) => {
             <Button onClick={handleContactBtnClick} tagName="span">
                 Me contacter
             </Button>
-            <ButtonPrimary>Télécharger mon CV</ButtonPrimary>
+            <ButtonPrimary>Voir mon CV</ButtonPrimary>
         </Host>
     );
 };
