@@ -4,7 +4,7 @@ const Host = styled.div`
     > a {
         color: ${props =>
             props.reverseColor ? "#fff" : props.theme.colors.textBase};
-        font-size: 22px;
+        font-size: 21px;
         font-weight: 700;
     }
 `;
