@@ -20,10 +20,10 @@ export const Cover = styled.div`
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 125px;
+    height: 155px;
 
     &.lg {
-        height: 300px;
+        height: 500px;
     }
 `;
 

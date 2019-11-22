@@ -7,30 +7,40 @@ import { Host, Cover, Body, Logo, Content, Title, Description } from "./style";
 
 import iconCalendar from "../../../assets/images/icon-calendar.svg";
 
-const ProjectCard = ({ project, width }) => (
-    <Host hoverEffect>
-        <Link href={`/projets/${project.slug}`} tagName="routerLink">
-            <Cover
-                className={width === "full" ? "lg" : ""}
-                style="background-image: url('https://picsum.photos/id/277/700/300');"
-            ></Cover>
-            <Body>
-                <Logo>
-                    <img src="https://picsum.photos/id/305/300/300" alt="" />
-                </Logo>
-                <Content>
-                    <Title>{project.name}</Title>
-                    <Description>{project.description}</Description>
-                    <Meta iconWidthXs>
-                        <svg>
-                            <use xlinkHref={`#${iconCalendar.id}`}></use>
-                        </svg>
-                        <div>Année : {project.date}</div>
-                    </Meta>
-                </Content>
-            </Body>
-        </Link>
-    </Host>
-);
+const ProjectCard = ({ name, slug, date, description, width }) => {
+    let logoImageSrc = null,
+        backgroundImageSrc = null;
+
+    try {
+        logoImageSrc = require(`../../../../statics/images/projects/logos/logo-${slug}.png`);
+        backgroundImageSrc = require(`../../../../statics/images/projects/covers/md/cover-${slug}.jpg`);
+    } catch (error) {}
+
+    return (
+        <Host hoverEffect>
+            <Link href={`/projets/${slug}`} tagName="routerLink">
+                <Cover
+                    className={width === "full" ? "lg" : ""}
+                    style={{ backgroundImage: `url(${backgroundImageSrc})` }}
+                ></Cover>
+                <Body>
+                    <Logo>
+                        <img src={logoImageSrc} alt={`Logo ${name}`} />
+                    </Logo>
+                    <Content>
+                        <Title>{name}</Title>
+                        <Description>{description}</Description>
+                        <Meta iconWidthXs>
+                            <svg>
+                                <use xlinkHref={`#${iconCalendar.id}`}></use>
+                            </svg>
+                            <div>Année : {date}</div>
+                        </Meta>
+                    </Content>
+                </Body>
+            </Link>
+        </Host>
+    );
+};
 
 export default ProjectCard;
