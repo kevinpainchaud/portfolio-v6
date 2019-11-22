@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
-const SkillTag = styled.div`
+import Box from "../box";
+
+const SkillTag = styled(Box)`
     color: ${props => props.theme.colors.textColor};
-    border: 1px solid ${props => props.theme.colors.textColor};
-    padding: 5px 8px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 16px;
 `;
 
 SkillTag.defaultProps = {
