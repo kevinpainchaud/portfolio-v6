@@ -24,16 +24,25 @@ const Projects = () => (
             <ProjectCards>
                 {projectCardsLayout.map(row => (
                     <Row>
-                        {row.map(projectSlug => (
-                            <Col>
-                                <ProjectCard
-                                    project={projects.find(
-                                        p => p.slug === projectSlug
-                                    )}
-                                    width={row.length === 1 ? "full" : "normal"}
-                                ></ProjectCard>
-                            </Col>
-                        ))}
+                        {row.map(projectSlug => {
+                            const project = projects.find(
+                                p => p.slug === projectSlug
+                            );
+
+                            return (
+                                <Col>
+                                    <ProjectCard
+                                        name={project.name}
+                                        slug={project.slug}
+                                        date={project.date}
+                                        description={project.description}
+                                        width={
+                                            row.length === 1 ? "full" : "normal"
+                                        }
+                                    ></ProjectCard>
+                                </Col>
+                            );
+                        })}
                     </Row>
                 ))}
             </ProjectCards>
