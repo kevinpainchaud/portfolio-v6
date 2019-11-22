@@ -1,11 +1,14 @@
 import styled from "styled-components";
+import { darken } from "polished";
+
+import Box from "../../styled/box";
 
 const logoWidth = 68,
     logoPadding = 15,
     bodyPadding = 25;
 
-export const Host = styled.div`
-    border: 1px solid ${props => props.theme.colors.grayBase};
+export const Host = styled(Box)`
+    overflow: hidden;
 
     > a {
         color: inherit;
@@ -28,9 +31,8 @@ export const Body = styled.div`
     padding: ${bodyPadding}px;
 `;
 
-export const Logo = styled.div`
-    background-color: #fff;
-    border: 1px solid ${props => props.theme.colors.grayBase};
+export const Logo = styled(Box)`
+    box-shadow: none;
     display: inline-block;
     margin-top: -${(logoWidth / 2 + logoPadding + bodyPadding).toFixed()}px;
     padding: ${logoPadding}px;
@@ -43,6 +45,8 @@ export const Logo = styled.div`
 `;
 
 export const Content = styled.div`
+    font-size: 16px;
+
     * + & {
         margin-top: 15px;
     }
@@ -58,20 +62,16 @@ export const Title = styled.div`
     font-weight: 700;
 `;
 
-export const Description = styled.div`
-    font-size: ${props => props.theme.base.fontSize}px;
-`;
+export const Description = styled.div``;
 
 [Host, Cover, Logo].forEach(s => {
     s.defaultProps = {
         theme: {
-            base: {
-                fontSize: 14
-            },
             headings: {
                 fontFamily: "sans-serif"
             },
             colors: {
+                gray300: "#e1e1e1",
                 grayBase: "gray"
             }
         }

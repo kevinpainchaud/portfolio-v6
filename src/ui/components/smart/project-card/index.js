@@ -8,7 +8,7 @@ import { Host, Cover, Body, Logo, Content, Title, Description } from "./style";
 import iconCalendar from "../../../assets/images/icon-calendar.svg";
 
 const ProjectCard = ({ project, width }) => (
-    <Host>
+    <Host hoverEffect>
         <Link href={`/projets/${project.slug}`} tagName="routerLink">
             <Cover
                 className={width === "full" ? "lg" : ""}
