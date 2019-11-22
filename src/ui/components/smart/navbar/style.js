@@ -6,7 +6,7 @@ const Host = styled.header`
     border-bottom: ${props =>
         props.noBorderBottom ? null : "1px solid transparent"};
     border-bottom-color: ${props =>
-        props.transparent ? "transparent" : props.theme.colors.grayBase};
+        props.transparent ? "transparent" : props.theme.colors.gray300};
     display: flex;
     padding: 45px 0;
     position: relative;
@@ -20,7 +20,7 @@ const Host = styled.header`
 Host.defaultProps = {
     theme: {
         colors: {
-            grayBase: "gray"
+            gray300: "#e1e1e1"
         }
     }
 };
