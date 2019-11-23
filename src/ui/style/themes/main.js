@@ -12,6 +12,7 @@ const mainTheme = {
     },
     colors: {
         primary: "#eb6e08",
+        gray200: "#fafafa",
         gray300: "#f2f2f2",
         grayBase: "gray",
         textBase: lighten(0.15, "#000")
