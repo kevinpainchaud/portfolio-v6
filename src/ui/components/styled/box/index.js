@@ -23,7 +23,7 @@ const Box = styled.div`
         box-shadow: ${props =>
             props.hoverEffect
                 ? `${darken(0.1, props.theme.colors.gray300)} 1px 2px
-            8px;`
+            4px;`
                 : null};
     }
 `;
@@ -31,8 +31,8 @@ const Box = styled.div`
 Box.defaultProps = {
     theme: {
         base: {
-            borderRadius: 4,
-            transitionDuration: 0.3
+            borderRadius: 0,
+            transitionDuration: 0
         },
         colors: {
             gray300: "#e1e1e1"
