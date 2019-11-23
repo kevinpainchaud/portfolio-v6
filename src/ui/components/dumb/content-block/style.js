@@ -29,7 +29,7 @@ export const Content = styled.div`
 Inner.defaultProps = {
     theme: {
         base: {
-            borderRadius: 4
+            borderRadius: 0
         },
         colors: {
             gray300: "#e1e1e1"
