@@ -32,10 +32,7 @@ const config = {
                 use: [
                     "file-loader",
                     {
-                        loader: "image-webpack-loader",
-                        options: {
-                            outputPath: "assets/images"
-                        }
+                        loader: "image-webpack-loader"
                     }
                 ]
             },
