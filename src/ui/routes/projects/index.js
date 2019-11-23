@@ -11,13 +11,13 @@ import { Container, Row, Col } from "../../components/styled/grid";
 import ProjectCards from "./style";
 
 const Projects = () => (
-    <PageContent>
+    <PageContent background>
         <Container>
             <Row>
                 <Col>
                     <PageTitle
                         title="Projets"
-                        subTitle="Lorem ipsum dolor sit amet consectetur, adipisicing"
+                        subTitle="Sélection de projets sur lesquels j'ai eu l'occasion de travailler"
                     ></PageTitle>
                 </Col>
             </Row>
@@ -34,8 +34,10 @@ const Projects = () => (
                                     <ProjectCard
                                         name={project.name}
                                         slug={project.slug}
+                                        color={project.color}
                                         date={project.date}
                                         description={project.description}
+                                        highlights={project.highlights}
                                         width={
                                             row.length === 1 ? "full" : "normal"
                                         }
