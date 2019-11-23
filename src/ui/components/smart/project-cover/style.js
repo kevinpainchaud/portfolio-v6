@@ -62,7 +62,7 @@ export const Metas = styled.div`
     }
 `;
 
-Host.defaultProps = {
+BackgroundImage.defaultProps = {
     theme: {
         colors: {
             gray300: "#e1e1e1"
