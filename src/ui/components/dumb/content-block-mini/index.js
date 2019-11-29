@@ -4,6 +4,7 @@ import { Host, Title, Content } from "./style";
 
 const ContentBlockMini = ({
     title,
+    titleTextAlign,
     background,
     backgroundWhite,
     border,
@@ -20,7 +21,7 @@ const ContentBlockMini = ({
         noPaddingRight={noPaddingRight}
         textAlign={textAlign}
     >
-        {title ? <Title>{title}</Title> : null}
+        {title ? <Title textAlign={titleTextAlign}>{title}</Title> : null}
         <Content>{children}</Content>
     </Host>
 );

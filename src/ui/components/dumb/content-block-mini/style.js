@@ -8,14 +8,17 @@ export const Host = styled.div`
                 : props.theme.colors.gray300
             : "transparent"};
     border: ${props =>
-        props.border ? `1px solid ${props.theme.colors.grayBase}` : null};
+        props.border ? `1px solid ${props.theme.colors.gray400}` : null};
+    border-radius: ${props =>
+        props.background ? props.theme.base.borderRadius : null}px;
     padding: 25px;
     padding-left: ${props => (props.noPaddingLeft ? "0px" : null)};
     padding-right: ${props => (props.noPaddingRight ? "0px" : null)};
-    text-align: ${props => (props.textAlign ? "center" : null)};
+    text-align: ${props => props.textAlign};
 `;
-export const Title = styled.h2`
+export const Title = styled.h3`
     margin: 0;
+    text-align: ${props => props.textAlign};
 `;
 
 export const Content = styled.div`
@@ -26,9 +29,12 @@ export const Content = styled.div`
 
 Host.defaultProps = {
     theme: {
+        base: {
+            borderRadius: 0
+        },
         colors: {
             gray300: "#e1e1e1",
-            grayBase: "gray"
+            gray400: "#c4c4c4"
         }
     }
 };
