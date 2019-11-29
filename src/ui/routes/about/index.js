@@ -9,6 +9,8 @@ import tools from "../../../data/tools.json";
 import experience from "../../../data/experience.json";
 import education from "../../../data/education.json";
 
+import Experience from "../../components/smart/experience";
+import Education from "../../components/smart/education";
 import PageTitle from "../../components/dumb/page-title";
 import ContentBlock from "../../components/dumb/content-block";
 import ContentBlockMini from "../../components/dumb/content-block-mini";
@@ -20,6 +22,7 @@ import SkillTags from "../../components/styled/skill-tags";
 import SkillTag from "../../components/styled/skill-tag";
 import LogoBadges from "../../components/styled/logo-badges";
 import ActionsGroup from "../../components/styled/actions-group";
+import Entities from "../../components/styled/entities";
 
 const About = () => {
     const appContext = useContext(AppContext);
@@ -123,24 +126,39 @@ const About = () => {
                     <>
                         <ContentBlock
                             title="Mon parcours"
+                            titleTextAlign="center"
                             background={true}
-                            textAlign="center"
                         >
                             <Row>
                                 {experience.length > 0 ? (
                                     <Col sameHeight>
                                         <ContentBlockMini
                                             title="Mes expériences"
+                                            titleTextAlign="center"
                                             background
                                             backgroundWhite
                                             border
-                                            textAlign="center"
                                         >
-                                            {experience.map(e => (
-                                                <div>
-                                                    {e.title} - {e.companyName}
-                                                </div>
-                                            ))}
+                                            <Entities>
+                                                {experience.map(e => (
+                                                    <Experience
+                                                        companyUrn={
+                                                            e.companyUrn
+                                                        }
+                                                        title={e.title}
+                                                        companyName={
+                                                            e.companyName
+                                                        }
+                                                        timePeriod={
+                                                            e.timePeriod
+                                                                .startDate.year
+                                                        }
+                                                        locationName={
+                                                            e.locationName
+                                                        }
+                                                    />
+                                                ))}
+                                            </Entities>
                                         </ContentBlockMini>
                                     </Col>
                                 ) : (
@@ -150,17 +168,26 @@ const About = () => {
                                     <Col sameHeight>
                                         <ContentBlockMini
                                             title="Mes formations"
+                                            titleTextAlign="center"
                                             background
                                             backgroundWhite
                                             border
-                                            textAlign="center"
                                         >
-                                            {education.map(e => (
-                                                <div>
-                                                    {e.degreeName} -{" "}
-                                                    {e.schoolName}
-                                                </div>
-                                            ))}
+                                            <Entities>
+                                                {education.map(e => (
+                                                    <Education
+                                                        schoolUrn={e.schoolUrn}
+                                                        schoolName={
+                                                            e.schoolName
+                                                        }
+                                                        diploma={`${e.degreeName}, ${e.fieldOfStudy}`}
+                                                        timePeriod={
+                                                            e.timePeriod
+                                                                .startDate.year
+                                                        }
+                                                    />
+                                                ))}
+                                            </Entities>
                                         </ContentBlockMini>
                                     </Col>
                                 ) : (
