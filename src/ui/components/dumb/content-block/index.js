@@ -6,6 +6,7 @@ import { Host, Inner, Title, Content } from "./style";
 
 const ContentBlock = ({
     title,
+    titleTextAlign,
     background,
     backgroundFullWidth,
     noPaddingBottom,
@@ -23,7 +24,9 @@ const ContentBlock = ({
                         noPaddingTop={noPaddingTop}
                         textAlign={textAlign}
                     >
-                        {title ? <Title>{title}</Title> : null}
+                        {title ? (
+                            <Title textAlign={titleTextAlign}>{title}</Title>
+                        ) : null}
                         <Content>{children}</Content>
                     </Inner>
                 </Col>
