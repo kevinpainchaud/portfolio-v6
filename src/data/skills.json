@@ -4,15 +4,23 @@
         "slug": "integration"
     },
     {
-        "name": "Tests e2e",
-        "slug": "tests-e2e"
-    },
-    {
-        "name": "Tests A/B",
-        "slug": "tests-a-b"
+        "name": "Développement front-end",
+        "slug": "dev-front-end"
     },
     {
         "name": "DevOps",
         "slug": "devops"
+    },
+    {
+        "name": "UX",
+        "slug": "ux"
+    },
+    {
+        "name": "Méthode agile",
+        "slug": "methode-agile"
+    },
+    {
+        "name": "E-commerce",
+        "slug": "e-commerce"
     }
 ]

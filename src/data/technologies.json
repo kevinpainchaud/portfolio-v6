@@ -4,11 +4,55 @@
         "slug": "sass"
     },
     {
+        "name": "JavaScript",
+        "slug": "javascript"
+    },
+    {
+        "name": "React",
+        "slug": "react"
+    },
+    {
+        "name": "Webpack",
+        "slug": "webpack"
+    },
+    {
+        "name": "Gulp",
+        "slug": "gulp"
+    },
+    {
+        "name": "Node.js",
+        "slug": "nodejs"
+    },
+    {
         "name": "Electron",
         "slug": "electron"
     },
     {
+        "name": "PHP",
+        "slug": "php"
+    },
+    {
+        "name": "WordPress",
+        "slug": "wordpress"
+    },
+    {
+        "name": "Git",
+        "slug": "git"
+    },
+    {
         "name": "GitLab CI/CD",
         "slug": "gitlab-ci-cd"
+    },
+    {
+        "name": "Docker",
+        "slug": "docker"
+    },
+    {
+        "name": "Cypress",
+        "slug": "cypress"
+    },
+    {
+        "name": "Google Optimize",
+        "slug": "google-optimize"
     }
 ]
