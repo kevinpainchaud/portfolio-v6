@@ -13,11 +13,9 @@ const Host = styled.div`
             padding: ${logoPadding}px;
             width: ${logoWidth + logoPadding * 2}px;
 
-            > svg {
+            > img {
                 display: block;
                 height: ${logoWidth}px;
-
-                min-width: ${logoWidth}px;
                 width: ${logoWidth}px;
             }
         }

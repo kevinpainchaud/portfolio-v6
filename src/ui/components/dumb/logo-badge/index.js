@@ -6,7 +6,7 @@ import Host from "./style";
 
 const logoBadge = ({ type, slug, name, darker }) => {
     let dirName = null,
-        logoId = null;
+        logo = null;
 
     if (type === "technology") {
         dirName = "technologies";
@@ -15,16 +15,13 @@ const logoBadge = ({ type, slug, name, darker }) => {
     }
 
     try {
-        logoId = require(`../../../assets/images/logos/${dirName}/logo-${slug}.svg`)
-            .default.id;
+        logo = require(`../../../../statics/images/${dirName}/logos/logo-${slug}.png`);
     } catch (error) {}
 
     return (
         <Host>
             <Box darker={darker}>
-                <svg>
-                    <use xlinkHref={`#${logoId}`}></use>
-                </svg>
+                <img src={logo} alt={`Logo ${name}`} />
             </Box>
             <div>{name}</div>
         </Host>
