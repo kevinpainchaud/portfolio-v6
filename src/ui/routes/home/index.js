@@ -46,20 +46,27 @@ const Home = () => {
                                 ref={jumbotronInner}
                                 style={`min-height: ${minHeight}px`}
                             >
-                                <JumbotronIllustration>
+                                {/* <JumbotronIllustration>
                                     <svg>
                                         <use
                                             xlinkHref={`#${illustration.id}`}
                                         ></use>
                                     </svg>
-                                </JumbotronIllustration>
+                                </JumbotronIllustration> */}
                                 <JumbotronContent>
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Officia suscipit
-                                        architecto minima pariatur optio.
-                                        Laudantium nemo possimus ratione
-                                        aspernatur.
+                                        Hello 👋,
+                                        <br />
+                                        Je suis Kévin Painchaud,{" "}
+                                        <strong>
+                                            développeur front-end
+                                        </strong> à <strong>Rennes</strong>.
+                                        Passionné par le web en général, je me
+                                        suis spécialisé dans la réalisation
+                                        d'interfaces. Je m'intéresse aussi
+                                        particulièrement à l'architecture de
+                                        l'information et plus généralement à
+                                        l'expérience utilisateur.
                                     </p>
                                     <ButtonPrimary>Voir mon CV</ButtonPrimary>
                                 </JumbotronContent>
