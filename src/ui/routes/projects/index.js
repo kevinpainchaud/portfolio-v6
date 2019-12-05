@@ -3,12 +3,11 @@ import { h } from "preact";
 import projects from "../../../data/projects.json";
 import projectCardsLayout from "../../../data/project-cards-layout.json";
 
-import ProjectCard from "../../components/smart/project-card";
 import PageTitle from "../../components/dumb/page-title";
 import PageContent from "../../components/styled/page-content";
 import { Container, Row, Col } from "../../components/styled/grid";
 
-import ProjectCards from "./style";
+import { ProjectCards, ProjectCard } from "./style";
 
 const Projects = () => (
     <PageContent background>

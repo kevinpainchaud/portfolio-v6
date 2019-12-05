@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
+import OriginalProjectCard from "../../components/smart/project-card";
 import { gutterWidth } from "../../components/styled/grid";
 
-const ProjectCards = styled.div`
+export const ProjectCards = styled.div`
     padding-bottom: 80px;
 
     > * + * {
@@ -10,4 +11,6 @@ const ProjectCards = styled.div`
     }
 `;
 
-export default ProjectCards;
+export const ProjectCard = styled(OriginalProjectCard)`
+    height: 100%;
+`;
