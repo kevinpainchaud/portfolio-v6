@@ -11,10 +11,11 @@ const mainTheme = {
         fontFamily: '"Gilroy", sans-serif'
     },
     colors: {
-        primary: "#eb6e08",
-        gray200: "#fafafa",
-        gray300: "#f2f2f2",
-        gray400: "#c4c4c4",
+        primary: "#110133",
+        secondary: "#40bfc1",
+        gray200: "#edfcfc",
+        gray300: "#e6fdfd",
+        gray400: "#cadcdc",
         grayBase: "#808080",
         textBase: lighten(0.15, "#000")
     },
