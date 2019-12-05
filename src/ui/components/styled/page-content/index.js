@@ -12,7 +12,7 @@ const fadeIn = keyframes`
 
 const PageContent = styled.div`
     background-color: ${props =>
-        props.background ? props.theme.colors.gray200 : null};
+        props.background ? props.theme.colors.gray300 : null};
     animation: ${fadeIn} 0.2s;
 `;
 
