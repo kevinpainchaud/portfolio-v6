@@ -10,11 +10,11 @@ import iconCalendar from "../../../assets/images/icon-calendar.svg";
 const ProjectCard = ({
     name,
     slug,
-    color,
     date,
     description,
     highlights,
-    width
+    width,
+    className
 }) => {
     let logoImageSrc = null,
         coverImageSrc = null;
@@ -25,7 +25,7 @@ const ProjectCard = ({
     } catch (error) {}
 
     return (
-        <Host hoverEffect>
+        <Host className={className} hoverEffect>
             <Link href={`/projets/${slug}`} tagName="routerLink">
                 <Body>
                     <Logo>
