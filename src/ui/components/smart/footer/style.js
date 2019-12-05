@@ -16,12 +16,12 @@ export const Host = styled.footer`
 `;
 
 export const StyledLink = styled(OriginalStyledLink)`
-    color: ${props => props.theme.colors.textBase};
+    color: ${props => props.theme.colors.primary};
 `;
 
 export const IconLink = styled(OriginalIconLink)`
     > a {
-        color: ${props => props.theme.colors.textBase};
+        color: ${props => props.theme.colors.primary};
     }
 `;
 
@@ -29,6 +29,7 @@ export const IconLink = styled(OriginalIconLink)`
     s.defaultProps = {
         theme: {
             colors: {
+                primary: "gray",
                 textBase: "#000"
             }
         }
