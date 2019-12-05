@@ -7,6 +7,7 @@ const typography = css`
     h4 {
         font-family: ${props => props.theme.headings.fontFamily};
         font-weight: 700;
+        color: ${props => props.theme.colors.primary};
     }
 
     h1 {
