@@ -22,6 +22,7 @@ export const Cover = styled.div`
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: none;
     position: relative;
     width: 75%;
 
@@ -40,7 +41,6 @@ export const Cover = styled.div`
 `;
 
 export const Logo = styled(Box)`
-    box-shadow: none;
     display: inline-block;
     padding: 15px;
 
@@ -69,6 +69,7 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
+    color: ${props => props.theme.colors.primary};
     font-size: 20px;
     font-family: ${props => props.theme.headings.fontFamily};
     font-weight: 700;
@@ -81,6 +82,7 @@ export const Title = styled.div`
                 fontFamily: "sans-serif"
             },
             colors: {
+                primary: "gray",
                 gray300: "#e1e1e1",
                 grayBase: "gray"
             }
