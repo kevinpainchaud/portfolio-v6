@@ -15,6 +15,18 @@ export const BackgroundImage = styled.div`
     position: absolute;
     top: 0;
     width: 100%;
+
+    &:after {
+        background-color: ${props => props.theme.colors.primary};
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        opacity: 0.8;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
 `;
 
 export const Header = styled.div`
@@ -65,6 +77,7 @@ export const Metas = styled.div`
 BackgroundImage.defaultProps = {
     theme: {
         colors: {
+            primary: "gray",
             gray300: "#e1e1e1"
         }
     }

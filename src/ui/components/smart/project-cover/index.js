@@ -1,7 +1,7 @@
 import { h } from "preact";
 
 import { Container, Row, Col } from "../../styled/grid";
-import { ButtonWhiteOutline } from "../../styled/button";
+import { ButtonSecondary, ButtonWhiteOutline } from "../../styled/button";
 import Meta from "../../styled/meta";
 
 import {
@@ -80,7 +80,7 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
                                         <div>Année : {date}</div>
                                     </Meta>
                                 </Metas>
-                                <ButtonWhiteOutline
+                                <ButtonSecondary
                                     href={url}
                                     target="_blank"
                                     tagName="button"
@@ -92,7 +92,7 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
                                         ></use>
                                     </svg>
                                     <span>Visiter le site</span>
-                                </ButtonWhiteOutline>
+                                </ButtonSecondary>
                             </BodyInner>
                         </Col>
                     </Row>
