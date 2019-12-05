@@ -3,16 +3,11 @@ import { darken } from "polished";
 
 const Box = styled.div`
     background-color: #fff;
-    border: 1px solid
-        ${props =>
-            props.darker
-                ? darken(0.1, props.theme.colors.gray300)
-                : props.theme.colors.gray300};
     border-radius: ${props => props.theme.base.borderRadius}px;
     box-shadow: ${props =>
             props.darker
-                ? darken(0.1, props.theme.colors.gray300)
-                : props.theme.colors.gray300}
+                ? darken(0.1, props.theme.colors.gray400)
+                : props.theme.colors.gray400}
         1px 2px 4px;
     transition: ${props =>
         props.hoverEffect
@@ -22,7 +17,7 @@ const Box = styled.div`
     &:hover {
         box-shadow: ${props =>
             props.hoverEffect
-                ? `${darken(0.1, props.theme.colors.gray300)} 1px 2px
+                ? `${darken(0.1, props.theme.colors.gray400)} 1px 2px
             4px;`
                 : null};
     }
@@ -35,7 +30,7 @@ Box.defaultProps = {
             transitionDuration: 0
         },
         colors: {
-            gray300: "#e1e1e1"
+            gray400: "#c4c4c4"
         }
     }
 };
