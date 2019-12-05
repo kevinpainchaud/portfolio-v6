@@ -2,9 +2,8 @@ import { h } from "preact";
 
 import links from "../../../../data/links.json";
 
+import IconLink from "../../dumb/icon-link";
 import LinksGroup from "../../dumb/links-group";
-
-import { IconLink } from "./style";
 
 import iconTwitter from "../../../assets/images/icon-twitter.svg";
 import iconLinkedIn from "../../../assets/images/icon-linkedin.svg";
