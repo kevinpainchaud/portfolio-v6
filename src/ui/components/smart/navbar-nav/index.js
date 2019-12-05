@@ -3,15 +3,27 @@ import { useContext } from "preact/hooks";
 
 import { AppContext } from "../../app";
 
-import { Button, ButtonPrimary } from "../../styled/button";
+import {
+    Button,
+    ButtonPrimary,
+    ButtonWhite,
+    ButtonSecondaryOutline,
+    ButtonWhiteOutline
+} from "../../styled/button";
 
 import { Host, Link } from "./style";
 
 const NavbarNav = ({ reverseColor }) => {
     const appContext = useContext(AppContext);
 
-    const handleContactBtnClick = () =>
+    const handleContactButtonClick = () =>
         appContext.emitter.emit("TOGGLE_CONTACT_MODAL");
+
+    const ContactButton = reverseColor
+        ? ButtonWhiteOutline
+        : ButtonSecondaryOutline;
+
+    const SeeCVButton = reverseColor ? ButtonWhite : ButtonPrimary;
 
     return (
         <Host>
@@ -39,10 +51,10 @@ const NavbarNav = ({ reverseColor }) => {
             >
                 À propos
             </Link>
-            <Button onClick={handleContactBtnClick} tagName="span">
+            <ContactButton onClick={handleContactButtonClick} tagName="span">
                 Me contacter
-            </Button>
-            <ButtonPrimary>Voir mon CV</ButtonPrimary>
+            </ContactButton>
+            <SeeCVButton>Voir mon CV</SeeCVButton>
         </Host>
     );
 };
