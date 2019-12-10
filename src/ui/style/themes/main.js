@@ -14,7 +14,7 @@ const mainTheme = {
         primary: "#110133",
         secondary: "#40bfc1",
         gray200: "#edfcfc",
-        gray300: "#e6fdfd",
+        gray300: "#edf6f6",
         gray400: "#cadcdc",
         grayBase: "#808080",
         textBase: lighten(0.15, "#000")
