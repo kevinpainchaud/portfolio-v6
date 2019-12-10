@@ -14,7 +14,9 @@ export const Button = styled(Link)`
     display: inline-flex;
     font-size: ${props => props.theme.base.fontSize - (props.xs ? 2 : 0)}px;
     font-weight: 600;
-    padding: ${props => (props.xs ? "5px 10px" : "8px 18px")};
+    line-height: 1em;
+    padding: ${props =>
+        props.xs ? "4px 10px 5px 10px" : "9px 18px 10px 18px"};
 
     &:hover {
         background-color: ${props => darken(0.1, props.theme.colors.primary)};
@@ -28,11 +30,8 @@ export const Button = styled(Link)`
 
     > svg {
         height: ${props => (props.iconWidthXs || props.xs ? "12px" : "16px")};
-        left: 0;
         min-width: ${props =>
             props.iconWidthXs || props.xs ? "12px" : "16px"};
-        position: relative;
-        top: -1px;
         width: ${props => (props.iconWidthXs || props.xs ? "12px" : "16px")};
 
         > use {
