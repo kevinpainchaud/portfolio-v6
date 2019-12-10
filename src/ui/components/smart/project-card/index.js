@@ -3,7 +3,7 @@ import { h } from "preact";
 import Link from "../link";
 import Meta from "../../styled/meta";
 
-import { Host, Body, Cover, Logo, Content, Title } from "./style";
+import { Host, Body, Logo, Content, Title } from "./style";
 
 import iconCalendar from "../../../assets/images/icon-calendar.svg";
 
@@ -16,12 +16,10 @@ const ProjectCard = ({
     width,
     className
 }) => {
-    let logoImageSrc = null,
-        coverImageSrc = null;
+    let logoImageSrc = null;
 
     try {
         logoImageSrc = require(`../../../../statics/images/projects/logos/logo-${slug}.png`);
-        coverImageSrc = require(`../../../../statics/images/projects/covers/project-card/project-card-cover-${slug}.jpg`);
     } catch (error) {}
 
     return (
@@ -47,11 +45,6 @@ const ProjectCard = ({
                         </Meta>
                     </Content>
                 </Body>
-                {width === "full" ? (
-                    <Cover
-                        style={{ backgroundImage: `url(${coverImageSrc})` }}
-                    ></Cover>
-                ) : null}
             </Link>
         </Host>
     );
