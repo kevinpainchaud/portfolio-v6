@@ -41,7 +41,7 @@ const config = {
                 loader: "svg-sprite-loader"
             },
             {
-                test: /\.woff2$/,
+                test: /\.(woff2|woff)$/,
                 use: [
                     {
                         loader: "file-loader",
