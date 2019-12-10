@@ -11,7 +11,7 @@ export const JumbotronInner = styled.div`
 `;
 
 export const JumbotronContent = styled.div`
-    width: 40%;
+    width: 55%;
     position: relative;
 
     > p {
@@ -26,15 +26,15 @@ export const JumbotronContent = styled.div`
 `;
 
 export const JumbotronIllustration = styled.div`
+    align-items: center;
+    display: flex;
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    width: 70%;
+    width: 40%;
 
-    > svg {
-        display: block;
-        height: 100%;
+    > img {
         width: 100%;
     }
 `;

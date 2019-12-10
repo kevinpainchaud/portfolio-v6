@@ -11,7 +11,7 @@ import {
 } from "../../components/styled/jumbotron";
 import { ButtonPrimary } from "../../components/styled/button";
 
-import illustration from "../../assets/images/illustration.svg";
+import me from "../../assets/images/me.png";
 
 const Home = () => {
     const jumbotronInner = useRef(null);
@@ -46,13 +46,9 @@ const Home = () => {
                                 ref={jumbotronInner}
                                 style={`min-height: ${minHeight}px`}
                             >
-                                {/* <JumbotronIllustration>
-                                    <svg>
-                                        <use
-                                            xlinkHref={`#${illustration.id}`}
-                                        ></use>
-                                    </svg>
-                                </JumbotronIllustration> */}
+                                <JumbotronIllustration>
+                                    <img src={me} alt="" />
+                                </JumbotronIllustration>
                                 <JumbotronContent>
                                     <p>
                                         Hello 👋,
@@ -61,6 +57,7 @@ const Home = () => {
                                         <strong>
                                             développeur front-end
                                         </strong> à <strong>Rennes</strong>.
+                                        <br />
                                         Passionné par le web en général, je me
                                         suis spécialisé dans la réalisation
                                         d'interfaces. Je m'intéresse aussi
