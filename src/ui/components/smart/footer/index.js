@@ -20,7 +20,7 @@ const Footer = () => (
                     </StyledLink>
                 </Col>
                 <Col>
-                    <SocialNetworks></SocialNetworks>
+                    <SocialNetworks iconLinkGray></SocialNetworks>
                 </Col>
                 <Col>
                     <LinksGroup title="Code source sur">
@@ -32,6 +32,7 @@ const Footer = () => (
                             }
                             target="_blank"
                             icon={iconGitLab}
+                            gray
                         >
                             GitLab
                         </IconLink>
