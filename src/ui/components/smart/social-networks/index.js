@@ -8,12 +8,13 @@ import LinksGroup from "../../dumb/links-group";
 import iconTwitter from "../../../assets/images/icon-twitter.svg";
 import iconLinkedIn from "../../../assets/images/icon-linkedin.svg";
 
-const SocialNetworks = () => (
+const SocialNetworks = ({ iconLinkGray }) => (
     <LinksGroup title="Me suivre sur">
         <IconLink
             href={links.find(l => l.slug === "twitter").url}
             target="_blank"
             icon={iconTwitter}
+            gray={iconLinkGray}
         >
             Twitter
         </IconLink>
@@ -21,6 +22,7 @@ const SocialNetworks = () => (
             href={links.find(l => l.slug === "linkedin").url}
             target="_blank"
             icon={iconLinkedIn}
+            gray={iconLinkGray}
         >
             LinkedIn
         </IconLink>
