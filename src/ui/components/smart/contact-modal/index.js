@@ -9,6 +9,8 @@ import SocialNetworks from "../social-networks";
 import Modal from "../../dumb/modal";
 import StyledLink from "../../styled/styled-link";
 
+import { ModalContent, Hr } from "./style";
+
 const ContactModal = () => {
     const [show, setShow] = useState(false);
 
@@ -25,12 +27,14 @@ const ContactModal = () => {
 
     return (
         <Modal show={show} setShow={show => setShow(show)} title="Me contacter">
-            Par mail :
-            <StyledLink href={`mailto:${contact.email}`}>
-                {contact.email}
-            </StyledLink>
-            <hr />
-            <SocialNetworks></SocialNetworks>
+            <ModalContent>
+                Par mail :{" "}
+                <StyledLink href={`mailto:${contact.email}`}>
+                    {contact.email}
+                </StyledLink>
+                <Hr />
+                <SocialNetworks></SocialNetworks>
+            </ModalContent>
         </Modal>
     );
 };
