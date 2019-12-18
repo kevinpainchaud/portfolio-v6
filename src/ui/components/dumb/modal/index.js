@@ -3,7 +3,9 @@ import { useState } from "preact/hooks";
 
 import "./bootstrap-modal.scss";
 
-import { Host, Header, HeaderTitle, Body } from "./style";
+import { Host, Header, HeaderTitle, HeaderBtnClose, Body } from "./style";
+
+import iconCross from "../../../assets/images/icon-cross.svg";
 
 const Modal = props => {
     const [show, setShow] =
@@ -17,7 +19,11 @@ const Modal = props => {
         <Host show={show} onHide={handleClose}>
             <Header>
                 <HeaderTitle>{props.title}</HeaderTitle>
-                <div onClick={handleClose}>X</div>
+                <HeaderBtnClose onClick={handleClose}>
+                    <svg>
+                        <use xlinkHref={`#${iconCross.id}`}></use>
+                    </svg>
+                </HeaderBtnClose>
             </Header>
             <Body>{props.children}</Body>
         </Host>
