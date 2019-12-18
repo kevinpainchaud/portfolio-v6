@@ -11,6 +11,7 @@ export const Host = styled(Modal)`
 export const Header = styled(Modal.Header)`
     &.modal-header {
         align-items: center;
+        border-bottom-color: ${props => props.theme.colors.gray400};
         display: flex;
         font-family: "Gilroy";
         font-weight: 600;
@@ -47,6 +48,7 @@ export const Body = styled(Modal.Body)``;
             },
             colors: {
                 primary: "gray",
+                gray400: "#c4c4c4",
                 grayBase: "gray"
             }
         }
