@@ -10,10 +10,11 @@ const IconLink = ({
     tagName,
     icon,
     iconWidthXs,
+    gray,
     className,
     children
 }) => (
-    <Host iconWidthXs={iconWidthXs} className={className}>
+    <Host iconWidthXs={iconWidthXs} gray={gray} className={className}>
         <svg>
             <use xlinkHref={`#${icon.id}`}></use>
         </svg>

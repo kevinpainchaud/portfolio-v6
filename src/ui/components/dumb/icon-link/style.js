@@ -10,7 +10,10 @@ const Host = styled.div`
         width: ${props => (props.iconWidthXs ? "12px" : "24px")};
 
         > use {
-            fill: ${props => props.theme.colors.grayBase};
+            fill: ${props =>
+                props.gray
+                    ? props.theme.colors.grayBase
+                    : props.theme.colors.primary};
         }
 
         & + * {
@@ -22,6 +25,7 @@ const Host = styled.div`
 Host.defaultProps = {
     theme: {
         colors: {
+            primary: "gray",
             grayBase: "gray"
         }
     }
