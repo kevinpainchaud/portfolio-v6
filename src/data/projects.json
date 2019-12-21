@@ -3,7 +3,6 @@
         "name": "MaFormation.fr",
         "slug": "maformation",
         "url": "https://www.maformation.fr",
-        "color": "#4f81f0",
         "date": "2017 - Aujourd'hui",
         "company": "HelloWork",
         "description": "1er site de formation en France",
@@ -19,7 +18,6 @@
         "name": "TOPO Revue",
         "slug": "topo-revue",
         "url": "http://www.toporevue.fr",
-        "color": "#eb1b3d",
         "date": "2016",
         "company": "Concept Image",
         "description": "Magazine d'actualité en bande dessinée pour les moins de vingt ans",
@@ -36,7 +34,6 @@
     {
         "name": "Bridor",
         "slug": "bridor",
-        "color": "#c8922b",
         "date": "2017",
         "company": "Concept Image",
         "description": "Borne de commande utilisée lors du salon SIRHA (rendez-vous mondial de la restauration et hôtellerie)",
@@ -44,6 +41,66 @@
             "Application offline",
             "Communication avec une mini-imprimante"
         ],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        }
+    },
+    {
+        "name": "Engie Home Services",
+        "slug": "engie-home-services",
+        "date": "2016",
+        "company": "Concept Image",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        }
+    },
+    {
+        "name": "Sojade",
+        "slug": "sojade",
+        "date": "2016",
+        "company": "Concept Image",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        }
+    },
+    {
+        "name": "Raphaël",
+        "slug": "raphael",
+        "date": "2016",
+        "company": "Concept Image",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        }
+    },
+    {
+        "name": "Guardian",
+        "slug": "guardian",
+        "date": "2019",
+        "company": "HelloWork",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        }
+    },
+    {
+        "name": "Carte des mises en relation HelloWork",
+        "slug": "carte-des-mises-en-relation-hellowork",
+        "date": "2018",
+        "company": "HelloWork",
+        "description": "",
+        "highlights": [],
         "presentation": {
             "title": "Nullam laoreet auctor quam ut elementum",
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
