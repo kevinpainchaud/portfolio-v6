@@ -17,6 +17,7 @@ export const Button = styled(Link)`
     line-height: 1em;
     padding: ${props =>
         props.xs ? "4px 10px 5px 10px" : "9px 18px 10px 18px"};
+    user-select: none;
 
     &:hover {
         background-color: ${props => darken(0.1, props.theme.colors.primary)};
