@@ -38,7 +38,7 @@ const Projects = () => (
                                         description={project.description}
                                         highlights={project.highlights}
                                         width={
-                                            row.length === 1 ? "full" : "normal"
+                                            row.length === 1 ? "xxl" : "default"
                                         }
                                     ></ProjectCard>
                                 </Col>
