@@ -1,7 +1,7 @@
 [
     ["maformation"],
     ["topo-revue", "bridor"],
-    ["engie-home-services", "sojade"],
-    ["raphael", "guardian"],
-    ["carte-des-mises-en-relation-hellowork"]
+    ["engie-home-services"],
+    ["raphael", "sojade"],
+    ["carte-des-mises-en-relation-hellowork", "guardian"]
 ]
