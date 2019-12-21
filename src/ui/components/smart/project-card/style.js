@@ -19,7 +19,7 @@ export const Body = styled.div`
 
 export const Logo = styled(Box)`
     display: inline-block;
-    padding: 15px;
+    padding: 10px;
 
     > img {
         display: block;
