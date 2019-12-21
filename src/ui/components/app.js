@@ -21,10 +21,29 @@ export default class App extends Component {
     render() {
         const navbarRef = useRef();
 
+        let projectsWindowScrollY = 0;
+
+        // Store the window scroll top position on the project list
+        window.addEventListener("scroll", () => {
+            if (this.currentUrl === "/projets") {
+                projectsWindowScrollY = window.scrollY;
+            }
+        });
+
         const handleRoute = e => {
             this.currentUrl = e.url;
 
-            window.scrollTo(0, 0);
+            // Restore the window scroll top position
+            // when the user back to the project list from the project index
+            if (
+                e.url === "/projets" &&
+                e.previous &&
+                e.previous.match(/^\/projets\/.*/)
+            ) {
+                setTimeout(() => window.scrollTo(0, projectsWindowScrollY));
+            } else {
+                window.scrollTo(0, 0);
+            }
 
             // We have to re-render navbar because
             // her styles can change depending on current page
