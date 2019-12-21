@@ -18,7 +18,7 @@ const Box = styled.div`
         box-shadow: ${props =>
             props.hoverEffect
                 ? `${darken(0.1, props.theme.colors.gray400)} 1px 2px
-            4px;`
+            24px;`
                 : null};
     }
 `;
