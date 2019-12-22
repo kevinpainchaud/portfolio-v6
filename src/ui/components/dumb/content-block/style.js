@@ -12,6 +12,8 @@ export const Inner = styled.div`
         props.background ? props.theme.base.borderRadius : null}px;
     padding: 50px;
     padding-bottom: ${props => (props.noPaddingBottom ? "0px" : null)};
+    padding-left: ${props => (props.noPaddingLeft ? "0px" : null)};
+    padding-right: ${props => (props.noPaddingRight ? "0px" : null)};
     padding-top: ${props => (props.noPaddingTop ? "0px" : null)};
     text-align: ${props => (props.textAlign ? "center" : null)};
 `;

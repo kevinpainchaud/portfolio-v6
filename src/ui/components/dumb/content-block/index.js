@@ -10,6 +10,8 @@ const ContentBlock = ({
     background,
     backgroundFullWidth,
     noPaddingBottom,
+    noPaddingLeft,
+    noPaddingRight,
     noPaddingTop,
     textAlign,
     children
@@ -21,6 +23,8 @@ const ContentBlock = ({
                     <Inner
                         background={background && !backgroundFullWidth}
                         noPaddingBottom={noPaddingBottom}
+                        noPaddingLeft={noPaddingLeft}
+                        noPaddingRight={noPaddingRight}
                         noPaddingTop={noPaddingTop}
                         textAlign={textAlign}
                     >
