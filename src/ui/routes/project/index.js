@@ -11,6 +11,7 @@ import ContentBlock from "../../components/dumb/content-block";
 import LogoBadge from "../../components/dumb/logo-badge";
 import IconLink from "../../components/dumb/icon-link";
 import ProjectIntro from "../../components/dumb/project-intro";
+import ProjectGallery from "../../components/smart/project-gallery";
 import PageContent from "../../components/styled/page-content";
 import { Button } from "../../components/styled/button";
 import ActionsGroup from "../../components/styled/actions-group";
@@ -74,10 +75,12 @@ const Project = ({ projectSlug, navbarRef }) => {
                 ></ProjectCover>
 
                 {/* Intro */}
-                <ProjectIntro
-                    title={project.presentation.title}
-                    content={project.presentation.content}
-                ></ProjectIntro>
+                <ContentBlock>
+                    <ProjectIntro
+                        title={project.presentation.title}
+                        content={project.presentation.content}
+                    ></ProjectIntro>
+                </ContentBlock>
 
                 {/* Skills */}
                 {projectSkills ? (
@@ -115,7 +118,17 @@ const Project = ({ projectSlug, navbarRef }) => {
                     </ContentBlock>
                 ) : null}
 
-                <ContentBlock noPaddingBottom>
+                {/* Gallery */}
+                {project.galleryLayout && project.galleryLayout.length > 0 ? (
+                    <ContentBlock noPaddingLeft noPaddingRight>
+                        <ProjectGallery
+                            slug={project.slug}
+                            layout={project.galleryLayout}
+                        ></ProjectGallery>
+                    </ContentBlock>
+                ) : null}
+
+                <ContentBlock noPaddingBottom noPaddingTop>
                     <ActionsGroup>
                         <Button href={project.url} target="_blank" iconWidthXs>
                             <svg>
