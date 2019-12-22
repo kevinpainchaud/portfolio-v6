@@ -30,7 +30,12 @@ const config = {
             {
                 test: /\.(gif|png|jpe?g)$/,
                 use: [
-                    "file-loader",
+                    {
+                        loader: "file-loader",
+                        options: {
+                            outputPath: "assets/images"
+                        }
+                    },
                     {
                         loader: "image-webpack-loader"
                     }
@@ -38,7 +43,16 @@ const config = {
             },
             {
                 test: /\.svg$/,
-                loader: "svg-sprite-loader"
+                loader: "svg-sprite-loader",
+                exclude: [/node_modules/]
+            },
+            {
+                test: /\.svg$/,
+                loader: "file-loader",
+                options: {
+                    outputPath: "assets/images"
+                },
+                include: [/node_modules/]
             },
             {
                 test: /\.(woff2|woff)$/,
@@ -50,6 +64,10 @@ const config = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"]
             },
             {
                 test: /\.scss$/,
