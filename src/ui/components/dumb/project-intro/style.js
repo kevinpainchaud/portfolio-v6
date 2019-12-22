@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Host = styled.div`
     text-align: center;
-    padding: 75px 0;
 `;
 
 export const Title = styled.h2`
