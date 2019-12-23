@@ -8,6 +8,9 @@ import App from "./components/app";
 import mainTheme from "./style/themes/main";
 import GlobalStyle from "./style/index";
 
+import faviconIco from "./assets/images/favicon.ico";
+import faviconPng from "./assets/images/favicon.png";
+
 render(
     <ThemeProvider theme={mainTheme}>
         {/* Document title */}
@@ -18,6 +21,19 @@ render(
                     name: "viewport",
                     content:
                         "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+                }
+            ]}
+            link={[
+                {
+                    rel: "shortcut icon",
+                    href: faviconIco,
+                    type: "image/x-icon"
+                },
+                {
+                    rel: "icon",
+                    href: faviconPng,
+                    type: "image/png",
+                    sizes: "128x128"
                 }
             ]}
         />
