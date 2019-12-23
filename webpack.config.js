@@ -28,7 +28,7 @@ const config = {
                 exclude: /node_modules/
             },
             {
-                test: /\.(gif|png|jpe?g)$/,
+                test: /\.(gif|png|jpe?g|ico)$/,
                 use: [
                     {
                         loader: "file-loader",
