@@ -86,7 +86,7 @@ const Project = ({ projectSlug, navbarRef }) => {
                 {projectSkills ? (
                     <ContentBlock
                         title="Compétences"
-                        background={true}
+                        background
                         textAlign="center"
                     >
                         <SkillTags>
@@ -101,7 +101,7 @@ const Project = ({ projectSlug, navbarRef }) => {
                 {projectTechnologies ? (
                     <ContentBlock
                         title="Technos"
-                        background={true}
+                        background
                         noPaddingTop
                         textAlign="center"
                     >
