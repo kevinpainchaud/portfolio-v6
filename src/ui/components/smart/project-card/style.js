@@ -120,12 +120,13 @@ export const Mockup = styled.div`
     }
 
     &.mockup--reversed {
-        max-width: 63%;
+        max-width: 58%;
 
         &.mockup-type--ipad {
             > div {
-                left: -30%;
+                left: -35%;
                 transform: scaleX(-1) translateX(${padding}px);
+                width: 128%;
 
                 > img:nth-child(2) {
                     transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg)
