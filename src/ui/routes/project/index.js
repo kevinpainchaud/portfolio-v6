@@ -130,14 +130,20 @@ const Project = ({ projectSlug, navbarRef }) => {
 
                 <ContentBlock noPaddingBottom noPaddingTop>
                     <ActionsGroup>
-                        <Button href={project.url} target="_blank" iconWidthXs>
-                            <svg>
-                                <use
-                                    xlinkHref={`#${iconExternalLink.id}`}
-                                ></use>
-                            </svg>
-                            <span>Visiter le site</span>
-                        </Button>
+                        {project.url ? (
+                            <Button
+                                href={project.url}
+                                target="_blank"
+                                iconWidthXs
+                            >
+                                <svg>
+                                    <use
+                                        xlinkHref={`#${iconExternalLink.id}`}
+                                    ></use>
+                                </svg>
+                                <span>Visiter le site</span>
+                            </Button>
+                        ) : null}
                         <IconLink
                             href="/projets"
                             tagName="routerLink"

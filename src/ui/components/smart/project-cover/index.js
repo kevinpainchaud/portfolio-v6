@@ -80,19 +80,21 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
                                         <div>Année : {date}</div>
                                     </Meta>
                                 </Metas>
-                                <ButtonSecondary
-                                    href={url}
-                                    target="_blank"
-                                    tagName="button"
-                                    iconWidthXs
-                                >
-                                    <svg>
-                                        <use
-                                            xlinkHref={`#${iconExternalLink.id}`}
-                                        ></use>
-                                    </svg>
-                                    <span>Visiter le site</span>
-                                </ButtonSecondary>
+                                {url ? (
+                                    <ButtonSecondary
+                                        href={url}
+                                        target="_blank"
+                                        tagName="button"
+                                        iconWidthXs
+                                    >
+                                        <svg>
+                                            <use
+                                                xlinkHref={`#${iconExternalLink.id}`}
+                                            ></use>
+                                        </svg>
+                                        <span>Visiter le site</span>
+                                    </ButtonSecondary>
+                                ) : null}
                             </BodyInner>
                         </Col>
                     </Row>
