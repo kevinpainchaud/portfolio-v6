@@ -69,8 +69,13 @@ const About = () => {
                                     >
                                         {technologies.length > 0 ? (
                                             <LogoBadges>
-                                                {technologies.map(
-                                                    technology => (
+                                                {technologies
+                                                    .filter(
+                                                        technology =>
+                                                            technology.currentStack ===
+                                                            true
+                                                    )
+                                                    .map(technology => (
                                                         <LogoBadge
                                                             type="technology"
                                                             slug={
@@ -80,8 +85,7 @@ const About = () => {
                                                                 technology.name
                                                             }
                                                         ></LogoBadge>
-                                                    )
-                                                )}
+                                                    ))}
                                             </LogoBadges>
                                         ) : (
                                             ""
