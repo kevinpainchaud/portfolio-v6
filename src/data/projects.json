@@ -12,10 +12,16 @@
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
         },
         "galleryLayout": [
-            ["1.jpg"],
-            ["2.jpg", "3.jpg"],
-            ["4.jpg"],
-            ["5.jpg", "6.jpg"]
+            [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
+            [
+                { "filename": "2.jpg", "width": 1920, "height": 1080 },
+                { "filename": "3.jpg", "width": 1920, "height": 1080 }
+            ],
+            [{ "filename": "4.jpg", "width": 1920, "height": 1080 }],
+            [
+                { "filename": "5.jpg", "width": 1920, "height": 1080 },
+                { "filename": "6.jpg", "width": 1920, "height": 1080 }
+            ]
         ],
         "skills": [
             "integration",
@@ -51,7 +57,13 @@
             "title": "Nullam laoreet auctor quam ut elementum",
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
         },
-        "galleryLayout": [["2.jpg", "3.jpg"], ["1.jpg"]],
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
+            [
+                { "filename": "2.jpg", "width": 1920, "height": 1080 },
+                { "filename": "3.jpg", "width": 1920, "height": 1080 }
+            ]
+        ],
         "skills": ["integration", "ux", "e-commerce"],
         "technologies": [
             "sass",
@@ -76,6 +88,18 @@
             "title": "Nullam laoreet auctor quam ut elementum",
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
         },
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1467, "height": 915 }],
+            [
+                { "filename": "2.jpg", "width": 1467, "height": 915 },
+                { "filename": "3.jpg", "width": 1467, "height": 915 }
+            ],
+            [{ "filename": "4.jpg", "width": 1467, "height": 915 }],
+            [
+                { "filename": "5.jpg", "width": 1467, "height": 915 },
+                { "filename": "6.jpg", "width": 1467, "height": 915 }
+            ]
+        ],
         "skills": ["integration", "dev-front-end", "ux"],
         "technologies": [
             "sass",

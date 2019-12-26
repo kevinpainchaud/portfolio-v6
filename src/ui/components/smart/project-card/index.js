@@ -3,9 +3,11 @@ import { h } from "preact";
 import Link from "../link";
 import Meta from "../../styled/meta";
 
-import { Host, Body, Logo, Content, Title, Mockup } from "./style";
+import { Host, Body, Inner, Logo, Content, Title, Mockup } from "./style";
 
 import iconCalendar from "../../../assets/images/icon-calendar.svg";
+import ipadMockup from "../../../assets/images/ipad-mockup.png";
+import tvMockup from "../../../assets/images/tv-mockup.png";
 
 const ProjectCard = ({
     name,
@@ -13,7 +15,9 @@ const ProjectCard = ({
     date,
     description,
     highlights,
-    width,
+    mockup,
+    mockupType,
+    reverse,
     className
 }) => {
     let logoImageSrc = null,
@@ -22,43 +26,57 @@ const ProjectCard = ({
     try {
         logoImageSrc = require(`../../../../statics/images/projects/logos/logo-${slug}.png`);
 
-        if (width === "xxl") {
+        if (mockup) {
             mockupContent = require(`../../../../statics/images/projects/mockup-contents/mockup-content-${slug}.jpg`);
         }
     } catch (error) {}
 
+    const bodyCols = [
+        <Inner>
+            <Logo>
+                <img src={logoImageSrc} alt={`Logo ${name}`} />
+            </Logo>
+            <Content>
+                <Title>{name}</Title>
+                <div>{description}</div>
+                <ul>
+                    {highlights.map(highlight => (
+                        <li>{highlight}</li>
+                    ))}
+                </ul>
+                <Meta iconWidthXs>
+                    <svg>
+                        <use xlinkHref={`#${iconCalendar.id}`}></use>
+                    </svg>
+                    <div>Année : {date}</div>
+                </Meta>
+            </Content>
+        </Inner>,
+        mockup &&
+        (mockupType === "ipad" || mockupType === "tv") &&
+        mockupContent ? (
+            <Mockup
+                class={`mockup-type--${mockupType} ${
+                    reverse ? "mockup--reversed" : ""
+                }`}
+            >
+                <div>
+                    {mockupType === "ipad" ? <img src={ipadMockup} /> : null}
+                    {mockupType === "tv" ? <img src={tvMockup} /> : null}
+                    <img src={mockupContent} />
+                </div>
+            </Mockup>
+        ) : null
+    ];
+
+    if (reverse) {
+        bodyCols.reverse();
+    }
+
     return (
-        <Host width={width} className={className} hoverEffect>
+        <Host className={className} hoverEffect>
             <Link href={`/projets/${slug}`} tagName="routerLink">
-                <Body>
-                    <div>
-                        <Logo>
-                            <img src={logoImageSrc} alt={`Logo ${name}`} />
-                        </Logo>
-                        <Content>
-                            <Title>{name}</Title>
-                            <div>{description}</div>
-                            <ul>
-                                {highlights.map(highlight => (
-                                    <li>{highlight}</li>
-                                ))}
-                            </ul>
-                            <Meta iconWidthXs>
-                                <svg>
-                                    <use
-                                        xlinkHref={`#${iconCalendar.id}`}
-                                    ></use>
-                                </svg>
-                                <div>Année : {date}</div>
-                            </Meta>
-                        </Content>
-                    </div>
-                    {width === "xxl" ? (
-                        <Mockup>
-                            <img src={mockupContent} alt="" />
-                        </Mockup>
-                    ) : null}
-                </Body>
+                <Body>{bodyCols}</Body>
             </Link>
         </Host>
     );

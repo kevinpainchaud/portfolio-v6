@@ -11,16 +11,16 @@ const ProjectGallery = ({ slug, layout = [] }) => {
             const isXxlWidth = row.length === 1,
                 item = {
                     width: isXxlWidth ? "xxl" : "default",
-                    w: 1920,
-                    h: 1080
+                    w: image.width,
+                    h: image.height
                 };
 
             let mdImageSrc = null,
                 lgImageSrc = null;
 
             try {
-                mdImageSrc = require(`../../../../statics/images/gallery/${slug}/md/${image}`);
-                lgImageSrc = require(`../../../../statics/images/gallery/${slug}/lg/${image}`);
+                mdImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/md/${image.filename}`);
+                lgImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/lg/${image.filename}`);
             } catch (error) {}
 
             if (mdImageSrc && lgImageSrc) {

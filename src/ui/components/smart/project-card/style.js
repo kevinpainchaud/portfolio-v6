@@ -2,10 +2,7 @@ import styled from "styled-components";
 
 import Box from "../../styled/box";
 
-import ipadMockup from "../../../assets/images/ipad-mockup.png";
-
-const padding = 25,
-    ipadMockupHeight = 474;
+const padding = 25;
 
 export const Host = styled(Box)`
     overflow: hidden;
@@ -22,12 +19,16 @@ export const Body = styled.div`
     flex: 1;
     padding: ${padding}px;
 
-    > div:first-child {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    > * + * {
+        margin-left: ${padding}px;
     }
+`;
+
+export const Inner = styled.div`
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 `;
 
 export const Logo = styled(Box)`
@@ -67,34 +68,72 @@ export const Title = styled.div`
 
 export const Mockup = styled.div`
     flex: 1;
-    min-height: ${ipadMockupHeight - padding}px;
     position: relative;
 
-    &:before {
-        background-image: url(${ipadMockup});
-        background-position: left top;
-        background-repeat: no-repeat;
-        content: "";
-        display: block;
-        height: calc(100% + ${padding}px);
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: calc(100% + ${padding}px);
+    &.mockup-type--ipad {
+        > div {
+            margin-left: 5%;
+            min-height: ${390 - padding * 2}px;
+            position: relative;
+            width: 120%;
+
+            > img {
+                display: block;
+                left: 0;
+                position: absolute;
+                top: 0;
+            }
+
+            > img:nth-child(1) {
+                width: 100%;
+            }
+
+            > img:nth-child(2) {
+                border-radius: 20px;
+                transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg);
+                transform-origin: 67.5% 17.5%;
+                width: 57.25%;
+            }
+        }
     }
 
-    > img {
-        border-radius: 20px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg);
-        transform-origin: 69% 18%;
-        width: 645px;
+    &.mockup-type--tv {
+        > div {
+            position: relative;
+            margin: auto;
+            max-width: 545px;
+
+            > img {
+                &:nth-child(1) {
+                    width: 100%;
+                }
+
+                &:nth-child(2) {
+                    width: 95.6%;
+                    left: 2.1%;
+                    position: absolute;
+                    top: 0.9%;
+                    height: 86%;
+                }
+            }
+        }
     }
 
-    * + & {
-        margin-left: 60px;
+    &.mockup--reversed {
+        max-width: 63%;
+
+        &.mockup-type--ipad {
+            > div {
+                left: -30%;
+                transform: scaleX(-1) translateX(${padding}px);
+
+                > img:nth-child(2) {
+                    transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg)
+                        scaleX(-1);
+                    transform-origin: 60.75% 31%;
+                }
+            }
+        }
     }
 `;
 

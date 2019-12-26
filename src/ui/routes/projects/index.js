@@ -23,9 +23,9 @@ const Projects = () => (
             <ProjectCards>
                 {projectCardsLayout.map(row => (
                     <Row>
-                        {row.map(projectSlug => {
+                        {row.map(col => {
                             const project = projects.find(
-                                p => p.slug === projectSlug
+                                p => p.slug === col.projectSlug
                             );
 
                             return (
@@ -37,9 +37,9 @@ const Projects = () => (
                                         date={project.date}
                                         description={project.description}
                                         highlights={project.highlights}
-                                        width={
-                                            row.length === 1 ? "xxl" : "default"
-                                        }
+                                        mockup={row.length === 1}
+                                        mockupType={col.mockupType}
+                                        reverse={col.reverse}
                                     ></ProjectCard>
                                 </Col>
                             );
