@@ -17,8 +17,24 @@
             ["4.jpg"],
             ["5.jpg", "6.jpg"]
         ],
-        "skills": ["integration", "tests-a-b"],
-        "technologies": ["sass", "gitlab-ci-cd"]
+        "skills": [
+            "integration",
+            "dev-front-end",
+            "ux",
+            "tests-e2e",
+            "devops",
+            "methode-agile",
+            "e-commerce"
+        ],
+        "technologies": [
+            "sass",
+            "javascript",
+            "gulp",
+            "git",
+            "gitlab-ci-cd",
+            "cypress",
+            "google-optimize"
+        ]
     },
     {
         "name": "TOPO Revue",
@@ -36,7 +52,15 @@
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
         },
         "galleryLayout": [["2.jpg", "3.jpg"], ["1.jpg"]],
-        "skills": ["devops"]
+        "skills": ["integration", "ux", "e-commerce"],
+        "technologies": [
+            "sass",
+            "javascript",
+            "gulp",
+            "php",
+            "wordpress",
+            "git"
+        ]
     },
     {
         "name": "Bridor",
@@ -51,7 +75,17 @@
         "presentation": {
             "title": "Nullam laoreet auctor quam ut elementum",
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
-        }
+        },
+        "skills": ["integration", "dev-front-end", "ux"],
+        "technologies": [
+            "sass",
+            "javascript",
+            "angular-js",
+            "gulp",
+            "nodejs",
+            "electron",
+            "git"
+        ]
     },
     {
         "name": "Engie Home Services",
@@ -63,19 +97,9 @@
         "presentation": {
             "title": "Nullam laoreet auctor quam ut elementum",
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
-        }
-    },
-    {
-        "name": "Sojade",
-        "slug": "sojade",
-        "date": "2016",
-        "company": "Concept Image",
-        "description": "",
-        "highlights": [],
-        "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
-        }
+        },
+        "skills": ["integration", "dev-front-end", "ux"],
+        "technologies": ["sass", "javascript", "angular-js", "gulp", "git"]
     },
     {
         "name": "Raphaël",
@@ -87,7 +111,46 @@
         "presentation": {
             "title": "Nullam laoreet auctor quam ut elementum",
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
-        }
+        },
+        "skills": ["integration", "dev-front-end", "ux"],
+        "technologies": ["sass", "javascript", "angular-js", "gulp", "git"]
+    },
+    {
+        "name": "Sojade",
+        "slug": "sojade",
+        "url": "http://www.sojade.fr",
+        "date": "2016",
+        "company": "Concept Image",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "skills": ["integration", "ux"],
+        "technologies": [
+            "sass",
+            "javascript",
+            "php",
+            "wordpress",
+            "gulp",
+            "git"
+        ]
+    },
+    {
+        "name": "Carte des mises en relation HelloWork",
+        "slug": "carte-des-mises-en-relation-hellowork",
+        "url": "https://ressources.regionsjob.com/hw-linking-map/tags/3.2.0/index.html",
+        "date": "2018",
+        "company": "HelloWork",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "skills": ["integration", "dev-front-end", "ux"],
+        "technologies": ["sass", "javascript", "gulp", "git"]
     },
     {
         "name": "Guardian",
@@ -99,18 +162,8 @@
         "presentation": {
             "title": "Nullam laoreet auctor quam ut elementum",
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
-        }
-    },
-    {
-        "name": "Carte des mises en relation HelloWork",
-        "slug": "carte-des-mises-en-relation-hellowork",
-        "date": "2018",
-        "company": "HelloWork",
-        "description": "",
-        "highlights": [],
-        "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
-        }
+        },
+        "skills": ["tests-e2e", "devops"],
+        "technologies": ["cypress", "nodejs", "docker", "git"]
     }
 ]

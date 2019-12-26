@@ -8,12 +8,16 @@
         "slug": "dev-front-end"
     },
     {
-        "name": "DevOps",
-        "slug": "devops"
-    },
-    {
         "name": "UX",
         "slug": "ux"
+    },
+    {
+        "name": "Tests e2e",
+        "slug": "tests-e2e"
+    },
+    {
+        "name": "DevOps",
+        "slug": "devops"
     },
     {
         "name": "Méthode agile",
