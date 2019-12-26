@@ -44,7 +44,7 @@ const Modal = forwardRef((props, ref) => {
                 <Dialog class={show ? "visible" : null}>
                     <Content>
                         <Header>
-                            <HeaderTitle>Modal header</HeaderTitle>
+                            <HeaderTitle>{props.title}</HeaderTitle>
                             <HeaderBtnClose onClick={handleClosing}>
                                 <svg>
                                     <use xlinkHref={`#${iconCross.id}`}></use>
