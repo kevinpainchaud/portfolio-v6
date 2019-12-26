@@ -1,31 +1,92 @@
 import styled from "styled-components";
-import Modal from "react-bootstrap/Modal";
 
-export const Host = styled(Modal)`
-    > .modal-content {
-        border: 0;
-        border-radius: ${props => props.theme.base.borderRadius}px;
+export const Host = styled.div``;
+
+export const Backdrop = styled.div`
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s, transform 0s;
+    transition-delay: 0s, 0.3s;
+    z-index: 1;
+
+    &.visible {
+        opacity: 0.5;
+        transform: translateY(0%);
+        transition-delay: 0s, 0s;
     }
 `;
 
-export const Header = styled(Modal.Header)`
-    &.modal-header {
-        align-items: center;
-        border-bottom-color: ${props => props.theme.colors.gray400};
-        display: flex;
-        font-family: "Gilroy";
-        font-weight: 600;
+export const Wrapper = styled.div`
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateY(-100%);
+    transition: transform 0s;
+    transition-delay: 0.3s;
+    z-index: 1;
+
+    &.visible {
+        transform: translateY(0%);
+        transition-delay: 0s;
     }
 `;
 
-export const HeaderTitle = styled(Modal.Title)`
-    color: ${props => props.theme.colors.primary};
-    text-align: center;
+export const Outside = styled.div`
+    display: ${props => (props.show ? "block" : "none")};
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
     width: 100%;
+`;
+
+export const Dialog = styled.div`
+    background-color: #fff;
+    border-radius: ${props => props.theme.base.borderRadius}px;
+    opacity: 0;
+    margin: 50px auto;
+    max-width: 500px;
+    transform: translateY(-30px);
+    transition: opacity 0.3s, transform 0.3s;
+    transition-delay: 0s, 0s;
+
+    &.visible {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+`;
+
+export const Content = styled.div``;
+
+export const Header = styled.div`
+    align-items: center;
+    border-bottom: 1px solid ${props => props.theme.colors.gray400};
+    display: flex;
+    padding: 15px;
+`;
+
+export const HeaderTitle = styled.div`
+    color: ${props => props.theme.colors.primary};
+    flex: 1;
+    font-family: "Gilroy";
+    font-weight: 600;
+    text-align: center;
 `;
 
 export const HeaderBtnClose = styled.div`
     cursor: pointer;
+    margin-left: 15px;
 
     > svg {
         height: 16px;
@@ -38,9 +99,11 @@ export const HeaderBtnClose = styled.div`
     }
 `;
 
-export const Body = styled(Modal.Body)``;
+export const Body = styled.div`
+    padding: 15px;
+`;
 
-[Host, HeaderTitle, HeaderBtnClose].forEach(s => {
+[Dialog].forEach(s => {
     s.defaultProps = {
         theme: {
             base: {

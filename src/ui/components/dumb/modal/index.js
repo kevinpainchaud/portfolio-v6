@@ -1,33 +1,62 @@
 import { h } from "preact";
-import { useState } from "preact/hooks";
+import { useState, useEffect } from "preact/hooks";
+import { forwardRef } from "preact/compat";
 
-import "./bootstrap-modal.scss";
-
-import { Host, Header, HeaderTitle, HeaderBtnClose, Body } from "./style";
+import {
+    Host,
+    Backdrop,
+    Wrapper,
+    Outside,
+    Dialog,
+    Content,
+    Header,
+    HeaderTitle,
+    HeaderBtnClose,
+    Body
+} from "./style";
 
 import iconCross from "../../../assets/images/icon-cross.svg";
 
-const Modal = props => {
-    const [show, setShow] =
-        typeof props.setShow === "function"
-            ? [props.show, props.setShow]
-            : useState(props.show);
+const Modal = forwardRef((props, ref) => {
+    const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(!show);
+    const handleOpening = () => {
+            setShow(true);
+            document.body.overflow = "hidden";
+        },
+        handleClosing = () => {
+            setShow(false);
+            document.body.overflow = "visible";
+        };
+
+    useEffect(() => {
+        ref.current.addEventListener("open", handleOpening);
+    }, []);
 
     return (
-        <Host show={show} onHide={handleClose}>
-            <Header>
-                <HeaderTitle>{props.title}</HeaderTitle>
-                <HeaderBtnClose onClick={handleClose}>
-                    <svg>
-                        <use xlinkHref={`#${iconCross.id}`}></use>
-                    </svg>
-                </HeaderBtnClose>
-            </Header>
-            <Body>{props.children}</Body>
+        <Host ref={ref}>
+            <Backdrop
+                onClick={handleClosing}
+                class={show ? "visible" : null}
+            ></Backdrop>
+            <Wrapper class={show ? "visible" : null}>
+                <Outside onClick={handleClosing} show={show}></Outside>
+                <Dialog class={show ? "visible" : null}>
+                    <Content>
+                        <Header>
+                            <HeaderTitle>Modal header</HeaderTitle>
+                            <HeaderBtnClose onClick={handleClosing}>
+                                <svg>
+                                    <use xlinkHref={`#${iconCross.id}`}></use>
+                                </svg>
+                            </HeaderBtnClose>
+                        </Header>
+                        <Body>{props.children}</Body>
+                    </Content>
+                </Dialog>
+            </Wrapper>
         </Host>
     );
-};
+});
 
 export default Modal;

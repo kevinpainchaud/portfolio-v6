@@ -1,5 +1,5 @@
-import { h } from "preact";
-import { useState, useContext, useEffect } from "preact/hooks";
+import { h, createRef } from "preact";
+import { useContext, useEffect } from "preact/hooks";
 
 import contact from "../../../../data/contact.json";
 
@@ -12,7 +12,7 @@ import StyledLink from "../../styled/styled-link";
 import { ModalContent, Hr } from "./style";
 
 const ContactModal = () => {
-    const [show, setShow] = useState(false);
+    const modalRef = createRef();
 
     useEffect(() => {
         const appContext = useContext(AppContext);
@@ -23,10 +23,10 @@ const ContactModal = () => {
             appContext.emitter.off("TOGGLE_CONTACT_MODAL", toggleModal);
     }, []);
 
-    const toggleModal = () => setShow(!show);
+    const toggleModal = () => modalRef.current.dispatchEvent(new Event("open"));
 
     return (
-        <Modal show={show} setShow={show => setShow(show)} title="Me contacter">
+        <Modal ref={modalRef} title="Me contacter">
             <ModalContent>
                 Par mail :{" "}
                 <StyledLink href={`mailto:${contact.email}`}>
