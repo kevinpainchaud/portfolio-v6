@@ -20,7 +20,7 @@ export const Host = styled.div`
 export const Logo = styled(Box)`
     padding: 10px;
 
-    > img {
+    > .img {
         display: block;
         height: 64px;
         width: 64px;

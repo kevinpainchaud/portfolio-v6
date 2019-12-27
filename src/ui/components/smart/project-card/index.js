@@ -1,5 +1,6 @@
 import { h } from "preact";
 
+import Image from "../../dumb/image";
 import Link from "../link";
 import Meta from "../../styled/meta";
 
@@ -20,11 +21,11 @@ const ProjectCard = ({
     reverse,
     className
 }) => {
-    let logoImageSrc = null,
+    let logo = null,
         mockupContent = null;
 
     try {
-        logoImageSrc = require(`../../../../statics/images/projects/logos/logo-${slug}.png`);
+        logo = require(`../../../../statics/images/projects/logos/logo-${slug}.png`);
 
         if (mockup) {
             mockupContent = require(`../../../../statics/images/projects/mockup-contents/mockup-content-${slug}.jpg`);
@@ -34,7 +35,7 @@ const ProjectCard = ({
     const bodyCols = [
         <Inner>
             <Logo>
-                <img src={logoImageSrc} alt={`Logo ${name}`} />
+                <Image src={logo} alt={`Logo ${name}`} />
             </Logo>
             <Content>
                 <Title>{name}</Title>
@@ -61,9 +62,9 @@ const ProjectCard = ({
                 }`}
             >
                 <div>
-                    {mockupType === "ipad" ? <img src={ipadMockup} /> : null}
-                    {mockupType === "tv" ? <img src={tvMockup} /> : null}
-                    <img src={mockupContent} />
+                    {mockupType === "ipad" ? <Image src={ipadMockup} /> : null}
+                    {mockupType === "tv" ? <Image src={tvMockup} /> : null}
+                    <Image src={mockupContent} />
                 </div>
             </Mockup>
         ) : null

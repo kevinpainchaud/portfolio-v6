@@ -35,7 +35,7 @@ export const Logo = styled(Box)`
     display: inline-block;
     padding: 10px;
 
-    > img {
+    > .img {
         display: block;
         height: 64px;
         width: 64px;
@@ -77,18 +77,18 @@ export const Mockup = styled.div`
             position: relative;
             width: 120%;
 
-            > img {
+            > .img {
                 display: block;
                 left: 0;
                 position: absolute;
                 top: 0;
             }
 
-            > img:nth-child(1) {
+            > .img:nth-child(1) {
                 width: 100%;
             }
 
-            > img:nth-child(2) {
+            > .img:nth-child(2) {
                 border-radius: 20px;
                 transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg);
                 transform-origin: 67.5% 17.5%;
@@ -103,7 +103,7 @@ export const Mockup = styled.div`
             margin: auto;
             max-width: 545px;
 
-            > img {
+            > .img {
                 &:nth-child(1) {
                     width: 100%;
                 }
@@ -128,7 +128,7 @@ export const Mockup = styled.div`
                 transform: scaleX(-1) translateX(${padding}px);
                 width: 128%;
 
-                > img:nth-child(2) {
+                > .img:nth-child(2) {
                     transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg)
                         scaleX(-1);
                     transform-origin: 60.75% 31%;

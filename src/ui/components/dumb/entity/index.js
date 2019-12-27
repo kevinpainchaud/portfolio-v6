@@ -1,5 +1,7 @@
 import { h } from "preact";
 
+import Image from "../../dumb/image";
+
 import { Host, Logo, Title, SubTitle, Meta } from "./style";
 
 const Entity = ({ title, subTitle, metas, logo, logoAlt }) => (
@@ -7,7 +9,7 @@ const Entity = ({ title, subTitle, metas, logo, logoAlt }) => (
         <div>
             {logo ? (
                 <Logo>
-                    <img src={logo} alt={logoAlt} />
+                    <Image src={logo} alt={logoAlt} />
                 </Logo>
             ) : null}
         </div>

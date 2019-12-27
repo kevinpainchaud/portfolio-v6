@@ -9,7 +9,6 @@ export const BackgroundImage = styled.div`
     background-color: #000;
     height: 100%;
     left: 0;
-    overflow: hidden;
     position: absolute;
     top: 0;
     width: 100%;
@@ -26,11 +25,13 @@ export const BackgroundImage = styled.div`
         width: 100%;
     }
 
-    > .lazy-load-image-background > img {
-        display: block;
-        height: 100vh;
-        width: 100vw;
-        object-fit: cover;
+    > .img {
+        height: 100%;
+        width: 100%;
+
+        img {
+            object-fit: cover;
+        }
     }
 `;
 

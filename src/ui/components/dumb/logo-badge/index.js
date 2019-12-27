@@ -1,5 +1,6 @@
 import { h } from "preact";
 
+import Image from "../../dumb/image";
 import Box from "../../styled/box";
 
 import Host from "./style";
@@ -21,7 +22,7 @@ const logoBadge = ({ type, slug, name, darker }) => {
     return (
         <Host>
             <Box darker={darker}>
-                <img src={logo} alt={`Logo ${name}`} />
+                <Image src={logo} alt={`Logo ${name}`} />
             </Box>
             <div>{name}</div>
         </Host>

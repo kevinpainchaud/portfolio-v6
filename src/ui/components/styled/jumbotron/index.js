@@ -34,7 +34,7 @@ export const JumbotronIllustration = styled.div`
     top: 0;
     width: 40%;
 
-    > img {
+    > .img {
         width: 100%;
     }
 `;

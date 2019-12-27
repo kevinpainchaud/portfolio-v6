@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { useRef, useState, useEffect } from "preact/hooks";
 
+import Image from "../../components/dumb/image";
 import PageContent from "../../components/styled/page-content";
 import { Container, Row, Col } from "../../components/styled/grid";
 import {
@@ -47,7 +48,7 @@ const Home = () => {
                                 style={`min-height: ${minHeight}px`}
                             >
                                 <JumbotronIllustration>
-                                    <img src={me} alt="" />
+                                    <Image src={me} />
                                 </JumbotronIllustration>
                                 <JumbotronContent>
                                     <p>

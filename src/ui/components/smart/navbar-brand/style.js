@@ -6,7 +6,7 @@ const Host = styled.div`
 
         display: flex;
 
-        > img {
+        > .img {
             height: 48px;
             width: 48px;
 
