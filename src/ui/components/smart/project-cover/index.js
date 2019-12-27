@@ -1,5 +1,6 @@
 import { h } from "preact";
 
+import Image from "../../dumb/image";
 import { Container, Row, Col } from "../../styled/grid";
 import { ButtonSecondary, ButtonWhiteOutline } from "../../styled/button";
 import Meta from "../../styled/meta";
@@ -33,9 +34,9 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
                 "margin-top": -topOffset + "px"
             }}
         >
-            <BackgroundImage
-                style={{ backgroundImage: `url(${backgroundImageSrc})` }}
-            ></BackgroundImage>
+            <BackgroundImage>
+                <Image src={backgroundImageSrc} />
+            </BackgroundImage>
             <Container
                 style={{
                     "padding-top": topOffset + "px"

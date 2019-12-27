@@ -6,12 +6,10 @@ export const Host = styled.div`
 `;
 
 export const BackgroundImage = styled.div`
-    background-color: ${props => props.theme.colors.grayBase};
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #000;
     height: 100%;
     left: 0;
+    overflow: hidden;
     position: absolute;
     top: 0;
     width: 100%;
@@ -26,6 +24,13 @@ export const BackgroundImage = styled.div`
         position: absolute;
         top: 0;
         width: 100%;
+    }
+
+    > .lazy-load-image-background > img {
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
     }
 `;
 
