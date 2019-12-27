@@ -89,7 +89,7 @@ export const Mockup = styled.div`
             }
 
             > .img:nth-child(2) {
-                border-radius: 20px;
+                border-radius: 3%;
                 transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg);
                 transform-origin: 67.5% 17.5%;
                 width: 57.25%;
