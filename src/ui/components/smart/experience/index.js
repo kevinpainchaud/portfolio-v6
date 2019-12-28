@@ -1,5 +1,7 @@
 import { h } from "preact";
 
+import { getHumanizedTimePeriod } from "../../../helpers/date";
+
 import Entity from "../../dumb/entity";
 
 const Experience = ({
@@ -19,7 +21,14 @@ const Experience = ({
         <Entity
             title={title}
             subTitle={companyName}
-            metas={[timePeriod, locationName]}
+            metas={[
+                getHumanizedTimePeriod(
+                    timePeriod.startDate,
+                    timePeriod.endDate,
+                    true
+                ),
+                locationName
+            ]}
             logo={logo}
             logoAlt={`Logo ${companyName}`}
         />

@@ -1,5 +1,7 @@
 import { h } from "preact";
 
+import { getHumanizedTimePeriod } from "../../../helpers/date";
+
 import Entity from "../../dumb/entity";
 
 const Education = ({ schoolUrn, schoolName, diploma, timePeriod }) => {
@@ -13,7 +15,9 @@ const Education = ({ schoolUrn, schoolName, diploma, timePeriod }) => {
         <Entity
             title={schoolName}
             subTitle={diploma}
-            metas={[timePeriod]}
+            metas={[
+                getHumanizedTimePeriod(timePeriod.startDate, timePeriod.endDate)
+            ]}
             logo={logo}
             logoAlt={`Logo ${schoolName}`}
         />

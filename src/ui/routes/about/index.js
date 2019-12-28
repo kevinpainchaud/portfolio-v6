@@ -155,7 +155,6 @@ const About = () => {
                                                         }
                                                         timePeriod={
                                                             e.timePeriod
-                                                                .startDate.year
                                                         }
                                                         locationName={
                                                             e.locationName
@@ -187,7 +186,6 @@ const About = () => {
                                                         diploma={`${e.degreeName}, ${e.fieldOfStudy}`}
                                                         timePeriod={
                                                             e.timePeriod
-                                                                .startDate.year
                                                         }
                                                     />
                                                 ))}
