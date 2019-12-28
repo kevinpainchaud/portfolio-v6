@@ -1,6 +1,6 @@
 import { h } from "preact";
 
-import { getHumanizedTimePeriod } from "../../../helpers/date";
+import { getHumanizedTimePeriod } from "../../../../helpers/date";
 
 import Entity from "../../dumb/entity";
 
