@@ -52,19 +52,16 @@ const Home = () => {
                                 </JumbotronIllustration>
                                 <JumbotronContent>
                                     <p>
-                                        Hello 👋,
+                                        Bonjour 👋,
                                         <br />
-                                        Je suis Kévin Painchaud,{" "}
+                                        Je suis{" "}
                                         <strong>
                                             développeur front-end
                                         </strong> à <strong>Rennes</strong>.
                                         <br />
-                                        Passionné par le web en général, je me
-                                        suis spécialisé dans la réalisation
-                                        d'interfaces. Je m'intéresse aussi
-                                        particulièrement à l'architecture de
-                                        l'information et plus généralement à
-                                        l'expérience utilisateur.
+                                        Après 8 années d'expérience et quelques dizaines de projets web,<br />
+                                        je travaille aujourd'hui pour le groupe HelloWork en tant que
+                                        responsable front-end sur le produit MaFormation.fr.
                                     </p>
                                     <ButtonPrimary>Voir mon CV</ButtonPrimary>
                                 </JumbotronContent>
