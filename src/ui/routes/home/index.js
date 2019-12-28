@@ -66,8 +66,10 @@ const Home = () => {
                                         projets web,
                                         <br />
                                         je travaille aujourd'hui pour le groupe
-                                        HelloWork en tant que responsable
-                                        front-end sur le produit MaFormation.fr.
+                                        HelloWork en tant que
+                                        <br />
+                                        responsable front-end sur le produit
+                                        MaFormation.fr.
                                     </p>
                                     <ButtonPrimary>Voir mon CV</ButtonPrimary>
                                 </JumbotronContent>
