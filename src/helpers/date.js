@@ -1,4 +1,17 @@
 /**
+ * Convert a time period object to a date object
+ *
+ * @param {Object} timePeriodOject
+ * @returns {date}
+ */
+const getDateFromTimePeriodObject = timePeriodOject =>
+    new Date(
+        `${timePeriodOject.year}${
+            timePeriodOject.month ? `-${timePeriodOject.month}` : ""
+        }`
+    );
+
+/**
  * Get number of months between 2 dates
  *
  * @param {date} startDate
@@ -24,7 +37,7 @@ const getHumanizedDuration = (startDate, endDate) => {
         return null;
     }
 
-    const monthsDiff = getMonthsDiff(startDate, endDate ? endDate : new Date()),
+    const monthsDiff = getMonthsDiff(startDate, endDate),
         years = Math.floor(monthsDiff / 12),
         months = Math.round((monthsDiff / 12 - years) * 12);
 
@@ -90,18 +103,8 @@ export const getHumanizedTimePeriod = (
 
     if (duration) {
         const durationStr = getHumanizedDuration(
-            new Date(
-                `${startDate.year}${
-                    startDate.month ? `-${startDate.month}` : ""
-                }`
-            ),
-            endDate
-                ? new Date(
-                      `${endDate.year}${
-                          endDate.month ? `-${endDate.month}` : ""
-                      }`
-                  )
-                : null
+            getDateFromTimePeriodObject(startDate),
+            endDate ? getDateFromTimePeriodObject(endDate) : new Date()
         );
 
         if (durationStr) {
