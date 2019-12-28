@@ -1,6 +1,8 @@
 import { h } from "preact";
 import { useRef, useState, useEffect } from "preact/hooks";
 
+import { getExperienceYears } from "../../../helpers/date";
+
 import Image from "../../components/dumb/image";
 import PageContent from "../../components/styled/page-content";
 import { Container, Row, Col } from "../../components/styled/grid";
@@ -59,9 +61,13 @@ const Home = () => {
                                             développeur front-end
                                         </strong> à <strong>Rennes</strong>.
                                         <br />
-                                        Après 8 années d'expérience et quelques dizaines de projets web,<br />
-                                        je travaille aujourd'hui pour le groupe HelloWork en tant que
-                                        responsable front-end sur le produit MaFormation.fr.
+                                        Après {getExperienceYears()} années
+                                        d'expérience et quelques dizaines de
+                                        projets web,
+                                        <br />
+                                        je travaille aujourd'hui pour le groupe
+                                        HelloWork en tant que responsable
+                                        front-end sur le produit MaFormation.fr.
                                     </p>
                                     <ButtonPrimary>Voir mon CV</ButtonPrimary>
                                 </JumbotronContent>

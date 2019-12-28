@@ -1,3 +1,5 @@
+import experience from "../data/experience.json";
+
 /**
  * Convert a time period object to a date object
  *
@@ -113,4 +115,26 @@ export const getHumanizedTimePeriod = (
     }
 
     return timePeriodStr;
+};
+
+/**
+ * Get the number of experience years
+ *
+ * @returns {number}
+ */
+export const getExperienceYears = () => {
+    let experienceYears = 0;
+
+    experience.forEach(e => {
+        const monthsDiff = getMonthsDiff(
+            getDateFromTimePeriodObject(e.timePeriod.startDate),
+            e.timePeriod.endDate
+                ? getDateFromTimePeriodObject(e.timePeriod.endDate)
+                : new Date()
+        );
+
+        experienceYears += monthsDiff / 12;
+    });
+
+    return Math.floor(experienceYears);
 };
