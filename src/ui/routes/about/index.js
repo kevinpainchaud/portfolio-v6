@@ -203,7 +203,13 @@ const About = () => {
                 )}
                 <ContentBlock noPaddingBottom>
                     <ActionsGroup>
-                        <ButtonPrimary>Voir mon CV</ButtonPrimary>
+                        <ButtonPrimary
+                            href="/cv-kevin-painchaud.pdf"
+                            target="_blank"
+                            tagName="button"
+                        >
+                            Voir mon CV
+                        </ButtonPrimary>
                         <Button onClick={handleContactBtnClick} tagName="span">
                             Me contacter
                         </Button>

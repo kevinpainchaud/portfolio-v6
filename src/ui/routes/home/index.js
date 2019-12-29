@@ -71,7 +71,12 @@ const Home = () => {
                                         responsable front-end sur le produit
                                         MaFormation.fr.
                                     </p>
-                                    <ButtonPrimary>Voir mon CV</ButtonPrimary>
+                                    <ButtonPrimary
+                                        href="/cv-kevin-painchaud.pdf"
+                                        target="_blank"
+                                    >
+                                        Voir mon CV
+                                    </ButtonPrimary>
                                 </JumbotronContent>
                             </JumbotronInner>
                         </Col>

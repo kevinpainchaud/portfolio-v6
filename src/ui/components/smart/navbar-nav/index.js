@@ -54,7 +54,13 @@ const NavbarNav = ({ reverseColor }) => {
             <ContactButton onClick={handleContactButtonClick} tagName="span">
                 Me contacter
             </ContactButton>
-            <SeeCVButton>Voir mon CV</SeeCVButton>
+            <SeeCVButton
+                href="/cv-kevin-painchaud.pdf"
+                target="_blank"
+                tagName="button"
+            >
+                Voir mon CV
+            </SeeCVButton>
         </Host>
     );
 };
