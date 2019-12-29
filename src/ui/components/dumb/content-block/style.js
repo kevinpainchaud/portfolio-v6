@@ -13,10 +13,8 @@ const getInnerBorderRadius = props => {
         !(props.noBorderRadiusBottom && props.noBorderRadiusTop)
     ) {
         if (props.noBorderRadiusBottom) {
-            console.log(1);
             borderRadius = `${props.theme.base.borderRadius}px ${props.theme.base.borderRadius}px 0 0`;
         } else if (props.noBorderRadiusTop) {
-            console.log(2);
             borderRadius = `0 0 ${props.theme.base.borderRadius}px ${props.theme.base.borderRadius}px`;
         } else {
             borderRadius = `${props.theme.base.borderRadius}px`;
