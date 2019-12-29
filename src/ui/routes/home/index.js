@@ -10,7 +10,7 @@ import {
     Jumbotron,
     JumbotronInner,
     JumbotronContent,
-    JumbotronIllustration
+    JumbotronImage
 } from "../../components/styled/jumbotron";
 import { ButtonPrimary } from "../../components/styled/button";
 
@@ -49,9 +49,6 @@ const Home = () => {
                                 ref={jumbotronInner}
                                 style={`min-height: ${minHeight}px`}
                             >
-                                <JumbotronIllustration>
-                                    <Image src={me} />
-                                </JumbotronIllustration>
                                 <JumbotronContent>
                                     <p>
                                         Bonjour 👋,
@@ -78,6 +75,9 @@ const Home = () => {
                                         Voir mon CV
                                     </ButtonPrimary>
                                 </JumbotronContent>
+                                <JumbotronImage>
+                                    <Image src={me} />
+                                </JumbotronImage>
                             </JumbotronInner>
                         </Col>
                     </Row>
