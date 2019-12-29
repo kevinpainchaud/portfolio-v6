@@ -2,6 +2,7 @@ import { h, Component, Fragment, createContext } from "preact";
 import { useRef } from "preact/hooks";
 import { Router } from "preact-router";
 import mitt from "mitt";
+import { subscribe } from "subscribe-ui-event";
 
 import Navbar from "./smart/navbar";
 import Footer from "./smart/footer";
@@ -24,7 +25,7 @@ export default class App extends Component {
         let projectsWindowScrollY = 0;
 
         // Store the window scroll top position on the project list
-        window.addEventListener("scroll", () => {
+        subscribe("scroll", () => {
             if (this.currentUrl === "/projets") {
                 projectsWindowScrollY = window.scrollY;
             }
