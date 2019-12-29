@@ -1,6 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-const Host = styled.header`
+import { after } from "../../../style/mixins/media-queries";
+
+export const Host = styled.header`
     align-items: center;
     background-color: ${props => (props.transparent ? "transparent" : "#fff")};
     border-bottom: ${props =>
@@ -8,13 +10,16 @@ const Host = styled.header`
     border-bottom-color: ${props =>
         props.transparent ? "transparent" : props.theme.colors.gray300};
     display: flex;
-    padding: 45px 0;
+    padding: 15px 0;
     position: relative;
     z-index: 1;
 
-    > * + * {
-        margin-left: 15px;
-    }
+    ${after(
+        "sm",
+        css`
+            padding: 45px 0;
+        `
+    )}
 `;
 
 Host.defaultProps = {

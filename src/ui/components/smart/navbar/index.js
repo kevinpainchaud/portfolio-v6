@@ -7,7 +7,7 @@ import NavbarBrand from "../navbar-brand";
 import NavbarNav from "../navbar-nav";
 import { Container, Row, Col } from "../../styled/grid";
 
-import Host from "./style";
+import { Host } from "./style";
 
 const Navbar = () => {
     const isHomePage = /^\/$/.test(getCurrentUrl()),
@@ -22,7 +22,7 @@ const Navbar = () => {
                     <Col colWidth="3">
                         <NavbarBrand reverseColor={isProjectPage} />
                     </Col>
-                    <Col colWidth="9">
+                    <Col colWidth="9" class="hidden-xs">
                         <NavbarNav reverseColor={isProjectPage} />
                     </Col>
                 </Row>

@@ -1,14 +1,38 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { before, after } from "../../../style/mixins/media-queries";
 
 export const Jumbotron = styled.div`
-    align-items: center;
     display: flex;
-    height: 100%;
-    padding: 45px 0;
+    flex-direction: column;
+    padding: 15px 0;
+
+    ${after(
+        "sm",
+        css`
+            align-items: center;
+            flex-direction: row;
+            height: 100%;
+            padding: 45px 0;
+        `
+    )}
 `;
 
 export const JumbotronContent = styled.div`
-    width: 55%;
+    ${before(
+        "sm",
+        css`
+            margin-top: 10px;
+            order: 2;
+        `
+    )}
+
+    ${after(
+        "sm",
+        css`
+            width: 55%;
+        `
+    )}
 
     > p {
         font-size: 18px;
@@ -22,6 +46,28 @@ export const JumbotronContent = styled.div`
 `;
 
 export const JumbotronImage = styled.div`
-    margin-left: 35px;
-    width: 40%;
+    ${before(
+        "sm",
+        css`
+            margin: 0 auto;
+            order: 1;
+        `
+    )}
+
+    ${after(
+        "sm",
+        css`
+            margin-left: 35px;
+            width: 40%;
+        `
+    )}
+
+    > .img {
+        ${before(
+            "sm",
+            css`
+                max-width: 250px;
+            `
+        )}
+    }
 `;

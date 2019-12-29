@@ -1,18 +1,20 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { after } from "../../../style/mixins/media-queries";
 
 import OriginalIconLink from "../../dumb/icon-link";
 import OriginalStyledLink from "../../styled/styled-link";
 
 export const Host = styled.footer`
-    align-items: center;
-    display: flex;
     font-size: 14px;
-    justify-content: center;
-    padding: 45px 0;
+    padding: 15px 0;
 
-    > * + * {
-        margin-left: 45px;
-    }
+    ${after(
+        "sm",
+        css`
+            padding: 45px 0;
+        `
+    )}
 `;
 
 export const StyledLink = styled(OriginalStyledLink)`
