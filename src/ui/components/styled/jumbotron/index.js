@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Jumbotron = styled.div``;
-
-export const JumbotronInner = styled.div`
+export const Jumbotron = styled.div`
     align-items: center;
     display: flex;
     height: 100%;
