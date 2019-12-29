@@ -10,7 +10,6 @@ import GlobalStyle from "./style/index";
 
 import faviconIco from "./assets/images/favicon.ico";
 import faviconPng from "./assets/images/favicon.png";
-import ogImage from "./assets/images/og-image.jpg";
 
 render(
     <ThemeProvider theme={mainTheme}>
@@ -25,7 +24,8 @@ render(
                 },
                 {
                     property: "og:image",
-                    content: `https://www.kevinpainchaud.fr${ogImage}`
+                    content:
+                        "https://www.kevinpainchaud.fr/assets/images/og-image.jpg"
                 }
             ]}
             link={[

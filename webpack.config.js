@@ -1,6 +1,7 @@
 const path = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const config = {
     entry: "./src/ui/index.js",
@@ -75,7 +76,20 @@ const config = {
             }
         ]
     },
-    plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin()]
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin(),
+        new CopyPlugin([
+            {
+                from: "./src/statics/documents/cv-kevin-painchaud.pdf",
+                to: "."
+            },
+            {
+                from: "./src/statics/images/og-image.jpg",
+                to: "assets/images"
+            }
+        ])
+    ]
 };
 
 module.exports = config;
