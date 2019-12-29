@@ -89,6 +89,7 @@ const Project = ({ projectSlug, navbarRef }) => {
                     <ContentBlock
                         title="Compétences"
                         background
+                        noBorderRadiusBottom={projectTechnologies}
                         textAlign="center"
                     >
                         <SkillTags>
@@ -104,6 +105,7 @@ const Project = ({ projectSlug, navbarRef }) => {
                     <ContentBlock
                         title="Technos"
                         background
+                        noBorderRadiusTop={projectSkills}
                         noPaddingTop
                         textAlign="center"
                     >

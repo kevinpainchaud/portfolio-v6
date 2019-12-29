@@ -9,6 +9,8 @@ const ContentBlock = ({
     titleTextAlign,
     background,
     backgroundFullWidth,
+    noBorderRadiusBottom,
+    noBorderRadiusTop,
     noPaddingBottom,
     noPaddingLeft,
     noPaddingRight,
@@ -22,6 +24,8 @@ const ContentBlock = ({
                 <Col>
                     <Inner
                         background={background && !backgroundFullWidth}
+                        noBorderRadiusBottom={noBorderRadiusBottom}
+                        noBorderRadiusTop={noBorderRadiusTop}
                         noPaddingBottom={noPaddingBottom}
                         noPaddingLeft={noPaddingLeft}
                         noPaddingRight={noPaddingRight}
