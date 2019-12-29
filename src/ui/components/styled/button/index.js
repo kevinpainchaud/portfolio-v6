@@ -1,5 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { darken } from "polished";
+
+import { after } from "../../../style/mixins/media-queries";
 
 import Link from "../../smart/link";
 
@@ -12,12 +14,19 @@ export const Button = styled(Link)`
     color: ${props => props.theme.colors.primary};
     cursor: pointer;
     display: inline-flex;
-    font-size: ${props => props.theme.base.fontSize - (props.xs ? 2 : 0)}px;
+    font-size: ${props => (props.xs ? 14 : 16)}px;
     font-weight: 600;
     line-height: 1em;
     padding: ${props =>
         props.xs ? "4px 10px 5px 10px" : "9px 18px 10px 18px"};
     user-select: none;
+
+    ${after(
+        "sm",
+        css`
+            font-size: ${props => (props.xs ? 16 : 18)}px;
+        `
+    )}
 
     &:hover {
         background-color: ${props => darken(0.1, props.theme.colors.primary)};
@@ -107,9 +116,6 @@ export const ButtonWhiteOutline = styled(Button)`
 ].forEach(b => {
     b.defaultProps = {
         theme: {
-            base: {
-                fontSize: 14
-            },
             colors: {
                 primary: "gray"
             },

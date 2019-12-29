@@ -1,8 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { after } from "../../../style/mixins/media-queries";
 
 import Box from "../../styled/box";
 
-const padding = 25;
+const paddingXs = 15,
+    paddingSm = 25;
 
 export const Host = styled(Box)`
     overflow: hidden;
@@ -17,10 +20,22 @@ export const Host = styled(Box)`
 export const Body = styled.div`
     display: flex;
     flex: 1;
-    padding: ${padding}px;
+    padding: ${paddingXs}px;
+
+    ${after(
+        "sm",
+        css`
+            padding: ${paddingSm}px;
+        `
+    )}
 
     > * + * {
-        margin-left: ${padding}px;
+        ${after(
+            "sm",
+            css`
+                margin-left: ${paddingSm}px;
+            `
+        )}
     }
 `;
 
@@ -37,13 +52,28 @@ export const Logo = styled(Box)`
 
     > .img {
         display: block;
-        height: 64px;
-        width: 64px;
+        height: 48px;
+        width: 48px;
+
+        ${after(
+            "sm",
+            css`
+                height: 64px;
+                width: 64px;
+            `
+        )}
     }
 `;
 
 export const Content = styled.div`
-    font-size: 16px;
+    font-size: 14px;
+
+    ${after(
+        "sm",
+        css`
+            font-size: 16px;
+        `
+    )}
 
     * + & {
         margin-top: 15px;
@@ -61,9 +91,16 @@ export const Content = styled.div`
 
 export const Title = styled.div`
     color: ${props => props.theme.colors.primary};
-    font-size: 20px;
+    font-size: 16px;
     font-family: ${props => props.theme.headings.fontFamily};
     font-weight: 700;
+
+    ${after(
+        "sm",
+        css`
+            font-size: 20px;
+        `
+    )}
 `;
 
 export const Mockup = styled.div`
@@ -73,7 +110,7 @@ export const Mockup = styled.div`
     &.mockup-type--ipad {
         > div {
             margin-left: 5%;
-            min-height: ${390 - padding * 2}px;
+            min-height: ${390 - paddingSm * 2}px;
             position: relative;
             width: 120%;
 
@@ -125,7 +162,7 @@ export const Mockup = styled.div`
         &.mockup-type--ipad {
             > div {
                 left: -35%;
-                transform: scaleX(-1) translateX(${padding}px);
+                transform: scaleX(-1) translateX(${paddingSm}px);
                 width: 128%;
 
                 > .img:nth-child(2) {

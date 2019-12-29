@@ -36,7 +36,7 @@ export const Row = styled.div`
         ${before(
             "sm",
             css`
-                margin-top: 15px;
+                margin-top: ${gutterWidth / 2}px;
             `
         )}
     }

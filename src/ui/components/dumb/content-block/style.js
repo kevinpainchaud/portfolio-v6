@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { after } from "../../../style/mixins/media-queries";
 
 export const Host = styled.div`
     background-color: ${props =>
@@ -28,12 +30,20 @@ export const Inner = styled.div`
     background-color: ${props =>
         props.background ? props.theme.colors.gray300 : null};
     border-radius: ${props => getInnerBorderRadius(props)};
-    padding: 50px;
-    padding-bottom: ${props => (props.noPaddingBottom ? "0px" : null)};
-    padding-left: ${props => (props.noPaddingLeft ? "0px" : null)};
-    padding-right: ${props => (props.noPaddingRight ? "0px" : null)};
-    padding-top: ${props => (props.noPaddingTop ? "0px" : null)};
+    padding: 25px 15px;
+    padding-bottom: ${props =>
+        props.noPaddingBottom ? "0px !important" : null};
+    padding-left: ${props => (props.noPaddingLeft ? "0px !important" : null)};
+    padding-right: ${props => (props.noPaddingRight ? "0px !important" : null)};
+    padding-top: ${props => (props.noPaddingTop ? "0px !important" : null)};
     text-align: ${props => (props.textAlign ? "center" : null)};
+
+    ${after(
+        "sm",
+        css`
+            padding: 50px;
+        `
+    )}
 `;
 
 export const Title = styled.h2`
@@ -43,7 +53,14 @@ export const Title = styled.h2`
 
 export const Content = styled.div`
     * + & {
-        margin-top: 50px;
+        margin-top: 20px;
+
+        ${after(
+            "sm",
+            css`
+                margin-top: 50px;
+            `
+        )}
     }
 `;
 

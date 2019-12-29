@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { after } from "../../../style/mixins/media-queries";
 
 import Box from "../../styled/box";
 
@@ -8,7 +10,14 @@ export const Host = styled.div`
     > div {
         &:last-child {
             flex: 1;
-            padding-left: 20px;
+            padding-left: 10px;
+
+            ${after(
+                "sm",
+                css`
+                    padding-left: 20px;
+                `
+            )}
 
             > * + * {
                 margin-top: 3px;
@@ -22,8 +31,16 @@ export const Logo = styled(Box)`
 
     > .img {
         display: block;
-        height: 64px;
-        width: 64px;
+        height: 48px;
+        width: 48px;
+
+        ${after(
+            "sm",
+            css`
+                height: 64px;
+                width: 64px;
+            `
+        )}
     }
 `;
 
@@ -32,12 +49,26 @@ export const Title = styled.div`
 `;
 
 export const SubTitle = styled.div`
-    font-size: 16px;
+    font-size: 14px;
+
+    ${after(
+        "sm",
+        css`
+            font-size: 16px;
+        `
+    )}
 `;
 
 export const Meta = styled.div`
     color: ${props => props.theme.colors.grayBase};
-    font-size: 16px;
+    font-size: 14px;
+
+    ${after(
+        "sm",
+        css`
+            font-size: 16px;
+        `
+    )}
 `;
 
 Meta.defaultProps = {

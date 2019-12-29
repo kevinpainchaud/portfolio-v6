@@ -3,7 +3,6 @@ import { lighten } from "polished";
 const mainTheme = {
     base: {
         fontFamily: '"HK Grotesk", sans-serif',
-        fontSize: 18,
         borderRadius: 6,
         transitionDuration: 0.2
     },

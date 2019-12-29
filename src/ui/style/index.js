@@ -15,8 +15,7 @@ const GlobalStyle = createGlobalStyle`
 GlobalStyle.defaultProps = {
     theme: {
         base: {
-            fontFamily: "sans-serif",
-            fontSize: 14
+            fontFamily: "sans-serif"
         },
         colors: {
             primary: "gray"

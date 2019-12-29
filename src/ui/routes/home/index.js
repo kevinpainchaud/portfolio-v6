@@ -8,11 +8,12 @@ import Image from "../../components/dumb/image";
 import PageContent from "../../components/styled/page-content";
 import { Container, Row, Col } from "../../components/styled/grid";
 import {
-    Jumbotron,
     JumbotronContent,
     JumbotronImage
 } from "../../components/styled/jumbotron";
 import { ButtonPrimary } from "../../components/styled/button";
+
+import { Jumbotron } from "./style";
 
 import me from "../../assets/images/me.png";
 
@@ -61,10 +62,10 @@ const Home = () => {
                                     Après {getExperienceYears()} années
                                     d'expérience et quelques dizaines de projets
                                     web,
-                                    <br />
+                                    <br class="hidden-xs" />
                                     je travaille aujourd'hui pour le groupe
                                     HelloWork en tant que
-                                    <br />
+                                    <br class="hidden-xs" />
                                     responsable front-end sur le produit
                                     MaFormation.fr.
                                 </p>

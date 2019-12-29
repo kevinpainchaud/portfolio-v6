@@ -1,5 +1,7 @@
 import { css } from "styled-components";
 
+import { after } from "./mixins/media-queries";
+
 const typography = css`
     h1,
     h2,
@@ -11,11 +13,25 @@ const typography = css`
     }
 
     h1 {
-        font-size: 40px;
+        font-size: 30px;
+
+        ${after(
+            "sm",
+            css`
+                font-size: 40px;
+            `
+        )}
     }
 
     h2 {
-        font-size: 26px;
+        font-size: 19px;
+
+        ${after(
+            "sm",
+            css`
+                font-size: 40px;
+            `
+        )}
     }
 `;
 

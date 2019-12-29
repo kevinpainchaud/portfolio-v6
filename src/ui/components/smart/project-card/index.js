@@ -57,7 +57,7 @@ const ProjectCard = ({
         (mockupType === "ipad" || mockupType === "tv") &&
         mockupContent ? (
             <Mockup
-                class={`mockup-type--${mockupType} ${
+                class={`hidden-xs mockup-type--${mockupType} ${
                     reverse ? "mockup--reversed" : ""
                 }`}
             >

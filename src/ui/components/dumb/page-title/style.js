@@ -1,8 +1,17 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { after } from "../../../style/mixins/media-queries";
 
 export const Host = styled.div`
-    padding: 80px 0;
+    padding: 25px 0;
     text-align: center;
+
+    ${after(
+        "sm",
+        css`
+            padding: 80px 0;
+        `
+    )}
 `;
 
 export const Title = styled.h1`

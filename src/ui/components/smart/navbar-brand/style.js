@@ -1,10 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { before } from "../../../style/mixins/media-queries";
 
 const Host = styled.div`
     > a {
         align-items: center;
-
         display: flex;
+
+        ${before(
+            "sm",
+            css`
+                justify-content: center;
+            `
+        )}
 
         > .img {
             height: 48px;

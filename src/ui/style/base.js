@@ -1,10 +1,19 @@
 import { css } from "styled-components";
 
+import { after } from "./mixins/media-queries";
+
 const base = css`
     body {
         font-family: ${props => props.theme.base.fontFamily};
-        font-size: ${props => props.theme.base.fontSize}px;
+        font-size: 14px;
         font-weight: 400;
+
+        ${after(
+            "sm",
+            css`
+                font-size: 18px;
+            `
+        )}
     }
 
     * {

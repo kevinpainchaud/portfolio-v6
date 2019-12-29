@@ -24,6 +24,7 @@ export const JumbotronContent = styled.div`
         css`
             margin-top: 10px;
             order: 2;
+            text-align: center;
         `
     )}
 
@@ -35,9 +36,16 @@ export const JumbotronContent = styled.div`
     )}
 
     > p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 2em;
         margin: 0;
+
+        ${after(
+            "sm",
+            css`
+                font-size: 18px;
+            `
+        )}
 
         & + * {
             margin-top: 25px;
