@@ -1,5 +1,6 @@
 import { h } from "preact";
 import { useRef, useState, useEffect } from "preact/hooks";
+import { subscribe } from "subscribe-ui-event";
 
 import { getExperienceYears } from "../../../helpers/date";
 
@@ -32,11 +33,12 @@ const Home = () => {
 
     useEffect(() => {
         updateMinHeight();
-        window.addEventListener("resize", updateMinHeight);
 
-        return () => {
-            window.removeEventListener("resize", updateMinHeight);
-        };
+        const subscription = subscribe("resize", updateMinHeight, {
+            throttleRate: 100
+        });
+
+        return () => subscription.unsubscribe();
     }, []);
 
     return (

@@ -1,5 +1,6 @@
 import { h, Fragment } from "preact";
 import { useRef, useState, useEffect } from "preact/hooks";
+import { subscribe } from "subscribe-ui-event";
 import Error404 from "../../routes/error-404";
 
 import projects from "../../../data/projects.json";
@@ -55,11 +56,12 @@ const Project = ({ projectSlug, navbarRef }) => {
 
         useEffect(() => {
             updateTopOffset();
-            window.addEventListener("resize", updateTopOffset);
 
-            return () => {
-                window.removeEventListener("resize", updateTopOffset);
-            };
+            const subscription = subscribe("resize", updateTopOffset, {
+                throttleRate: 100
+            });
+
+            return () => subscription.unsubscribe();
         }, []);
 
         return (
