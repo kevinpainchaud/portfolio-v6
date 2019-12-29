@@ -8,6 +8,7 @@ const Host = styled.div`
 
         > .img {
             height: 48px;
+            min-width: 48px;
             width: 48px;
 
             & + * {
@@ -21,6 +22,7 @@ const Host = styled.div`
             font-family: "Gilroy";
             font-size: 23px;
             font-weight: 700;
+            line-height: 1em;
         }
     }
 `;
