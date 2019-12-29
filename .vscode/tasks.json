@@ -24,6 +24,11 @@
             "script": "serve"
         },
         {
+            "label": "analyze-bundle",
+            "type": "npm",
+            "script": "analyze-bundle"
+        },
+        {
             "label": "fetch-linkedin",
             "type": "npm",
             "script": "fetch-linkedin"

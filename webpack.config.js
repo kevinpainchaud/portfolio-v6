@@ -10,6 +10,9 @@ const config = {
         filename: "main.js",
         publicPath: "/"
     },
+    stats: {
+        source: false
+    },
     devServer: {
         historyApiFallback: true
     },

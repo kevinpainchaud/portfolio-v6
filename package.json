@@ -11,9 +11,10 @@
     },
     "scripts": {
         "start": "webpack-dev-server",
-        "build": "webpack --mode production",
+        "build": "webpack --mode production --profile --json > stats.json",
         "postbuild": "react-snap",
         "serve": "serve dist",
+        "analyze-bundle": "webpack-bundle-analyzer stats.json ./dist",
         "fetch-linkedin": "python3 ./tools/fetch-linkedin.py",
         "docker:start": "docker-compose -f ./docker/docker-compose.yml run --service-ports --rm start",
         "docker:build": "docker-compose -f ./docker/docker-compose.yml run --rm build",
