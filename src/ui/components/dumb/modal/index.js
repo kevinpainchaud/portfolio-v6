@@ -22,11 +22,11 @@ const Modal = forwardRef((props, ref) => {
 
     const handleOpening = () => {
             setShow(true);
-            document.body.overflow = "hidden";
+            document.body.style.overflow = "hidden";
         },
         handleClosing = () => {
             setShow(false);
-            document.body.overflow = "visible";
+            document.body.style.overflow = "visible";
         };
 
     useEffect(() => {
