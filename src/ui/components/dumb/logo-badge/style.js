@@ -13,7 +13,7 @@ const Host = styled.div`
             padding: ${logoPadding}px;
             width: ${logoWidth + logoPadding * 2}px;
 
-            > img {
+            > .img {
                 display: block;
                 height: ${logoWidth}px;
                 width: ${logoWidth}px;

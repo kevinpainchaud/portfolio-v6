@@ -10,6 +10,7 @@ export const Host = styled.div`
         width: 100%;
 
         > img {
+            display: block;
             height: 100%;
             width: 100%;
         }
