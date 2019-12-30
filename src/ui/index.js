@@ -2,7 +2,6 @@ import { h, render } from "preact";
 import { ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
 import Helmet from "preact-helmet";
-import ElementQueries from "css-element-queries/src/ElementQueries";
 
 import App from "./components/app";
 
@@ -11,9 +10,6 @@ import GlobalStyle from "./style/index";
 
 import faviconIco from "./assets/images/favicon.ico";
 import faviconPng from "./assets/images/favicon.png";
-
-// Init element queries
-ElementQueries.listen();
 
 render(
     <ThemeProvider theme={mainTheme}>
