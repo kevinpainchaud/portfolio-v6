@@ -9,6 +9,7 @@ export const Jumbotron = styled(OriginalJumbotron)`
         "sm",
         css`
             padding-top: 0;
+            min-height: auto !important;
         `
     )}
 `;
