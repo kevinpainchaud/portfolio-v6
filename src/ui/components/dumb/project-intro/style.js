@@ -7,7 +7,6 @@ export const Host = styled.div`
 `;
 
 export const Title = styled.h2`
-    font-size: 15px;
     margin: 0;
 
     ${after(

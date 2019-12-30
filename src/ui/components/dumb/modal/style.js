@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { after } from "../../../style/mixins/media-queries";
 
 export const Host = styled.div``;
 
@@ -27,6 +29,7 @@ export const Wrapper = styled.div`
     left: 0;
     overflow-x: hidden;
     overflow-y: auto;
+    padding: 0 30px;
     position: fixed;
     right: 0;
     top: 0;
@@ -55,11 +58,18 @@ export const Dialog = styled.div`
     background-color: #fff;
     border-radius: ${props => props.theme.base.borderRadius}px;
     opacity: 0;
-    margin: 50px auto;
+    margin: 30px auto;
     max-width: 500px;
     transform: translateY(-30px);
     transition: opacity 0.3s, transform 0.3s;
     transition-delay: 0s, 0s;
+
+    ${after(
+        "sm",
+        css`
+            margin-top: 50px;
+        `
+    )}
 
     &.visible {
         opacity: 1;

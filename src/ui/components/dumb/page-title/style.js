@@ -21,9 +21,17 @@ export const Title = styled.h1`
 
 export const SubTitle = styled.div`
     color: ${props => props.theme.colors.grayBase};
+    line-height: 1.35em;
 
     * + & {
-        margin-top: 15px;
+        margin-top: 5px;
+
+        ${after(
+            "sm",
+            css`
+                margin-top: 15px;
+            `
+        )}
     }
 `;
 

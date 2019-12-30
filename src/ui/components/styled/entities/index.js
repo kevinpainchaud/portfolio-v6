@@ -1,10 +1,20 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { after } from "../../../style/mixins/media-queries";
 
 const Entities = styled.div`
     > * + * {
         border-top: 1px solid ${props => props.theme.colors.gray300};
-        margin-top: 25px;
-        padding-top: 25px;
+        margin-top: 15px;
+        padding-top: 15px;
+
+        ${after(
+            "sm",
+            css`
+                margin-top: 25px;
+                padding-top: 25px;
+            `
+        )}
     }
 `;
 

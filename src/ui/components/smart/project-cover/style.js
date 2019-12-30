@@ -28,29 +28,16 @@ export const BackgroundImage = styled.div`
         display: block;
         height: 100%;
         left: 0;
+        opacity: 0.8;
         position: absolute;
         top: 0;
         width: 100%;
-
-        ${after(
-            "sm",
-            css`
-                opacity: 0.8;
-            `
-        )}
     }
 
     > .img {
-        display: none;
-
-        ${after(
-            "sm",
-            css`
-                display: block;
-                height: 100%;
-                width: 100%;
-            `
-        )}
+        display: block;
+        height: 100%;
+        width: 100%;
 
         img {
             object-fit: cover;
@@ -68,7 +55,7 @@ export const Body = styled.div`
     z-index: 1;
 
     * + & {
-        margin-top: 25px;
+        margin-top: 75px;
 
         ${after(
             "sm",
