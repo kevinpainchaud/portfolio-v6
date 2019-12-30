@@ -42,7 +42,7 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
                     "padding-top": topOffset + "px"
                 }}
             >
-                <Header>
+                <Header class="hidden-xs">
                     <Row>
                         <Col>
                             <ButtonWhiteOutline
