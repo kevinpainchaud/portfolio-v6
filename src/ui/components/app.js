@@ -6,6 +6,7 @@ import { subscribe } from "subscribe-ui-event";
 
 import Navbar from "./smart/navbar";
 import Footer from "./smart/footer";
+import StickyBottomNav from "./smart/sticky-bottom-nav";
 import ContactModal from "./smart/contact-modal";
 
 import Home from "../routes/home";
@@ -68,7 +69,8 @@ export default class App extends Component {
                         <Error404 default />
                     </Router>
                     <Footer />
-                    <ContactModal></ContactModal>
+                    <StickyBottomNav />
+                    <ContactModal />
                 </AppContext.Provider>
             </>
         );
