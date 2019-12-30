@@ -15,8 +15,8 @@ const Footer = () => (
         <Container>
             <Row textAlign="center">
                 <Col>
-                    <StyledLink href="#" tagName="span">
-                        Politique de Confidentialité
+                    <StyledLink href="/mentions-legales" tagName="routerLink">
+                        Mentions légales
                     </StyledLink>
                 </Col>
                 <Col>

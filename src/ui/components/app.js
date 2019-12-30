@@ -13,6 +13,7 @@ import Home from "../routes/home";
 import Projects from "../routes/projects";
 import Project from "../routes/project";
 import About from "../routes/about";
+import LegalNotice from "../routes/legal-notice";
 import Error404 from "../routes/error-404";
 
 const emitter = mitt();
@@ -66,6 +67,7 @@ export default class App extends Component {
                             navbarRef={navbarRef}
                         />
                         <About path="/a-propos" />
+                        <LegalNotice path="/mentions-legales" />
                         <Error404 default />
                     </Router>
                     <Footer />
