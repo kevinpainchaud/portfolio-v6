@@ -25,9 +25,18 @@ export const Host = styled.div`
         `
     )}
 `;
-export const Title = styled.h3`
+
+const Title = css`
     margin: 0;
     text-align: ${props => props.textAlign};
+`;
+
+export const TitleH2 = styled.h2`
+    ${Title}
+`;
+
+export const TitleH3 = styled.h3`
+    ${Title}
 `;
 
 export const Content = styled.div`

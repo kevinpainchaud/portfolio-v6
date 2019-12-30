@@ -63,6 +63,7 @@ const About = () => {
                                 <Col>
                                     <ContentBlockMini
                                         title="Ma stack actuelle"
+                                        titleTagName="h2"
                                         textAlign="center"
                                         noPaddingLeft
                                         noPaddingRight
@@ -99,6 +100,7 @@ const About = () => {
                                 <Col>
                                     <ContentBlockMini
                                         title="Mes outils"
+                                        titleTagName="h2"
                                         textAlign="center"
                                         noPaddingLeft
                                         noPaddingRight
