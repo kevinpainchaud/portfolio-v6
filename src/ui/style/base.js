@@ -4,6 +4,7 @@ import { after } from "./mixins/media-queries";
 
 const base = css`
     body {
+        color: ${props => props.theme.colors.textBase};
         font-family: ${props => props.theme.base.fontFamily};
         font-size: 14px;
         font-weight: 400;
