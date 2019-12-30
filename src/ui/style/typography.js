@@ -29,7 +29,18 @@ const typography = css`
         ${after(
             "sm",
             css`
-                font-size: 40px;
+                font-size: 26px;
+            `
+        )}
+    }
+
+    h3 {
+        font-size: 16px;
+
+        ${after(
+            "sm",
+            css`
+                font-size: 21px;
             `
         )}
     }
