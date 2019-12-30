@@ -44,6 +44,11 @@ const typography = css`
             `
         )}
     }
+
+    p,
+    ul > li {
+        line-height: 1.5em;
+    }
 `;
 
 export default typography;
