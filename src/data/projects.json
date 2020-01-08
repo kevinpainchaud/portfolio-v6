@@ -135,6 +135,7 @@
     {
         "name": "Raphaël",
         "slug": "raphael",
+        "url": "http://www.appli-raphael.fr/app/?api=http%3A%2F%2Fwww.appli-raphael.fr%2Fbackoffice%2Fshop%2F&shop=site-raphael&lang=fr",
         "date": "2016",
         "company": "Concept Image",
         "description": "",
@@ -202,6 +203,9 @@
             "title": "Nullam laoreet auctor quam ut elementum",
             "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
         },
+        "galleryLayout": [
+            [{ "filename": "1.gif", "width": 1440, "height": 900 }]
+        ],
         "skills": ["integration", "dev-front-end", "ux"],
         "technologies": ["sass", "javascript", "gulp", "git"]
     },
