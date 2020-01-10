@@ -1,28 +1,21 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
-import { before, after } from "../../style/mixins/media-queries";
+import { before } from "../../style/mixins/media-queries";
 
-import Box from "../../components/styled/box";
+import OriginalIframeWrapper from "../../components/dumb/iframe-wrapper";
 
-export const IframeWrapper = styled(Box)`
-    display: inline-block;
+export const IframeWrapper = styled(OriginalIframeWrapper)`
     margin-bottom: 10px;
 
-    ${after(
-        "sm",
-        css`
-            padding: 15px;
-        `
-    )}
-`;
+    iframe {
+        height: 200px;
+        width: 600px;
 
-export const Iframe = styled.iframe`
-    max-width: 100%;
-
-    ${before(
-        "sm",
-        css`
-            min-height: 300px;
-        `
-    )}
+        ${before(
+            "sm",
+            css`
+                min-height: 300px;
+            `
+        )}
+    }
 `;
