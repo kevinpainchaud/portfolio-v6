@@ -1,0 +1,33 @@
+stages:
+    - build
+    - deploy
+
+.deploy
+    script:
+        - apt-get update -qy
+        - apt-get install -y lftp
+
+build:
+    stage: build
+    script:
+        - npm ci
+        - npm run build
+    only:
+        - /^release/.*$/
+        - tags
+
+deploy_preprod:
+    stage: deploy
+    extends: .deploy
+    script:
+        - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete $DIR_SRC $DIR_DEST_PREPROD"
+    only:
+        - /^release/.*$/
+
+deploy_prod:
+    stage: deploy
+    extends: .deploy
+    script:
+        - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete $DIR_SRC $DIR_DEST_PROD"
+    only:
+        - tags
