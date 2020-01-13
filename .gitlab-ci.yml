@@ -2,6 +2,10 @@ stages:
     - build
     - deploy
 
+cache:
+    paths:
+        - node_modules/
+
 .deploy:
     script:
         - apt-get update -qy
@@ -9,6 +13,7 @@ stages:
 
 build:
     stage: build
+    image: node:latest
     script:
         - npm ci
         - npm run build
