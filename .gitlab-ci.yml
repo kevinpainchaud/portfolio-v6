@@ -2,7 +2,7 @@ stages:
     - build
     - deploy
 
-.deploy
+.deploy:
     script:
         - apt-get update -qy
         - apt-get install -y lftp
