@@ -1,0 +1,70 @@
+{
+    "name": "portfolio-v6",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://gitlab.com/kevinpainchaud/portfolio-v6.git"
+    },
+    "author": "Kévin Painchaud",
+    "bugs": {
+        "url": "https://gitlab.com/kevinpainchaud/portfolio-v6/issues"
+    },
+    "scripts": {
+        "start": "webpack-dev-server",
+        "build": "webpack --mode production --profile --json > stats.json",
+        "postbuild": "react-snap",
+        "serve": "serve dist",
+        "analyze-bundle": "webpack-bundle-analyzer stats.json ./dist",
+        "fetch-linkedin": "python3 ./tools/fetch-linkedin.py",
+        "docker:start": "docker-compose -f ./docker/docker-compose.yml run --service-ports --rm start",
+        "docker:build": "docker-compose -f ./docker/docker-compose.yml run --rm build",
+        "docker:serve": "docker-compose -f ./docker/docker-compose.yml run --service-ports --rm serve",
+        "docker:fetch-linkedin": "docker-compose -f ./docker/docker-compose.yml run --rm fetch-linkedin"
+    },
+    "reactSnap": {
+        "source": "dist",
+        "minifyHtml": {
+            "collapseWhitespace": true,
+            "removeComments": true
+        },
+        "puppeteerArgs": [
+            "--no-sandbox",
+            "--disable-setuid-sandbox"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.6.4",
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/preset-env": "^7.6.3",
+        "@babel/preset-react": "^7.6.3",
+        "babel-loader": "^8.0.6",
+        "clean-webpack-plugin": "^3.0.0",
+        "copy-webpack-plugin": "^5.1.1",
+        "css-loader": "^3.2.0",
+        "file-loader": "^4.2.0",
+        "html-webpack-plugin": "^3.2.0",
+        "image-webpack-loader": "^6.0.0",
+        "node-sass": "^4.13.0",
+        "react-snap": "^1.23.0",
+        "sass-loader": "^8.0.0",
+        "serve": "^11.2.0",
+        "style-loader": "^1.0.0",
+        "svg-sprite-loader": "^4.1.6",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.2"
+    },
+    "dependencies": {
+        "mitt": "^1.2.0",
+        "polished": "^3.4.2",
+        "preact": "^10.0.1",
+        "preact-helmet": "^4.0.0-alpha-3",
+        "preact-router": "^3.0.1",
+        "react-lazy-load-image-component": "^1.4.0",
+        "react-photoswipe": "^1.3.0",
+        "styled-components": "^4.4.0",
+        "styled-normalize": "^8.0.6",
+        "subscribe-ui-event": "^2.0.5",
+        "webpack-bundle-analyzer": "^3.6.0"
+    }
+}

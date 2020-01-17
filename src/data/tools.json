@@ -1,0 +1,46 @@
+[
+    {
+        "name": "VS Code",
+        "slug": "vs-code"
+    },
+    {
+        "name": "BrowserStack",
+        "slug": "browserstack"
+    },
+    {
+        "name": "Git Kraken",
+        "slug": "gitkraken"
+    },
+    {
+        "name": "Gitmoji",
+        "slug": "gitmoji"
+    },
+    {
+        "name": "WinSCP",
+        "slug": "winscp"
+    },
+    {
+        "name": "XD",
+        "slug": "adobe-xd"
+    },
+    {
+        "name": "Photoshop",
+        "slug": "adobe-photoshop"
+    },
+    {
+        "name": "Illustrator",
+        "slug": "adobe-illustrator"
+    },
+    {
+        "name": "InVision",
+        "slug": "invision"
+    },
+    {
+        "name": "Trello",
+        "slug": "trello"
+    },
+    {
+        "name": "Jira",
+        "slug": "jira"
+    }
+]

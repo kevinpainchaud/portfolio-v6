@@ -1,0 +1,62 @@
+[
+    {
+        "companyUrn": "721155",
+        "companyName": "HelloWork",
+        "timePeriod": {
+            "startDate": {
+                "month": 4,
+                "year": 2017
+            }
+        },
+        "title": "Développeur front-end",
+        "locationName": "Rennes, France"
+    },
+    {
+        "companyUrn": "880840",
+        "companyName": "CONCEPT IMAGE",
+        "timePeriod": {
+            "endDate": {
+                "month": 4,
+                "year": 2017
+            },
+            "startDate": {
+                "month": 10,
+                "year": 2013
+            }
+        },
+        "title": "Développeur web",
+        "locationName": "Rennes, France"
+    },
+    {
+        "companyUrn": "711601",
+        "companyName": "3W-online",
+        "timePeriod": {
+            "endDate": {
+                "month": 10,
+                "year": 2013
+            },
+            "startDate": {
+                "month": 11,
+                "year": 2012
+            }
+        },
+        "title": "Développeur web",
+        "locationName": "Paris, France"
+    },
+    {
+        "companyUrn": "18699424",
+        "companyName": "concepthygiene-com",
+        "timePeriod": {
+            "endDate": {
+                "month": 12,
+                "year": 2012
+            },
+            "startDate": {
+                "month": 9,
+                "year": 2010
+            }
+        },
+        "title": "Développeur web",
+        "locationName": "Changé (53), France"
+    }
+]

@@ -1,0 +1,37 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "start-development",
+            "type": "npm",
+            "script": "start"
+        },
+        {
+            "label": "build-application",
+            "type": "npm",
+            "script": "build"
+        },
+        {
+            "label": "prerender-application",
+            "type": "npm",
+            "script": "postbuild"
+        },
+        {
+            "label": "serve-application",
+            "type": "npm",
+            "script": "serve"
+        },
+        {
+            "label": "analyze-bundle",
+            "type": "npm",
+            "script": "analyze-bundle"
+        },
+        {
+            "label": "fetch-linkedin",
+            "type": "npm",
+            "script": "fetch-linkedin"
+        }
+    ]
+}

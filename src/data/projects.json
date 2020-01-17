@@ -1,0 +1,226 @@
+[
+    {
+        "name": "MaFormation.fr",
+        "slug": "maformation",
+        "url": "https://www.maformation.fr",
+        "date": "2017 - Aujourd'hui",
+        "company": "HelloWork",
+        "description": "1er site de formation en France",
+        "highlights": ["Responsable front-end", "+ 800 000 visiteurs / mois"],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
+            [
+                { "filename": "2.jpg", "width": 1920, "height": 1080 },
+                { "filename": "3.jpg", "width": 1920, "height": 1080 }
+            ],
+            [{ "filename": "4.jpg", "width": 1920, "height": 1080 }],
+            [
+                { "filename": "5.jpg", "width": 1920, "height": 1080 },
+                { "filename": "6.jpg", "width": 1920, "height": 1080 }
+            ]
+        ],
+        "skills": [
+            "integration",
+            "dev-front-end",
+            "ux",
+            "tests-e2e",
+            "devops",
+            "methode-agile",
+            "e-commerce"
+        ],
+        "technologies": [
+            "sass",
+            "javascript",
+            "gulp",
+            "git",
+            "gitlab-ci-cd",
+            "cypress",
+            "google-optimize"
+        ]
+    },
+    {
+        "name": "TOPO Revue",
+        "slug": "topo-revue",
+        "url": "http://www.toporevue.fr",
+        "date": "2016",
+        "company": "Concept Image",
+        "description": "Magazine d'actualité en bande dessinée pour les moins de vingt ans",
+        "highlights": [
+            "E-commerce avec abonnement",
+            "Types de contenu multiples et variés"
+        ],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
+            [
+                { "filename": "2.jpg", "width": 1920, "height": 1080 },
+                { "filename": "3.jpg", "width": 1920, "height": 1080 }
+            ]
+        ],
+        "skills": ["integration", "ux", "e-commerce"],
+        "technologies": [
+            "sass",
+            "javascript",
+            "gulp",
+            "php",
+            "wordpress",
+            "git"
+        ]
+    },
+    {
+        "name": "Bridor",
+        "slug": "bridor",
+        "date": "2017",
+        "company": "Concept Image",
+        "description": "Borne de commande utilisée lors du salon SIRHA (rendez-vous mondial de la restauration et hôtellerie)",
+        "highlights": [
+            "Application offline",
+            "Communication avec une mini-imprimante"
+        ],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1467, "height": 915 }],
+            [
+                { "filename": "2.jpg", "width": 1467, "height": 915 },
+                { "filename": "3.jpg", "width": 1467, "height": 915 }
+            ],
+            [{ "filename": "4.jpg", "width": 1467, "height": 915 }],
+            [
+                { "filename": "5.jpg", "width": 1467, "height": 915 },
+                { "filename": "6.jpg", "width": 1467, "height": 915 }
+            ]
+        ],
+        "skills": ["integration", "dev-front-end", "ux"],
+        "technologies": [
+            "sass",
+            "javascript",
+            "angular-js",
+            "gulp",
+            "nodejs",
+            "electron",
+            "git"
+        ]
+    },
+    {
+        "name": "Engie Home Services",
+        "slug": "engie-home-services",
+        "date": "2016",
+        "company": "Concept Image",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "galleryLayout": [
+            [{ "filename": "1.gif", "width": 1920, "height": 1080 }],
+            [
+                { "filename": "2.jpg", "width": 1920, "height": 1080 },
+                { "filename": "3.jpg", "width": 1920, "height": 1080 }
+            ]
+        ],
+        "skills": ["integration", "dev-front-end", "ux"],
+        "technologies": ["sass", "javascript", "angular-js", "gulp", "git"]
+    },
+    {
+        "name": "Raphaël",
+        "slug": "raphael",
+        "url": "http://www.appli-raphael.fr/app/?api=http%3A%2F%2Fwww.appli-raphael.fr%2Fbackoffice%2Fshop%2F&shop=site-raphael&lang=fr",
+        "date": "2016",
+        "company": "Concept Image",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
+            [
+                { "filename": "2.jpg", "width": 992, "height": 620 },
+                { "filename": "3.jpg", "width": 992, "height": 620 }
+            ],
+            [
+                { "filename": "4.jpg", "width": 992, "height": 620 },
+                { "filename": "5.jpg", "width": 992, "height": 620 }
+            ]
+        ],
+        "skills": ["integration", "dev-front-end", "ux"],
+        "technologies": ["sass", "javascript", "angular-js", "gulp", "git"]
+    },
+    {
+        "name": "Sojade",
+        "slug": "sojade",
+        "url": "http://www.sojade.fr",
+        "date": "2016",
+        "company": "Concept Image",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
+            [
+                { "filename": "2.jpg", "width": 1920, "height": 1080 },
+                { "filename": "3.jpg", "width": 1920, "height": 1080 }
+            ],
+            [
+                { "filename": "4.jpg", "width": 1920, "height": 1080 },
+                { "filename": "5.jpg", "width": 1920, "height": 1080 }
+            ]
+        ],
+        "skills": ["integration", "ux"],
+        "technologies": [
+            "sass",
+            "javascript",
+            "php",
+            "wordpress",
+            "gulp",
+            "git"
+        ]
+    },
+    {
+        "name": "Carte des mises en relation HelloWork",
+        "slug": "carte-des-mises-en-relation-hellowork",
+        "url": "https://ressources.regionsjob.com/hw-linking-map/tags/3.2.0/index.html",
+        "date": "2018",
+        "company": "HelloWork",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "galleryLayout": [
+            [{ "filename": "1.gif", "width": 1440, "height": 900 }]
+        ],
+        "skills": ["integration", "dev-front-end", "ux"],
+        "technologies": ["sass", "javascript", "gulp", "git"]
+    },
+    {
+        "name": "Guardian",
+        "slug": "guardian",
+        "date": "2019",
+        "company": "HelloWork",
+        "description": "",
+        "highlights": [],
+        "presentation": {
+            "title": "Nullam laoreet auctor quam ut elementum",
+            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+        },
+        "skills": ["tests-e2e", "devops"],
+        "technologies": ["cypress", "nodejs", "docker", "git"]
+    }
+]

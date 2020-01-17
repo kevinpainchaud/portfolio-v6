@@ -1,0 +1,40 @@
+stages:
+    - build
+    - deploy
+
+build:
+    stage: build
+    cache:
+        paths:
+            - node_modules/
+    image: buildkite/puppeteer:latest
+    script:
+        - npm ci
+        - npm run build
+    artifacts:
+        paths:
+            - dist/
+        expire_in: 1 week
+    only:
+        - /^release/.*$/
+        - tags
+
+deploy_preprod:
+    stage: deploy
+    before_script:
+        - apt-get update -qy
+        - apt-get install -y lftp
+    script:
+        - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete dist/ $DIR_DEST_PREPROD"
+    only:
+        - /^release/.*$/
+
+deploy_prod:
+    stage: deploy
+    before_script:
+        - apt-get update -qy
+        - apt-get install -y lftp
+    script:
+        - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete dist/ $DIR_DEST_PROD"
+    only:
+        - tags

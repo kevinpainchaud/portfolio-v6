@@ -1,0 +1,77 @@
+[
+    {
+        "name": "Sass",
+        "slug": "sass",
+        "currentStack": true
+    },
+    {
+        "name": "JavaScript",
+        "slug": "javascript",
+        "currentStack": true
+    },
+    {
+        "name": "React",
+        "slug": "react",
+        "currentStack": true
+    },
+    {
+        "name": "AngularJS",
+        "slug": "angular-js",
+        "currentStack": false
+    },
+    {
+        "name": "Webpack",
+        "slug": "webpack",
+        "currentStack": true
+    },
+    {
+        "name": "Gulp",
+        "slug": "gulp",
+        "currentStack": true
+    },
+    {
+        "name": "Node.js",
+        "slug": "nodejs",
+        "currentStack": true
+    },
+    {
+        "name": "Electron",
+        "slug": "electron",
+        "currentStack": true
+    },
+    {
+        "name": "PHP",
+        "slug": "php",
+        "currentStack": true
+    },
+    {
+        "name": "WordPress",
+        "slug": "wordpress",
+        "currentStack": true
+    },
+    {
+        "name": "Git",
+        "slug": "git",
+        "currentStack": true
+    },
+    {
+        "name": "GitLab CI/CD",
+        "slug": "gitlab-ci-cd",
+        "currentStack": true
+    },
+    {
+        "name": "Docker",
+        "slug": "docker",
+        "currentStack": true
+    },
+    {
+        "name": "Cypress",
+        "slug": "cypress",
+        "currentStack": true
+    },
+    {
+        "name": "Google Optimize",
+        "slug": "google-optimize",
+        "currentStack": true
+    }
+]

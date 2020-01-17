@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Intégration",
+        "slug": "integration"
+    },
+    {
+        "name": "Développement front-end",
+        "slug": "dev-front-end"
+    },
+    {
+        "name": "UX",
+        "slug": "ux"
+    },
+    {
+        "name": "Tests e2e",
+        "slug": "tests-e2e"
+    },
+    {
+        "name": "DevOps",
+        "slug": "devops"
+    },
+    {
+        "name": "Méthode agile",
+        "slug": "methode-agile"
+    },
+    {
+        "name": "E-commerce",
+        "slug": "e-commerce"
+    }
+]

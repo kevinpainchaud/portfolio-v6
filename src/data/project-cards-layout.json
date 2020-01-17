@@ -1,0 +1,16 @@
+[
+    [{ "projectSlug": "maformation", "mockupType": "ipad" }],
+    [{ "projectSlug": "topo-revue" }, { "projectSlug": "bridor" }],
+    [
+        {
+            "projectSlug": "engie-home-services",
+            "mockupType": "tv",
+            "reverse": true
+        }
+    ],
+    [{ "projectSlug": "raphael" }, { "projectSlug": "sojade" }],
+    [
+        { "projectSlug": "carte-des-mises-en-relation-hellowork" },
+        { "projectSlug": "guardian" }
+    ]
+]
