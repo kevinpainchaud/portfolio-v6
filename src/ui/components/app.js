@@ -28,7 +28,7 @@ export default class App extends Component {
 
         // Store the window scroll top position on the project list
         subscribe("scroll", () => {
-            if (this.currentUrl === "/projets") {
+            if (this.currentUrl === "/projets/") {
                 projectsWindowScrollY = window.scrollY;
             }
         });
@@ -39,7 +39,7 @@ export default class App extends Component {
             // Restore the window scroll top position
             // when the user back to the project list from the project index
             if (
-                e.url === "/projets" &&
+                e.url === "/projets/" &&
                 e.previous &&
                 e.previous.match(/^\/projets\/.*/)
             ) {
@@ -61,13 +61,13 @@ export default class App extends Component {
                     <Navbar ref={navbarRef} />
                     <Router onChange={handleRoute}>
                         <Home path="/" />
-                        <Projects path="/projets" />
+                        <Projects path="/projets/" />
                         <Project
                             path="/projets/:projectSlug"
                             navbarRef={navbarRef}
                         />
-                        <About path="/a-propos" />
-                        <LegalNotice path="/mentions-legales" />
+                        <About path="/a-propos/" />
+                        <LegalNotice path="/mentions-legales/" />
                         <Error404 default />
                     </Router>
                     <Footer />

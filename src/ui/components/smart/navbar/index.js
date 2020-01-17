@@ -12,7 +12,7 @@ import { Host } from "./style";
 const Navbar = () => {
     const isHomePage = /^\/$/.test(getCurrentUrl()),
         isProjectPage = new RegExp(
-            `^/projets/(${projects.map(p => p.slug).join("|")})\/?$`
+            `^/projets/(${projects.map(p => p.slug).join("|")})/$`
         ).test(getCurrentUrl());
 
     return (

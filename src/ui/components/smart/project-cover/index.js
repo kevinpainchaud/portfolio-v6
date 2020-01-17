@@ -46,7 +46,7 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
                     <Row>
                         <Col>
                             <ButtonWhiteOutline
-                                href="/projets"
+                                href="/projets/"
                                 tagName="routerLink"
                                 xs
                             >

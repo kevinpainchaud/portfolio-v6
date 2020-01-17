@@ -149,7 +149,7 @@ const Project = ({ projectSlug, navbarRef }) => {
                             </Button>
                         ) : null}
                         <IconLink
-                            href="/projets"
+                            href="/projets/"
                             tagName="routerLink"
                             icon={arrowLeft}
                             iconWidthXs
