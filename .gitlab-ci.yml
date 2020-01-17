@@ -17,6 +17,10 @@ build:
     script:
         - npm ci
         - npm run build
+    artifacts:
+        paths:
+            - dist/
+        expire_in: 1 week
     only:
         - /^release/.*$/
         - tags
@@ -25,7 +29,7 @@ deploy_preprod:
     stage: deploy
     extends: .deploy
     script:
-        - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete $DIR_SRC $DIR_DEST_PREPROD"
+        - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete dist/ $DIR_DEST_PREPROD"
     only:
         - /^release/.*$/
 
@@ -33,6 +37,6 @@ deploy_prod:
     stage: deploy
     extends: .deploy
     script:
-        - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete $DIR_SRC $DIR_DEST_PROD"
+        - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete dist/ $DIR_DEST_PROD"
     only:
         - tags
