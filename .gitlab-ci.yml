@@ -13,7 +13,7 @@ cache:
 
 build:
     stage: build
-    image: node:latest
+    image: buildkite/puppeteer:latest
     script:
         - npm ci
         - npm run build
