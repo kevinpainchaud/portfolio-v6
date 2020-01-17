@@ -7,7 +7,7 @@ cache:
         - node_modules/
 
 .deploy:
-    script:
+    before_script:
         - apt-get update -qy
         - apt-get install -y lftp
 
