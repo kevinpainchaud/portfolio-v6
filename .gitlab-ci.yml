@@ -2,17 +2,11 @@ stages:
     - build
     - deploy
 
-cache:
-    paths:
-        - node_modules/
-
-.deploy:
-    before_script:
-        - apt-get update -qy
-        - apt-get install -y lftp
-
 build:
     stage: build
+    cache:
+        paths:
+            - node_modules/
     image: buildkite/puppeteer:latest
     script:
         - npm ci
@@ -27,7 +21,9 @@ build:
 
 deploy_preprod:
     stage: deploy
-    extends: .deploy
+    before_script:
+        - apt-get update -qy
+        - apt-get install -y lftp
     script:
         - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete dist/ $DIR_DEST_PREPROD"
     only:
@@ -35,7 +31,9 @@ deploy_preprod:
 
 deploy_prod:
     stage: deploy
-    extends: .deploy
+    before_script:
+        - apt-get update -qy
+        - apt-get install -y lftp
     script:
         - lftp -e "open $FTP_HOST; user $FTP_USERNAME $FTP_PASSWORD; mirror -X .* -X .*/ --reverse --verbose --delete dist/ $DIR_DEST_PROD"
     only:
