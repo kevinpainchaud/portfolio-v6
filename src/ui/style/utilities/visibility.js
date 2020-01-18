@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-import { before, after } from "../mixins/media-queries";
+import { before, after, between } from "../mixins/media-queries";
 
 const visibility = css`
     .visible-xs {
@@ -15,6 +15,16 @@ const visibility = css`
     .hidden-xs {
         ${before(
             "sm",
+            css`
+                display: none;
+            `
+        )}
+    }
+
+    .hidden-sm {
+        ${between(
+            "sm",
+            "md",
             css`
                 display: none;
             `
