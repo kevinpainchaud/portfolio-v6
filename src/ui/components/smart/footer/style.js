@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { after } from "../../../style/mixins/media-queries";
+import { before, after, between } from "../../../style/mixins/media-queries";
 
 import OriginalIconLink from "../../dumb/icon-link";
 import OriginalStyledLink from "../../styled/styled-link";
@@ -15,6 +15,45 @@ export const Host = styled.footer`
             padding: 45px 0;
         `
     )}
+`;
+
+export const Inner = styled.div`
+    ${after(
+        "sm",
+        css`
+            align-items: center;
+            display: flex;
+        `
+    )}
+
+    > div {
+        ${after(
+            "sm",
+            css`
+                flex: 1;
+                padding: 0 15px;
+            `
+        )}
+
+        &:nth-child(2) {
+            ${between(
+                "sm",
+                "md",
+                css`
+                    flex: 2;
+                `
+            )}
+        }
+
+        & + div {
+            ${before(
+                "sm",
+                css`
+                    margin-top: 15px;
+                `
+            )}
+        }
+    }
 `;
 
 export const StyledLink = styled(OriginalStyledLink)`
