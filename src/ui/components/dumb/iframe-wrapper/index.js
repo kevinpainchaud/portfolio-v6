@@ -9,12 +9,13 @@ const IframeWrapper = ({ iframeSrc, className }) => {
     const [iframeLoaded, setIframeLoaded] = useState(false),
         iframeRef = useRef();
 
-    useEffect(() => {
-        iframeRef.current.onload = () => setIframeLoaded(true);
-    }, []);
+    useEffect(
+        () => (iframeRef.current.onload = () => setIframeLoaded(true)),
+        []
+    );
 
     return (
-        <Host class={!iframeLoaded ? "loading" : null} className={className}>
+        <Host className={`${className} ${!iframeLoaded ? "loading" : ""}`}>
             <Iframe ref={iframeRef} src={iframeSrc}></Iframe>
             <Loader>
                 <svg>
