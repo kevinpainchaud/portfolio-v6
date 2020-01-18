@@ -24,7 +24,7 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
     let backgroundImageSrc = null;
 
     try {
-        backgroundImageSrc = require(`../../../../statics/images/projects/covers/lg/cover-${slug}.jpg`);
+        backgroundImageSrc = require(`../../../../statics/images/projects/covers/cover-${slug}.jpg`);
     } catch (error) {}
 
     return (
