@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "preact/hooks";
 
 import { Host, Iframe, Loader } from "./style";
 
-import loader from "../../../assets/images/loader.svg";
+import iconLoader from "../../../assets/images/icon-loader.svg";
 
 const IframeWrapper = ({ iframeSrc, className }) => {
     const [iframeLoaded, setIframeLoaded] = useState(false),
@@ -19,7 +19,7 @@ const IframeWrapper = ({ iframeSrc, className }) => {
             <Iframe ref={iframeRef} src={iframeSrc}></Iframe>
             <Loader>
                 <svg>
-                    <use xlinkHref={`#${loader.id}`}></use>
+                    <use xlinkHref={`#${iconLoader.id}`}></use>
                 </svg>
             </Loader>
         </Host>

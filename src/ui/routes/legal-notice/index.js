@@ -66,7 +66,7 @@ const LegalNotice = () => {
                                 </ul>
                             </li>
                             <li>
-                                Set d'icônes :
+                                Sets d'icônes :
                                 <ul>
                                     <li>
                                         <StyledLink
@@ -76,6 +76,15 @@ const LegalNotice = () => {
                                             iOS 7 icons
                                         </StyledLink>{" "}
                                         par Visual Pharm
+                                    </li>
+                                    <li>
+                                        <StyledLink
+                                            href="https://ionicons.com"
+                                            target="_blank"
+                                        >
+                                            Ionicons
+                                        </StyledLink>{" "}
+                                        par Ionic Framework team
                                     </li>
                                 </ul>
                             </li>

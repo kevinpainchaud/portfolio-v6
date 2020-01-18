@@ -8,7 +8,7 @@ import { Container, Row, Col } from "../../styled/grid";
 
 import { Host, StyledLink, IconLink } from "./style";
 
-import iconGitLab from "../../../assets/images/icon-gitlab.svg";
+import iconGitLab from "../../../assets/images/icon-gitlab-circle.svg";
 
 const Footer = () => (
     <Host>

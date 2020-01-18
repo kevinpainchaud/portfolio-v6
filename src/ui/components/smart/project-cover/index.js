@@ -15,7 +15,7 @@ import {
     Metas
 } from "./style";
 
-import arrowLeft from "../../../assets/images/arrow-left.svg";
+import iconArrowLeft from "../../../assets/images/icon-arrow-left.svg";
 import iconExternalLink from "../../../assets/images/icon-external-link.svg";
 import iconCompany from "../../../assets/images/icon-company.svg";
 import iconCalendar from "../../../assets/images/icon-calendar.svg";
@@ -51,7 +51,9 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
                                 xs
                             >
                                 <svg>
-                                    <use xlinkHref={`#${arrowLeft.id}`}></use>
+                                    <use
+                                        xlinkHref={`#${iconArrowLeft.id}`}
+                                    ></use>
                                 </svg>
                                 <span>Retour</span>
                             </ButtonWhiteOutline>
