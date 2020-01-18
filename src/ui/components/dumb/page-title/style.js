@@ -9,6 +9,13 @@ export const Host = styled.div`
     ${after(
         "sm",
         css`
+            padding: 40px 0;
+        `
+    )}
+
+    ${after(
+        "md",
+        css`
             padding: 80px 0;
         `
     )}

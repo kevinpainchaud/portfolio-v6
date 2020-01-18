@@ -8,7 +8,7 @@ const ProjectIntro = ({ title, content }) => (
     <Host>
         <Container>
             <Row justifyContent="center">
-                <Col colWidth="8">
+                <Col colWidth="10">
                     <Title>{title}</Title>
                     <Content>{content}</Content>
                 </Col>

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { after } from "../../../style/mixins/media-queries";
+import { after, between } from "../../../style/mixins/media-queries";
 
 import Box from "../../styled/box";
 
@@ -113,6 +113,14 @@ export const Mockup = styled.div`
             min-height: ${390 - paddingSm * 2}px;
             position: relative;
             width: 120%;
+
+            ${between(
+                "sm",
+                "md",
+                css`
+                    width: 160%;
+                `
+            )}
 
             > .img {
                 display: block;

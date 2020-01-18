@@ -40,6 +40,19 @@ export const Host = styled.nav`
             `
         )}
     }
+
+    > a,
+    > span,
+    > button {
+        font-size: 17px;
+
+        ${after(
+            "md",
+            css`
+                font-size: 18px;
+            `
+        )}
+    }
 `;
 
 export const Link = styled(OriginalLink)`

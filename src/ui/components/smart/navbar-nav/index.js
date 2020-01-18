@@ -4,7 +4,6 @@ import { useContext } from "preact/hooks";
 import { AppContext } from "../../app";
 
 import {
-    Button,
     ButtonPrimary,
     ButtonWhite,
     ButtonSecondaryOutline,

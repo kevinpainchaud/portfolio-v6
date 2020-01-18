@@ -60,6 +60,13 @@ export const Body = styled.div`
         ${after(
             "sm",
             css`
+                margin-top: 125px;
+            `
+        )}
+
+        ${after(
+            "md",
+            css`
                 margin-top: 200px;
             `
         )}

@@ -11,6 +11,13 @@ export const ProjectCards = styled.div`
     ${after(
         "sm",
         css`
+            padding-bottom: 40px;
+        `
+    )}
+
+    ${after(
+        "md",
+        css`
             padding-bottom: 80px;
         `
     )}
