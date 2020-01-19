@@ -21,9 +21,15 @@ const Modal = forwardRef((props, ref) => {
     const [show, setShow] = useState(false);
 
     const handleOpening = () => {
+            const hasScrollbar =
+                window.innerHeight < document.body.clientHeight;
+
             setShow(true);
             document.body.style.overflow = "hidden";
-            document.body.style.paddingRight = `${getScrollbarWidth()}px`;
+
+            if (hasScrollbar) {
+                document.body.style.paddingRight = `${getScrollbarWidth()}px`;
+            }
         },
         handleClosing = () => {
             setShow(false);
