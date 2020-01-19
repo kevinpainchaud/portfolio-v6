@@ -9,7 +9,9 @@ import experience from "../data/experience.json";
 const getDateFromTimePeriodObject = timePeriodOject =>
     new Date(
         `${timePeriodOject.year}${
-            timePeriodOject.month ? `-${timePeriodOject.month}` : ""
+            timePeriodOject.month
+                ? `-${("0" + timePeriodOject.month).slice(-2)}`
+                : ""
         }`
     );
 
