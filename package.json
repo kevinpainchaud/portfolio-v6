@@ -55,6 +55,7 @@
         "webpack-dev-server": "^3.8.2"
     },
     "dependencies": {
+        "@datapunt/matomo-tracker-react": "0.0.16",
         "mitt": "^1.2.0",
         "polished": "^3.4.2",
         "preact": "^10.0.1",
