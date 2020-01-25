@@ -118,11 +118,11 @@
         "company": "Concept Image",
         "description": "Application TV installée dans les agences du grand ouest",
         "highlights": [
-            "Syncronisation du contenu en temps réel",
+            "Synchronisation du contenu en temps réel",
             "Différents templates : Vidéo, contenu colonné, tableau, ..."
         ],
         "presentation": {
-            "title": "Communcation interne via des écrans de TV en salle de pause",
+            "title": "Communication interne via des écrans de TV en salle de pause",
             "content": "Mise en place d'une application permettant au groupe Engie Home Services de diffuser des informations à ses salariés via des télévisions installées dans chaque agence du grand ouest."
         },
         "galleryLayout": [
@@ -144,11 +144,11 @@
         "description": "Borne tactile disponible dans des enseignes spécialisées Beaux-Arts. Son but : aider le consommateur à choisir des pinceaux adaptés à ses besoins.",
         "highlights": [
             "Adaptation au catalogue du magasin",
-            "Enjeux UX pour guider le consomateur en un minimum de temps"
+            "Enjeux UX pour guider le consommateur en un minimum de temps"
         ],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Guider le consommateur en magasin",
+            "content": "Réalisation d'une application tablette à destination de magasins spécialisés dans le domaine des arts graphiques. Elle permet au consommateur de trouver le/les pinceaux qui correspondent à ses besoins. Une partie de la complexité du projet a consisté à adapter le catalogue à chaque enseigne."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
@@ -176,8 +176,8 @@
             "Moteur de recherche de recette par produit"
         ],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Présenter la gamme de produits",
+            "content": "Le site vitrine de Sojade a pour but de présenter les différents produits de la marque. On peut également y trouver des idées de recettes ou encore en proposer de nouvelles."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
@@ -203,7 +203,6 @@
     {
         "name": "Carte des mises en relation HelloWork",
         "slug": "carte-des-mises-en-relation-hellowork",
-        "url": "https://ressources.regionsjob.com/hw-linking-map/tags/3.2.0/index.html",
         "date": "2018",
         "company": "HelloWork",
         "description": "Contacts collectés via RegionsJob, Cadreo, BDM/job, ...",
@@ -225,12 +224,12 @@
         "company": "HelloWork",
         "description": "Framework de test End-to-End basé sur Cypress.io",
         "highlights": [
-            "Reponsable du développement",
+            "Responsable du développement",
             "Partagé entre les différentes équipes produit"
         ],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Framework de tests End-to-End inter-produits",
+            "content": "Afin de faciliter la mise en place de tests End-to-End aux sein des équipes produits HelloWork, nous avons décidé de créer un framework dédié. Ce dernier contient des outils/helpers/plugins qui ajoutent des fonctionnalités à Cypress.io afin de répondre à nos besoins internes. Au sein de l'entreprise, je suis en charge de évolutions de Guardian et me rends disponible pour aider les équipes à mettre en place et maintenir leurs tests fonctionnels."
         },
         "skills": ["tests-e2e", "devops"],
         "technologies": ["cypress", "nodejs", "docker", "git"]
