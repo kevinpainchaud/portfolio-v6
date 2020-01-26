@@ -229,8 +229,11 @@
         ],
         "presentation": {
             "title": "Framework de tests End-to-End inter-produits",
-            "content": "Afin de faciliter la mise en place de tests End-to-End aux sein des équipes produits HelloWork, nous avons décidé de créer un framework dédié. Ce dernier contient des outils/helpers/plugins qui ajoutent des fonctionnalités à Cypress.io afin de répondre à nos besoins internes. Au sein de l'entreprise, je suis en charge de évolutions de Guardian et me rends disponible pour aider les équipes à mettre en place et maintenir leurs tests fonctionnels."
+            "content": "Afin de faciliter la mise en place de tests End-to-End au sein des équipes produits HelloWork, nous avons décidé de créer un framework dédié. Ce dernier contient des outils/helpers/plugins qui ajoutent des fonctionnalités à Cypress.io afin de répondre à nos besoins internes. Au sein d'HelloWork, je suis en charge du développement de Guardian et me rends disponible pour aider les équipes à mettre en place et maintenir leurs tests fonctionnels."
         },
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1920, "height": 1080 }]
+        ],
         "skills": ["tests-e2e", "devops"],
         "technologies": ["cypress", "nodejs", "docker", "git"]
     }
