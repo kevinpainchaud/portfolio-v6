@@ -6,7 +6,10 @@ const Host = styled.div`
 
     > svg {
         height: ${props => (props.iconWidthXs ? "12px" : "24px")};
+        left: 0;
         min-width: ${props => (props.iconWidthXs ? "12px" : "24px")};
+        position: relative;
+        top: 1px;
         width: ${props => (props.iconWidthXs ? "12px" : "24px")};
 
         > use {
