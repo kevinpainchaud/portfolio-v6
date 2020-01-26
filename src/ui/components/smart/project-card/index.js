@@ -76,7 +76,7 @@ const ProjectCard = ({
 
     return (
         <Host className={className} hoverEffect>
-            <Link href={`/projets/${slug}`} tagName="routerLink">
+            <Link href={`/projets/${slug}/`} tagName="routerLink">
                 <Body>{bodyCols}</Body>
             </Link>
         </Host>

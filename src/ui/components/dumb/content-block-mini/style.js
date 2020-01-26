@@ -19,7 +19,7 @@ export const Host = styled.div`
     text-align: ${props => props.textAlign};
 
     ${after(
-        "sm",
+        "md",
         css`
             padding: 25px;
         `

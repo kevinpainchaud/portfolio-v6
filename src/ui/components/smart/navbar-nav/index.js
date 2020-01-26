@@ -4,7 +4,6 @@ import { useContext } from "preact/hooks";
 import { AppContext } from "../../app";
 
 import {
-    Button,
     ButtonPrimary,
     ButtonWhite,
     ButtonSecondaryOutline,
@@ -36,7 +35,7 @@ const NavbarNav = ({ reverseColor }) => {
                 Accueil
             </Link>
             <Link
-                href="/projets"
+                href="/projets/"
                 tagName="routerLink"
                 activeClassName="active"
                 reverseColor={reverseColor}
@@ -44,7 +43,7 @@ const NavbarNav = ({ reverseColor }) => {
                 Projets
             </Link>
             <Link
-                href="/a-propos"
+                href="/a-propos/"
                 tagName="routerLink"
                 activeClassName="active"
                 reverseColor={reverseColor}

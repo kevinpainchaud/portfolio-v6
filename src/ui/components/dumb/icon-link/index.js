@@ -8,6 +8,7 @@ const IconLink = ({
     href,
     target,
     tagName,
+    onClick,
     icon,
     iconWidthXs,
     gray,
@@ -18,7 +19,12 @@ const IconLink = ({
         <svg>
             <use xlinkHref={`#${icon.id}`}></use>
         </svg>
-        <StyledLink href={href} target={target} tagName={tagName}>
+        <StyledLink
+            href={href}
+            target={target}
+            tagName={tagName}
+            onClick={onClick}
+        >
             {children}
         </StyledLink>
     </Host>

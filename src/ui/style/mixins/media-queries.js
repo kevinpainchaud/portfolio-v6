@@ -13,3 +13,11 @@ export const after = (breakpoint, properties) => css`
         ${properties}
     }
 `;
+
+export const between = (breakpointFrom, breakpointTo, properties) => css`
+    @media (min-width: ${breakpoints[
+            breakpointFrom
+        ]}px) and (max-width: ${breakpoints[breakpointTo] - 1}px) {
+        ${properties}
+    }
+`;

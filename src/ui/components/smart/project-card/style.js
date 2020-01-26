@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { after } from "../../../style/mixins/media-queries";
+import { after, between } from "../../../style/mixins/media-queries";
 
 import Box from "../../styled/box";
 
@@ -114,6 +114,14 @@ export const Mockup = styled.div`
             position: relative;
             width: 120%;
 
+            ${between(
+                "sm",
+                "md",
+                css`
+                    width: 160%;
+                `
+            )}
+
             > .img {
                 display: block;
                 left: 0;
@@ -127,6 +135,7 @@ export const Mockup = styled.div`
 
             > .img:nth-child(2) {
                 border-radius: 3%;
+                overflow: hidden;
                 transform: rotateX(55deg) rotateY(0deg) rotateZ(-45deg);
                 transform-origin: 67.5% 17.5%;
                 width: 57.25%;

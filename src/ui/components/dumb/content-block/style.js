@@ -41,6 +41,13 @@ export const Inner = styled.div`
     ${after(
         "sm",
         css`
+            padding: 35px;
+        `
+    )}
+
+    ${after(
+        "md",
+        css`
             padding: 50px;
         `
     )}
@@ -57,6 +64,13 @@ export const Content = styled.div`
 
         ${after(
             "sm",
+            css`
+                margin-top: 35px;
+            `
+        )}
+
+        ${after(
+            "md",
             css`
                 margin-top: 50px;
             `

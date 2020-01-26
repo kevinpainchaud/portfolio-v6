@@ -1,4 +1,5 @@
 import { h, render } from "preact";
+import { MatomoProvider, createInstance } from "@datapunt/matomo-tracker-react";
 import { ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
 import Helmet from "preact-helmet";
@@ -11,46 +12,53 @@ import GlobalStyle from "./style/index";
 import faviconIco from "./assets/images/favicon.ico";
 import faviconPng from "./assets/images/favicon.png";
 
+const matomoInstance = createInstance({
+    urlBase: "https://piwik.kpcd.me/",
+    siteId: 1
+});
+
 render(
-    <ThemeProvider theme={mainTheme}>
-        {/* Document title */}
-        <Helmet
-            title="Kévin Painchaud | Développeur front-end à Rennes"
-            meta={[
-                {
-                    name: "viewport",
-                    content:
-                        "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-                },
-                {
-                    property: "og:image",
-                    content:
-                        "https://www.kevinpainchaud.fr/assets/images/og-image.jpg"
-                }
-            ]}
-            link={[
-                {
-                    rel: "shortcut icon",
-                    href: faviconIco,
-                    type: "image/x-icon"
-                },
-                {
-                    rel: "icon",
-                    href: faviconPng,
-                    type: "image/png",
-                    sizes: "128x128"
-                }
-            ]}
-        />
+    <MatomoProvider value={matomoInstance}>
+        <ThemeProvider theme={mainTheme}>
+            {/* Document title */}
+            <Helmet
+                title="Kévin Painchaud | Développeur front-end à Rennes"
+                meta={[
+                    {
+                        name: "viewport",
+                        content:
+                            "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+                    },
+                    {
+                        property: "og:image",
+                        content:
+                            "https://www.kevinpainchaud.fr/assets/images/og-image.jpg"
+                    }
+                ]}
+                link={[
+                    {
+                        rel: "shortcut icon",
+                        href: faviconIco,
+                        type: "image/x-icon"
+                    },
+                    {
+                        rel: "icon",
+                        href: faviconPng,
+                        type: "image/png",
+                        sizes: "128x128"
+                    }
+                ]}
+            />
 
-        {/* Styles */}
-        <Normalize />
-        <GlobalStyle />
+            {/* Styles */}
+            <Normalize />
+            <GlobalStyle />
 
-        <div>
-            <App />
-        </div>
-    </ThemeProvider>,
+            <div>
+                <App />
+            </div>
+        </ThemeProvider>
+    </MatomoProvider>,
     document.body,
     document.body.firstElementChild
 );

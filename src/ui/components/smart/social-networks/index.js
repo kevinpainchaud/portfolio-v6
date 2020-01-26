@@ -5,8 +5,8 @@ import links from "../../../../data/links.json";
 import IconLink from "../../dumb/icon-link";
 import LinksGroup from "../../dumb/links-group";
 
-import iconTwitter from "../../../assets/images/icon-twitter.svg";
-import iconLinkedIn from "../../../assets/images/icon-linkedin.svg";
+import iconTwitter from "../../../assets/images/icon-twitter-circle.svg";
+import iconLinkedIn from "../../../assets/images/icon-linkedin-circle.svg";
 
 const SocialNetworks = ({ iconLinkGray }) => (
     <LinksGroup title="Me suivre sur">

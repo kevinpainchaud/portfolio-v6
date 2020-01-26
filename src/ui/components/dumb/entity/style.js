@@ -13,7 +13,7 @@ export const Host = styled.div`
             padding-left: 10px;
 
             ${after(
-                "sm",
+                "md",
                 css`
                     padding-left: 20px;
                 `
@@ -35,7 +35,7 @@ export const Logo = styled(Box)`
         width: 48px;
 
         ${after(
-            "sm",
+            "md",
             css`
                 height: 64px;
                 width: 64px;
@@ -52,7 +52,7 @@ export const SubTitle = styled.div`
     font-size: 14px;
 
     ${after(
-        "sm",
+        "md",
         css`
             font-size: 16px;
         `
@@ -64,7 +64,7 @@ export const Meta = styled.div`
     font-size: 14px;
 
     ${after(
-        "sm",
+        "md",
         css`
             font-size: 16px;
         `

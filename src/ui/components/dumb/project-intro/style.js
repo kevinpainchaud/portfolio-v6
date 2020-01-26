@@ -8,13 +8,6 @@ export const Host = styled.div`
 
 export const Title = styled.h2`
     margin: 0;
-
-    ${after(
-        "sm",
-        css`
-            padding: 20px;
-        `
-    )}
 `;
 
 export const Content = styled.p`
@@ -36,6 +29,13 @@ export const Content = styled.p`
             "sm",
             css`
                 margin-top: 20px;
+            `
+        )}
+
+        ${after(
+            "md",
+            css`
+                margin-top: 35px;
             `
         )}
     }

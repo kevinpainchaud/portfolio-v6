@@ -20,7 +20,7 @@ import SkillTags from "../../components/styled/skill-tags";
 import SkillTag from "../../components/styled/skill-tag";
 import LogoBadges from "../../components/styled/logo-badges";
 
-import arrowLeft from "../../assets/images/arrow-left.svg";
+import iconArrowLeft from "../../assets/images/icon-arrow-left.svg";
 import iconExternalLink from "../../assets/images/icon-external-link.svg";
 
 const Project = ({ projectSlug, navbarRef }) => {
@@ -149,9 +149,9 @@ const Project = ({ projectSlug, navbarRef }) => {
                             </Button>
                         ) : null}
                         <IconLink
-                            href="/projets"
+                            href="/projets/"
                             tagName="routerLink"
-                            icon={arrowLeft}
+                            icon={iconArrowLeft}
                             iconWidthXs
                         >
                             Retour

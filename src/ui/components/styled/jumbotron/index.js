@@ -37,13 +37,20 @@ export const JumbotronContent = styled.div`
 
     > p {
         font-size: 16px;
-        line-height: 2em;
+        line-height: 1.7em;
         margin: 0;
 
         ${after(
             "sm",
             css`
                 font-size: 18px;
+            `
+        )}
+
+        ${after(
+            "md",
+            css`
+                line-height: 2em;
             `
         )}
 

@@ -8,8 +8,8 @@
         "description": "1er site de formation en France",
         "highlights": ["Responsable front-end", "+ 800 000 visiteurs / mois"],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Responsable front-end",
+            "content": "Depuis 2017, je travaille au sein de l'équipe technique de MaFormation.fr, dans une organisation agile (SCRUM). Mon rôle principal consiste à faire évoluer le produit dans sa composante front-end et d'en assurer sa maintenance. Je suis également responsable des tests fonctionnels sur le site."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
@@ -54,8 +54,8 @@
             "Types de contenu multiples et variés"
         ],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "E-commerce sous WooCommerce",
+            "content": "Développement d'un site web e-commerce pour l'éditeur du magazine TOPO Revue. Les utilisateurs ont la possibilité d'acheter un ou plusieurs numéros ou même de s'abonner à la revue."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
@@ -85,8 +85,8 @@
             "Communication avec une mini-imprimante"
         ],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Borne de commande 👨‍🍳",
+            "content": "Lors de la version 2017 du salon SIRHA à Lyon, BRIDOR donnait la possibilité à ses visiteurs de commander gratuitement le plat de leur choix via des bornes tactiles. Une fois la commande effectuée, un ticket était automatiquement imprimé en cuisine afin de faire passer l'information au chef cuisiner."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1467, "height": 915 }],
@@ -116,11 +116,14 @@
         "slug": "engie-home-services",
         "date": "2016",
         "company": "Concept Image",
-        "description": "",
-        "highlights": [],
+        "description": "Application TV installée dans les agences du grand ouest",
+        "highlights": [
+            "Synchronisation du contenu en temps réel",
+            "Différents templates : Vidéo, contenu colonné, tableau, ..."
+        ],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Communication interne via des écrans de TV en salle de pause",
+            "content": "Mise en place d'une application permettant au groupe Engie Home Services de diffuser des informations à ses salariés via des télévisions installées dans chaque agence du grand ouest."
         },
         "galleryLayout": [
             [{ "filename": "1.gif", "width": 1920, "height": 1080 }],
@@ -138,11 +141,14 @@
         "url": "http://www.appli-raphael.fr/app/?api=http%3A%2F%2Fwww.appli-raphael.fr%2Fbackoffice%2Fshop%2F&shop=site-raphael&lang=fr",
         "date": "2016",
         "company": "Concept Image",
-        "description": "",
-        "highlights": [],
+        "description": "Borne tactile disponible dans des enseignes spécialisées Beaux-Arts. Son but : aider le consommateur à choisir des pinceaux adaptés à ses besoins.",
+        "highlights": [
+            "Adaptation au catalogue du magasin",
+            "Enjeux UX pour guider le consommateur en un minimum de temps"
+        ],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Guider le consommateur en magasin",
+            "content": "Réalisation d'une application tablette à destination de magasins spécialisés dans le domaine des arts graphiques. Elle permet au consommateur de trouver le/les pinceaux qui correspondent à ses besoins. Une partie de la complexité du projet a consisté à adapter le catalogue à chaque enseigne."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
@@ -164,11 +170,14 @@
         "url": "http://www.sojade.fr",
         "date": "2016",
         "company": "Concept Image",
-        "description": "",
-        "highlights": [],
+        "description": "Site vitrine de la marque Sojade, spécialisée dans l'alimentation végétale",
+        "highlights": [
+            "Catalogue de produits/recettes",
+            "Moteur de recherche de recette par produit"
+        ],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Présenter la gamme de produits",
+            "content": "Le site vitrine de Sojade a pour but de présenter les différents produits de la marque. On peut également y trouver des idées de recettes ou encore en proposer de nouvelles."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
@@ -194,32 +203,37 @@
     {
         "name": "Carte des mises en relation HelloWork",
         "slug": "carte-des-mises-en-relation-hellowork",
-        "url": "https://ressources.regionsjob.com/hw-linking-map/tags/3.2.0/index.html",
         "date": "2018",
         "company": "HelloWork",
-        "description": "",
-        "highlights": [],
+        "description": "Contacts collectés via RegionsJob, Cadreo, BDM/job, ...",
+        "highlights": ["Affichage en temps réel", "Version offline disponible"],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Application TV utilisée lors du salon #rmsconf",
+            "content": "Réalisation d'une carte dynamique affichant en temps réel les mises en relation du groupe HelloWork via l'ensemble de ses produits (RegionsJob, Cadreo, BDM/job, ...)."
         },
         "galleryLayout": [
             [{ "filename": "1.gif", "width": 1440, "height": 900 }]
         ],
         "skills": ["integration", "dev-front-end", "ux"],
-        "technologies": ["sass", "javascript", "gulp", "git"]
+        "technologies": ["sass", "javascript", "gulp", "electron", "git"]
     },
     {
         "name": "Guardian",
         "slug": "guardian",
-        "date": "2019",
+        "date": "2019 - Aujourd'hui",
         "company": "HelloWork",
-        "description": "",
-        "highlights": [],
+        "description": "Framework de test End-to-End basé sur Cypress.io",
+        "highlights": [
+            "Responsable du développement",
+            "Partagé entre les différentes équipes produit"
+        ],
         "presentation": {
-            "title": "Nullam laoreet auctor quam ut elementum",
-            "content": "Nunc fringilla purus vel quam imperdiet vestibulum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lectus ligula, finibus eu quam vitae, ultrices eleifend neque. Integer massa metus, feugiat a tempus et, porttitor eu mi. In a ullamcorper urna, eget congue massa. Pellentesque fermentum nisl eu tempus pellentesque. Morbi eget cursus nisl. Nullam luctus orci ac ultrices interdum. Curabitur magna nunc, tincidunt quis aliquam auctor, euismod vitae nulla. Donec blandit mattis luctus. Aliquam vulputate turpis vel ipsum auctor, quis mattis neque semper."
+            "title": "Framework de tests End-to-End inter-produits",
+            "content": "Afin de faciliter la mise en place de tests End-to-End au sein des équipes produits HelloWork, nous avons décidé de créer un framework dédié. Ce dernier contient des outils/helpers/plugins qui ajoutent des fonctionnalités à Cypress.io afin de répondre à nos besoins internes. Au sein d'HelloWork, je suis en charge du développement de Guardian et me rends disponible pour aider les équipes à mettre en place et maintenir leurs tests fonctionnels."
         },
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1920, "height": 1080 }]
+        ],
         "skills": ["tests-e2e", "devops"],
         "technologies": ["cypress", "nodejs", "docker", "git"]
     }

@@ -40,7 +40,11 @@ const StickyBottomNav = className => {
                 </Icon>
                 <Label>Accueil</Label>
             </Link>
-            <Link href="/projets" tagName="routerLink" activeClassName="active">
+            <Link
+                href="/projets/"
+                tagName="routerLink"
+                activeClassName="active"
+            >
                 <Icon>
                     <svg>
                         <use xlinkHref={`#${iconList.id}`}></use>
@@ -49,7 +53,7 @@ const StickyBottomNav = className => {
                 <Label>Projets</Label>
             </Link>
             <Link
-                href="/a-propos"
+                href="/a-propos/"
                 tagName="routerLink"
                 activeClassName="active"
             >

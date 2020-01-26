@@ -15,7 +15,7 @@ import {
     Metas
 } from "./style";
 
-import arrowLeft from "../../../assets/images/arrow-left.svg";
+import iconArrowLeft from "../../../assets/images/icon-arrow-left.svg";
 import iconExternalLink from "../../../assets/images/icon-external-link.svg";
 import iconCompany from "../../../assets/images/icon-company.svg";
 import iconCalendar from "../../../assets/images/icon-calendar.svg";
@@ -24,7 +24,7 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
     let backgroundImageSrc = null;
 
     try {
-        backgroundImageSrc = require(`../../../../statics/images/projects/covers/lg/cover-${slug}.jpg`);
+        backgroundImageSrc = require(`../../../../statics/images/projects/covers/cover-${slug}.jpg`);
     } catch (error) {}
 
     return (
@@ -46,12 +46,14 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
                     <Row>
                         <Col>
                             <ButtonWhiteOutline
-                                href="/projets"
+                                href="/projets/"
                                 tagName="routerLink"
                                 xs
                             >
                                 <svg>
-                                    <use xlinkHref={`#${arrowLeft.id}`}></use>
+                                    <use
+                                        xlinkHref={`#${iconArrowLeft.id}`}
+                                    ></use>
                                 </svg>
                                 <span>Retour</span>
                             </ButtonWhiteOutline>

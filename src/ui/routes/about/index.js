@@ -37,7 +37,7 @@ const About = () => {
                     <Col>
                         <PageTitle
                             title="À propos"
-                            subTitle="Lorem ipsum dolor sit, amet consectetur adipisicing"
+                            subTitle="Quelques mots pour me présenter"
                         ></PageTitle>
                     </Col>
                 </Row>

@@ -21,13 +21,45 @@ const Modal = forwardRef((props, ref) => {
     const [show, setShow] = useState(false);
 
     const handleOpening = () => {
+            const hasScrollbar =
+                window.innerHeight < document.body.clientHeight;
+
             setShow(true);
             document.body.style.overflow = "hidden";
+
+            if (hasScrollbar) {
+                document.body.style.paddingRight = `${getScrollbarWidth()}px`;
+            }
         },
         handleClosing = () => {
             setShow(false);
-            document.body.style.overflow = "visible";
+
+            setTimeout(() => {
+                document.body.style.overflow = "visible";
+                document.body.style.paddingRight = 0;
+            }, 300);
         };
+
+    const getScrollbarWidth = () => {
+        // Creating invisible container
+        const outer = document.createElement("div");
+        outer.style.visibility = "hidden";
+        outer.style.overflow = "scroll"; // forcing scrollbar to appear
+        outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+        document.body.appendChild(outer);
+
+        // Creating inner element and placing it in the container
+        const inner = document.createElement("div");
+        outer.appendChild(inner);
+
+        // Calculating difference between container's full width and the child width
+        const scrollbarWidth = outer.offsetWidth - inner.offsetWidth;
+
+        // Removing temporary elements from the DOM
+        outer.parentNode.removeChild(outer);
+
+        return scrollbarWidth;
+    };
 
     useEffect(() => {
         ref.current.addEventListener("open", handleOpening);
