@@ -141,7 +141,7 @@
         "url": "http://www.appli-raphael.fr/app/?api=http%3A%2F%2Fwww.appli-raphael.fr%2Fbackoffice%2Fshop%2F&shop=site-raphael&lang=fr",
         "date": "2016",
         "company": "Concept Image",
-        "description": "Borne tactile disponible dans des enseignes spécialisées Beaux-Arts. Son but : aider le consommateur à choisir des pinceaux adaptés à ses besoins.",
+        "description": "Borne tactile disponible dans des enseignes spécialisées dans les arts graphiques. Son but : aider le consommateur à choisir des pinceaux adaptés à ses besoins.",
         "highlights": [
             "Adaptation au catalogue du magasin",
             "Enjeux UX pour guider le consommateur en un minimum de temps"
@@ -222,14 +222,14 @@
         "slug": "guardian",
         "date": "2019 - Aujourd'hui",
         "company": "HelloWork",
-        "description": "Framework de test End-to-End basé sur Cypress.io",
+        "description": "Framework de tests End-to-End basé sur Cypress.io",
         "highlights": [
             "Responsable du développement",
-            "Partagé entre les différentes équipes produit"
+            "Utilisé par différentes équipes produit HelloWork"
         ],
         "presentation": {
             "title": "Framework de tests End-to-End inter-produits",
-            "content": "Afin de faciliter la mise en place de tests End-to-End au sein des équipes produits HelloWork, nous avons décidé de créer un framework dédié. Ce dernier contient des outils/helpers/plugins qui ajoutent des fonctionnalités à Cypress.io afin de répondre à nos besoins internes. Au sein d'HelloWork, je suis en charge du développement de Guardian et me rends disponible pour aider les équipes à mettre en place et maintenir leurs tests fonctionnels."
+            "content": "Afin de faciliter la mise en place de tests End-to-End au sein des équipes produit HelloWork, nous avons décidé de créer un framework dédié. Ce dernier contient des outils/helpers/plugins qui ajoutent des fonctionnalités à Cypress.io afin de répondre à nos besoins internes. Au sein d'HelloWork, je suis en charge du développement de Guardian et me rends disponible pour aider les équipes à mettre en place et maintenir leurs tests fonctionnels."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }]
