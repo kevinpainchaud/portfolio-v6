@@ -49,6 +49,13 @@ URL: [https://www.kevinpainchaud.fr](https://www.kevinpainchaud.fr)
 
 This command run a script to update the `src/data/experience.json` & `src/data/education.json` files with data fetched from my LinkedIn profile.
 
+Required: A .env file with the LinkedIn credentials:
+
+```
+LINKEDIN_USERNAME=XXX
+LINKEDIN_PASSWORD=XXX
+```
+
 ## Find and fix problems in the JavaScript code
 
 `npm run lint`
