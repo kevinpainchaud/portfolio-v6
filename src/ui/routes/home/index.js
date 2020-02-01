@@ -60,11 +60,11 @@ const Home = () => {
                                     </strong> à <strong>Rennes</strong>.
                                     <br />
                                     Après {getExperienceYears()} années
-                                    d'expérience et quelques dizaines de projets
-                                    web, <br class="hidden-xs hidden-sm" />
-                                    je travaille aujourd'hui pour le groupe
+                                    d’expérience et quelques dizaines de projets
+                                    web, <br className="hidden-xs hidden-sm" />
+                                    je travaille aujourd’hui pour le groupe
                                     HelloWork en tant que{" "}
-                                    <br class="hidden-xs hidden-sm" />
+                                    <br className="hidden-xs hidden-sm" />
                                     responsable front-end sur le produit
                                     MaFormation.fr.
                                 </p>

@@ -21,15 +21,15 @@ const Projects = () => (
                 </Col>
             </Row>
             <ProjectCards>
-                {projectCardsLayout.map(row => (
-                    <Row>
-                        {row.map(col => {
+                {projectCardsLayout.map((row, i) => (
+                    <Row key={i}>
+                        {row.map((col, j) => {
                             const project = projects.find(
                                 p => p.slug === col.projectSlug
                             );
 
                             return (
-                                <Col>
+                                <Col key={j}>
                                     <ProjectCard
                                         name={project.name}
                                         slug={project.slug}

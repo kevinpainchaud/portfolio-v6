@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { before, after } from "../../../style/mixins/media-queries";
+import { after } from "../../../style/mixins/media-queries";
 
 export const Host = styled.div`
     .pswp-thumbnails {

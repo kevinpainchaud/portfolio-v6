@@ -1,4 +1,5 @@
 import { h } from "preact";
+import PropTypes from "prop-types";
 
 import Image from "../../dumb/image";
 import { Container, Row, Col } from "../../styled/grid";
@@ -24,6 +25,7 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
     let backgroundImageSrc = null;
 
     try {
+        // eslint-disable-next-line no-undef
         backgroundImageSrc = require(`../../../../statics/images/projects/covers/cover-${slug}.jpg`);
     } catch (error) {}
 
@@ -105,6 +107,15 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
             </Container>
         </Host>
     );
+};
+
+ProjectCover.propTypes = {
+    name: PropTypes.string,
+    slug: PropTypes.string,
+    company: PropTypes.string,
+    date: PropTypes.string,
+    url: PropTypes.string,
+    topOffset: PropTypes.number
 };
 
 export default ProjectCover;

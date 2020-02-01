@@ -1,4 +1,5 @@
 import { h } from "preact";
+import PropTypes from "prop-types";
 
 import links from "../../../../data/links.json";
 
@@ -28,5 +29,9 @@ const SocialNetworks = ({ iconLinkGray }) => (
         </IconLink>
     </LinksGroup>
 );
+
+SocialNetworks.propTypes = {
+    iconLinkGray: PropTypes.bool
+};
 
 export default SocialNetworks;

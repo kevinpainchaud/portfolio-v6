@@ -12,7 +12,7 @@ import iconUser from "../../../assets/images/icon-user.svg";
 import iconMessage from "../../../assets/images/icon-message.svg";
 import iconDocument from "../../../assets/images/icon-document.svg";
 
-const StickyBottomNav = className => {
+const StickyBottomNav = () => {
     const appContext = useContext(AppContext),
         hostRef = useRef();
 

@@ -1,4 +1,4 @@
-import { h, Fragment } from "preact";
+import { h } from "preact";
 
 import PageContent from "../../components/styled/page-content";
 import { Container, Row, Col } from "../../components/styled/grid";
@@ -43,7 +43,7 @@ const LegalNotice = () => {
                         </p>
                         <ul>
                             <li>
-                                Polices d'écriture :
+                                Polices d’écriture :
                                 <ul>
                                     <li>
                                         <StyledLink
@@ -66,7 +66,7 @@ const LegalNotice = () => {
                                 </ul>
                             </li>
                             <li>
-                                Sets d'icônes :
+                                Sets d’icônes :
                                 <ul>
                                     <li>
                                         <StyledLink

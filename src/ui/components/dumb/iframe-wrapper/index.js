@@ -1,5 +1,6 @@
 import { h } from "preact";
 import { useState, useRef, useEffect } from "preact/hooks";
+import PropTypes from "prop-types";
 
 import { Host, Iframe, Loader } from "./style";
 
@@ -24,6 +25,11 @@ const IframeWrapper = ({ iframeSrc, className }) => {
             </Loader>
         </Host>
     );
+};
+
+IframeWrapper.propTypes = {
+    iframeSrc: PropTypes.string,
+    className: PropTypes.string
 };
 
 export default IframeWrapper;

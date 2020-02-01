@@ -1,4 +1,5 @@
 import { h } from "preact";
+import PropTypes from "prop-types";
 
 import StyledLink from "../../styled/styled-link";
 
@@ -29,5 +30,17 @@ const IconLink = ({
         </StyledLink>
     </Host>
 );
+
+IconLink.propTypes = {
+    href: PropTypes.string,
+    target: PropTypes.string,
+    tagName: PropTypes.string,
+    onClick: PropTypes.func,
+    icon: PropTypes.object,
+    iconWidthXs: PropTypes.bool,
+    gray: PropTypes.bool,
+    className: PropTypes.string,
+    children: PropTypes.element
+};
 
 export default IconLink;

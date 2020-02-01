@@ -1,6 +1,7 @@
 import { h } from "preact";
 import { useState, useEffect } from "preact/hooks";
 import { forwardRef } from "preact/compat";
+import PropTypes from "prop-types";
 
 import {
     Host,
@@ -17,7 +18,7 @@ import {
 
 import iconCross from "../../../assets/images/icon-cross.svg";
 
-const Modal = forwardRef((props, ref) => {
+const Modal = ({ title, children }, ref) => {
     const [show, setShow] = useState(false);
 
     const handleOpening = () => {
@@ -76,19 +77,24 @@ const Modal = forwardRef((props, ref) => {
                 <Dialog class={show ? "visible" : null}>
                     <Content>
                         <Header>
-                            <HeaderTitle>{props.title}</HeaderTitle>
+                            <HeaderTitle>{title}</HeaderTitle>
                             <HeaderBtnClose onClick={handleClosing}>
                                 <svg>
                                     <use xlinkHref={`#${iconCross.id}`}></use>
                                 </svg>
                             </HeaderBtnClose>
                         </Header>
-                        <Body>{props.children}</Body>
+                        <Body>{children}</Body>
                     </Content>
                 </Dialog>
             </Wrapper>
         </Host>
     );
-});
+};
 
-export default Modal;
+Modal.propTypes = {
+    title: PropTypes.string,
+    children: PropTypes.element
+};
+
+export default forwardRef(Modal);
