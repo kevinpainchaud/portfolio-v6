@@ -49,6 +49,10 @@ URL: [https://www.kevinpainchaud.fr](https://www.kevinpainchaud.fr)
 
 This command run a script to update the `src/data/experience.json` & `src/data/education.json` files with data fetched from my LinkedIn profile.
 
+## Find and fix problems in the JavaScript code
+
+`npm run lint`
+
 ## Serve the dist directory
 
 `npm run serve`
