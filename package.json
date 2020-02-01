@@ -13,6 +13,7 @@
         "start": "webpack-dev-server",
         "build": "webpack --mode production --profile --json > stats.json",
         "postbuild": "react-snap",
+        "lint": "eslint .",
         "serve": "serve dist",
         "analyze-bundle": "webpack-bundle-analyzer stats.json ./dist",
         "fetch-linkedin": "python3 ./tools/fetch-linkedin.py",

@@ -1,0 +1,25 @@
+{
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "modules": true,
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "plugins": ["react"],
+    "extends": ["eslint:recommended", "plugin:react/recommended"],
+    "settings": {
+        "react": {
+            "pragma": "h",
+            "version": "latest"
+        }
+    },
+    "ignorePatterns": ["webpack.config.js"],
+    "rules": {
+        "no-empty": ["error", { "allowEmptyCatch": true }]
+    }
+}
