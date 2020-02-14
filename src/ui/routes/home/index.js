@@ -13,7 +13,7 @@ import {
 } from "../../components/styled/jumbotron";
 import { ButtonPrimary } from "../../components/styled/button";
 
-import { Jumbotron } from "./style";
+import { Jumbotron, WavingHandEmoji } from "./style";
 
 import me from "../../assets/images/me.png";
 
@@ -52,7 +52,9 @@ const Home = () => {
                         >
                             <JumbotronContent>
                                 <p>
-                                    Bonjour 👋,
+                                    Bonjour
+                                    <WavingHandEmoji />
+                                    ,
                                     <br />
                                     Je suis{" "}
                                     <strong>
