@@ -113,7 +113,7 @@ export const Body = styled.div`
     padding: 15px;
 `;
 
-[Dialog].forEach(s => {
+[Dialog, Header, HeaderTitle, HeaderBtnClose].forEach(s => {
     s.defaultProps = {
         theme: {
             base: {

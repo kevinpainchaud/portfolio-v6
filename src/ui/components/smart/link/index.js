@@ -1,5 +1,6 @@
 import { h } from "preact";
 import { Link as RouterLink } from "preact-router/match";
+import PropTypes from "prop-types";
 
 const Link = ({
     href,
@@ -38,6 +39,16 @@ const Link = ({
             {children}
         </TagName>
     );
+};
+
+Link.propTypes = {
+    href: PropTypes.string,
+    target: PropTypes.string,
+    tagName: PropTypes.string,
+    onClick: PropTypes.func,
+    className: PropTypes.string,
+    activeClassName: PropTypes.string,
+    children: PropTypes.element
 };
 
 export default Link;

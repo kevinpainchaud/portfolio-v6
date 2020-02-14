@@ -1,4 +1,4 @@
-import { h, Fragment } from "preact";
+import { h } from "preact";
 import { useRef, useState, useEffect } from "preact/hooks";
 import { subscribe } from "subscribe-ui-event";
 import Error404 from "../../routes/error-404";
@@ -93,8 +93,10 @@ const Project = ({ projectSlug, navbarRef }) => {
                         textAlign="center"
                     >
                         <SkillTags>
-                            {projectSkills.map(skill => (
-                                <SkillTag darker>{skill.name}</SkillTag>
+                            {projectSkills.map((skill, i) => (
+                                <SkillTag key={i} darker>
+                                    {skill.name}
+                                </SkillTag>
                             ))}
                         </SkillTags>
                     </ContentBlock>
@@ -110,8 +112,9 @@ const Project = ({ projectSlug, navbarRef }) => {
                         textAlign="center"
                     >
                         <LogoBadges>
-                            {projectTechnologies.map(technology => (
+                            {projectTechnologies.map((technology, i) => (
                                 <LogoBadge
+                                    key={i}
                                     type="technology"
                                     slug={technology.slug}
                                     name={technology.name}

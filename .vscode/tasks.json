@@ -19,6 +19,11 @@
             "script": "postbuild"
         },
         {
+            "label": "lint",
+            "type": "npm",
+            "script": "lint"
+        },
+        {
             "label": "serve-application",
             "type": "npm",
             "script": "serve"

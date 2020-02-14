@@ -1,4 +1,5 @@
 import { h } from "preact";
+import PropTypes from "prop-types";
 
 import Image from "../../dumb/image";
 import Link from "../link";
@@ -15,5 +16,9 @@ const NavbarBrand = ({ reverseColor }) => (
         </Link>
     </Host>
 );
+
+NavbarBrand.propTypes = {
+    reverseColor: PropTypes.bool
+};
 
 export default NavbarBrand;

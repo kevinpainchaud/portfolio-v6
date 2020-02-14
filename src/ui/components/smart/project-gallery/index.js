@@ -1,4 +1,5 @@
 import { h } from "preact";
+import PropTypes from "prop-types";
 
 import Gallery from "../../dumb/gallery";
 
@@ -19,7 +20,9 @@ const ProjectGallery = ({ slug, layout = [] }) => {
                 lgImageSrc = null;
 
             try {
+                // eslint-disable-next-line no-undef
                 mdImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/md/${image.filename}`);
+                // eslint-disable-next-line no-undef
                 lgImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/lg/${image.filename}`);
             } catch (error) {}
 
@@ -33,6 +36,11 @@ const ProjectGallery = ({ slug, layout = [] }) => {
     });
 
     return <Gallery items={items} />;
+};
+
+ProjectGallery.propTypes = {
+    slug: PropTypes.string,
+    layout: PropTypes.array
 };
 
 export default ProjectGallery;

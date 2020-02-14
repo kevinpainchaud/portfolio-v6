@@ -1,4 +1,5 @@
 import { h } from "preact";
+import PropTypes from "prop-types";
 
 import Image from "../../dumb/image";
 import Link from "../link";
@@ -25,15 +26,17 @@ const ProjectCard = ({
         mockupContent = null;
 
     try {
+        // eslint-disable-next-line no-undef
         logo = require(`../../../../statics/images/projects/logos/logo-${slug}.png`);
 
         if (mockup) {
+            // eslint-disable-next-line no-undef
             mockupContent = require(`../../../../statics/images/projects/mockup-contents/mockup-content-${slug}.jpg`);
         }
     } catch (error) {}
 
     const bodyCols = [
-        <Inner>
+        <Inner key="1">
             <Logo>
                 <Image src={logo} alt={`Logo ${name}`} />
             </Logo>
@@ -41,8 +44,8 @@ const ProjectCard = ({
                 <Title>{name}</Title>
                 <div>{description}</div>
                 <ul>
-                    {highlights.map(highlight => (
-                        <li>{highlight}</li>
+                    {highlights.map((highlight, i) => (
+                        <li key={i}>{highlight}</li>
                     ))}
                 </ul>
                 <Meta iconWidthXs>
@@ -57,6 +60,7 @@ const ProjectCard = ({
         (mockupType === "ipad" || mockupType === "tv") &&
         mockupContent ? (
             <Mockup
+                key="2"
                 class={`hidden-xs mockup-type--${mockupType} ${
                     reverse ? "mockup--reversed" : ""
                 }`}
@@ -81,6 +85,18 @@ const ProjectCard = ({
             </Link>
         </Host>
     );
+};
+
+ProjectCard.propTypes = {
+    name: PropTypes.string,
+    slug: PropTypes.string,
+    date: PropTypes.string,
+    description: PropTypes.string,
+    highlights: PropTypes.array,
+    mockup: PropTypes.string,
+    mockupType: PropTypes.string,
+    reverse: PropTypes.bool,
+    className: PropTypes.string
 };
 
 export default ProjectCard;

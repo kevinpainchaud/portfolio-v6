@@ -1,4 +1,5 @@
 import { h } from "preact";
+import PropTypes from "prop-types";
 
 import Image from "../../dumb/image";
 
@@ -16,11 +17,19 @@ const Entity = ({ title, subTitle, metas, logo, logoAlt }) => (
         <div>
             <Title>{title}</Title>
             <SubTitle>{subTitle}</SubTitle>
-            {metas.map(meta => (
-                <Meta>{meta}</Meta>
+            {metas.map((meta, i) => (
+                <Meta key={i}>{meta}</Meta>
             ))}
         </div>
     </Host>
 );
+
+Entity.propTypes = {
+    title: PropTypes.string,
+    subTitle: PropTypes.string,
+    metas: PropTypes.array,
+    logo: PropTypes.string,
+    logoAlt: PropTypes.string
+};
 
 export default Entity;

@@ -2,6 +2,7 @@ import { h } from "preact";
 import { useRef, useEffect } from "preact/hooks";
 import { PhotoSwipeGallery } from "react-photoswipe";
 import "react-photoswipe/lib/photoswipe.css";
+import PropTypes from "prop-types";
 
 import { Host } from "./style";
 
@@ -34,6 +35,10 @@ const Gallery = ({ items = [] }) => {
             />
         </Host>
     );
+};
+
+Gallery.propTypes = {
+    items: PropTypes.array
 };
 
 export default Gallery;

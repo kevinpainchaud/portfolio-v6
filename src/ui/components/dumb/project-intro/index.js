@@ -1,4 +1,5 @@
 import { h } from "preact";
+import PropTypes from "prop-types";
 
 import { Container, Row, Col } from "../../styled/grid";
 
@@ -16,5 +17,10 @@ const ProjectIntro = ({ title, content }) => (
         </Container>
     </Host>
 );
+
+ProjectIntro.propTypes = {
+    title: PropTypes.string,
+    content: PropTypes.string
+};
 
 export default ProjectIntro;

@@ -1,5 +1,6 @@
 import { h } from "preact";
 import { useContext } from "preact/hooks";
+import PropTypes from "prop-types";
 
 import { AppContext } from "../../app";
 
@@ -62,6 +63,10 @@ const NavbarNav = ({ reverseColor }) => {
             </SeeCVButton>
         </Host>
     );
+};
+
+NavbarNav.propTypes = {
+    reverseColor: PropTypes.bool
 };
 
 export default NavbarNav;

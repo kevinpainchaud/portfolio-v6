@@ -1,6 +1,6 @@
 {
     "name": "portfolio-v6",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "repository": {
         "type": "git",
         "url": "git+https://gitlab.com/kevinpainchaud/portfolio-v6.git"
@@ -13,6 +13,7 @@
         "start": "webpack-dev-server",
         "build": "webpack --mode production --profile --json > stats.json",
         "postbuild": "react-snap",
+        "lint": "eslint .",
         "serve": "serve dist",
         "analyze-bundle": "webpack-bundle-analyzer stats.json ./dist",
         "fetch-linkedin": "python3 ./tools/fetch-linkedin.py",
@@ -41,13 +42,15 @@
         "clean-webpack-plugin": "^3.0.0",
         "copy-webpack-plugin": "^5.1.1",
         "css-loader": "^3.2.0",
+        "eslint": "^6.8.0",
+        "eslint-plugin-react": "^7.18.0",
         "file-loader": "^4.2.0",
         "html-webpack-plugin": "^3.2.0",
         "image-webpack-loader": "^6.0.0",
         "node-sass": "^4.13.0",
         "react-snap": "^1.23.0",
         "sass-loader": "^8.0.0",
-        "serve": "^11.2.0",
+        "serve": "^11.3.0",
         "style-loader": "^1.0.0",
         "svg-sprite-loader": "^4.1.6",
         "webpack": "^4.41.2",

@@ -1,4 +1,5 @@
 import { h } from "preact";
+import PropTypes from "prop-types";
 
 import { Container, Row, Col } from "../../styled/grid";
 
@@ -42,5 +43,20 @@ const ContentBlock = ({
         </Container>
     </Host>
 );
+
+ContentBlock.propTypes = {
+    title: PropTypes.string,
+    titleTextAlign: PropTypes.string,
+    background: PropTypes.bool,
+    backgroundFullWidth: PropTypes.bool,
+    noBorderRadiusBottom: PropTypes.bool,
+    noBorderRadiusTop: PropTypes.bool,
+    noPaddingBottom: PropTypes.bool,
+    noPaddingLeft: PropTypes.bool,
+    noPaddingRight: PropTypes.bool,
+    noPaddingTop: PropTypes.bool,
+    textAlign: PropTypes.string,
+    children: PropTypes.element
+};
 
 export default ContentBlock;

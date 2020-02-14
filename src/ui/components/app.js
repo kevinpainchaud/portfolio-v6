@@ -56,7 +56,7 @@ export default class App extends Component {
         };
 
         return (
-            <>
+            <Fragment>
                 <AppContext.Provider value={{ emitter }}>
                     <Navbar ref={navbarRef} />
                     <Router onChange={handleRoute}>
@@ -74,7 +74,7 @@ export default class App extends Component {
                     <StickyBottomNav />
                     <ContactModal />
                 </AppContext.Provider>
-            </>
+            </Fragment>
         );
     }
 }

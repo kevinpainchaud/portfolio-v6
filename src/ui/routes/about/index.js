@@ -48,8 +48,10 @@ const About = () => {
                         textAlign="center"
                     >
                         <SkillTags>
-                            {skills.map(skill => (
-                                <SkillTag darker>{skill.name}</SkillTag>
+                            {skills.map((skill, i) => (
+                                <SkillTag key={i} darker>
+                                    {skill.name}
+                                </SkillTag>
                             ))}
                         </SkillTags>
                     </ContentBlock>
@@ -76,8 +78,9 @@ const About = () => {
                                                             technology.currentStack ===
                                                             true
                                                     )
-                                                    .map(technology => (
+                                                    .map((technology, i) => (
                                                         <LogoBadge
+                                                            key={i}
                                                             type="technology"
                                                             slug={
                                                                 technology.slug
@@ -107,8 +110,9 @@ const About = () => {
                                     >
                                         {tools.length > 0 ? (
                                             <LogoBadges>
-                                                {tools.map(tool => (
+                                                {tools.map((tool, i) => (
                                                     <LogoBadge
+                                                        key={i}
                                                         type="tool"
                                                         slug={tool.slug}
                                                         name={tool.name}
@@ -129,7 +133,7 @@ const About = () => {
                     ""
                 )}
                 {experience.length > 0 || education.length > 0 ? (
-                    <>
+                    <Fragment>
                         <ContentBlock
                             title="Mon parcours"
                             titleTextAlign="center"
@@ -146,8 +150,9 @@ const About = () => {
                                             border
                                         >
                                             <Entities>
-                                                {experience.map(e => (
+                                                {experience.map((e, i) => (
                                                     <Experience
+                                                        key={i}
                                                         companyUrn={
                                                             e.companyUrn
                                                         }
@@ -179,8 +184,9 @@ const About = () => {
                                             border
                                         >
                                             <Entities>
-                                                {education.map(e => (
+                                                {education.map((e, i) => (
                                                     <Education
+                                                        key={i}
                                                         schoolUrn={e.schoolUrn}
                                                         schoolName={
                                                             e.schoolName
@@ -199,7 +205,7 @@ const About = () => {
                                 )}
                             </Row>
                         </ContentBlock>
-                    </>
+                    </Fragment>
                 ) : (
                     ""
                 )}

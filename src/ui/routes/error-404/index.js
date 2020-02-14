@@ -1,4 +1,4 @@
-import { h, Fragment } from "preact";
+import { h } from "preact";
 import Helmet from "preact-helmet";
 
 import PageContent from "../../components/styled/page-content";
