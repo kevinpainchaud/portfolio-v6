@@ -32,7 +32,7 @@ const Home = () => {
         );
 
     useEffect(() => {
-        updateMinHeight();
+        setTimeout(updateMinHeight);
 
         const subscription = subscribe("resize", updateMinHeight, {
             throttleRate: 100
