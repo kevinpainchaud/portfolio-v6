@@ -13,3 +13,9 @@ export const Jumbotron = styled(OriginalJumbotron)`
         `
     )}
 `;
+
+export const WavingHandEmoji = styled.span`
+    &:after {
+        content: " 👋";
+    }
+`;
