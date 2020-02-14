@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import OriginalLink from "../link";
 
-export const Host = styled.div`
+export const Host = styled.nav`
     background-color: #fff;
     bottom: 0;
     box-shadow: ${props => props.theme.colors.grayBase} -1px 10px 25px;
