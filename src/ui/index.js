@@ -63,9 +63,9 @@ render(
     document.body.firstElementChild
 );
 
-// Prevent conflict between preact-router & react-snap
-// After the page prerendering, remove active class from header links
 window.snapSaveState = () => {
+    // Prevent conflict between preact-router & react-snap
+    // After the page prerendering, remove active class from header links
     const activeHeaderLinks = document.querySelectorAll(
         "header a.active, footer + nav a.active"
     );
@@ -73,4 +73,8 @@ window.snapSaveState = () => {
     if (activeHeaderLinks) {
         activeHeaderLinks.forEach(link => link.classList.remove("active"));
     }
+
+    // Removing the app wrapper padding bottom by default
+    // Patch to prevent a glitch on page load
+    document.body.firstChild.style.paddingBottom = 0;
 };
