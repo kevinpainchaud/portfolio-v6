@@ -17,7 +17,7 @@ const StickyBottomNav = () => {
         hostRef = useRef();
 
     const handleBodyPadding = () =>
-        (document.body.style.paddingBottom = `${hostRef.current.offsetHeight}px`);
+        (document.body.firstChild.style.paddingBottom = `${hostRef.current.offsetHeight}px`);
 
     const handleContactButtonClick = () =>
         appContext.emitter.emit("TOGGLE_CONTACT_MODAL");

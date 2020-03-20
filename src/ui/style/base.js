@@ -15,6 +15,12 @@ const base = css`
                 font-size: 18px;
             `
         )}
+
+        > *:first-child {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
     }
 
     * {

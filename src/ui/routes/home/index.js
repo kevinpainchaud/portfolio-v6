@@ -1,6 +1,4 @@
 import { h } from "preact";
-import { useRef, useState, useEffect } from "preact/hooks";
-import { subscribe } from "subscribe-ui-event";
 
 import { getExperienceYears } from "../../../helpers/date";
 
@@ -18,38 +16,12 @@ import { Jumbotron, WavingHandEmoji } from "./style";
 import me from "../../assets/images/me.png";
 
 const Home = () => {
-    const jumbotron = useRef(null);
-    const [minHeight, setMinHeight] = useState(0);
-
-    const updateMinHeight = () =>
-        setMinHeight(
-            window.innerHeight -
-                (document.body.clientHeight -
-                    window
-                        .getComputedStyle(jumbotron.current)
-                        .getPropertyValue("height")
-                        .replace("px", ""))
-        );
-
-    useEffect(() => {
-        setTimeout(updateMinHeight);
-
-        const subscription = subscribe("resize", updateMinHeight, {
-            throttleRate: 100
-        });
-
-        return () => subscription.unsubscribe();
-    }, []);
-
     return (
-        <PageContent>
+        <PageContent justifyContent="center">
             <Container>
                 <Row alignItems="center">
                     <Col>
-                        <Jumbotron
-                            ref={jumbotron}
-                            style={`min-height: ${minHeight}px`}
-                        >
+                        <Jumbotron>
                             <JumbotronContent>
                                 <p>
                                     Bonjour
