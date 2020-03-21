@@ -4,8 +4,16 @@
         "slug": "vs-code"
     },
     {
-        "name": "BrowserStack",
-        "slug": "browserstack"
+        "name": "Prettier",
+        "slug": "prettier"
+    },
+    {
+        "name": "ESLint",
+        "slug": "eslint"
+    },
+    {
+        "name": "Storybook",
+        "slug": "storybook"
     },
     {
         "name": "Git Kraken",
@@ -14,6 +22,10 @@
     {
         "name": "Gitmoji",
         "slug": "gitmoji"
+    },
+    {
+        "name": "BrowserStack",
+        "slug": "browserstack"
     },
     {
         "name": "WinSCP",
