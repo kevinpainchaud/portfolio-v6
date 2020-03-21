@@ -33,7 +33,7 @@ const Link = ({
             href={href && !virtualLink ? href : null}
             target={href && !virtualLink ? target : null}
             onClick={onClick || handleClick}
-            className={className}
+            class={className}
             activeClassName={activeClassName}
         >
             {children}
