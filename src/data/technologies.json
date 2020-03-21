@@ -1,23 +1,43 @@
 [
     {
-        "name": "Sass",
-        "slug": "sass",
-        "currentStack": true
-    },
-    {
         "name": "JavaScript",
         "slug": "javascript",
         "currentStack": true
     },
     {
-        "name": "React",
-        "slug": "react",
+        "name": "TypeScript",
+        "slug": "typescript",
         "currentStack": true
+    },
+    {
+        "name": "Vue.js",
+        "slug": "vue-js",
+        "currentStack": true
+    },
+    {
+        "name": "Nuxt.js",
+        "slug": "nuxt-js",
+        "currentStack": true
+    },
+    {
+        "name": "Preact",
+        "slug": "preact",
+        "currentStack": true
+    },
+    {
+        "name": "LitElement",
+        "slug": "lit-element",
+        "currentStack": false
     },
     {
         "name": "AngularJS",
         "slug": "angular-js",
         "currentStack": false
+    },
+    {
+        "name": "Sass",
+        "slug": "sass",
+        "currentStack": true
     },
     {
         "name": "Webpack",
@@ -27,27 +47,27 @@
     {
         "name": "Gulp",
         "slug": "gulp",
-        "currentStack": true
+        "currentStack": false
     },
     {
         "name": "Node.js",
-        "slug": "nodejs",
+        "slug": "node-js",
         "currentStack": true
     },
     {
         "name": "Electron",
         "slug": "electron",
-        "currentStack": true
+        "currentStack": false
     },
     {
         "name": "PHP",
         "slug": "php",
-        "currentStack": true
+        "currentStack": false
     },
     {
         "name": "WordPress",
         "slug": "wordpress",
-        "currentStack": true
+        "currentStack": false
     },
     {
         "name": "Git",

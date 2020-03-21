@@ -102,7 +102,7 @@ export const getHumanizedTimePeriod = (
 
         timePeriodStr += endDate.year;
     } else {
-        timePeriodStr += `Aujourd'hui`;
+        timePeriodStr += `Aujourd’hui`;
     }
 
     if (duration) {
