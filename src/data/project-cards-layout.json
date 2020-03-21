@@ -9,8 +9,5 @@
         }
     ],
     [{ "projectSlug": "raphael" }, { "projectSlug": "sojade" }],
-    [
-        { "projectSlug": "carte-des-mises-en-relation-hellowork" },
-        { "projectSlug": "guardian" }
-    ]
+    [{ "projectSlug": "guardian" }, { "projectSlug": "watchtower" }]
 ]

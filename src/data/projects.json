@@ -201,23 +201,6 @@
         ]
     },
     {
-        "name": "Carte des mises en relation HelloWork",
-        "slug": "carte-des-mises-en-relation-hellowork",
-        "date": "2018",
-        "company": "HelloWork",
-        "description": "Contacts collectés via RegionsJob, Cadreo, BDM/job, ...",
-        "highlights": ["Affichage en temps réel", "Version offline disponible"],
-        "presentation": {
-            "title": "Application TV utilisée lors du salon #rmsconf",
-            "content": "Réalisation d'une carte dynamique affichant en temps réel les mises en relation du groupe HelloWork via l'ensemble de ses produits (RegionsJob, Cadreo, BDM/job, ...)."
-        },
-        "galleryLayout": [
-            [{ "filename": "1.gif", "width": 1440, "height": 900 }]
-        ],
-        "skills": ["integration", "dev-front-end", "ux"],
-        "technologies": ["sass", "javascript", "gulp", "electron", "git"]
-    },
-    {
         "name": "Guardian",
         "slug": "guardian",
         "date": "2019 - Aujourd’hui",
@@ -236,5 +219,32 @@
         ],
         "skills": ["tests-e2e", "devops"],
         "technologies": ["cypress", "nodejs", "docker", "git"]
+    },
+    {
+        "name": "Watchtower",
+        "slug": "watchtower",
+        "date": "2020 - Aujourd’hui",
+        "company": "HelloWork",
+        "description": "Dashboard de visualisation de résultats de tests End-to-End",
+        "highlights": [
+            "Responsable du développement",
+            "Cypress + Guardian + GitLab CI/CD + Watchtower = ♥"
+        ],
+        "presentation": {
+            "title": "Consulter les résultats de tests fonctionnels en un clin d'œil",
+            "content": "Cette application est née du besoin des équipes produit HelloWork de pouvoir facilement et rapidement lire les résultats de leurs tests e2e. Ces derniers sont exécutés via GitLab CI/CD. Watchtower communique donc avec son API pour permettre de consulter les rapports, lancer les tests, ou même de relancer uniquement ceux en erreur."
+        },
+        "galleryLayout": [
+            [{ "filename": "1.jpg", "width": 1920, "height": 1080 }]
+        ],
+        "skills": ["integration", "dev-front-end", "ux", "devops"],
+        "technologies": [
+            "typescript",
+            "lit-element",
+            "sass",
+            "webpack",
+            "git",
+            "gitlab-ci-cd"
+        ]
     }
 ]
