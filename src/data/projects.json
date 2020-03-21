@@ -3,7 +3,7 @@
         "name": "MaFormation.fr",
         "slug": "maformation",
         "url": "https://www.maformation.fr",
-        "date": "2017 - Aujourd'hui",
+        "date": "2017 - Aujourd’hui",
         "company": "HelloWork",
         "description": "1er site de formation en France",
         "highlights": ["Responsable front-end", "+ 800 000 visiteurs / mois"],
@@ -220,7 +220,7 @@
     {
         "name": "Guardian",
         "slug": "guardian",
-        "date": "2019 - Aujourd'hui",
+        "date": "2019 - Aujourd’hui",
         "company": "HelloWork",
         "description": "Framework de tests End-to-End basé sur Cypress.io",
         "highlights": [
