@@ -39,7 +39,7 @@ URL: [https://preprod.kevinpainchaud.fr](https://preprod.kevinpainchaud.fr)
 
 ### Deploy to production:
 
-Push a tag to the `master` branch
+Push to the `master` branch
 
 URL: [https://www.kevinpainchaud.fr](https://www.kevinpainchaud.fr)
 
