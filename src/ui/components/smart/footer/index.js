@@ -8,7 +8,7 @@ import { Container, Row, Col } from "../../styled/grid";
 
 import { Host, Inner, StyledLink, IconLink } from "./style";
 
-import iconGitLab from "../../../assets/images/icon-gitlab-circle.svg";
+import iconGithub from "../../../assets/images/icon-github-circle.svg";
 
 const Footer = () => (
     <Host>
@@ -33,14 +33,14 @@ const Footer = () => (
                                     href={
                                         links.find(
                                             l =>
-                                                l.slug === "gitlab-portfolio-v6"
+                                                l.slug === "github-portfolio-v6"
                                         ).url
                                     }
                                     target="_blank"
-                                    icon={iconGitLab}
+                                    icon={iconGithub}
                                     gray
                                 >
-                                    GitLab
+                                    GitHub
                                 </IconLink>
                             </LinksGroup>
                         </div>

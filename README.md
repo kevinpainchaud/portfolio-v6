@@ -29,7 +29,7 @@ Pages are pre-rendered via [react-snap](https://github.com/stereobooster/react-s
 
 ## Deploy to preprod/production
 
-GitLab CI/CD is used to build & deploy the website with GitFlow.
+GitHub Actions is used to build & deploy the website with GitFlow.
 
 ### Deploy to preprod:
 
