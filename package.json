@@ -3,11 +3,11 @@
     "version": "1.0.2",
     "repository": {
         "type": "git",
-        "url": "git+https://gitlab.com/kevinpainchaud/portfolio-v6.git"
+        "url": "git+https://github.com/kevinpainchaud/portfolio-v6.git"
     },
     "author": "Kévin Painchaud",
     "bugs": {
-        "url": "https://gitlab.com/kevinpainchaud/portfolio-v6/issues"
+        "url": "https://github.com/kevinpainchaud/portfolio-v6/issues"
     },
     "scripts": {
         "start": "webpack-dev-server",
