@@ -55,8 +55,8 @@
             "Manipulation de l'API YouTube Player"
         ],
         "presentation": {
-            "title": "--",
-            "content": "--"
+            "title": "Side project autour de l'e-sport",
+            "content": "Amateur d'e-sport, et notamment d'Overwatch League, je me suis lancé dans la création d'une plate-forme dédiée aux replays de matchs. L'idée principale étant de visionner ces derniers via un player spécifique. Celui-ci n'affiche jamais la durée (totale ou restante) d'une vidéo, ce qui évite d'éventuels spoils."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
