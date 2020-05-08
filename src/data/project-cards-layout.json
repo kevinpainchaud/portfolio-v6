@@ -1,6 +1,6 @@
 [
     [{ "projectSlug": "maformation", "mockupType": "ipad" }],
-    [{ "projectSlug": "topo-revue" }, { "projectSlug": "bridor" }],
+    [{ "projectSlug": "reowl" }, { "projectSlug": "bridor" }],
     [
         {
             "projectSlug": "engie-home-services",
@@ -8,6 +8,6 @@
             "reverse": true
         }
     ],
-    [{ "projectSlug": "raphael" }, { "projectSlug": "sojade" }],
+    [{ "projectSlug": "raphael" }, { "projectSlug": "topo-revue" }],
     [{ "projectSlug": "guardian" }, { "projectSlug": "watchtower" }]
 ]

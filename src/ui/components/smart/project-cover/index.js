@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Image from "../../dumb/image";
 import { Container, Row, Col } from "../../styled/grid";
 import { ButtonSecondary, ButtonWhiteOutline } from "../../styled/button";
+import ButtonGroup from "../../styled/button-group";
 import Meta from "../../styled/meta";
 
 import {
@@ -13,7 +14,7 @@ import {
     Body,
     BodyInner,
     Title,
-    Metas
+    Metas,
 } from "./style";
 
 import iconArrowLeft from "../../../assets/images/icon-arrow-left.svg";
@@ -21,7 +22,15 @@ import iconExternalLink from "../../../assets/images/icon-external-link.svg";
 import iconCompany from "../../../assets/images/icon-company.svg";
 import iconCalendar from "../../../assets/images/icon-calendar.svg";
 
-const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
+const ProjectCover = ({
+    name,
+    slug,
+    company,
+    date,
+    url,
+    repoUrl,
+    topOffset,
+}) => {
     let backgroundImageSrc = null;
 
     try {
@@ -33,7 +42,7 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
         <Host
             slug={slug}
             style={{
-                "margin-top": -topOffset + "px"
+                "margin-top": -topOffset + "px",
             }}
         >
             <BackgroundImage>
@@ -41,7 +50,7 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
             </BackgroundImage>
             <Container
                 style={{
-                    "padding-top": topOffset + "px"
+                    "padding-top": topOffset + "px",
                 }}
             >
                 <Header class="hidden-xs">
@@ -85,20 +94,39 @@ const ProjectCover = ({ name, slug, company, date, url, topOffset }) => {
                                         <div>Année : {date}</div>
                                     </Meta>
                                 </Metas>
-                                {url ? (
-                                    <ButtonSecondary
-                                        href={url}
-                                        target="_blank"
-                                        tagName="button"
-                                        iconWidthXs
-                                    >
-                                        <svg>
-                                            <use
-                                                xlinkHref={`#${iconExternalLink.id}`}
-                                            ></use>
-                                        </svg>
-                                        <span>Visiter le site</span>
-                                    </ButtonSecondary>
+                                {url || repoUrl ? (
+                                    <ButtonGroup>
+                                        {url ? (
+                                            <ButtonSecondary
+                                                href={url}
+                                                target="_blank"
+                                                tagName="button"
+                                                iconWidthXs
+                                            >
+                                                <svg>
+                                                    <use
+                                                        xlinkHref={`#${iconExternalLink.id}`}
+                                                    ></use>
+                                                </svg>
+                                                <span>Visiter le site</span>
+                                            </ButtonSecondary>
+                                        ) : null}
+                                        {repoUrl ? (
+                                            <ButtonWhiteOutline
+                                                href={repoUrl}
+                                                target="_blank"
+                                                tagName="button"
+                                                iconWidthXs
+                                            >
+                                                <svg>
+                                                    <use
+                                                        xlinkHref={`#${iconExternalLink.id}`}
+                                                    ></use>
+                                                </svg>
+                                                <span>Code source</span>
+                                            </ButtonWhiteOutline>
+                                        ) : null}
+                                    </ButtonGroup>
                                 ) : null}
                             </BodyInner>
                         </Col>
@@ -115,7 +143,7 @@ ProjectCover.propTypes = {
     company: PropTypes.string,
     date: PropTypes.string,
     url: PropTypes.string,
-    topOffset: PropTypes.number
+    topOffset: PropTypes.number,
 };
 
 export default ProjectCover;

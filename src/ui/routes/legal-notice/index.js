@@ -115,6 +115,15 @@ const LegalNotice = () => {
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                                Arrière-plans :
+                                <ul>
+                                    <li>
+                                        Entête du projet Reowl par Blizzard
+                                        Entertainment
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </Col>
                 </Row>
