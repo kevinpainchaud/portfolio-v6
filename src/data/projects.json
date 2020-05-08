@@ -43,19 +43,20 @@
         ]
     },
     {
-        "name": "TOPO Revue",
-        "slug": "topo-revue",
-        "url": "http://www.toporevue.fr",
-        "date": "2016",
-        "company": "Concept Image",
-        "description": "Magazine d'actualité en bande dessinée pour les moins de vingt ans",
+        "name": "Reowl",
+        "slug": "reowl",
+        "url": "https://www.reowl.fr",
+        "repoUrl": "https://github.com/kevinpainchaud/reowl",
+        "date": "2020",
+        "company": "Projet personnel",
+        "description": "Replays des matchs Overwatch League sans spoiler et en français",
         "highlights": [
-            "E-commerce avec abonnement",
-            "Types de contenu multiples et variés"
+            "Side project autour de l'e-sport",
+            "Manipulation de l'API YouTube Player"
         ],
         "presentation": {
-            "title": "E-commerce sous WooCommerce",
-            "content": "Développement d'un site web e-commerce pour l'éditeur du magazine TOPO Revue. Les utilisateurs ont la possibilité d'acheter un ou plusieurs numéros ou même de s'abonner à la revue."
+            "title": "--",
+            "content": "--"
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
@@ -64,13 +65,13 @@
                 { "filename": "3.jpg", "width": 1920, "height": 1080 }
             ]
         ],
-        "skills": ["integration", "ux", "e-commerce"],
+        "skills": ["integration", "dev-front-end", "ux"],
         "technologies": [
+            "typescript",
+            "vue-js",
+            "nuxt-js",
             "sass",
-            "javascript",
-            "gulp",
-            "php",
-            "wordpress",
+            "webpack",
             "git"
         ]
     },
@@ -165,38 +166,34 @@
         "technologies": ["sass", "javascript", "angular-js", "gulp", "git"]
     },
     {
-        "name": "Sojade",
-        "slug": "sojade",
-        "url": "http://www.sojade.fr",
+        "name": "TOPO Revue",
+        "slug": "topo-revue",
+        "url": "https://www.toporevue.fr",
         "date": "2016",
         "company": "Concept Image",
-        "description": "Site vitrine de la marque Sojade, spécialisée dans l'alimentation végétale",
+        "description": "Magazine d'actualité en bande dessinée pour les moins de vingt ans",
         "highlights": [
-            "Catalogue de produits/recettes",
-            "Moteur de recherche de recette par produit"
+            "E-commerce avec abonnement",
+            "Types de contenu multiples et variés"
         ],
         "presentation": {
-            "title": "Présenter la gamme de produits",
-            "content": "Le site vitrine de Sojade a pour but de présenter les différents produits de la marque. On peut également y trouver des idées de recettes ou encore en proposer de nouvelles."
+            "title": "E-commerce sous WooCommerce",
+            "content": "Développement d'un site web e-commerce pour l'éditeur du magazine TOPO Revue. Les utilisateurs ont la possibilité d'acheter un ou plusieurs numéros ou même de s'abonner à la revue."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
             [
                 { "filename": "2.jpg", "width": 1920, "height": 1080 },
                 { "filename": "3.jpg", "width": 1920, "height": 1080 }
-            ],
-            [
-                { "filename": "4.jpg", "width": 1920, "height": 1080 },
-                { "filename": "5.jpg", "width": 1920, "height": 1080 }
             ]
         ],
-        "skills": ["integration", "ux"],
+        "skills": ["integration", "ux", "e-commerce"],
         "technologies": [
             "sass",
             "javascript",
+            "gulp",
             "php",
             "wordpress",
-            "gulp",
             "git"
         ]
     },
