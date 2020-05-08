@@ -13,6 +13,7 @@ import LogoBadge from "../../components/dumb/logo-badge";
 import IconLink from "../../components/dumb/icon-link";
 import ProjectIntro from "../../components/dumb/project-intro";
 import ProjectGallery from "../../components/smart/project-gallery";
+import ButtonGroup from "../../components/styled/button-group";
 import PageContent from "../../components/styled/page-content";
 import { Button } from "../../components/styled/button";
 import ActionsGroup from "../../components/styled/actions-group";
@@ -24,7 +25,7 @@ import iconArrowLeft from "../../assets/images/icon-arrow-left.svg";
 import iconExternalLink from "../../assets/images/icon-external-link.svg";
 
 const Project = ({ projectSlug, navbarRef }) => {
-    const project = projects.find(p => p.slug === projectSlug);
+    const project = projects.find((p) => p.slug === projectSlug);
 
     if (project) {
         const host = useRef(null),
@@ -32,13 +33,13 @@ const Project = ({ projectSlug, navbarRef }) => {
             projectSkills =
                 project.skills && project.skills.length > 0
                     ? skills.filter(
-                          skill => project.skills.indexOf(skill.slug) >= 0
+                          (skill) => project.skills.indexOf(skill.slug) >= 0
                       )
                     : null,
             projectTechnologies =
                 project.technologies && project.technologies.length > 0
                     ? technologies.filter(
-                          technology =>
+                          (technology) =>
                               project.technologies.indexOf(technology.slug) >= 0
                       )
                     : null;
@@ -58,7 +59,7 @@ const Project = ({ projectSlug, navbarRef }) => {
             updateTopOffset();
 
             const subscription = subscribe("resize", updateTopOffset, {
-                throttleRate: 100
+                throttleRate: 100,
             });
 
             return () => subscription.unsubscribe();
@@ -73,6 +74,7 @@ const Project = ({ projectSlug, navbarRef }) => {
                     company={project.company}
                     date={project.date}
                     url={project.url}
+                    repoUrl={project.repoUrl}
                     topOffset={topOffset}
                 ></ProjectCover>
 
@@ -138,18 +140,36 @@ const Project = ({ projectSlug, navbarRef }) => {
                 <ContentBlock noPaddingBottom noPaddingTop>
                     <ActionsGroup>
                         {project.url ? (
-                            <Button
-                                href={project.url}
-                                target="_blank"
-                                iconWidthXs
-                            >
-                                <svg>
-                                    <use
-                                        xlinkHref={`#${iconExternalLink.id}`}
-                                    ></use>
-                                </svg>
-                                <span>Visiter le site</span>
-                            </Button>
+                            <ButtonGroup>
+                                {project.url ? (
+                                    <Button
+                                        href={project.url}
+                                        target="_blank"
+                                        iconWidthXs
+                                    >
+                                        <svg>
+                                            <use
+                                                xlinkHref={`#${iconExternalLink.id}`}
+                                            ></use>
+                                        </svg>
+                                        <span>Visiter le site</span>
+                                    </Button>
+                                ) : null}
+                                {project.repoUrl ? (
+                                    <Button
+                                        href={project.repoUrl}
+                                        target="_blank"
+                                        iconWidthXs
+                                    >
+                                        <svg>
+                                            <use
+                                                xlinkHref={`#${iconExternalLink.id}`}
+                                            ></use>
+                                        </svg>
+                                        <span>Code source</span>
+                                    </Button>
+                                ) : null}
+                            </ButtonGroup>
                         ) : null}
                         <IconLink
                             href="/projets/"
