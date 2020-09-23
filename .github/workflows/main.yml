@@ -32,7 +32,7 @@ jobs:
                   export DIST_TARGET_DIR="$([ "$TARGET_ENV" == 'production' ] && echo ${{ secrets.DIST_TARGET_DIR_PROD }} || echo ${{ secrets.DIST_TARGET_DIR_PREPROD }})"
                   echo "::set-env name=DIST_TARGET_DIR::$DIST_TARGET_DIR"
             - name: Deploy to FTP (${{ env.TARGET_ENV }})
-              uses: kevinpainchaud/simple-ftp-deploy-action@v1
+              uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.0
               with:
                   ftp_host: ${{ secrets.FTP_HOST }}
                   ftp_username: ${{ secrets.FTP_USERNAME }}
