@@ -27,11 +27,13 @@ const ProjectCard = ({
 
     try {
         // eslint-disable-next-line no-undef
-        logo = require(`../../../../statics/images/projects/logos/logo-${slug}.png`);
+        logo = require(`../../../../statics/images/projects/logos/logo-${slug}.png`)
+            .default;
 
         if (mockup) {
             // eslint-disable-next-line no-undef
-            mockupContent = require(`../../../../statics/images/projects/mockup-contents/mockup-content-${slug}.jpg`);
+            mockupContent = require(`../../../../statics/images/projects/mockup-contents/mockup-content-${slug}.jpg`)
+                .default;
         }
     } catch (error) {}
 

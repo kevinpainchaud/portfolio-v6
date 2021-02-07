@@ -35,7 +35,8 @@ const ProjectCover = ({
 
     try {
         // eslint-disable-next-line no-undef
-        backgroundImageSrc = require(`../../../../statics/images/projects/covers/cover-${slug}.jpg`);
+        backgroundImageSrc = require(`../../../../statics/images/projects/covers/cover-${slug}.jpg`)
+            .default;
     } catch (error) {}
 
     return (

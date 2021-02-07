@@ -16,7 +16,8 @@ const Experience = ({
 
     try {
         // eslint-disable-next-line no-undef
-        logo = require(`../../../../statics/images/companies/logos/logo-${companyUrn}.png`);
+        logo = require(`../../../../statics/images/companies/logos/logo-${companyUrn}.png`)
+            .default;
     } catch (error) {}
 
     return (

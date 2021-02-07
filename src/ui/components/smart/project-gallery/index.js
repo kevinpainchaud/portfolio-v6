@@ -21,9 +21,11 @@ const ProjectGallery = ({ slug, layout = [] }) => {
 
             try {
                 // eslint-disable-next-line no-undef
-                mdImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/md/${image.filename}`);
+                mdImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/md/${image.filename}`)
+                    .default;
                 // eslint-disable-next-line no-undef
-                lgImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/lg/${image.filename}`);
+                lgImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/lg/${image.filename}`)
+                    .default;
             } catch (error) {}
 
             if (mdImageSrc && lgImageSrc) {
