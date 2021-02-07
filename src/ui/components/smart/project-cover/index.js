@@ -143,6 +143,7 @@ ProjectCover.propTypes = {
     slug: PropTypes.string,
     company: PropTypes.string,
     date: PropTypes.string,
+    repoUrl: PropTypes.string,
     url: PropTypes.string,
     topOffset: PropTypes.number,
 };
