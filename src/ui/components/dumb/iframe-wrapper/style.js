@@ -34,7 +34,7 @@ export const Iframe = styled.iframe`
 
 export const Loader = styled.div`
     align-items: center;
-    background-color: ${props => props.theme.colors.gray300};
+    background-color: ${(props) => props.theme.colors.gray300};
     content: "";
     display: none;
     height: 100%;
@@ -51,7 +51,7 @@ export const Loader = styled.div`
         width: 48px;
 
         > use {
-            fill: ${props => props.theme.colors.primary};
+            fill: ${(props) => props.theme.colors.primary};
         }
     }
 
@@ -60,16 +60,16 @@ export const Loader = styled.div`
     }
 `;
 
-[Loader].forEach(s => {
+[Loader].forEach((s) => {
     s.defaultProps = {
         theme: {
             base: {
-                borderRadius: 0
+                borderRadius: 0,
             },
             colors: {
                 primary: "gray",
-                gray300: "#c4c4c4"
-            }
-        }
+                gray300: "#c4c4c4",
+            },
+        },
     };
 });

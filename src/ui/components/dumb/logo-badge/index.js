@@ -18,7 +18,8 @@ const LogoBadge = ({ type, slug, name, darker }) => {
 
     try {
         // eslint-disable-next-line no-undef
-        logo = require(`../../../../statics/images/${dirName}/logos/logo-${slug}.png`);
+        logo = require(`../../../../statics/images/${dirName}/logos/logo-${slug}.png`)
+            .default;
     } catch (error) {}
 
     return (
@@ -35,7 +36,7 @@ LogoBadge.propTypes = {
     type: PropTypes.string,
     slug: PropTypes.string,
     name: PropTypes.string,
-    darker: PropTypes.bool
+    darker: PropTypes.bool,
 };
 
 export default LogoBadge;

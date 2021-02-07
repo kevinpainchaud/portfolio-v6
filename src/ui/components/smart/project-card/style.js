@@ -90,9 +90,9 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     font-size: 16px;
-    font-family: ${props => props.theme.headings.fontFamily};
+    font-family: ${(props) => props.theme.headings.fontFamily};
     font-weight: 700;
 
     ${after(
@@ -184,17 +184,17 @@ export const Mockup = styled.div`
     }
 `;
 
-[Host, Logo, Title].forEach(s => {
+[Host, Logo, Title].forEach((s) => {
     s.defaultProps = {
         theme: {
             headings: {
-                fontFamily: "sans-serif"
+                fontFamily: "sans-serif",
             },
             colors: {
                 primary: "gray",
                 gray300: "#e1e1e1",
-                grayBase: "gray"
-            }
-        }
+                grayBase: "gray",
+            },
+        },
     };
 });

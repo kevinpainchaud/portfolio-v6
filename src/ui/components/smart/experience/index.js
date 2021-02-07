@@ -10,13 +10,14 @@ const Experience = ({
     title,
     companyName,
     timePeriod,
-    locationName
+    locationName,
 }) => {
     let logo = null;
 
     try {
         // eslint-disable-next-line no-undef
-        logo = require(`../../../../statics/images/companies/logos/logo-${companyUrn}.png`);
+        logo = require(`../../../../statics/images/companies/logos/logo-${companyUrn}.png`)
+            .default;
     } catch (error) {}
 
     return (
@@ -29,7 +30,7 @@ const Experience = ({
                     timePeriod.endDate,
                     true
                 ),
-                locationName
+                locationName,
             ]}
             logo={logo}
             logoAlt={`Logo ${companyName}`}
@@ -42,7 +43,7 @@ Experience.propTypes = {
     title: PropTypes.string,
     companyName: PropTypes.string,
     timePeriod: PropTypes.object,
-    locationName: PropTypes.string
+    locationName: PropTypes.string,
 };
 
 export default Experience;

@@ -9,7 +9,7 @@ import { Host } from "./style";
 const Gallery = ({ items = [] }) => {
     const photoSwipeGalleryRef = useRef(),
         options = { history: false, shareEl: false },
-        getThumbnailContent = item => {
+        getThumbnailContent = (item) => {
             return <img src={item.thumbnail} />;
         };
 
@@ -38,7 +38,7 @@ const Gallery = ({ items = [] }) => {
 };
 
 Gallery.propTypes = {
-    items: PropTypes.array
+    items: PropTypes.array,
 };
 
 export default Gallery;

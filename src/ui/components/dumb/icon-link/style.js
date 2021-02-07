@@ -5,15 +5,15 @@ const Host = styled.div`
     display: inline-flex;
 
     > svg {
-        height: ${props => (props.iconWidthXs ? "12px" : "24px")};
+        height: ${(props) => (props.iconWidthXs ? "12px" : "24px")};
         left: 0;
-        min-width: ${props => (props.iconWidthXs ? "12px" : "24px")};
+        min-width: ${(props) => (props.iconWidthXs ? "12px" : "24px")};
         position: relative;
         top: 1px;
-        width: ${props => (props.iconWidthXs ? "12px" : "24px")};
+        width: ${(props) => (props.iconWidthXs ? "12px" : "24px")};
 
         > use {
-            fill: ${props =>
+            fill: ${(props) =>
                 props.gray
                     ? props.theme.colors.grayBase
                     : props.theme.colors.primary};
@@ -29,9 +29,9 @@ Host.defaultProps = {
     theme: {
         colors: {
             primary: "gray",
-            grayBase: "gray"
-        }
-    }
+            grayBase: "gray",
+        },
+    },
 };
 
 export default Host;

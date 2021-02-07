@@ -13,7 +13,7 @@ import {
     Header,
     HeaderTitle,
     HeaderBtnClose,
-    Body
+    Body,
 } from "./style";
 
 import iconCross from "../../../assets/images/icon-cross.svg";
@@ -70,11 +70,11 @@ const Modal = ({ title, children }, ref) => {
         <Host ref={ref}>
             <Backdrop
                 onClick={handleClosing}
-                class={show ? "visible" : null}
+                className={show ? "visible" : null}
             ></Backdrop>
-            <Wrapper class={show ? "visible" : null}>
+            <Wrapper className={show ? "visible" : null}>
                 <Outside onClick={handleClosing} show={show}></Outside>
-                <Dialog class={show ? "visible" : null}>
+                <Dialog className={show ? "visible" : null}>
                     <Content>
                         <Header>
                             <HeaderTitle>{title}</HeaderTitle>
@@ -94,7 +94,7 @@ const Modal = ({ title, children }, ref) => {
 
 Modal.propTypes = {
     title: PropTypes.string,
-    children: PropTypes.element
+    children: PropTypes.element,
 };
 
 export default forwardRef(Modal);

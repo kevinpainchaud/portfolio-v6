@@ -14,7 +14,7 @@ const IconLink = ({
     iconWidthXs,
     gray,
     className,
-    children
+    children,
 }) => (
     <Host iconWidthXs={iconWidthXs} gray={gray} className={className}>
         <svg>
@@ -40,7 +40,7 @@ IconLink.propTypes = {
     iconWidthXs: PropTypes.bool,
     gray: PropTypes.bool,
     className: PropTypes.string,
-    children: PropTypes.element
+    children: PropTypes.element,
 };
 
 export default IconLink;

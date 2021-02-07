@@ -4,10 +4,11 @@ import { after } from "../../../style/mixins/media-queries";
 
 export const Host = styled.header`
     align-items: center;
-    background-color: ${props => (props.transparent ? "transparent" : "#fff")};
-    border-bottom: ${props =>
+    background-color: ${(props) =>
+        props.transparent ? "transparent" : "#fff"};
+    border-bottom: ${(props) =>
         props.noBorderBottom ? null : "1px solid transparent"};
-    border-bottom-color: ${props =>
+    border-bottom-color: ${(props) =>
         props.transparent ? "transparent" : props.theme.colors.gray300};
     display: flex;
     padding: 15px 0;
@@ -25,9 +26,9 @@ export const Host = styled.header`
 Host.defaultProps = {
     theme: {
         colors: {
-            gray300: "#e1e1e1"
-        }
-    }
+            gray300: "#e1e1e1",
+        },
+    },
 };
 
 export default Host;

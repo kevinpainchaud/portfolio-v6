@@ -32,7 +32,7 @@ const Host = styled.div`
         }
 
         &:last-child {
-            color: ${props => props.theme.colors.textColor};
+            color: ${(props) => props.theme.colors.textColor};
             font-size: 14px;
             margin-top: 10px;
 
@@ -49,9 +49,9 @@ const Host = styled.div`
 Host.defaultProps = {
     theme: {
         colors: {
-            textColor: "gray"
-        }
-    }
+            textColor: "gray",
+        },
+    },
 };
 
 export default Host;

@@ -6,7 +6,7 @@ import experience from "../data/experience.json";
  * @param {Object} timePeriodOject
  * @returns {date}
  */
-const getDateFromTimePeriodObject = timePeriodOject =>
+const getDateFromTimePeriodObject = (timePeriodOject) =>
     new Date(
         `${timePeriodOject.year}${
             timePeriodOject.month
@@ -86,7 +86,7 @@ export const getHumanizedTimePeriod = (
             "Sept.",
             "Oct.",
             "Nov.",
-            "Dec."
+            "Dec.",
         ];
 
     if (startDate.month) {
@@ -127,7 +127,7 @@ export const getHumanizedTimePeriod = (
 export const getExperienceYears = () => {
     let experienceYears = 0;
 
-    experience.forEach(e => {
+    experience.forEach((e) => {
         const monthsDiff = getMonthsDiff(
             getDateFromTimePeriodObject(e.timePeriod.startDate),
             e.timePeriod.endDate

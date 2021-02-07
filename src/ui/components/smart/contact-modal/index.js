@@ -12,13 +12,11 @@ import { ModalContent, Hr } from "./style";
 import iconMessage from "../../../assets/images/icon-message.svg";
 
 const ContactModal = () => {
+    const appContext = useContext(AppContext);
     const modalRef = createRef();
 
     useEffect(() => {
-        const appContext = useContext(AppContext);
-
         appContext.emitter.on("TOGGLE_CONTACT_MODAL", toggleModal);
-
         return () =>
             appContext.emitter.off("TOGGLE_CONTACT_MODAL", toggleModal);
     }, []);

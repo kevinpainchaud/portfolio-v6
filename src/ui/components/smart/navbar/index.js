@@ -12,7 +12,7 @@ import { Host } from "./style";
 const Navbar = () => {
     const isHomePage = /^\/$/.test(getCurrentUrl()),
         isProjectPage = new RegExp(
-            `^/projets/(${projects.map(p => p.slug).join("|")})/$`
+            `^/projets/(${projects.map((p) => p.slug).join("|")})/$`
         ).test(getCurrentUrl());
 
     return (
@@ -22,7 +22,7 @@ const Navbar = () => {
                     <Col colWidth="3">
                         <NavbarBrand reverseColor={isProjectPage} />
                     </Col>
-                    <Col colWidth="9" class="hidden-xs">
+                    <Col colWidth="9" className="hidden-xs">
                         <NavbarNav reverseColor={isProjectPage} />
                     </Col>
                 </Row>

@@ -12,7 +12,7 @@ const LinksGroup = ({ title, children }) => (
 
 LinksGroup.propTypes = {
     title: PropTypes.string,
-    children: PropTypes.element
+    children: PropTypes.element,
 };
 
 export default LinksGroup;

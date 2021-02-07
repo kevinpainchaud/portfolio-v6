@@ -26,12 +26,12 @@ const StickyBottomNav = () => {
         handleBodyPadding();
 
         subscribe("resize", handleBodyPadding, {
-            throttleRate: 500
+            throttleRate: 500,
         });
     }, []);
 
     return (
-        <Host ref={hostRef} class="visible-xs">
+        <Host ref={hostRef} className="visible-xs">
             <Link href="/" tagName="routerLink" activeClassName="active">
                 <Icon>
                     <svg>

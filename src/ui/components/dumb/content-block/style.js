@@ -3,11 +3,11 @@ import styled, { css } from "styled-components";
 import { after } from "../../../style/mixins/media-queries";
 
 export const Host = styled.div`
-    background-color: ${props =>
+    background-color: ${(props) =>
         props.background ? props.theme.colors.gray300 : null};
 `;
 
-const getInnerBorderRadius = props => {
+const getInnerBorderRadius = (props) => {
     let borderRadius = null;
 
     if (
@@ -27,16 +27,17 @@ const getInnerBorderRadius = props => {
 };
 
 export const Inner = styled.div`
-    background-color: ${props =>
+    background-color: ${(props) =>
         props.background ? props.theme.colors.gray300 : null};
-    border-radius: ${props => getInnerBorderRadius(props)};
+    border-radius: ${(props) => getInnerBorderRadius(props)};
     padding: 25px 15px;
-    padding-bottom: ${props =>
+    padding-bottom: ${(props) =>
         props.noPaddingBottom ? "0px !important" : null};
-    padding-left: ${props => (props.noPaddingLeft ? "0px !important" : null)};
-    padding-right: ${props => (props.noPaddingRight ? "0px !important" : null)};
-    padding-top: ${props => (props.noPaddingTop ? "0px !important" : null)};
-    text-align: ${props => (props.textAlign ? "center" : null)};
+    padding-left: ${(props) => (props.noPaddingLeft ? "0px !important" : null)};
+    padding-right: ${(props) =>
+        props.noPaddingRight ? "0px !important" : null};
+    padding-top: ${(props) => (props.noPaddingTop ? "0px !important" : null)};
+    text-align: ${(props) => (props.textAlign ? "center" : null)};
 
     ${after(
         "sm",
@@ -55,7 +56,7 @@ export const Inner = styled.div`
 
 export const Title = styled.h2`
     margin: 0;
-    text-align: ${props => props.textAlign};
+    text-align: ${(props) => props.textAlign};
 `;
 
 export const Content = styled.div`
@@ -81,10 +82,10 @@ export const Content = styled.div`
 Inner.defaultProps = {
     theme: {
         base: {
-            borderRadius: 0
+            borderRadius: 0,
         },
         colors: {
-            gray300: "#e1e1e1"
-        }
-    }
+            gray300: "#e1e1e1",
+        },
+    },
 };

@@ -7,7 +7,7 @@ import PageContent from "../../components/styled/page-content";
 import { Container, Row, Col } from "../../components/styled/grid";
 import {
     JumbotronContent,
-    JumbotronImage
+    JumbotronImage,
 } from "../../components/styled/jumbotron";
 import { ButtonPrimary } from "../../components/styled/button";
 

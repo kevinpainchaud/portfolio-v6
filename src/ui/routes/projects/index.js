@@ -25,7 +25,7 @@ const Projects = () => (
                     <Row key={i}>
                         {row.map((col, j) => {
                             const project = projects.find(
-                                p => p.slug === col.projectSlug
+                                (p) => p.slug === col.projectSlug
                             );
 
                             return (

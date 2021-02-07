@@ -8,28 +8,33 @@ const config = {
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "main.js",
-        publicPath: "/"
+        publicPath: "/",
     },
     stats: {
-        source: false
+        source: false,
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
     },
     resolve: {
         alias: {
             react: "preact/compat",
             "react-dom": "preact/compat",
             "create-react-class": "preact/compat/lib/create-react-class",
-            "react-dom-factories": "preact/compat/lib/react-dom-factories"
-        }
+            "react-dom-factories": "preact/compat/lib/react-dom-factories",
+        },
     },
     module: {
         rules: [
             {
-                test: /\.js$/,
-                use: ["babel-loader"],
-                exclude: /node_modules/
+                test: /\.m?js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: ["@babel/preset-env"],
+                    },
+                },
             },
             {
                 test: /\.(gif|png|jpe?g|ico)$/,
@@ -37,26 +42,26 @@ const config = {
                     {
                         loader: "file-loader",
                         options: {
-                            outputPath: "assets/images"
-                        }
+                            outputPath: "assets/images",
+                        },
                     },
                     {
-                        loader: "image-webpack-loader"
-                    }
-                ]
+                        loader: "image-webpack-loader",
+                    },
+                ],
             },
             {
                 test: /\.svg$/,
                 loader: "svg-sprite-loader",
-                exclude: [/node_modules/]
+                exclude: [/node_modules/],
             },
             {
                 test: /\.svg$/,
                 loader: "file-loader",
                 options: {
-                    outputPath: "assets/images"
+                    outputPath: "assets/images",
                 },
-                include: [/node_modules/]
+                include: [/node_modules/],
             },
             {
                 test: /\.(woff2|woff)$/,
@@ -64,35 +69,37 @@ const config = {
                     {
                         loader: "file-loader",
                         options: {
-                            outputPath: "assets/fonts"
-                        }
-                    }
-                ]
+                            outputPath: "assets/fonts",
+                        },
+                    },
+                ],
             },
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                use: ["style-loader", "css-loader"],
             },
             {
                 test: /\.scss$/,
-                use: ["style-loader", "css-loader", "sass-loader"]
-            }
-        ]
+                use: ["style-loader", "css-loader", "sass-loader"],
+            },
+        ],
     },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin(),
-        new CopyPlugin([
-            {
-                from: "./src/statics/documents/cv-kevin-painchaud.pdf",
-                to: "."
-            },
-            {
-                from: "./src/statics/images/og-image.jpg",
-                to: "assets/images"
-            }
-        ])
-    ]
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: "./src/statics/documents/cv-kevin-painchaud.pdf",
+                    to: ".",
+                },
+                {
+                    from: "./src/statics/images/og-image.jpg",
+                    to: "assets/images",
+                },
+            ],
+        }),
+    ],
 };
 
 module.exports = config;
