@@ -13,7 +13,7 @@ const ContentBlockMini = ({
     noPaddingLeft,
     noPaddingRight,
     textAlign,
-    children
+    children,
 }) => {
     const Title = titleTagName === "h2" ? TitleH2 : TitleH3;
 
@@ -42,7 +42,7 @@ ContentBlockMini.propTypes = {
     noPaddingLeft: PropTypes.bool,
     noPaddingRight: PropTypes.bool,
     textAlign: PropTypes.string,
-    children: PropTypes.element
+    children: PropTypes.element,
 };
 
 export default ContentBlockMini;

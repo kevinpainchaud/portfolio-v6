@@ -15,16 +15,16 @@ const GlobalStyle = createGlobalStyle`
 GlobalStyle.defaultProps = {
     theme: {
         base: {
-            fontFamily: "sans-serif"
+            fontFamily: "sans-serif",
         },
         colors: {
             primary: "gray",
-            textBase: "#000"
+            textBase: "#000",
         },
         headings: {
-            fontFamily: "sans-serif"
-        }
-    }
+            fontFamily: "sans-serif",
+        },
+    },
 };
 
 export default GlobalStyle;

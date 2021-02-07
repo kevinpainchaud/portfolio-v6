@@ -3,20 +3,20 @@ import styled, { css } from "styled-components";
 import { after } from "../../../style/mixins/media-queries";
 
 export const Host = styled.div`
-    background-color: ${props =>
+    background-color: ${(props) =>
         props.background
             ? props.backgroundWhite
                 ? "#fff"
                 : props.theme.colors.gray300
             : "transparent"};
-    border: ${props =>
+    border: ${(props) =>
         props.border ? `1px solid ${props.theme.colors.gray400}` : null};
-    border-radius: ${props =>
+    border-radius: ${(props) =>
         props.background ? props.theme.base.borderRadius : null}px;
     padding: 15px;
-    padding-left: ${props => (props.noPaddingLeft ? "0px" : null)};
-    padding-right: ${props => (props.noPaddingRight ? "0px" : null)};
-    text-align: ${props => props.textAlign};
+    padding-left: ${(props) => (props.noPaddingLeft ? "0px" : null)};
+    padding-right: ${(props) => (props.noPaddingRight ? "0px" : null)};
+    text-align: ${(props) => props.textAlign};
 
     ${after(
         "md",
@@ -28,7 +28,7 @@ export const Host = styled.div`
 
 const Title = css`
     margin: 0;
-    text-align: ${props => props.textAlign};
+    text-align: ${(props) => props.textAlign};
 `;
 
 export const TitleH2 = styled.h2`
@@ -48,11 +48,11 @@ export const Content = styled.div`
 Host.defaultProps = {
     theme: {
         base: {
-            borderRadius: 0
+            borderRadius: 0,
         },
         colors: {
             gray300: "#e1e1e1",
-            gray400: "#c4c4c4"
-        }
-    }
+            gray400: "#c4c4c4",
+        },
+    },
 };

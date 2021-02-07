@@ -35,7 +35,8 @@ const ProjectCover = ({
 
     try {
         // eslint-disable-next-line no-undef
-        backgroundImageSrc = require(`../../../../statics/images/projects/covers/cover-${slug}.jpg`);
+        backgroundImageSrc = require(`../../../../statics/images/projects/covers/cover-${slug}.jpg`)
+            .default;
     } catch (error) {}
 
     return (
@@ -53,7 +54,7 @@ const ProjectCover = ({
                     "padding-top": topOffset + "px",
                 }}
             >
-                <Header class="hidden-xs">
+                <Header className="hidden-xs">
                     <Row>
                         <Col>
                             <ButtonWhiteOutline
@@ -142,6 +143,7 @@ ProjectCover.propTypes = {
     slug: PropTypes.string,
     company: PropTypes.string,
     date: PropTypes.string,
+    repoUrl: PropTypes.string,
     url: PropTypes.string,
     topOffset: PropTypes.number,
 };

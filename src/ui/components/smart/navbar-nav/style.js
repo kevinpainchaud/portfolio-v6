@@ -56,7 +56,7 @@ export const Host = styled.nav`
 `;
 
 export const Link = styled(OriginalLink)`
-    color: ${props =>
+    color: ${(props) =>
         props.reverseColor ? "#fff" : props.theme.colors.textBase};
 
     &.active {
@@ -67,7 +67,7 @@ export const Link = styled(OriginalLink)`
 Link.defaultProps = {
     theme: {
         colors: {
-            textBase: "#000"
-        }
-    }
+            textBase: "#000",
+        },
+    },
 };

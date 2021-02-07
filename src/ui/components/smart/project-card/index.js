@@ -20,18 +20,20 @@ const ProjectCard = ({
     mockup,
     mockupType,
     reverse,
-    className
+    className,
 }) => {
     let logo = null,
         mockupContent = null;
 
     try {
         // eslint-disable-next-line no-undef
-        logo = require(`../../../../statics/images/projects/logos/logo-${slug}.png`);
+        logo = require(`../../../../statics/images/projects/logos/logo-${slug}.png`)
+            .default;
 
         if (mockup) {
             // eslint-disable-next-line no-undef
-            mockupContent = require(`../../../../statics/images/projects/mockup-contents/mockup-content-${slug}.jpg`);
+            mockupContent = require(`../../../../statics/images/projects/mockup-contents/mockup-content-${slug}.jpg`)
+                .default;
         }
     } catch (error) {}
 
@@ -61,7 +63,7 @@ const ProjectCard = ({
         mockupContent ? (
             <Mockup
                 key="2"
-                class={`hidden-xs mockup-type--${mockupType} ${
+                className={`hidden-xs mockup-type--${mockupType} ${
                     reverse ? "mockup--reversed" : ""
                 }`}
             >
@@ -71,7 +73,7 @@ const ProjectCard = ({
                     <Image src={mockupContent} />
                 </div>
             </Mockup>
-        ) : null
+        ) : null,
     ];
 
     if (reverse) {
@@ -96,7 +98,7 @@ ProjectCard.propTypes = {
     mockup: PropTypes.string,
     mockupType: PropTypes.string,
     reverse: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 export default ProjectCard;

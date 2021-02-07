@@ -33,7 +33,7 @@ export default class App extends Component {
             }
         });
 
-        const handleRoute = e => {
+        const handleRoute = (e) => {
             this.currentUrl = e.url;
 
             // Restore the window scroll top position

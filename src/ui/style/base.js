@@ -4,8 +4,8 @@ import { after } from "./mixins/media-queries";
 
 const base = css`
     body {
-        color: ${props => props.theme.colors.textBase};
-        font-family: ${props => props.theme.base.fontFamily};
+        color: ${(props) => props.theme.colors.textBase};
+        font-family: ${(props) => props.theme.base.fontFamily};
         font-size: 14px;
         font-weight: 400;
 
@@ -28,7 +28,7 @@ const base = css`
     }
 
     a {
-        color: ${props => props.theme.colors.primary};
+        color: ${(props) => props.theme.colors.primary};
         text-decoration: none;
     }
 `;

@@ -9,12 +9,12 @@ const Link = ({
     onClick,
     className,
     activeClassName,
-    children
+    children,
 }) => {
     const TagName = tagName === "routerLink" ? RouterLink : tagName,
         virtualLink = ["a", "routerLink"].indexOf(tagName) === -1;
 
-    const handleClick = event => {
+    const handleClick = (event) => {
         if (href && tagName !== "a") {
             event.preventDefault();
 
@@ -48,7 +48,7 @@ Link.propTypes = {
     onClick: PropTypes.func,
     className: PropTypes.string,
     activeClassName: PropTypes.string,
-    children: PropTypes.element
+    children: PropTypes.element,
 };
 
 export default Link;

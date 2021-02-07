@@ -12,7 +12,7 @@ const NavbarNav = ({ title, subTitle }) => (
 
 NavbarNav.propTypes = {
     title: PropTypes.string,
-    subTitle: PropTypes.string
+    subTitle: PropTypes.string,
 };
 
 export default NavbarNav;

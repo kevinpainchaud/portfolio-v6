@@ -29,7 +29,7 @@ Entity.propTypes = {
     subTitle: PropTypes.string,
     metas: PropTypes.array,
     logo: PropTypes.string,
-    logoAlt: PropTypes.string
+    logoAlt: PropTypes.string,
 };
 
 export default Entity;

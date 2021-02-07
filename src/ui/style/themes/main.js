@@ -4,10 +4,10 @@ const mainTheme = {
     base: {
         fontFamily: '"HK Grotesk", sans-serif',
         borderRadius: 6,
-        transitionDuration: 0.2
+        transitionDuration: 0.2,
     },
     headings: {
-        fontFamily: '"Gilroy", sans-serif'
+        fontFamily: '"Gilroy", sans-serif',
     },
     colors: {
         primary: "#110133",
@@ -16,12 +16,12 @@ const mainTheme = {
         gray300: "#edf6f6",
         gray400: "#cadcdc",
         grayBase: "#808080",
-        textBase: lighten(0.15, "#000")
+        textBase: lighten(0.15, "#000"),
     },
     button: {
         borderRadius: 200,
-        borderWidth: 2
-    }
+        borderWidth: 2,
+    },
 };
 
 export default mainTheme;

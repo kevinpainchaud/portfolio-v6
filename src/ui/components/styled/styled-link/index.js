@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Link from "../../smart/link";
 
 const StyledLink = styled(Link)`
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     cursor: pointer;
     text-decoration: underline;
 `;
@@ -11,9 +11,9 @@ const StyledLink = styled(Link)`
 StyledLink.defaultProps = {
     theme: {
         colors: {
-            primary: "gray"
-        }
-    }
+            primary: "gray",
+        },
+    },
 };
 
 export default StyledLink;

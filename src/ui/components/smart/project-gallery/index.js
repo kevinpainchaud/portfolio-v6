@@ -7,13 +7,13 @@ const ProjectGallery = ({ slug, layout = [] }) => {
     const items = [];
 
     // Construct the items array
-    layout.forEach(row => {
-        row.forEach(image => {
+    layout.forEach((row) => {
+        row.forEach((image) => {
             const isXxlWidth = row.length === 1,
                 item = {
                     width: isXxlWidth ? "xxl" : "default",
                     w: image.width,
-                    h: image.height
+                    h: image.height,
                 };
 
             let mdImageSrc = null,
@@ -21,9 +21,11 @@ const ProjectGallery = ({ slug, layout = [] }) => {
 
             try {
                 // eslint-disable-next-line no-undef
-                mdImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/md/${image.filename}`);
+                mdImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/md/${image.filename}`)
+                    .default;
                 // eslint-disable-next-line no-undef
-                lgImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/lg/${image.filename}`);
+                lgImageSrc = require(`../../../../statics/images/projects/gallery/${slug}/lg/${image.filename}`)
+                    .default;
             } catch (error) {}
 
             if (mdImageSrc && lgImageSrc) {
@@ -40,7 +42,7 @@ const ProjectGallery = ({ slug, layout = [] }) => {
 
 ProjectGallery.propTypes = {
     slug: PropTypes.string,
-    layout: PropTypes.array
+    layout: PropTypes.array,
 };
 
 export default ProjectGallery;

@@ -4,8 +4,6 @@ import PageContent from "../../components/styled/page-content";
 import { Container, Row, Col } from "../../components/styled/grid";
 import StyledLink from "../../components/styled/styled-link";
 
-import { IframeWrapper } from "./style";
-
 const LegalNotice = () => {
     return (
         <PageContent>
@@ -13,29 +11,29 @@ const LegalNotice = () => {
                 <Row>
                     <Col>
                         <h1>Mentions légales</h1>
-                        <h2>Confidentialité</h2>
-                        <p>
-                            J’ai mis en place un tracker via le service{" "}
-                            <StyledLink
-                                href="https://fr.matomo.org"
-                                target="_blank"
-                            >
-                                Matomo
-                            </StyledLink>{" "}
-                            (auto-hébergé).
-                            <br />
-                            Celui-ci me permet de comptabiliser le nombre de
-                            visites sur ce site.
-                            <br />
-                            Si vous le souhaitez, vous pouvez à tout moment le
-                            désactiver via le champ ci-dessous :
-                        </p>
-                        <IframeWrapper iframeSrc="https://piwik.kpcd.me/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=&fontColor=262626&fontSize=18px&fontFamily=%22HK%20Grotesk%22%2C%20sans-serif" />
                         <h2>Hébergement</h2>
                         <p>
                             Le site www.kevinpainchaud.fr est hébergé chez OVH.
                             <br />2 rue Kellermann 59100 Roubaix – France
                         </p>
+                        <h2>Cookies</h2>
+                        <p>
+                            Un cookie est un fichier de petite taille identifié
+                            par un nom et transmis à votre navigateur par un
+                            site web sur lequel vous vous connectez. Ce dernier
+                            peut contenir diverses informations d’ordre
+                            technique, statistique ou publicitaire. Votre
+                            navigateur le conservera et le renverra au serveur
+                            web chaque fois que vous vous y re-connecterez
+                            jusqu’à sa disparition conditionnée selon une
+                            certaine durée.
+                        </p>
+                        <p>
+                            Sur ce site, des cookies sont utilisés pour :<br />
+                        </p>
+                        <ul>
+                            <li>des statistiques via Google Analytics</li>
+                        </ul>
                         <h2>Ressources</h2>
                         <p>
                             Ci-dessous, une partie des ressources utilisées dans

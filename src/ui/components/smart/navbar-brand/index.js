@@ -18,7 +18,7 @@ const NavbarBrand = ({ reverseColor }) => (
 );
 
 NavbarBrand.propTypes = {
-    reverseColor: PropTypes.bool
+    reverseColor: PropTypes.bool,
 };
 
 export default NavbarBrand;
