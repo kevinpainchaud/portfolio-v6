@@ -60,7 +60,7 @@ export const SubTitle = styled.div`
 `;
 
 export const Meta = styled.div`
-    color: ${props => props.theme.colors.grayBase};
+    color: ${(props) => props.theme.colors.grayBase};
     font-size: 14px;
 
     ${after(
@@ -74,7 +74,7 @@ export const Meta = styled.div`
 Meta.defaultProps = {
     theme: {
         colors: {
-            grayBase: "gray"
-        }
-    }
+            grayBase: "gray",
+        },
+    },
 };

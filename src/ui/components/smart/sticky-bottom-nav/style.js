@@ -5,7 +5,7 @@ import OriginalLink from "../link";
 export const Host = styled.nav`
     background-color: #fff;
     bottom: 0;
-    box-shadow: ${props => props.theme.colors.grayBase} -1px 10px 25px;
+    box-shadow: ${(props) => props.theme.colors.grayBase} -1px 10px 25px;
     display: flex;
     left: 0;
     position: fixed;
@@ -16,7 +16,7 @@ export const Host = styled.nav`
     }
 
     > * + * {
-        border-left: 1px solid ${props => props.theme.colors.gray300};
+        border-left: 1px solid ${(props) => props.theme.colors.gray300};
     }
 `;
 
@@ -28,7 +28,7 @@ export const Link = styled(OriginalLink)`
     padding: 10px;
 
     &.active {
-        background-color: ${props => props.theme.colors.secondary};
+        background-color: ${(props) => props.theme.colors.secondary};
         color: #fff;
     }
 `;
@@ -40,7 +40,7 @@ export const Icon = styled.div`
         width: 24px;
 
         > use {
-            fill: ${props => props.theme.colors.primary};
+            fill: ${(props) => props.theme.colors.primary};
 
             .active & {
                 fill: #fff;
@@ -55,15 +55,15 @@ export const Label = styled.div`
     text-align: center;
 `;
 
-[Host, Link, Icon].forEach(s => {
+[Host, Link, Icon].forEach((s) => {
     s.defaultProps = {
         theme: {
             colors: {
                 primary: "gray",
                 secondary: "gray",
                 gray300: "#e1e1e1",
-                grayBase: "gray"
-            }
-        }
+                grayBase: "gray",
+            },
+        },
     };
 });

@@ -45,7 +45,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Outside = styled.div`
-    display: ${props => (props.show ? "block" : "none")};
+    display: ${(props) => (props.show ? "block" : "none")};
     height: 100%;
     left: 0;
     position: absolute;
@@ -56,7 +56,7 @@ export const Outside = styled.div`
 
 export const Dialog = styled.div`
     background-color: #fff;
-    border-radius: ${props => props.theme.base.borderRadius}px;
+    border-radius: ${(props) => props.theme.base.borderRadius}px;
     opacity: 0;
     margin: 30px auto;
     max-width: 500px;
@@ -81,13 +81,13 @@ export const Content = styled.div``;
 
 export const Header = styled.div`
     align-items: center;
-    border-bottom: 1px solid ${props => props.theme.colors.gray400};
+    border-bottom: 1px solid ${(props) => props.theme.colors.gray400};
     display: flex;
     padding: 15px;
 `;
 
 export const HeaderTitle = styled.div`
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     flex: 1;
     font-family: "Gilroy";
     font-weight: 600;
@@ -104,7 +104,7 @@ export const HeaderBtnClose = styled.div`
         width: 16px;
 
         > use {
-            fill: ${props => props.theme.colors.grayBase};
+            fill: ${(props) => props.theme.colors.grayBase};
         }
     }
 `;
@@ -113,17 +113,17 @@ export const Body = styled.div`
     padding: 15px;
 `;
 
-[Dialog, Header, HeaderTitle, HeaderBtnClose].forEach(s => {
+[Dialog, Header, HeaderTitle, HeaderBtnClose].forEach((s) => {
     s.defaultProps = {
         theme: {
             base: {
-                borderRadius: 0
+                borderRadius: 0,
             },
             colors: {
                 primary: "gray",
                 gray400: "#c4c4c4",
-                grayBase: "gray"
-            }
-        }
+                grayBase: "gray",
+            },
+        },
     };
 });

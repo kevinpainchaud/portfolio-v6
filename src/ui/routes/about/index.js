@@ -74,7 +74,7 @@ const About = () => {
                                             <LogoBadges>
                                                 {technologies
                                                     .filter(
-                                                        technology =>
+                                                        (technology) =>
                                                             technology.currentStack ===
                                                             true
                                                     )

@@ -22,14 +22,14 @@ export const Row = styled.div`
     ${after(
         "sm",
         css`
-            align-items: ${props => props.alignItems || null};
+            align-items: ${(props) => props.alignItems || null};
             display: flex;
-            justify-content: ${props => props.justifyContent || null};
+            justify-content: ${(props) => props.justifyContent || null};
         `
     )}
 
     > * {
-        text-align: ${props => props.textAlign || null};
+        text-align: ${(props) => props.textAlign || null};
     }
 
     > * + * {
@@ -50,11 +50,11 @@ export const Col = styled.div`
     ${after(
         "sm",
         css`
-            flex-basis: ${props =>
+            flex-basis: ${(props) =>
                 props.colWidth
                     ? ((props.colWidth / nbCols) * 100).toFixed(6) + "%"
                     : "auto"};
-            min-width: ${props =>
+            min-width: ${(props) =>
                 props.colWidth
                     ? ((props.colWidth / nbCols) * 100).toFixed(6) + "%"
                     : "auto"};
@@ -62,6 +62,6 @@ export const Col = styled.div`
     )}
 
     > * {
-        min-height: ${props => (props.sameHeight ? "100%" : null)};
+        min-height: ${(props) => (props.sameHeight ? "100%" : null)};
     }
 `;

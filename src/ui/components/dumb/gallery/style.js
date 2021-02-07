@@ -16,8 +16,8 @@ export const Host = styled.div`
         )}
 
         .thumbnail {
-            border: 1px solid ${props => props.theme.colors.gray400};
-            border-radius: ${props => props.theme.base.borderRadius}px;
+            border: 1px solid ${(props) => props.theme.colors.gray400};
+            border-radius: ${(props) => props.theme.base.borderRadius}px;
             cursor: zoom-in;
             margin: 5px;
             overflow: hidden;
@@ -51,10 +51,10 @@ export const Host = styled.div`
 Host.defaultProps = {
     theme: {
         base: {
-            borderRadius: 0
+            borderRadius: 0,
         },
         colors: {
-            gray400: "#c4c4c4"
-        }
-    }
+            gray400: "#c4c4c4",
+        },
+    },
 };

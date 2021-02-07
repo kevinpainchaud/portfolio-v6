@@ -7,9 +7,9 @@ const typography = css`
     h2,
     h3,
     h4 {
-        font-family: ${props => props.theme.headings.fontFamily};
+        font-family: ${(props) => props.theme.headings.fontFamily};
         font-weight: 700;
-        color: ${props => props.theme.colors.primary};
+        color: ${(props) => props.theme.colors.primary};
     }
 
     h1 {

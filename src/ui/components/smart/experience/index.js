@@ -10,7 +10,7 @@ const Experience = ({
     title,
     companyName,
     timePeriod,
-    locationName
+    locationName,
 }) => {
     let logo = null;
 
@@ -29,7 +29,7 @@ const Experience = ({
                     timePeriod.endDate,
                     true
                 ),
-                locationName
+                locationName,
             ]}
             logo={logo}
             logoAlt={`Logo ${companyName}`}
@@ -42,7 +42,7 @@ Experience.propTypes = {
     title: PropTypes.string,
     companyName: PropTypes.string,
     timePeriod: PropTypes.object,
-    locationName: PropTypes.string
+    locationName: PropTypes.string,
 };
 
 export default Experience;

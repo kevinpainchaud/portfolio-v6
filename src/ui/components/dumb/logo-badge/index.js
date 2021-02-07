@@ -35,7 +35,7 @@ LogoBadge.propTypes = {
     type: PropTypes.string,
     slug: PropTypes.string,
     name: PropTypes.string,
-    darker: PropTypes.bool
+    darker: PropTypes.bool,
 };
 
 export default LogoBadge;

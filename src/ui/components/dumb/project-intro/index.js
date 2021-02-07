@@ -20,7 +20,7 @@ const ProjectIntro = ({ title, content }) => (
 
 ProjectIntro.propTypes = {
     title: PropTypes.string,
-    content: PropTypes.string
+    content: PropTypes.string,
 };
 
 export default ProjectIntro;

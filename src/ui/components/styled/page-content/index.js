@@ -12,20 +12,20 @@ const fadeIn = keyframes`
 
 const PageContent = styled.div`
     animation: ${fadeIn} 0.2s;
-    background-color: ${props =>
+    background-color: ${(props) =>
         props.background ? props.theme.colors.gray300 : null};
     display: flex;
     flex: 1;
     flex-direction: column;
-    justify-content: ${props => props.justifyContent || null};
+    justify-content: ${(props) => props.justifyContent || null};
 `;
 
 PageContent.defaultProps = {
     theme: {
         colors: {
-            gray300: "#f7f7f7"
-        }
-    }
+            gray300: "#f7f7f7",
+        },
+    },
 };
 
 export default PageContent;

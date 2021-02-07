@@ -29,7 +29,7 @@ const IframeWrapper = ({ iframeSrc, className }) => {
 
 IframeWrapper.propTypes = {
     iframeSrc: PropTypes.string,
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 export default IframeWrapper;

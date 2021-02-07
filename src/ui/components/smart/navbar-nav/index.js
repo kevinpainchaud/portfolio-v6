@@ -8,7 +8,7 @@ import {
     ButtonPrimary,
     ButtonWhite,
     ButtonSecondaryOutline,
-    ButtonWhiteOutline
+    ButtonWhiteOutline,
 } from "../../styled/button";
 
 import { Host, Link } from "./style";
@@ -66,7 +66,7 @@ const NavbarNav = ({ reverseColor }) => {
 };
 
 NavbarNav.propTypes = {
-    reverseColor: PropTypes.bool
+    reverseColor: PropTypes.bool,
 };
 
 export default NavbarNav;

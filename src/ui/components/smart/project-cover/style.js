@@ -23,7 +23,7 @@ export const BackgroundImage = styled.div`
     width: 100%;
 
     &:after {
-        background-color: ${props => props.theme.colors.primary};
+        background-color: ${(props) => props.theme.colors.primary};
         content: "";
         display: block;
         height: 100%;
@@ -123,7 +123,7 @@ BackgroundImage.defaultProps = {
     theme: {
         colors: {
             primary: "gray",
-            gray300: "#e1e1e1"
-        }
-    }
+            gray300: "#e1e1e1",
+        },
+    },
 };

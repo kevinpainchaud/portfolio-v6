@@ -19,7 +19,7 @@ export const ModalContent = styled.div`
 `;
 
 export const Hr = styled.div`
-    background-color: ${props => props.theme.colors.gray400};
+    background-color: ${(props) => props.theme.colors.gray400};
     height: 1px;
     margin: 15px auto 10px auto;
     width: 100px;
@@ -35,7 +35,7 @@ export const Hr = styled.div`
 Hr.defaultProps = {
     theme: {
         colors: {
-            gray400: "#c4c4c4"
-        }
-    }
+            gray400: "#c4c4c4",
+        },
+    },
 };

@@ -12,7 +12,7 @@ const Image = ({ src, alt }) => (
 
 Image.propTypes = {
     src: PropTypes.string,
-    alt: PropTypes.string
+    alt: PropTypes.string,
 };
 
 export default Image;

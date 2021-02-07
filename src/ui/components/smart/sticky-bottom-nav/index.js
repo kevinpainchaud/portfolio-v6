@@ -26,7 +26,7 @@ const StickyBottomNav = () => {
         handleBodyPadding();
 
         subscribe("resize", handleBodyPadding, {
-            throttleRate: 500
+            throttleRate: 500,
         });
     }, []);
 

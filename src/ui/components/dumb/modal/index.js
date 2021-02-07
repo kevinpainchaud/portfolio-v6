@@ -13,7 +13,7 @@ import {
     Header,
     HeaderTitle,
     HeaderBtnClose,
-    Body
+    Body,
 } from "./style";
 
 import iconCross from "../../../assets/images/icon-cross.svg";
@@ -94,7 +94,7 @@ const Modal = ({ title, children }, ref) => {
 
 Modal.propTypes = {
     title: PropTypes.string,
-    children: PropTypes.element
+    children: PropTypes.element,
 };
 
 export default forwardRef(Modal);

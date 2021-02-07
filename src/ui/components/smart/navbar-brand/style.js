@@ -34,7 +34,7 @@ const Host = styled.div`
         }
 
         > span {
-            color: ${props =>
+            color: ${(props) =>
                 props.reverseColor ? "#fff" : props.theme.colors.textBase};
             font-family: "Gilroy";
             font-size: 21px;
@@ -54,9 +54,9 @@ const Host = styled.div`
 Host.defaultProps = {
     theme: {
         colors: {
-            textBase: "#000"
-        }
-    }
+            textBase: "#000",
+        },
+    },
 };
 
 export default Host;

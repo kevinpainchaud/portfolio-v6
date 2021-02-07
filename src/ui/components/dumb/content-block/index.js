@@ -17,7 +17,7 @@ const ContentBlock = ({
     noPaddingRight,
     noPaddingTop,
     textAlign,
-    children
+    children,
 }) => (
     <Host background={background && backgroundFullWidth}>
         <Container>
@@ -56,7 +56,7 @@ ContentBlock.propTypes = {
     noPaddingRight: PropTypes.bool,
     noPaddingTop: PropTypes.bool,
     textAlign: PropTypes.string,
-    children: PropTypes.element
+    children: PropTypes.element,
 };
 
 export default ContentBlock;

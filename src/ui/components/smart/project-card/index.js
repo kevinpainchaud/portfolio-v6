@@ -20,7 +20,7 @@ const ProjectCard = ({
     mockup,
     mockupType,
     reverse,
-    className
+    className,
 }) => {
     let logo = null,
         mockupContent = null;
@@ -71,7 +71,7 @@ const ProjectCard = ({
                     <Image src={mockupContent} />
                 </div>
             </Mockup>
-        ) : null
+        ) : null,
     ];
 
     if (reverse) {
@@ -96,7 +96,7 @@ ProjectCard.propTypes = {
     mockup: PropTypes.string,
     mockupType: PropTypes.string,
     reverse: PropTypes.bool,
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 export default ProjectCard;

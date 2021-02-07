@@ -27,7 +27,7 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.div`
-    color: ${props => props.theme.colors.grayBase};
+    color: ${(props) => props.theme.colors.grayBase};
     line-height: 1.35em;
 
     * + & {
@@ -45,7 +45,7 @@ export const SubTitle = styled.div`
 SubTitle.defaultProps = {
     theme: {
         colors: {
-            grayBase: "gray"
-        }
-    }
+            grayBase: "gray",
+        },
+    },
 };

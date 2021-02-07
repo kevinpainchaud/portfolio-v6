@@ -14,7 +14,7 @@ import faviconPng from "./assets/images/favicon.png";
 
 const matomoInstance = createInstance({
     urlBase: "https://piwik.kpcd.me/",
-    siteId: 1
+    siteId: 1,
 });
 
 render(
@@ -27,26 +27,26 @@ render(
                     {
                         name: "viewport",
                         content:
-                            "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+                            "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
                     },
                     {
                         property: "og:image",
                         content:
-                            "https://www.kevinpainchaud.fr/assets/images/og-image.jpg"
-                    }
+                            "https://www.kevinpainchaud.fr/assets/images/og-image.jpg",
+                    },
                 ]}
                 link={[
                     {
                         rel: "shortcut icon",
                         href: faviconIco,
-                        type: "image/x-icon"
+                        type: "image/x-icon",
                     },
                     {
                         rel: "icon",
                         href: faviconPng,
                         type: "image/png",
-                        sizes: "128x128"
-                    }
+                        sizes: "128x128",
+                    },
                 ]}
             />
 
@@ -71,7 +71,7 @@ window.snapSaveState = () => {
     );
 
     if (activeHeaderLinks) {
-        activeHeaderLinks.forEach(link => link.classList.remove("active"));
+        activeHeaderLinks.forEach((link) => link.classList.remove("active"));
     }
 
     // Removing the app wrapper padding bottom by default

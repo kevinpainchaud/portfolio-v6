@@ -32,7 +32,7 @@ const Footer = () => (
                                 <IconLink
                                     href={
                                         links.find(
-                                            l =>
+                                            (l) =>
                                                 l.slug === "github-portfolio-v6"
                                         ).url
                                     }

@@ -7,13 +7,13 @@ const ProjectGallery = ({ slug, layout = [] }) => {
     const items = [];
 
     // Construct the items array
-    layout.forEach(row => {
-        row.forEach(image => {
+    layout.forEach((row) => {
+        row.forEach((image) => {
             const isXxlWidth = row.length === 1,
                 item = {
                     width: isXxlWidth ? "xxl" : "default",
                     w: image.width,
-                    h: image.height
+                    h: image.height,
                 };
 
             let mdImageSrc = null,
@@ -40,7 +40,7 @@ const ProjectGallery = ({ slug, layout = [] }) => {
 
 ProjectGallery.propTypes = {
     slug: PropTypes.string,
-    layout: PropTypes.array
+    layout: PropTypes.array,
 };
 
 export default ProjectGallery;
