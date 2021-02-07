@@ -2,7 +2,6 @@ import { h, render } from "preact";
 import { ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
 import Helmet from "preact-helmet";
-import ReactGA from "react-ga";
 
 import App from "./components/app";
 
@@ -11,8 +10,6 @@ import GlobalStyle from "./style/index";
 
 import faviconIco from "./assets/images/favicon.ico";
 import faviconPng from "./assets/images/favicon.png";
-
-ReactGA.initialize("UA-163933218-2");
 
 render(
     <ThemeProvider theme={mainTheme}>

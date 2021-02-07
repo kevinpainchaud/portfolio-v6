@@ -3,6 +3,8 @@ import { useRef } from "preact/hooks";
 import { Router } from "preact-router";
 import mitt from "mitt";
 import { subscribe } from "subscribe-ui-event";
+import ReactGA from "react-ga";
+import tracking from "../../data/tracking.json";
 
 import Navbar from "./smart/navbar";
 import Footer from "./smart/footer";
@@ -21,6 +23,13 @@ const emitter = mitt();
 export const AppContext = createContext({ emitter });
 
 export default class App extends Component {
+    componentDidMount() {
+        ReactGA.initialize(
+            tracking.find((tracker) => tracker.type === "ga").code
+        );
+        ReactGA.pageview(window.location.pathname + window.location.search);
+    }
+
     render() {
         const navbarRef = useRef();
 
@@ -53,6 +62,9 @@ export default class App extends Component {
             if (navbarRef.current) {
                 navbarRef.current.forceUpdate();
             }
+
+            // Send page view to Google Analytics
+            ReactGA.pageview(this.currentUrl);
         };
 
         return (
