@@ -22,7 +22,7 @@ const Navbar = () => {
                     <Col colWidth="3">
                         <NavbarBrand reverseColor={isProjectPage} />
                     </Col>
-                    <Col colWidth="9" class="hidden-xs">
+                    <Col colWidth="9" className="hidden-xs">
                         <NavbarNav reverseColor={isProjectPage} />
                     </Col>
                 </Row>

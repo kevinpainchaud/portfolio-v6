@@ -31,7 +31,7 @@ const StickyBottomNav = () => {
     }, []);
 
     return (
-        <Host ref={hostRef} class="visible-xs">
+        <Host ref={hostRef} className="visible-xs">
             <Link href="/" tagName="routerLink" activeClassName="active">
                 <Icon>
                     <svg>

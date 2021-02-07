@@ -61,7 +61,7 @@ const ProjectCard = ({
         mockupContent ? (
             <Mockup
                 key="2"
-                class={`hidden-xs mockup-type--${mockupType} ${
+                className={`hidden-xs mockup-type--${mockupType} ${
                     reverse ? "mockup--reversed" : ""
                 }`}
             >

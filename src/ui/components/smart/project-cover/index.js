@@ -53,7 +53,7 @@ const ProjectCover = ({
                     "padding-top": topOffset + "px",
                 }}
             >
-                <Header class="hidden-xs">
+                <Header className="hidden-xs">
                     <Row>
                         <Col>
                             <ButtonWhiteOutline

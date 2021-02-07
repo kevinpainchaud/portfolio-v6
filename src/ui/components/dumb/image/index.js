@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { Host } from "./style";
 
 const Image = ({ src, alt }) => (
-    <Host class="img">
+    <Host className="img">
         <LazyLoadImage effect="none" src={src} alt={alt} />
     </Host>
 );
