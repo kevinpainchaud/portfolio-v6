@@ -14,8 +14,8 @@
         "build": "webpack --profile --json > stats.json",
         "postbuild": "react-snap",
         "lint": "eslint src/**/*.js",
-        "serve": "serve dist",
-        "analyze-bundle": "webpack-bundle-analyzer stats.json ./dist",
+        "serve": "serve build",
+        "analyze-bundle": "webpack-bundle-analyzer stats.json ./build",
         "fetch-linkedin": "python3 ./tools/fetch-linkedin.py",
         "docker:start": "docker-compose -f ./docker/docker-compose.yml run --service-ports --rm start",
         "docker:build": "docker-compose -f ./docker/docker-compose.yml run --rm build",
@@ -23,7 +23,7 @@
         "docker:fetch-linkedin": "docker-compose -f ./docker/docker-compose.yml run --rm fetch-linkedin"
     },
     "reactSnap": {
-        "source": "dist",
+        "source": "build",
         "minifyHtml": {
             "collapseWhitespace": true,
             "removeComments": true

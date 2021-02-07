@@ -60,7 +60,7 @@ LINKEDIN_PASSWORD=XXX
 
 `npm run lint`
 
-## Serve the dist directory
+## Serve the build directory
 
 `npm run serve`
 

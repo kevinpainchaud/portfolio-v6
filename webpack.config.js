@@ -6,7 +6,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const config = {
     entry: "./src/ui/index.js",
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "build"),
         filename: "main.js",
         publicPath: "/",
     },
