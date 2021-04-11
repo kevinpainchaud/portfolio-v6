@@ -7,11 +7,12 @@ export const Host = styled.div`
         display: block !important;
         height: 100%;
         width: 100%;
+    }
 
-        > img {
-            display: block;
-            height: 100%;
-            width: 100%;
-        }
+    > img,
+    .lazy-load-image-background > img {
+        display: block;
+        height: 100%;
+        width: 100%;
     }
 `;

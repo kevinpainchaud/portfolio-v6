@@ -10,7 +10,7 @@ const Entity = ({ title, subTitle, metas, logo, logoAlt }) => (
         <div>
             {logo ? (
                 <Logo>
-                    <Image src={logo} alt={logoAlt} />
+                    <Image src={logo} alt={logoAlt} lazyload />
                 </Logo>
             ) : null}
         </div>

@@ -25,7 +25,7 @@ const LogoBadge = ({ type, slug, name, darker }) => {
     return (
         <Host>
             <Box darker={darker}>
-                <Image src={logo} alt={`Logo ${name}`} />
+                <Image src={logo} alt={`Logo ${name}`} lazyload />
             </Box>
             <div>{name}</div>
         </Host>
