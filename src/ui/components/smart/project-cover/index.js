@@ -47,7 +47,7 @@ const ProjectCover = ({
             }}
         >
             <BackgroundImage>
-                <Image src={backgroundImageSrc} />
+                <Image src={backgroundImageSrc} lazyload />
             </BackgroundImage>
             <Container
                 style={{
