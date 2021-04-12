@@ -11,7 +11,6 @@
 
 -   [Preact](https://preactjs.com)
 -   [Styled components](https://styled-components.com)
--   [Photoswipe](https://photoswipe.com)
 
 ### Branching model
 
@@ -27,21 +26,11 @@ I'm using the [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/
 
 Pages are pre-rendered via [react-snap](https://github.com/stereobooster/react-snap).
 
-## Deploy to preprod/production
+## Deploy to production
 
-GitHub Actions is used to build & deploy the website with GitFlow.
+[Vercel](https://vercel.com) is used to build, deploy & host the website.
 
-### Deploy to preprod:
-
-Push to a `release/*-*-*` branch
-
-URL: [https://preprod.kevinpainchaud.fr](https://preprod.kevinpainchaud.fr)
-
-### Deploy to production:
-
-Push to the `master` branch
-
-URL: [https://www.kevinpainchaud.fr](https://www.kevinpainchaud.fr)
+You just have to push to the `master` branch.
 
 ## <a name="fetch-linkedin"></a>Fetch experience & education data from LinkedIn
 
@@ -70,4 +59,4 @@ LINKEDIN_PASSWORD=XXX
 
 ## Feedback
 
-If you have any question/suggestion/bug, please feel free to create an issue or email me.
+If you have any question/suggestion/bug, please feel free to create an issue.

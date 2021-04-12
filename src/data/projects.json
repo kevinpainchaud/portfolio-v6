@@ -9,7 +9,7 @@
         "highlights": ["Responsable front-end", "+ 800 000 visiteurs / mois"],
         "presentation": {
             "title": "Responsable front-end",
-            "content": "Depuis 2017, je travaille au sein de l'équipe technique de MaFormation.fr, dans une organisation agile (SCRUM). Mon rôle principal consiste à faire évoluer le produit dans sa composante front-end et d'en assurer sa maintenance. Je suis également responsable des tests fonctionnels sur le site."
+            "content": "Depuis 2017, je travaille au sein de l'équipe technique de MaFormation.fr, dans une organisation agile (SCRUM). Mon rôle principal consiste à faire évoluer le produit dans sa composante front-end et d'en assurer sa maintenance."
         },
         "galleryLayout": [
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }],
@@ -35,8 +35,8 @@
         "technologies": [
             "sass",
             "javascript",
-            "gulp",
-            "git",
+            "vue-js",
+            "webpack",
             "gitlab-ci-cd",
             "cypress",
             "google-optimize"
@@ -66,14 +66,7 @@
             ]
         ],
         "skills": ["integration", "dev-front-end", "ux"],
-        "technologies": [
-            "typescript",
-            "vue-js",
-            "nuxt-js",
-            "sass",
-            "webpack",
-            "git"
-        ]
+        "technologies": ["typescript", "vue-js", "nuxt-js", "sass", "webpack"]
     },
     {
         "name": "Bridor",
@@ -108,8 +101,7 @@
             "angular-js",
             "gulp",
             "nodejs",
-            "electron",
-            "git"
+            "electron"
         ]
     },
     {
@@ -134,7 +126,7 @@
             ]
         ],
         "skills": ["integration", "dev-front-end", "ux"],
-        "technologies": ["sass", "javascript", "angular-js", "gulp", "git"]
+        "technologies": ["sass", "javascript", "angular-js", "gulp"]
     },
     {
         "name": "Raphaël",
@@ -163,7 +155,7 @@
             ]
         ],
         "skills": ["integration", "dev-front-end", "ux"],
-        "technologies": ["sass", "javascript", "angular-js", "gulp", "git"]
+        "technologies": ["sass", "javascript", "angular-js", "gulp"]
     },
     {
         "name": "TOPO Revue",
@@ -188,14 +180,7 @@
             ]
         ],
         "skills": ["integration", "ux", "e-commerce"],
-        "technologies": [
-            "sass",
-            "javascript",
-            "gulp",
-            "php",
-            "wordpress",
-            "git"
-        ]
+        "technologies": ["sass", "javascript", "gulp", "php", "wordpress"]
     },
     {
         "name": "Guardian",
@@ -215,7 +200,7 @@
             [{ "filename": "1.jpg", "width": 1920, "height": 1080 }]
         ],
         "skills": ["tests-e2e", "devops"],
-        "technologies": ["cypress", "nodejs", "docker", "git"]
+        "technologies": ["cypress", "nodejs", "docker"]
     },
     {
         "name": "Watchtower",
@@ -240,7 +225,6 @@
             "lit-element",
             "sass",
             "webpack",
-            "git",
             "gitlab-ci-cd"
         ]
     }

@@ -70,11 +70,6 @@
         "currentStack": false
     },
     {
-        "name": "Git",
-        "slug": "git",
-        "currentStack": true
-    },
-    {
         "name": "GitLab CI/CD",
         "slug": "gitlab-ci-cd",
         "currentStack": true
