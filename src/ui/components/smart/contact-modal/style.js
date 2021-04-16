@@ -13,7 +13,7 @@ export const ModalContent = styled.div`
     )}
 
     a {
-        font-weight: 500;
+        font-weight: 600;
         text-decoration: none;
     }
 `;
