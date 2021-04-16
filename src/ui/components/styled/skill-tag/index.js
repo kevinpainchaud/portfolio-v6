@@ -7,6 +7,7 @@ import Box from "../box";
 const SkillTag = styled(Box)`
     color: ${(props) => props.theme.colors.textColor};
     font-size: 14px;
+    font-weight: 600;
     padding: 8px 16px;
 
     ${after(

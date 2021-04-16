@@ -60,7 +60,7 @@ export const Link = styled(OriginalLink)`
         props.reverseColor ? "#fff" : props.theme.colors.textBase};
 
     &.active {
-        font-weight: 600;
+        font-weight: 700;
     }
 `;
 

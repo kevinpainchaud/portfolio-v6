@@ -89,6 +89,7 @@ export const Header = styled.div`
 export const HeaderTitle = styled.div`
     color: ${(props) => props.theme.colors.primary};
     flex: 1;
+    font-family: "Gilroy";
     font-weight: 600;
     text-align: center;
 `;

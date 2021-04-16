@@ -36,8 +36,9 @@ const Host = styled.div`
         > span {
             color: ${(props) =>
                 props.reverseColor ? "#fff" : props.theme.colors.textBase};
+            font-family: "Gilroy";
             font-size: 21px;
-            font-weight: 800;
+            font-weight: 700;
             line-height: 1em;
 
             ${after(
