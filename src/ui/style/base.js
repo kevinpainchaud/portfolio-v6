@@ -31,6 +31,10 @@ const base = css`
         color: ${(props) => props.theme.colors.primary};
         text-decoration: none;
     }
+
+    strong {
+        font-weight: 600;
+    }
 `;
 
 export default base;

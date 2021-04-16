@@ -16,8 +16,7 @@ export const Button = styled(Link)`
     display: inline-flex;
     font-size: ${(props) => (props.xs ? 14 : 16)}px;
     font-weight: 600;
-    padding: ${(props) =>
-        props.xs ? "4px 10px 5px 10px" : "8px 18px 10px 18px"};
+    padding: ${(props) => (props.xs ? "5px 10px" : "10px 18px")};
     user-select: none;
 
     ${after(

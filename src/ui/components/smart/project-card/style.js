@@ -93,7 +93,7 @@ export const Title = styled.div`
     color: ${(props) => props.theme.colors.primary};
     font-size: 16px;
     font-family: ${(props) => props.theme.headings.fontFamily};
-    font-weight: 700;
+    font-weight: 800;
 
     ${after(
         "sm",
