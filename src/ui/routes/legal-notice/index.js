@@ -45,21 +45,12 @@ const LegalNotice = () => {
                                 <ul>
                                     <li>
                                         <StyledLink
-                                            href="https://www.fontsquirrel.com/fonts/hk-grotesk"
+                                            href="https://www.indiantypefoundry.com/fonts/poppins"
                                             target="_blank"
                                         >
-                                            HK Grotesk
+                                            Poppins
                                         </StyledLink>{" "}
-                                        par Hanken Design Co.
-                                    </li>
-                                    <li>
-                                        <StyledLink
-                                            href="https://www.tinkov.info/gilroy.html"
-                                            target="_blank"
-                                        >
-                                            Gilroy
-                                        </StyledLink>{" "}
-                                        par Radomir Tinkov
+                                        par Indian Type Foundry
                                     </li>
                                 </ul>
                             </li>

@@ -2,12 +2,12 @@ import { lighten } from "polished";
 
 const mainTheme = {
     base: {
-        fontFamily: '"HK Grotesk", sans-serif',
+        fontFamily: '"Poppins", sans-serif',
         borderRadius: 6,
         transitionDuration: 0.2,
     },
     headings: {
-        fontFamily: '"Gilroy", sans-serif',
+        fontFamily: '"Poppins", sans-serif',
     },
     colors: {
         primary: "#110133",
