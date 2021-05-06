@@ -1,9 +1,8 @@
 import styled, { css } from "styled-components";
 
-import { after } from "../../assets/styles/mixins/media-queries";
+import { after } from "../../../assets/styles/mixins/media-queries";
 
-import OriginalProjectCard from "../../components/smart/project-card";
-import { gutterWidth } from "../../components/styled/grid";
+import { gutterWidth } from "../grid";
 
 export const ProjectCards = styled.div`
     padding-bottom: 25px;
@@ -32,8 +31,4 @@ export const ProjectCards = styled.div`
             `
         )}
     }
-`;
-
-export const ProjectCard = styled(OriginalProjectCard)`
-    height: 100%;
 `;

@@ -1,13 +1,19 @@
 import { h } from "preact";
+import styled from "styled-components";
 
 import projects from "../../data/projects.json";
 import projectCardsLayout from "../../data/project-cards-layout.json";
 
+import OriginalProjectCard from "../../components/smart/project-card";
 import PageTitle from "../../components/dumb/page-title";
 import PageContent from "../../components/styled/page-content";
 import { Container, Row, Col } from "../../components/styled/grid";
 
-import { ProjectCards, ProjectCard } from "./style";
+import { ProjectCards } from "../../components/styled/project-cards";
+
+const ProjectCard = styled(OriginalProjectCard)`
+    height: 100%;
+`;
 
 const Projects = () => (
     <PageContent background>

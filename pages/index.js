@@ -1,7 +1,9 @@
 import { h } from "preact";
 import Image from "next/image";
+import styled, { css } from "styled-components";
 
 import { getExperienceYears } from "../helpers/date";
+import { before } from "../assets/styles/mixins/media-queries";
 
 import PageContent from "../components/styled/page-content";
 import { Container, Row, Col } from "../components/styled/grid";
@@ -10,8 +12,23 @@ import {
     JumbotronImage,
 } from "../components/styled/jumbotron";
 import { ButtonPrimary } from "../components/styled/button";
+import { Jumbotron as OriginalJumbotron } from "../components/styled/jumbotron";
 
-import { Jumbotron, WavingHandEmoji } from "./home/style";
+const Jumbotron = styled(OriginalJumbotron)`
+    ${before(
+        "sm",
+        css`
+            padding-top: 0;
+            min-height: auto !important;
+        `
+    )}
+`;
+
+const WavingHandEmoji = styled.span`
+    &:after {
+        content: " 👋";
+    }
+`;
 
 const Home = () => {
     return (
