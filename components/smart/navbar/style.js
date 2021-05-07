@@ -7,10 +7,6 @@ export const Host = styled.header`
     align-items: center;
     background-color: ${(props) =>
         props.transparent ? "transparent" : "#fff"};
-    border-bottom: ${(props) =>
-        props.noBorderBottom ? null : "1px solid transparent"};
-    border-bottom-color: ${(props) =>
-        props.transparent ? "transparent" : props.theme.colors.gray300};
     display: flex;
     height: ${layout.navbarHeight}px;
     position: relative;
@@ -22,6 +18,17 @@ export const Host = styled.header`
             height: ${layout.navbarHeightMd}px;
         `
     )}
+
+    &:after {
+        background-color: ${(props) => props.theme.colors.gray300};
+        bottom: 0;
+        content: "";
+        display: ${(props) => (props.borderBottom ? "block" : "none")};
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
 `;
 
 Host.defaultProps = {

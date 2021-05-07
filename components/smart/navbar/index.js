@@ -10,21 +10,24 @@ import { Container, Row, Col } from "../../styled/grid";
 import { Host } from "./style";
 
 const Navbar = () => {
+    const specialPages = ["/", "/projets", "/projets/[slug]"];
     const appContext = useAppContext();
-    const [isHomePage, setIsHomePage] = useState(
-        appContext.currentRoutePathname === "/"
+    const [isADefaultPage, setIsADefaultPage] = useState(
+        !specialPages.includes(appContext.currentRoutePathname)
     );
     const [isProjectPage, setIsProjectPage] = useState(
         appContext.currentRoutePathname === "/projets/[slug]"
     );
 
     useEffect(() => {
-        setIsHomePage(appContext.currentRoutePathname === "/");
+        setIsADefaultPage(
+            !specialPages.includes(appContext.currentRoutePathname)
+        );
         setIsProjectPage(appContext.currentRoutePathname === "/projets/[slug]");
     }, [appContext.currentRoutePathname]);
 
     return (
-        <Host noBorderBottom={isHomePage} transparent={isProjectPage}>
+        <Host borderBottom={isADefaultPage} transparent={isProjectPage}>
             <Container>
                 <Row alignItems="center">
                     <Col colWidth="3">
