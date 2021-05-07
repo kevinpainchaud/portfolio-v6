@@ -47,15 +47,13 @@ const App = ({ Component, pageProps }) => {
                 ]}
             />
 
-            {/* Tracking */}
-            <Tracking />
-
             {/* Styles */}
             <Normalize />
             <GlobalStyle theme={mainTheme} />
 
             <ThemeProvider theme={mainTheme}>
                 <AppWrapper>
+                    <Tracking />
                     <Navbar />
                     <Component {...pageProps} />
                     <Footer />
