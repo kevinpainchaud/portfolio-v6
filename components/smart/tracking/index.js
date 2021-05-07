@@ -1,4 +1,3 @@
-import { h } from "preact";
 import { useEffect } from "preact/hooks";
 import ReactGA from "react-ga";
 import { useAppContext } from "../../../context/app-context";
@@ -14,14 +13,8 @@ const Tracking = () => {
     }, []);
 
     useEffect(() => {
-        ReactGA.pageview(
-            "set",
-            "page",
-            window.location.pathname + window.location.search
-        );
+        ReactGA.pageview(window.location.pathname + window.location.search);
     }, [appContext.currentRoutePathname]);
-
-    return <h1>Page: {appContext.currentRoutePathname}</h1>;
 };
 
 export default Tracking;
