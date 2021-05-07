@@ -18,7 +18,6 @@
             "version": "latest"
         }
     },
-    "ignorePatterns": ["webpack.config.js"],
     "rules": {
         "no-empty": ["error", { "allowEmptyCatch": true }]
     }

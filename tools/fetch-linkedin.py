@@ -9,7 +9,7 @@ from linkedin_api import Linkedin
 
 load_dotenv()
 
-DEST = os.path.dirname(os.path.realpath(__file__)) + "/../src/data"
+DEST = os.path.dirname(os.path.realpath(__file__)) + "/../data"
 EXPERIENCE_OUTPUT_FILENAME = "experience.json"
 EDUCATION_OUTPUT_FILENAME = "education.json"
 LINKEDIN_PUBLIC_ID = "kévin-painchaud-a2605935"
