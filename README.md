@@ -10,6 +10,7 @@
 ### Main technologies
 
 -   [Preact](https://preactjs.com)
+-   [Next.js](https://nextjs.org)
 -   [Styled components](https://styled-components.com)
 
 ### Branching model
@@ -18,13 +19,15 @@ I'm using the [GitFlow](https://nvie.com/posts/a-successful-git-branching-model/
 
 ## Local development with dev server
 
-`npm run start`
+`npm run dev`
 
 ## Build the website for production
 
 `npm run build`
 
-Pages are pre-rendered via [react-snap](https://github.com/stereobooster/react-snap).
+## Start the production website
+
+`npm run start`
 
 ## Deploy to production
 
@@ -48,10 +51,6 @@ LINKEDIN_PASSWORD=XXX
 ## Find and fix problems in the JavaScript code
 
 `npm run lint`
-
-## Serve the build directory
-
-`npm run serve`
 
 ## Analyse the webpack bundle content
 

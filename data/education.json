@@ -1,0 +1,30 @@
+[
+    {
+        "schoolUrn": "12531",
+        "schoolName": "Université François Rabelais de Tours",
+        "timePeriod": {
+            "endDate": {
+                "year": 2012
+            },
+            "startDate": {
+                "year": 2011
+            }
+        },
+        "degreeName": "Licence professionnelle",
+        "fieldOfStudy": "Activités et Techniques de Communication"
+    },
+    {
+        "schoolUrn": "12529",
+        "schoolName": "Université du Maine-Le Mans-Laval",
+        "timePeriod": {
+            "endDate": {
+                "year": 2011
+            },
+            "startDate": {
+                "year": 2009
+            }
+        },
+        "degreeName": "DUT",
+        "fieldOfStudy": "Services et Réseaux de Communication"
+    }
+]
