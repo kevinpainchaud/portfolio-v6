@@ -1,8 +1,7 @@
 import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
-import { useRouter } from "next/router";
 
-import projects from "../../../data/projects.json";
+import { useAppContext } from "../../../context/app-context";
 
 import NavbarBrand from "../navbar-brand";
 import NavbarNav from "../navbar-nav";
@@ -11,27 +10,18 @@ import { Container, Row, Col } from "../../styled/grid";
 import { Host } from "./style";
 
 const Navbar = () => {
-    const router = useRouter();
-    const [isHomePage, setIsHomePage] = useState(false);
-    const [isProjectPage, setIsProjectPage] = useState(false);
+    const appContext = useAppContext();
+    const [isHomePage, setIsHomePage] = useState(
+        appContext.currentRoutePathname === "/"
+    );
+    const [isProjectPage, setIsProjectPage] = useState(
+        appContext.currentRoutePathname === "/projets/[slug]"
+    );
 
     useEffect(() => {
-        const handleRouteChange = (url) => {
-            setIsHomePage(/^\/$/.test(url));
-            setIsProjectPage(
-                new RegExp(
-                    `^/projets/(${projects.map((p) => p.slug).join("|")})$`
-                ).test(url)
-            );
-        };
-
-        handleRouteChange(router.pathname);
-        router.events.on("routeChangeStart", handleRouteChange);
-
-        return () => {
-            router.events.off("routeChangeStart", handleRouteChange);
-        };
-    }, []);
+        setIsHomePage(appContext.currentRoutePathname === "/");
+        setIsProjectPage(appContext.currentRoutePathname === "/projets/[slug]");
+    }, [appContext.currentRoutePathname]);
 
     return (
         <Host noBorderBottom={isHomePage} transparent={isProjectPage}>

@@ -1,6 +1,4 @@
 import { h } from "preact";
-import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "preact/hooks";
 
 import { useAppContext } from "../../../context/app-context";
 
@@ -14,28 +12,18 @@ import iconDocument from "../../../public/images/icons/icon-document.svg";
 
 const StickyBottomNav = () => {
     const appContext = useAppContext();
-    const hostRef = useRef();
-    const router = useRouter();
-    const [currentRouteUrl, setCurrentRouteUrl] = useState();
-
-    useEffect(() => {
-        setCurrentRouteUrl(router.pathname);
-        router.events.on("routeChangeStart", setCurrentRouteUrl);
-
-        return () => {
-            router.events.off("routeChangeStart", setCurrentRouteUrl);
-        };
-    }, []);
 
     const handleContactButtonClick = () =>
         appContext.emitter.emit("TOGGLE_CONTACT_MODAL");
 
     return (
-        <Host ref={hostRef} className="visible-xs">
+        <Host className="visible-xs">
             <Link
                 href="/"
                 tagName="routerLink"
-                className={currentRouteUrl === "/" ? "active" : null}
+                className={
+                    appContext.currentRoutePathname === "/" ? "active" : null
+                }
             >
                 <Icon>
                     <svg>
@@ -47,7 +35,12 @@ const StickyBottomNav = () => {
             <Link
                 href="/projets/"
                 tagName="routerLink"
-                className={currentRouteUrl === "/projets" ? "active" : null}
+                className={
+                    appContext.currentRoutePathname === "/projets" ||
+                    appContext.currentRoutePathname === "/projets/[slug]"
+                        ? "active"
+                        : null
+                }
             >
                 <Icon>
                     <svg>
@@ -59,7 +52,11 @@ const StickyBottomNav = () => {
             <Link
                 href="/a-propos/"
                 tagName="routerLink"
-                className={currentRouteUrl === "/a-propos" ? "active" : null}
+                className={
+                    appContext.currentRoutePathname === "/a-propos"
+                        ? "active"
+                        : null
+                }
             >
                 <Icon>
                     <svg>

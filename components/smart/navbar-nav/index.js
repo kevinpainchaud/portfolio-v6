@@ -1,6 +1,4 @@
 import { h } from "preact";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "preact/hooks";
 import PropTypes from "prop-types";
 
 import { useAppContext } from "../../../context/app-context";
@@ -16,21 +14,6 @@ import { Host, Link } from "./style";
 
 const NavbarNav = ({ reverseColor }) => {
     const appContext = useAppContext();
-    const router = useRouter();
-    const [currentRouteUrl, setCurrentRouteUrl] = useState();
-
-    useEffect(() => {
-        const handleRouteChange = (url) => {
-            setCurrentRouteUrl(url);
-        };
-
-        handleRouteChange(router.pathname);
-        router.events.on("routeChangeStart", handleRouteChange);
-
-        return () => {
-            router.events.off("routeChangeStart", handleRouteChange);
-        };
-    }, []);
 
     const handleContactButtonClick = () =>
         appContext.emitter.emit("TOGGLE_CONTACT_MODAL");
@@ -46,7 +29,9 @@ const NavbarNav = ({ reverseColor }) => {
             <Link
                 href="/"
                 tagName="routerLink"
-                className={currentRouteUrl === "/" ? "active" : null}
+                className={
+                    appContext.currentRoutePathname === "/" ? "active" : null
+                }
                 reverseColor={reverseColor}
             >
                 Accueil
@@ -54,7 +39,12 @@ const NavbarNav = ({ reverseColor }) => {
             <Link
                 href="/projets"
                 tagName="routerLink"
-                className={currentRouteUrl === "/projets" ? "active" : null}
+                className={
+                    appContext.currentRoutePathname === "/projets" ||
+                    appContext.currentRoutePathname === "/projets/[slug]"
+                        ? "active"
+                        : null
+                }
                 reverseColor={reverseColor}
             >
                 Projets
@@ -62,7 +52,11 @@ const NavbarNav = ({ reverseColor }) => {
             <Link
                 href="/a-propos"
                 tagName="routerLink"
-                className={currentRouteUrl === "/a-propos" ? "active" : null}
+                className={
+                    appContext.currentRoutePathname === "/a-propos"
+                        ? "active"
+                        : null
+                }
                 reverseColor={reverseColor}
             >
                 À propos
