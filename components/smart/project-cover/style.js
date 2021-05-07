@@ -1,14 +1,19 @@
 import styled, { css } from "styled-components";
 
 import { after } from "../../../assets/styles/mixins/media-queries";
+import { layout } from "../../../assets/styles/variables/layout";
 
 export const Host = styled.div`
+    margin-top: ${(props) =>
+        props.navbarOffset ? `-${layout.navbarHeight}px` : null};
     padding-bottom: 35px;
     position: relative;
 
     ${after(
         "sm",
         css`
+            margin-top: ${(props) =>
+                props.navbarOffset ? `-${layout.navbarHeightMd}px` : null};
             padding-bottom: 55px;
         `
     )}
@@ -45,8 +50,18 @@ export const BackgroundImage = styled.div`
 `;
 
 export const Header = styled.div`
+    margin-top: ${(props) =>
+        props.navbarOffset ? `${layout.navbarHeight}px` : null};
     position: relative;
     z-index: 1;
+
+    ${after(
+        "sm",
+        css`
+            margin-top: ${(props) =>
+                props.navbarOffset ? `${layout.navbarHeightMd}px` : null};
+        `
+    )}
 `;
 
 export const Body = styled.div`

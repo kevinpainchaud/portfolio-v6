@@ -1,5 +1,4 @@
 import { h, Fragment } from "preact";
-import { useRef } from "preact/hooks";
 import PropTypes from "prop-types";
 import Helmet from "preact-helmet";
 import { ThemeProvider } from "styled-components";
@@ -17,8 +16,6 @@ import StickyBottomNav from "../components/smart/sticky-bottom-nav";
 import ContactModal from "../components/smart/contact-modal";
 
 const App = ({ Component, pageProps }) => {
-    const navbarRef = useRef();
-
     return (
         <Fragment>
             {/* Document head */}
@@ -57,8 +54,8 @@ const App = ({ Component, pageProps }) => {
 
             <ThemeProvider theme={mainTheme}>
                 <AppWrapper>
-                    <Navbar ref={navbarRef} />
-                    <Component {...pageProps} navbarRef={navbarRef} />
+                    <Navbar />
+                    <Component {...pageProps} />
                     <Footer />
                     <StickyBottomNav />
                     <ContactModal />

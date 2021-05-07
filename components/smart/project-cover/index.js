@@ -29,15 +29,10 @@ const ProjectCover = ({
     date,
     url,
     repoUrl,
-    topOffset,
+    navbarOffset,
 }) => {
     return (
-        <Host
-            slug={slug}
-            style={{
-                "margin-top": -topOffset + "px",
-            }}
-        >
+        <Host slug={slug} navbarOffset={navbarOffset}>
             <BackgroundImage>
                 <Image
                     src={`/images/projects/covers/cover-${slug}.jpg`}
@@ -45,12 +40,8 @@ const ProjectCover = ({
                     height="580"
                 />
             </BackgroundImage>
-            <Container
-                style={{
-                    "padding-top": topOffset + "px",
-                }}
-            >
-                <Header className="hidden-xs">
+            <Container>
+                <Header navbarOffset={navbarOffset} className="hidden-xs">
                     <Row>
                         <Col>
                             <ButtonWhiteOutline
@@ -141,7 +132,7 @@ ProjectCover.propTypes = {
     date: PropTypes.string,
     repoUrl: PropTypes.string,
     url: PropTypes.string,
-    topOffset: PropTypes.number,
+    navbarOffset: PropTypes.bool,
 };
 
 export default ProjectCover;

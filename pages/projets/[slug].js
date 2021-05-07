@@ -1,12 +1,12 @@
 import { h } from "preact";
-import { useRef, useState, useEffect } from "preact/hooks";
 import { useRouter } from "next/router";
-import { subscribe } from "subscribe-ui-event";
+
 import Error404 from "../404";
 
 import projects from "../../data/projects.json";
 import skills from "../../data/skills.json";
 import technologies from "../../data/technologies.json";
+import { layout } from "../../assets/styles/variables/layout";
 
 import ProjectCover from "../../components/smart/project-cover";
 import ContentBlock from "../../components/dumb/content-block";
@@ -25,52 +25,27 @@ import LogoBadges from "../../components/styled/logo-badges";
 import iconArrowLeft from "../../public/images/icons/icon-arrow-left.svg";
 import iconExternalLink from "../../public/images/icons/icon-external-link.svg";
 
-const Project = ({ navbarRef }) => {
+const Project = () => {
     const router = useRouter();
     const project = projects.find((p) => p.slug === router.query.slug);
 
     if (project) {
-        const host = useRef(null),
-            [topOffset, setTopOffset] = useState(0),
-            projectSkills =
-                project.skills && project.skills.length > 0
-                    ? skills.filter(
-                          (skill) => project.skills.indexOf(skill.slug) >= 0
-                      )
-                    : null,
-            projectTechnologies =
-                project.technologies && project.technologies.length > 0
-                    ? technologies.filter(
-                          (technology) =>
-                              project.technologies.indexOf(technology.slug) >= 0
-                      )
-                    : null;
-
-        const updateTopOffset = () => {
-            if (navbarRef.current) {
-                setTopOffset(
-                    parseFloat(
-                        window
-                            .getComputedStyle(navbarRef.current.base)
-                            .getPropertyValue("height")
-                            .replace("px", "")
-                    )
-                );
-            }
-        };
-
-        useEffect(() => {
-            updateTopOffset();
-
-            const subscription = subscribe("resize", updateTopOffset, {
-                throttleRate: 100,
-            });
-
-            return () => subscription.unsubscribe();
-        }, []);
+        const projectSkills =
+            project.skills && project.skills.length > 0
+                ? skills.filter(
+                      (skill) => project.skills.indexOf(skill.slug) >= 0
+                  )
+                : null;
+        const projectTechnologies =
+            project.technologies && project.technologies.length > 0
+                ? technologies.filter(
+                      (technology) =>
+                          project.technologies.indexOf(technology.slug) >= 0
+                  )
+                : null;
 
         return (
-            <PageContent ref={host}>
+            <PageContent>
                 {/* Cover */}
                 <ProjectCover
                     name={project.name}
@@ -79,7 +54,7 @@ const Project = ({ navbarRef }) => {
                     date={project.date}
                     url={project.url}
                     repoUrl={project.repoUrl}
-                    topOffset={topOffset}
+                    navbarOffset
                 ></ProjectCover>
 
                 {/* Intro */}

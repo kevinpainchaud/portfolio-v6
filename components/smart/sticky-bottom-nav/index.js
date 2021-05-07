@@ -1,7 +1,6 @@
 import { h } from "preact";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "preact/hooks";
-import { subscribe } from "subscribe-ui-event";
 
 import { useAppContext } from "../../../context/app-context";
 
@@ -28,19 +27,8 @@ const StickyBottomNav = () => {
         };
     }, []);
 
-    const handleBodyPadding = () =>
-        (document.body.firstChild.style.paddingBottom = `${hostRef.current.offsetHeight}px`);
-
     const handleContactButtonClick = () =>
         appContext.emitter.emit("TOGGLE_CONTACT_MODAL");
-
-    useEffect(() => {
-        handleBodyPadding();
-
-        subscribe("resize", handleBodyPadding, {
-            throttleRate: 500,
-        });
-    }, []);
 
     return (
         <Host ref={hostRef} className="visible-xs">

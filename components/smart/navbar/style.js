@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { after } from "../../../assets/styles/mixins/media-queries";
+import { layout } from "../../../assets/styles/variables/layout";
 
 export const Host = styled.header`
     align-items: center;
@@ -11,14 +12,14 @@ export const Host = styled.header`
     border-bottom-color: ${(props) =>
         props.transparent ? "transparent" : props.theme.colors.gray300};
     display: flex;
-    padding: 15px 0;
+    height: ${layout.navbarHeight}px;
     position: relative;
     z-index: 1;
 
     ${after(
         "sm",
         css`
-            padding: 45px 0;
+            height: ${layout.navbarHeightMd}px;
         `
     )}
 `;

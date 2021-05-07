@@ -1,6 +1,7 @@
 import { css } from "styled-components";
 
-import { after } from "./mixins/media-queries";
+import { after, before } from "./mixins/media-queries";
+import { layout } from "./variables/layout";
 
 const base = css`
     body {
@@ -21,6 +22,13 @@ const base = css`
         display: flex;
         flex-direction: column;
         min-height: 100vh;
+
+        ${before(
+            "sm",
+            css`
+                padding-bottom: ${layout.stickyBottomNavHeight}px;
+            `
+        )}
     }
 
     * {

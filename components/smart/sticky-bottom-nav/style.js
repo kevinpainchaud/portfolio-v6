@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+import { layout } from "../../../assets/styles/variables/layout";
 import OriginalLink from "../link";
 
 export const Host = styled.nav`
@@ -7,6 +8,7 @@ export const Host = styled.nav`
     bottom: 0;
     box-shadow: ${(props) => props.theme.colors.grayBase} -1px 10px 25px;
     display: flex;
+    height: ${layout.stickyBottomNavHeight}px;
     left: 0;
     position: fixed;
     width: 100%;
