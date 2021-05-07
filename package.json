@@ -15,9 +15,9 @@
         "lint": "eslint {assets,components,context,helpers,pages}/**/*.js",
         "analyze-bundle": "cross-env ANALYZE=true npm run build",
         "fetch-linkedin": "python3 ./tools/fetch-linkedin.py",
-        "docker:start": "docker-compose -f ./docker/docker-compose.yml run --service-ports --rm start",
-        "docker:build": "docker-compose -f ./docker/docker-compose.yml run --rm build",
-        "docker:fetch-linkedin": "docker-compose -f ./docker/docker-compose.yml run --rm fetch-linkedin"
+        "docker:start": "docker-compose -f ./.docker/docker-compose.yml run --service-ports --rm start",
+        "docker:build": "docker-compose -f ./.docker/docker-compose.yml run --rm build",
+        "docker:fetch-linkedin": "docker-compose -f ./.docker/docker-compose.yml run --rm fetch-linkedin"
     },
     "devDependencies": {
         "@babel/core": "^7.14.0",
