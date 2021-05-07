@@ -10,6 +10,7 @@
 ### Main technologies
 
 -   [Preact](https://preactjs.com)
+-   [Next.js](https://nextjs.org)
 -   [Styled components](https://styled-components.com)
 
 ### Branching model
